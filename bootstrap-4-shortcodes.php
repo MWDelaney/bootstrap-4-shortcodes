@@ -84,6 +84,8 @@ class Boostrap4Shortcodes {
 			'container-fluid',
 			'row',
 			'column',
+
+			'media-list',
 			'media',
 			'media-object',
 
@@ -112,7 +114,7 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]	= ( $atts['fluid']   == 'true' )  ? 'container-fluid' : 'container';
 
-		return $this->bs_output(
+		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
@@ -120,6 +122,8 @@ class Boostrap4Shortcodes {
 				do_shortcode( $content )
 			)
 		);
+
+		return $return;
 	}
 
 
@@ -139,7 +143,7 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]	= ( $atts['fluid']   == 'true' )  ? 'container-fluid' : 'container';
 
-		return $this->bs_output(
+		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
@@ -147,6 +151,8 @@ class Boostrap4Shortcodes {
 				do_shortcode( $content )
 			)
 		);
+
+		return $return;
 	}
 
 
@@ -166,7 +172,7 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]	= 'row';
 
-		return $this->bs_output(
+		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
@@ -174,6 +180,8 @@ class Boostrap4Shortcodes {
 				do_shortcode( $content )
 			)
 		);
+
+		return $return;
 	}
 
 
@@ -241,7 +249,7 @@ class Boostrap4Shortcodes {
 
 		$class[]	= ( $atts['xclass'] )                                       ? ' ' . $atts['xclass'] : '';
 
-		return $this->bs_output(
+		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
@@ -249,7 +257,42 @@ class Boostrap4Shortcodes {
 				do_shortcode( $content )
 			)
 		);
+
+		return $return;
 	}
+
+
+
+	/**
+	 * Media List (media object wrapper) shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_media_list( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+		), $atts );
+
+		$class	= array();
+		$class[]  = 'media-list';
+
+		$GLOBALS['media_list'] = true;
+
+		$return = $this->bs_output(
+			sprintf(
+				'<ul class="%s"%s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				do_shortcode( $content )
+			)
+		);
+
+		unset($GLOBALS['media_list']);
+		return $return;
+	}
+
 
 
 	/**
@@ -267,14 +310,17 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]  = 'media';
 
-		return $this->bs_output(
+		$return = $this->bs_output(
 			sprintf(
-				'<div class="%s"%s>%s</div>',
+				'<%1$s class="%2$s"%3$s>%4$s</%1$s>',
+				(isset($GLOBALS['media_list'])) ? 'li' : 'div',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
 				do_shortcode( $content )
 			)
 		);
+
+		return $return;
 	}
 
 
@@ -286,26 +332,31 @@ class Boostrap4Shortcodes {
 	 */
 	function bs_media_object( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
-				"media"  => "left",
-				"class" => false,
-				"data"   => false
+				"media"	=> "left",
+				"alignment"	=> false,
+				"class"	=> false,
+				"data"	=> false
 		), $atts );
 
 		$class	= array();
-		$class[]	= ($atts['media']) ? 'media-' . $atts['media'] : '';
+		$class[]	= ($atts['media']) ? 'media-' . $atts['media'] : null;
+		$class[]	= ($atts['alignment']) ? 'media-' . $atts['alignment'] : null;
 
 		$object_class	= array();
-		$object_class[] = "media-object";
+		$object_class[]	= "media-object";
 
+		$allowed_tags	= array('figure', 'div', 'img', 'i', 'span');
 
-		return $this->bs_output(
+		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
-				$this->scrape_dom_element(array('figure', 'div', 'img', 'i', 'span'), $content, $object_class, null, null)
+				$this->scrape_dom_element($allowed_tags, $content, $object_class, null, null)
 			)
 		);
+
+		return $return;
 	}
 
 
@@ -340,7 +391,7 @@ class Boostrap4Shortcodes {
 	 * @param  string $return The shortcode output passed from the calling function
 	 * @return string         The filtered shortcode output
 	 */
-	function bs_output( $return ) {
+	function bs_output( $return, $callback = null ) {
 		return apply_filters($this->getCallingFunctionName(), $return);
 	}
 
