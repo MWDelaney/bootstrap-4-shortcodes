@@ -360,6 +360,36 @@ class Boostrap4Shortcodes {
 	}
 
 
+
+	/**
+	 * Media Body shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_media_body( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+		), $atts );
+
+		$class	= array();
+		$class[]  = 'media-body';
+
+		$return = $this->bs_output(
+			sprintf(
+				'<div class="%s"%s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				do_shortcode( $content )
+			)
+		);
+
+		return $return;
+	}
+
+
+
 	/**
 	 * Get the name of the function that called the current function
 	 * @param  boolean $completeTrace [description]
@@ -536,3 +566,4 @@ class Boostrap4Shortcodes {
 
 } // End Boostrap4Shortcodes class
 new Boostrap4Shortcodes();
+g
