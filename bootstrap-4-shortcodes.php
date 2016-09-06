@@ -88,6 +88,7 @@ class Boostrap4Shortcodes {
 			'media-list',
 			'media',
 			'media-object',
+			'media-heading',
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -223,31 +224,31 @@ class Boostrap4Shortcodes {
 
 		$class	= array();
 
-		$class[]	= ( $atts['xs'] )			                                			? ' col-xs-' . $atts['xs'] : '';
-		$class[]	= ( $atts['sm'] )                                           ? ' col-sm-' . $atts['sm'] : '';
-		$class[]	= ( $atts['md'] )                                           ? ' col-md-' . $atts['md'] : '';
-		$class[]	= ( $atts['lg'] )                                           ? ' col-lg-' . $atts['lg'] : '';
-		$class[]	= ( $atts['xl'] )                                           ? ' col-xl-' . $atts['xl'] : '';
+		$class[]	= ( $atts['xs'] )			                                			? ' col-xs-' . $atts['xs'] : null;
+		$class[]	= ( $atts['sm'] )                                           ? ' col-sm-' . $atts['sm'] : null;
+		$class[]	= ( $atts['md'] )                                           ? ' col-md-' . $atts['md'] : null;
+		$class[]	= ( $atts['lg'] )                                           ? ' col-lg-' . $atts['lg'] : null;
+		$class[]	= ( $atts['xl'] )                                           ? ' col-xl-' . $atts['xl'] : null;
 
-		$class[]	= ( $atts['offset-xs'] || $atts['offset-xs'] === "0" )      ? ' col-xs-offset-' . $atts['offset-xs'] : '';
-		$class[]	= ( $atts['offset-sm'] || $atts['offset-sm'] === "0" )      ? ' col-sm-offset-' . $atts['offset-sm'] : '';
-		$class[]	= ( $atts['offset-md'] || $atts['offset-md'] === "0" )      ? ' col-md-offset-' . $atts['offset-md'] : '';
-		$class[]	= ( $atts['offset-lg'] || $atts['offset-lg'] === "0" )      ? ' col-lg-offset-' . $atts['offset-lg'] : '';
-		$class[]	= ( $atts['offset-xl'] || $atts['offset-xl'] === "0" )      ? ' col-xl-offset-' . $atts['offset-xl'] : '';
+		$class[]	= ( $atts['offset-xs'] || $atts['offset-xs'] === "0" )      ? ' col-xs-offset-' . $atts['offset-xs'] : null;
+		$class[]	= ( $atts['offset-sm'] || $atts['offset-sm'] === "0" )      ? ' col-sm-offset-' . $atts['offset-sm'] : null;
+		$class[]	= ( $atts['offset-md'] || $atts['offset-md'] === "0" )      ? ' col-md-offset-' . $atts['offset-md'] : null;
+		$class[]	= ( $atts['offset-lg'] || $atts['offset-lg'] === "0" )      ? ' col-lg-offset-' . $atts['offset-lg'] : null;
+		$class[]	= ( $atts['offset-xl'] || $atts['offset-xl'] === "0" )      ? ' col-xl-offset-' . $atts['offset-xl'] : null;
 
-		$class[]	= ( $atts['pull-xs']   || $atts['pull-xs'] === "0" )        ? ' col-xs-pull-' . $atts['pull-xs'] : '';
-		$class[]	= ( $atts['pull-sm']   || $atts['pull-sm'] === "0" )        ? ' col-sm-pull-' . $atts['pull-sm'] : '';
-		$class[]	= ( $atts['pull-md']   || $atts['pull-md'] === "0" )        ? ' col-md-pull-' . $atts['pull-md'] : '';
-		$class[]	= ( $atts['pull-lg']   || $atts['pull-lg'] === "0" )        ? ' col-lg-pull-' . $atts['pull-lg'] : '';
-		$class[]	= ( $atts['pull-xl']   || $atts['pull-xl'] === "0" )        ? ' col-xl-pull-' . $atts['pull-xl'] : '';
+		$class[]	= ( $atts['pull-xs']   || $atts['pull-xs'] === "0" )        ? ' col-xs-pull-' . $atts['pull-xs'] : null;
+		$class[]	= ( $atts['pull-sm']   || $atts['pull-sm'] === "0" )        ? ' col-sm-pull-' . $atts['pull-sm'] : null;
+		$class[]	= ( $atts['pull-md']   || $atts['pull-md'] === "0" )        ? ' col-md-pull-' . $atts['pull-md'] : null;
+		$class[]	= ( $atts['pull-lg']   || $atts['pull-lg'] === "0" )        ? ' col-lg-pull-' . $atts['pull-lg'] : null;
+		$class[]	= ( $atts['pull-xl']   || $atts['pull-xl'] === "0" )        ? ' col-xl-pull-' . $atts['pull-xl'] : null;
 
-		$class[]	= ( $atts['push-xs']   || $atts['push-xs'] === "0" )        ? ' col-xs-push-' . $atts['push-xs'] : '';
-		$class[]	= ( $atts['push-sm']   || $atts['push-sm'] === "0" )        ? ' col-sm-push-' . $atts['push-sm'] : '';
-		$class[]	= ( $atts['push-md']   || $atts['push-md'] === "0" )        ? ' col-md-push-' . $atts['push-md'] : '';
-		$class[]	= ( $atts['push-lg']   || $atts['push-lg'] === "0" )        ? ' col-lg-push-' . $atts['push-lg'] : '';
-		$class[]	= ( $atts['push-xl']   || $atts['push-xl'] === "0" )        ? ' col-xl-push-' . $atts['push-xl'] : '';
+		$class[]	= ( $atts['push-xs']   || $atts['push-xs'] === "0" )        ? ' col-xs-push-' . $atts['push-xs'] : null;
+		$class[]	= ( $atts['push-sm']   || $atts['push-sm'] === "0" )        ? ' col-sm-push-' . $atts['push-sm'] : null;
+		$class[]	= ( $atts['push-md']   || $atts['push-md'] === "0" )        ? ' col-md-push-' . $atts['push-md'] : null;
+		$class[]	= ( $atts['push-lg']   || $atts['push-lg'] === "0" )        ? ' col-lg-push-' . $atts['push-lg'] : null;
+		$class[]	= ( $atts['push-xl']   || $atts['push-xl'] === "0" )        ? ' col-xl-push-' . $atts['push-xl'] : null;
 
-		$class[]	= ( $atts['xclass'] )                                       ? ' ' . $atts['xclass'] : '';
+		$class[]	= ( $atts['xclass'] )                                       ? ' ' . $atts['xclass'] : null;
 
 		$return = $this->bs_output(
 			sprintf(
@@ -391,6 +392,61 @@ class Boostrap4Shortcodes {
 
 
 	/**
+	 * Media heading shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_media_heading( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+		), $atts );
+
+		$class	= array();
+		$class[]  = 'media-heading';
+
+
+		$return = $this->bs_output(
+			sprintf(
+				'<%1$s class="%2$s"%3$s>%4$s</%1$s>',
+				apply_filters('bs_media_heading_tag', 'h4'),
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				do_shortcode( $content )
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	function bs_hidden( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"up" => false,
+				"down"  => false,
+				"class"  => false,
+				"data"    => false
+		), $atts );
+
+		$class	= array();
+		$class[]	= ( $atts['up'] )		? ' hidden-' . $atts['up'] . '-up': null;
+		$class[]	= ( $atts['down'] )		? ' hidden-' . $atts['down'] . '-down': null;
+
+		$return = $this->bs_output(
+			sprintf(
+				'<div class="%s"%s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				do_shortcode( $content )
+			)
+		);
+
+		return $return;
+	}
+
+	/**
 	 * Get the name of the function that called the current function
 	 * @param  boolean $completeTrace [description]
 	 * @return string                 The calling function's name
@@ -500,6 +556,25 @@ class Boostrap4Shortcodes {
 
 
 
+	function get_dom_element( $tag, $content, $class, $title = null, $data = null ) {
+		//clean up content
+		$content = trim(trim($content), chr(0xC2).chr(0xA0));
+		$previous_value = libxml_use_internal_errors(TRUE);
+		$dom = new DOMDocument;
+		$dom->loadXML(utf8_encode($content));
+		libxml_clear_errors();
+		libxml_use_internal_errors($previous_value);
+
+		// Check whether the content has a root element, wrap it all in $tag if not
+		if(!$dom->documentElement) {
+				$element = $dom->createElement($tag, utf8_encode($content));
+				$dom->appendChild($element);
+		}
+		return $this->scrape_dom_element(array($tag), $content, $class, $title, $data)
+	}
+
+
+
 	/**
 	 * Scrape the shortcode's contents for a particular DOMDocument tag or tags, pull them out, apply attributes, and return just the tags.
 	 * @param  [type] $tag     [description]
@@ -509,7 +584,7 @@ class Boostrap4Shortcodes {
 	 * @param  [type] $data    [description]
 	 * @return [type]          [description]
 	 */
-	function scrape_dom_element( $tag, $content, $class = '', $title = '', $data = null ) {
+	function scrape_dom_element( $tag, $content, $class = null, $title = null, $data = null ) {
 
 		// Hide warnings while we run this function
 		$previous_value = libxml_use_internal_errors(TRUE);
@@ -566,4 +641,3 @@ class Boostrap4Shortcodes {
 
 } // End Boostrap4Shortcodes class
 new Boostrap4Shortcodes();
-g
