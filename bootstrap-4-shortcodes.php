@@ -475,14 +475,22 @@ class Boostrap4Shortcodes {
 		$link_class	= array();
 		$link_class[]	= 'alert-link';
 
-		$search_tags = array('a');
+		$heading_class	= array();
+		$heading_class[]	= 'alert-heading';
+
+		$search_anchors = array('a');
+		$search_headings = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $search_anchors, $content, $link_class );
+		$content = $this->addclass( $search_headings, $content, $heading_class );
 
 		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
-				$this->addclass( $search_tags, do_shortcode( $content ), $link_class )
+				$content
 			)
 		);
 
@@ -607,7 +615,7 @@ class Boostrap4Shortcodes {
 	 // Hide warnings while we run this function
 	 $previous_value = libxml_use_internal_errors(TRUE);
 	 $doc = new DOMDocument();
-	 $doc->loadXML($content);
+	 $doc->loadHTML($content);
 	 libxml_clear_errors();
 	 libxml_use_internal_errors($previous_value);
 
