@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-4-shortcodes",
+  "version": "1.0.0",
+  "description": "Implements Bootstrap 4 styles and components in WordPress through shortcodes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MWDelaney/bootstrap-4-shortcodes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MWDelaney/bootstrap-4-shortcodes/issues"
+  },
+  "homepage": "https://github.com/MWDelaney/bootstrap-4-shortcodes#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-markdown": "^1.2.0"
+  }
+}

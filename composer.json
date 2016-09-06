@@ -1,0 +1,25 @@
+{
+	"name": "mwdelaney/bootstrap-4-shortcodes",
+	"description": "WordPress shortcodes for easier use of Bootstrap 4 elements in your content.",
+	"keywords": [
+		"bootstrap",
+		"shortcodes",
+		"wordpress",
+		"plugin"
+	],
+	"homepage": "https://github.com/mwdelaney/bootstrap-4-shortcodes",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Michael W. Delaney",
+			"email": "michael.delaney@gmail.com",
+			"homepage": "https://github.com/MWDelaney/bootstrap-4-shortcodes",
+			"role": "Developer"
+		}
+	],
+	"type": "wordpress-plugin",
+	"require": {
+		"php": ">=5.3.2",
+		"composer/installers": "1.0.*@dev"
+	}
+}
