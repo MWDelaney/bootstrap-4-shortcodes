@@ -90,6 +90,10 @@ class Boostrap4Shortcodes {
 			'media-object',
 			'media-heading',
 
+			'hidden',
+
+			'img',
+
 		);
 		foreach ( $shortcodes as $shortcode ) {
 			$function = 'bs_' . str_replace( '-', '_', $shortcode );
@@ -353,7 +357,7 @@ class Boostrap4Shortcodes {
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
-				$this->scrape_dom_element($allowed_tags, $content, $object_class, null, null)
+				$this->scrape_dom_element($allowed_tags, 'div', $content, $object_class, null, null)
 			)
 		);
 
@@ -406,14 +410,12 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]  = 'media-heading';
 
+		$tag = apply_filters('media-heading-tag', 'h4');
 
 		$return = $this->bs_output(
 			sprintf(
-				'<%1$s class="%2$s"%3$s>%4$s</%1$s>',
-				apply_filters('bs_media_heading_tag', 'h4'),
-				$this->class_output(__FUNCTION__, $class, $atts['class']),
-				$this->parse_data_attributes( $atts['data'] ),
-				do_shortcode( $content )
+				'%s',
+				$this->scrape_dom_element(null, $tag, do_shortcode($content), $class, null, null)
 			)
 		);
 
@@ -421,7 +423,12 @@ class Boostrap4Shortcodes {
 	}
 
 
-
+	/**
+	 * Hidden shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
 	function bs_hidden( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
 				"up" => false,
@@ -431,15 +438,50 @@ class Boostrap4Shortcodes {
 		), $atts );
 
 		$class	= array();
-		$class[]	= ( $atts['up'] )		? ' hidden-' . $atts['up'] . '-up': null;
-		$class[]	= ( $atts['down'] )		? ' hidden-' . $atts['down'] . '-down': null;
+		$class[]	= ( $atts['up'] )		? 'hidden-' . $atts['up'] . '-up': null;
+		$class[]	= ( $atts['down'] )		? 'hidden-' . $atts['down'] . '-down': null;
 
 		$return = $this->bs_output(
 			sprintf(
-				'<div class="%s"%s>%s</div>',
-				$this->class_output(__FUNCTION__, $class, $atts['class']),
-				$this->parse_data_attributes( $atts['data'] ),
-				do_shortcode( $content )
+				'%s',
+				$this->scrape_dom_element(null, 'span', do_shortcode($content), $class, null, null)
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	/**
+	 * img shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_img( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"responsive" => false,
+				"type"  => false,
+				"class"  => false,
+				"data"    => false
+		), $atts );
+
+		$class	= array();
+		$class[]	= ( $atts['responsive'] == 'true' )		? 'img-fluid': null;
+		$class[]	= ( $atts['type'] )		? 'img-' . $atts['type']: null;
+		$class = $this->class_output(
+			__FUNCTION__ . '_tag',
+			$class,
+			$atts['class']
+		)
+
+		$allowed_tags	= array('img');
+
+		$return = $this->bs_output(
+			sprintf(
+				'%s',
+				$this->scrape_dom_element($allowed_tags, null, do_shortcode($content), $class, null, null)
 			)
 		);
 
@@ -556,25 +598,6 @@ class Boostrap4Shortcodes {
 
 
 
-	function get_dom_element( $tag, $content, $class, $title = null, $data = null ) {
-		//clean up content
-		$content = trim(trim($content), chr(0xC2).chr(0xA0));
-		$previous_value = libxml_use_internal_errors(TRUE);
-		$dom = new DOMDocument;
-		$dom->loadXML(utf8_encode($content));
-		libxml_clear_errors();
-		libxml_use_internal_errors($previous_value);
-
-		// Check whether the content has a root element, wrap it all in $tag if not
-		if(!$dom->documentElement) {
-				$element = $dom->createElement($tag, utf8_encode($content));
-				$dom->appendChild($element);
-		}
-		return $this->scrape_dom_element(array($tag), $content, $class, $title, $data)
-	}
-
-
-
 	/**
 	 * Scrape the shortcode's contents for a particular DOMDocument tag or tags, pull them out, apply attributes, and return just the tags.
 	 * @param  [type] $tag     [description]
@@ -584,14 +607,26 @@ class Boostrap4Shortcodes {
 	 * @param  [type] $data    [description]
 	 * @return [type]          [description]
 	 */
-	function scrape_dom_element( $tag, $content, $class = null, $title = null, $data = null ) {
+	function scrape_dom_element( $tag, $default, $content, $class = null, $title = null, $data = null ) {
 
 		// Hide warnings while we run this function
 		$previous_value = libxml_use_internal_errors(TRUE);
 		$dom = new DOMDocument;
-		$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
+		$dom->loadXML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
 		libxml_clear_errors();
 		libxml_use_internal_errors($previous_value);
+
+		// If there's no root element, set it to $default
+		if(!$dom->documentElement) {
+				$element = $dom->createElement($default, utf8_encode($content));
+				$dom->appendChild($element);
+		}
+
+		// If there's no $tag set, use the root element
+		if(!$tag) {
+			$root = $dom->documentElement;
+			$tag = array($root->tagName);
+		}
 
 		// Search the document object for the the tags in $tag
 		foreach ($tag as $find) {
@@ -633,7 +668,7 @@ class Boostrap4Shortcodes {
 				}
 
 				// Return the modified HTML
-				return $outputdom->saveHTML($outputdom->documentElement);
+				return $outputdom->saveXML($outputdom->documentElement);
 			}
 		}
 	}
