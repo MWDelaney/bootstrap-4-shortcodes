@@ -92,7 +92,7 @@ class Boostrap4Shortcodes {
 
 			'hidden',
 
-			'img',
+			'alert',
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -350,14 +350,15 @@ class Boostrap4Shortcodes {
 		$object_class	= array();
 		$object_class[]	= "media-object";
 
-		$allowed_tags	= array('figure', 'div', 'img', 'i', 'span');
+		$search_tags	= array('figure', 'div', 'img', 'i', 'span');
+		$fallback_tag = 'div';
 
 		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
-				$this->scrape_dom_element($allowed_tags, 'div', $content, $object_class, null, null)
+				$this->addclass( $search_tags, do_shortcode( $content ), $object_class, $fallback_tag )
 			)
 		);
 
@@ -410,12 +411,13 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]  = 'media-heading';
 
-		$tag = apply_filters('media-heading-tag', 'h4');
+		$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+		$fallback_tag = 'h4';
 
 		$return = $this->bs_output(
 			sprintf(
 				'%s',
-				$this->scrape_dom_element(null, $tag, do_shortcode($content), $class, null, null)
+				$this->addclass( $search_tags, do_shortcode( $content ), $class, $fallback_tag )
 			)
 		);
 
@@ -444,7 +446,7 @@ class Boostrap4Shortcodes {
 		$return = $this->bs_output(
 			sprintf(
 				'%s',
-				$this->scrape_dom_element(null, 'span', do_shortcode($content), $class, null, null)
+				$this->addclass( null, do_shortcode( $content ), $class, null )
 			)
 		);
 
@@ -454,39 +456,39 @@ class Boostrap4Shortcodes {
 
 
 	/**
-	 * img shortcode
+	 * Alert shortcode
 	 * @param  [type] $atts    shortcode attributes
 	 * @param  string $content shortcode contents
 	 * @return string
 	 */
-	function bs_img( $atts, $content = null ) {
+	function bs_alert( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
-				"responsive" => false,
-				"type"  => false,
-				"class"  => false,
-				"data"    => false
+				"type"	=> "info",
+				"class" => false,
+				"data"	=> false
 		), $atts );
 
 		$class	= array();
-		$class[]	= ( $atts['responsive'] == 'true' )		? 'img-fluid': null;
-		$class[]	= ( $atts['type'] )		? 'img-' . $atts['type']: null;
-		$class = $this->class_output(
-			__FUNCTION__ . '_tag',
-			$class,
-			$atts['class']
-		)
+		$class[]  = 'alert';
+		$class[]  = 'alert-' . $atts['type'];
 
-		$allowed_tags	= array('img');
+		$link_class	= array();
+		$link_class[]	= 'alert-link';
+
+		$search_tags = array('a');
 
 		$return = $this->bs_output(
 			sprintf(
-				'%s',
-				$this->scrape_dom_element($allowed_tags, null, do_shortcode($content), $class, null, null)
+				'<div class="%s"%s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				$this->addclass( $search_tags, do_shortcode( $content ), $link_class )
 			)
 		);
 
 		return $return;
 	}
+
 
 	/**
 	 * Get the name of the function that called the current function
@@ -599,7 +601,28 @@ class Boostrap4Shortcodes {
 
 
 	/**
-	 * Scrape the shortcode's contents for a particular DOMDocument tag or tags, pull them out, apply attributes, and return just the tags.
+	 * Process DOM
+	 */
+	function processdom( $content, $tag = null ) {
+	 // Hide warnings while we run this function
+	 $previous_value = libxml_use_internal_errors(TRUE);
+	 $doc = new DOMDocument();
+	 $doc->loadXML($content);
+	 libxml_clear_errors();
+	 libxml_use_internal_errors($previous_value);
+
+	 $tag = ($tag) ? $tag : 'div';
+
+	 // If there's no root element, set it to $default
+	 if(!$doc->documentElement) {
+			 $element = $doc->createElement($tag, utf8_encode($content));
+			 $doc->appendChild($element);
+		}
+		return $doc;
+	}
+
+	/**
+	 * Parse a shortcode's contents for a tag and apply classes to each instance
 	 * @param  [type] $tag     [description]
 	 * @param  [type] $content [description]
 	 * @param  [type] $class   [description]
@@ -607,70 +630,63 @@ class Boostrap4Shortcodes {
 	 * @param  [type] $data    [description]
 	 * @return [type]          [description]
 	 */
-	function scrape_dom_element( $tag, $default, $content, $class = null, $title = null, $data = null ) {
+	function addclass( $finds, $content, $class, $fallback_tag = null ) {
 
-		// Hide warnings while we run this function
-		$previous_value = libxml_use_internal_errors(TRUE);
-		$dom = new DOMDocument;
-		$dom->loadXML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
-		libxml_clear_errors();
-		libxml_use_internal_errors($previous_value);
+		$doc = $this->processdom($content, $fallback_tag);
 
-		// If there's no root element, set it to $default
-		if(!$dom->documentElement) {
-				$element = $dom->createElement($default, utf8_encode($content));
-				$dom->appendChild($element);
+		if(!$finds) {
+			$root = $doc->documentElement;
+			$finds = array($root->tagName);
 		}
 
-		// If there's no $tag set, use the root element
-		if(!$tag) {
-			$root = $dom->documentElement;
+		foreach( $finds as $found ){
+			$tags = $doc->getElementsByTagName($found);
+			foreach ($tags as $tag) {
+				// Append the classes in $class to the tag's existing classes
+				$tag->setAttribute(
+					'class',
+					$this->class_output(
+						$this->getCallingFunctionName() . '_addclass',
+						$class,
+						$tag->getAttribute('class')
+					)
+				);
+			}
+		}
+		return $doc->saveHTML($doc->documentElement);
+	}
+
+
+
+	/**
+	 * Parse a shortcode's contents for a tag and apply classes to each instance
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	function addtitle( $finds, $content, $title ) {
+
+		$doc = $this->processdom($content);
+
+		if(!$finds) {
+			$root = $doc->documentElement;
 			$tag = array($root->tagName);
 		}
 
-		// Search the document object for the the tags in $tag
-		foreach ($tag as $find) {
-			$tags = $dom->getElementsByTagName($find);
-
-			// For each tag found, create a new document object and apply our changes
-			foreach ($tags as $find_tag) {
-				$outputdom = new DOMDocument;
-				$new_root = $outputdom->importNode($find_tag, true);
-				$outputdom->appendChild($new_root);
-				if(is_object($outputdom->documentElement)) {
-
-					// Append the classes in $class to the tag's existing classes
-					$outputdom->documentElement->setAttribute(
-						'class',
-						$this->class_output(
-							$this->getCallingFunctionName() . '_tag',
-							$class,
-							$outputdom->documentElement->getAttribute('class')
-						)
-					);
-
-					// If $title was passed, set the title attribute
-					if( $title ) {
-						$outputdom->documentElement->setAttribute(
-							'title',
-							$title
-						);
-					}
-
-					// If $data was passed, set data attributes
-					if( $data ) {
-						$data = explode( '|', $data );
-						foreach( $data as $d ):
-							$d = explode(',',$d);
-							$outputdom->documentElement->setAttribute('data-'.$d[0],trim($d[1]));
-						endforeach;
-					}
-				}
-
-				// Return the modified HTML
-				return $outputdom->saveXML($outputdom->documentElement);
+		foreach( $finds as $found ){
+			$tags = $doc->getElementsByTagName($found);
+			foreach ($tags as $tag) {
+				// Append the classes in $class to the tag's existing classes
+				$tag->setAttribute(
+					'title',
+					$title
+				);
 			}
 		}
+		return $doc->saveHTML($doc->documentElement);
 	}
 
 
