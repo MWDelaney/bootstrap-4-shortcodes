@@ -94,6 +94,9 @@ class Boostrap4Shortcodes {
 
 			'alert',
 
+			'breadcrumb',
+			'active',
+
 		);
 		foreach ( $shortcodes as $shortcode ) {
 			$function = 'bs_' . str_replace( '-', '_', $shortcode );
@@ -111,13 +114,12 @@ class Boostrap4Shortcodes {
 	 */
 	function bs_container( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
-				"fluid"  => false,
 				"class" => false,
 				"data"   => false,
 		), $atts );
 
 		$class	= array();
-		$class[]	= ( $atts['fluid']   == 'true' )  ? 'container-fluid' : 'container';
+		$class[]	= 'container';
 
 		$return = $this->bs_output(
 			sprintf(
@@ -351,12 +353,15 @@ class Boostrap4Shortcodes {
 		$search_tags	= array('figure', 'div', 'img', 'i', 'span');
 		$fallback_tag = 'div';
 
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $search_tags, $content, $object_class, $fallback_tag )
+
 		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
-				$this->addclass( $search_tags, do_shortcode( $content ), $object_class, $fallback_tag )
+				$content
 			)
 		);
 
@@ -412,10 +417,14 @@ class Boostrap4Shortcodes {
 		$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 		$fallback_tag = 'h4';
 
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $search_tags, $content, $class, $fallback_tag )
+		$content = $this->adddata( $search_tags, $content, $atts['data'] );
+
 		$return = $this->bs_output(
 			sprintf(
 				'%s',
-				$this->addclass( $search_tags, do_shortcode( $content ), $class, $fallback_tag )
+				$content
 			)
 		);
 
@@ -441,10 +450,14 @@ class Boostrap4Shortcodes {
 		$class[]	= ( $atts['up'] )		? 'hidden-' . $atts['up'] . '-up': null;
 		$class[]	= ( $atts['down'] )		? 'hidden-' . $atts['down'] . '-down': null;
 
+		$content = do_shortcode( $content );
+		$content = $this->addclass( null, $content, $class )
+		$content = $this->adddata( null, $content, $atts['data'] );
+
 		$return = $this->bs_output(
 			sprintf(
 				'%s',
-				$this->addclass( null, do_shortcode( $content ), $class, null )
+				$content
 			)
 		);
 
@@ -491,6 +504,72 @@ class Boostrap4Shortcodes {
 				'<div class="%s"%s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
+				$content
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	/**
+	 * Breadcrumb shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_breadcrumb( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class"	=> false,
+				"data"	=> false
+		), $atts );
+
+		$class	= array();
+		$class[]	= 'breadcrumb';
+
+		$anchor_class	= array();
+		$anchor_class[]	= "breadcrumb-item";
+
+		$search_tags	= array('a');
+
+		$return = $this->bs_output(
+			sprintf(
+				'<nav class="%s"%s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				$this->addclass( $search_tags, do_shortcode( $content ), $anchor_class )
+			)
+		);
+
+		return $return;
+	}
+
+
+	/**
+	 * Active shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_active( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class"	=> false,
+				"data"	=> false
+		), $atts );
+
+		$class	= array();
+		$class[]	= 'active';
+
+		$search_tags	= array('a');
+
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $search_tags, $content, $class )
+		$content = $this->adddata( $search_tags, $content, $atts['data'] );
+
+		$return = $this->bs_output(
+			sprintf(
+				'$s',
 				$content
 			)
 		);
@@ -668,7 +747,7 @@ class Boostrap4Shortcodes {
 
 
 	/**
-	 * Parse a shortcode's contents for a tag and apply classes to each instance
+	 * Parse a shortcode's contents for a tag and add a specified title to each instance
 	 * @param  [type] $tag     [description]
 	 * @param  [type] $content [description]
 	 * @param  [type] $class   [description]
@@ -688,11 +767,46 @@ class Boostrap4Shortcodes {
 		foreach( $finds as $found ){
 			$tags = $doc->getElementsByTagName($found);
 			foreach ($tags as $tag) {
-				// Append the classes in $class to the tag's existing classes
+				// Set the title attribute
 				$tag->setAttribute(
 					'title',
 					$title
 				);
+			}
+		}
+		return $doc->saveHTML($doc->documentElement);
+	}
+
+
+	/**
+	 * Parse a shortcode's contents for a tag and apply data attribute pairs to each instances
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	function adddata( $finds, $content, $data ) {
+
+		$doc = $this->processdom($content);
+
+		if(!$finds) {
+			$root = $doc->documentElement;
+			$tag = array($root->tagName);
+		}
+
+		foreach( $finds as $found ){
+			$tags = $doc->getElementsByTagName($found);
+			foreach ($tags as $tag) {
+				// Set data attributes
+				if( $data ) {
+					$data = explode( '|', $data );
+					foreach( $data as $d ) {
+						$d = explode(',',$d);
+						$tag->setAttribute('data-'.$d[0],trim($d[1]));
+					}
+				}
 			}
 		}
 		return $doc->saveHTML($doc->documentElement);
