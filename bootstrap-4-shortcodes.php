@@ -252,8 +252,6 @@ class Boostrap4Shortcodes {
 		$class[]	= ( $atts['push-lg']   || $atts['push-lg'] === "0" )        ? ' col-lg-push-' . $atts['push-lg'] : null;
 		$class[]	= ( $atts['push-xl']   || $atts['push-xl'] === "0" )        ? ' col-xl-push-' . $atts['push-xl'] : null;
 
-		$class[]	= ( $atts['xclass'] )                                       ? ' ' . $atts['xclass'] : null;
-
 		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
