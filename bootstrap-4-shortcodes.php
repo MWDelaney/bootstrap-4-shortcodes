@@ -464,6 +464,7 @@ class Boostrap4Shortcodes {
 	function bs_alert( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
 				"type"	=> "info",
+				"dismissible"	=> false,
 				"class" => false,
 				"data"	=> false
 		), $atts );
@@ -471,6 +472,7 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]  = 'alert';
 		$class[]  = 'alert-' . $atts['type'];
+		$class[]	= 'alert-dismissible fade in';
 
 		$link_class	= array();
 		$link_class[]	= 'alert-link';
@@ -484,6 +486,7 @@ class Boostrap4Shortcodes {
 		$content = do_shortcode( $content );
 		$content = $this->addclass( $search_anchors, $content, $link_class );
 		$content = $this->addclass( $search_headings, $content, $heading_class );
+		$content = ($atts['dismissible']) ? '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $content : $content;
 
 		$return = $this->bs_output(
 			sprintf(
