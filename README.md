@@ -63,25 +63,25 @@ The container-fluid component is supported as a discrete shortcode for cases whe
 		[/container]
 	[/container-fluid]
 
-#### [container] parameters
+### [container] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-#### [container-fluid] parameters
+### [container-fluid] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-#### [row] parameters
+### [row] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-#### [column] parameters
+### [column] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 xs | Size of column on extra small screens (less than 768px) | optional | 1-12 | none
@@ -111,7 +111,7 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Media Object
+## Media Object
 	[media]
 		[media-object]
 			...
@@ -122,7 +122,7 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 		[/media-body]
 	[/media]
 
-### Media List
+## Media List
     [media-list]
 		  [media]
 			  [media-object]
@@ -144,13 +144,13 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 		  [/media]
 		[/media-list]
 
-#### [media] parameters
+### [media] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-#### [media-object] parameters
+### [media-object] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 media | Whether the image pulls to the left or right | optional | left, right | left
@@ -160,21 +160,21 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 __NOTE: media-object should contain an image, or linked image, inserted using the WordPress TinyMCE editor__
 
-#### [media-body] parameters
+### [media-body] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-#### [media-heading] parameters
+### [media-heading] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-__NOTE: media-heading should contain heading tag (h1, h2, h3, h4, h5, or h6), inserted using the WordPress TinyMCE editor. If a header tag is not added <h4> will be used__
+__NOTE: media-heading should contain heading tag (h1, h2, h3, h4, h5, or h6), inserted using the WordPress TinyMCE editor. If a header tag is not added h4 will be used__
 
-#### [media-list] parameters
+### [media-list] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
@@ -183,3 +183,16 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 [Bootstrap media objects documentation](http://getbootstrap.com/layout/media-object/)
 
 * * *
+
+## Responsive Utilities
+	[hidden down="sm"]
+    ...
+	[/hidden]
+
+### [hidden] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+up | Hide the contents on this screen size and above | optional | xs, sm, md, lg, xl | none
+down | Hide the contents on this screen size and below | optional | xs, sm, md, lg, xl | none
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
