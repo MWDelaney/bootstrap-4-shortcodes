@@ -230,35 +230,30 @@ class Boostrap4Shortcodes {
 
 		$class	= array();
 
-		$map_classes = array( // 'attribute_name' => 'classname'
-			$atts['xs']	=> 'col-xs',
-			$atts['sm']	=> 'col-sm',
-			$atts['lg']	=> 'col-lg',
-			$atts['xl']	=> 'col-xl',
+		$class[]	= ( $atts['xs'] )		? 'col-xs' . (($atts['xs'] == "flex") ? null : '-' . $atts['xs']) : null;
+		$class[]	= ( $atts['sm'] )		? 'col-sm' . (($atts['sm'] == "flex") ? null : '-' . $atts['sm']) : null;
+		$class[]	= ( $atts['md'] )		? 'col-md' . (($atts['md'] == "flex") ? null : '-' . $atts['md']) : null;
+		$class[]	= ( $atts['lg'] )		? 'col-lg' . (($atts['lg'] == "flex") ? null : '-' . $atts['lg']) : null;
+		$class[]	= ( $atts['xl'] )		? 'col-xl' . (($atts['xl'] == "flex") ? null : '-' . $atts['xl']) : null;
 
-			$atts['offset_xs']	=> 'offset-xs',
-			$atts['offset_sm']	=> 'offset-sm',
-			$atts['offset_lg']	=> 'offset-lg',
-			$atts['offset_xl']	=> 'offset-xl',
+		$class[]	= ( $atts['offset-xs'] || $atts['offset-xs'] === "0" )		? 'col-xs-offset-' . $atts['offset-xs'] : null;
+		$class[]	= ( $atts['offset-sm'] || $atts['offset-sm'] === "0" )		? 'col-sm-offset-' . $atts['offset-sm'] : null;
+		$class[]	= ( $atts['offset-md'] || $atts['offset-md'] === "0" )		? 'col-md-offset-' . $atts['offset-md'] : null;
+		$class[]	= ( $atts['offset-lg'] || $atts['offset-lg'] === "0" )		? 'col-lg-offset-' . $atts['offset-lg'] : null;
+		$class[]	= ( $atts['offset-xl'] || $atts['offset-xl'] === "0" )		? 'col-xl-offset-' . $atts['offset-xl'] : null;
 
-			$atts['pull_xs']	=> 'pull-xs',
-			$atts['pull_sm']	=> 'pull-sm',
-			$atts['pull_lg']	=> 'pull-lg',
-			$atts['pull_xl']	=> 'pull-xl',
+		$class[]	= ( $atts['pull-xs']   || $atts['pull-xs'] === "0" )		? 'col-xs-pull-' . $atts['pull-xs'] : null;
+		$class[]	= ( $atts['pull-sm']   || $atts['pull-sm'] === "0" )		? 'col-sm-pull-' . $atts['pull-sm'] : null;
+		$class[]	= ( $atts['pull-md']   || $atts['pull-md'] === "0" )		? 'col-md-pull-' . $atts['pull-md'] : null;
+		$class[]	= ( $atts['pull-lg']   || $atts['pull-lg'] === "0" )		? 'col-lg-pull-' . $atts['pull-lg'] : null;
+		$class[]	= ( $atts['pull-xl']   || $atts['pull-xl'] === "0" )		? 'col-xl-pull-' . $atts['pull-xl'] : null;
 
-			$atts['push_xs']	=> 'push-xs',
-			$atts['push_sm']	=> 'push-sm',
-			$atts['push_lg']	=> 'push-lg',
-			$atts['push_xl']	=> 'push-xl',
+		$class[]	= ( $atts['push-xs']   || $atts['push-xs'] === "0" )		? 'col-xs-push-' . $atts['push-xs'] : null;
+		$class[]	= ( $atts['push-sm']   || $atts['push-sm'] === "0" )		? 'col-sm-push-' . $atts['push-sm'] : null;
+		$class[]	= ( $atts['push-md']   || $atts['push-md'] === "0" )		? 'col-md-push-' . $atts['push-md'] : null;
+		$class[]	= ( $atts['push-lg']   || $atts['push-lg'] === "0" )		? 'col-lg-push-' . $atts['push-lg'] : null;
+		$class[]	= ( $atts['push-xl']   || $atts['push-xl'] === "0" )		? 'col-xl-push-' . $atts['push-xl'] : null;
 
-		);
-
-		// Loop through all the parameters and build flexbox-friendly Bootstrap classes for them
-		foreach($map_classes as $c) {
-			$out = ( $c[0] ) ?: $c[1];
-			$out .= ( is_numeric($c[0]) ) ?: '-' . $c[0];
-			$class[] = $out;
-		}
 
 		$return = $this->bs_output(
 			sprintf(
@@ -360,7 +355,7 @@ class Boostrap4Shortcodes {
 		$fallback_tag = 'div';
 
 		$content = do_shortcode( $content );
-		$content = $this->addclass( $search_tags, $content, $object_class, $fallback_tag )
+		$content = $this->addclass( $search_tags, $content, $object_class, $fallback_tag );
 
 		$return = $this->bs_output(
 			sprintf(
@@ -424,7 +419,7 @@ class Boostrap4Shortcodes {
 		$fallback_tag = 'h4';
 
 		$content = do_shortcode( $content );
-		$content = $this->addclass( $search_tags, $content, $class, $fallback_tag )
+		$content = $this->addclass( $search_tags, $content, $class, $fallback_tag );
 		$content = $this->adddata( $search_tags, $content, $atts['data'] );
 
 		$return = $this->bs_output(
@@ -457,7 +452,7 @@ class Boostrap4Shortcodes {
 		$class[]	= ( $atts['down'] )		? 'hidden-' . $atts['down'] . '-down': null;
 
 		$content = do_shortcode( $content );
-		$content = $this->addclass( null, $content, $class )
+		$content = $this->addclass( null, $content, $class );
 		$content = $this->adddata( null, $content, $atts['data'] );
 
 		$return = $this->bs_output(
@@ -570,7 +565,7 @@ class Boostrap4Shortcodes {
 		$search_tags	= array('a');
 
 		$content = do_shortcode( $content );
-		$content = $this->addclass( $search_tags, $content, $class )
+		$content = $this->addclass( $search_tags, $content, $class );
 		$content = $this->adddata( $search_tags, $content, $atts['data'] );
 
 		$return = $this->bs_output(

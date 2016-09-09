@@ -27,22 +27,34 @@ The plugin is tested to work with ```Bootstrap 4``` and ```WordPress 4.6``` and 
 
 ## Grid
 	[row]
-		[column md="6"]
+		[column sm="6"]
 			...
 		[/column]
-		[column md="6"]
+		[column sm="6"]
 			...
 		[/column]
 	[/row]
+
+Flexbox columns are supported by using "flex" rather than a column width.
+
+	## Grid
+		[row]
+			[column xs="flex"]
+				...
+			[/column]
+			[column xs="flex"]
+				...
+			[/column]
+		[/row]
 
 The container component is also supported in case your theme doesn't include a container.
 
 	[container]
 		[row]
-			[column md="6"]
+			[column sm="6"]
 				...
 			[/column]
-			[column md="6"]
+			[column sm="6"]
 				...
 			[/column]
 		[/row]
@@ -53,10 +65,10 @@ The container-fluid component is supported as a discrete shortcode for cases whe
 	[container-fluid]
 		[container]
 			[row]
-				[column md="6"]
+				[column sm="6"]
 					...
 				[/column]
-				[column md="6"]
+				[column sm="6"]
 					...
 				[/column]
 			[/row]
@@ -84,11 +96,11 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 ### [column] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
-xs | Size of column on extra small screens (less than 768px) | optional | 1-12 | none
-sm | Size of column on small screens (greater than 768px) | optional | 1-12 | none
-md | Size of column on medium screens (greater than 992px) | optional | 1-12 | none
-lg | Size of column on large screens (greater than 1200px) | optional | 1-12 | none
-xl | Size of column on extra large screens (greater than 1200px) | optional | 1-12 | none
+xs | Size of column on extra small screens (less than 768px) | optional | 1-12, flex | none
+sm | Size of column on small screens (greater than 768px) | optional | 1-12, flex | none
+md | Size of column on medium screens (greater than 992px) | optional | 1-12, flex | none
+lg | Size of column on large screens (greater than 1200px) | optional | 1-12, flex | none
+xl | Size of column on extra large screens (greater than 1200px) | optional | 1-12, flex | none
 offset_xs | Offset on extra small screens | optional | 1-12 | none
 offset_sm | Offset on small screens | optional | 1-12 | none
 offset_md | Offset on column on medium screens | optional | 1-12 | none
