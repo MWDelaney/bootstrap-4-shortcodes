@@ -19,7 +19,7 @@ The plugin is tested to work with ```Bootstrap 4``` and ```WordPress 4.6``` and 
 ### Layout
 * [Grid](#grid)
 * [Media Object](#media-object)
-* [Responsive Utilities](#responsive-Utilities)
+* [Responsive Utilities](#responsive-utilities)
 
 # Usage and Examples
 
@@ -180,14 +180,14 @@ Parameter | Description | Required | Values | Default
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-[Bootstrap media objects documentation](http://getbootstrap.com/layout/media-object/)
+[Bootstrap media object documentation](http://getbootstrap.com/layout/media-object/)
 
 * * *
 
 ## Responsive Utilities
 	[hidden down="sm"]
     ...
-	[/hidden]
+	[/hidden]g
 
 ### [hidden] parameters
 Parameter | Description | Required | Values | Default
@@ -196,3 +196,5 @@ up | Hide the contents on this screen size and above | optional | xs, sm, md, lg
 down | Hide the contents on this screen size and below | optional | xs, sm, md, lg, xl | none
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+[Bootstrap media objects documentation](http://getbootstrap.com/layout/responsive-utilities/)

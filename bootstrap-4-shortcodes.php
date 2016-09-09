@@ -200,59 +200,65 @@ class Boostrap4Shortcodes {
 	 */
 	function bs_column( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
-				"xs"          => false,
-				"sm"          => false,
-				"md"          => false,
-				"lg"          => false,
-				"xl"          => false,
+				"xs"	=> false,
+				"sm"	=> false,
+				"md"	=> false,
+				"lg"	=> false,
+				"xl"	=> false,
 
-				"offset-xs"   => false,
-				"offset-sm"   => false,
-				"offset-md"   => false,
-				"offset-lg"   => false,
-				"offset-xl"   => false,
+				"offset-xs"	=> false,
+				"offset-sm"	=> false,
+				"offset-md"	=> false,
+				"offset-lg"	=> false,
+				"offset-xl"	=> false,
 
-				"pull-xs"     => false,
-				"pull-sm"     => false,
-				"pull-md"     => false,
-				"pull-lg"     => false,
-				"pull-xl"     => false,
+				"pull-xs"	=> false,
+				"pull-sm"	=> false,
+				"pull-md"	=> false,
+				"pull-lg"	=> false,
+				"pull-xl"	=> false,
 
-				"push-xs"     => false,
-				"push-sm"     => false,
-				"push-md"     => false,
-				"push-lg"     => false,
-				"push-xl"     => false,
+				"push-xs"	=> false,
+				"push-sm"	=> false,
+				"push-md"	=> false,
+				"push-lg"	=> false,
+				"push-xl"	=> false,
 
-				"class"      => false,
-				"data"        => false
+				"class"	=> false,
+				"data"	=> false
 		), $atts );
 
 		$class	= array();
 
-		$class[]	= ( $atts['xs'] )			                                			? ' col-xs-' . $atts['xs'] : null;
-		$class[]	= ( $atts['sm'] )                                           ? ' col-sm-' . $atts['sm'] : null;
-		$class[]	= ( $atts['md'] )                                           ? ' col-md-' . $atts['md'] : null;
-		$class[]	= ( $atts['lg'] )                                           ? ' col-lg-' . $atts['lg'] : null;
-		$class[]	= ( $atts['xl'] )                                           ? ' col-xl-' . $atts['xl'] : null;
+		$map_classes = array( // 'attribute_name' => 'classname'
+			$atts['xs']	=> 'col-xs',
+			$atts['sm']	=> 'col-sm',
+			$atts['lg']	=> 'col-lg',
+			$atts['xl']	=> 'col-xl',
 
-		$class[]	= ( $atts['offset-xs'] || $atts['offset-xs'] === "0" )      ? ' col-xs-offset-' . $atts['offset-xs'] : null;
-		$class[]	= ( $atts['offset-sm'] || $atts['offset-sm'] === "0" )      ? ' col-sm-offset-' . $atts['offset-sm'] : null;
-		$class[]	= ( $atts['offset-md'] || $atts['offset-md'] === "0" )      ? ' col-md-offset-' . $atts['offset-md'] : null;
-		$class[]	= ( $atts['offset-lg'] || $atts['offset-lg'] === "0" )      ? ' col-lg-offset-' . $atts['offset-lg'] : null;
-		$class[]	= ( $atts['offset-xl'] || $atts['offset-xl'] === "0" )      ? ' col-xl-offset-' . $atts['offset-xl'] : null;
+			$atts['offset_xs']	=> 'offset-xs',
+			$atts['offset_sm']	=> 'offset-sm',
+			$atts['offset_lg']	=> 'offset-lg',
+			$atts['offset_xl']	=> 'offset-xl',
 
-		$class[]	= ( $atts['pull-xs']   || $atts['pull-xs'] === "0" )        ? ' col-xs-pull-' . $atts['pull-xs'] : null;
-		$class[]	= ( $atts['pull-sm']   || $atts['pull-sm'] === "0" )        ? ' col-sm-pull-' . $atts['pull-sm'] : null;
-		$class[]	= ( $atts['pull-md']   || $atts['pull-md'] === "0" )        ? ' col-md-pull-' . $atts['pull-md'] : null;
-		$class[]	= ( $atts['pull-lg']   || $atts['pull-lg'] === "0" )        ? ' col-lg-pull-' . $atts['pull-lg'] : null;
-		$class[]	= ( $atts['pull-xl']   || $atts['pull-xl'] === "0" )        ? ' col-xl-pull-' . $atts['pull-xl'] : null;
+			$atts['pull_xs']	=> 'pull-xs',
+			$atts['pull_sm']	=> 'pull-sm',
+			$atts['pull_lg']	=> 'pull-lg',
+			$atts['pull_xl']	=> 'pull-xl',
 
-		$class[]	= ( $atts['push-xs']   || $atts['push-xs'] === "0" )        ? ' col-xs-push-' . $atts['push-xs'] : null;
-		$class[]	= ( $atts['push-sm']   || $atts['push-sm'] === "0" )        ? ' col-sm-push-' . $atts['push-sm'] : null;
-		$class[]	= ( $atts['push-md']   || $atts['push-md'] === "0" )        ? ' col-md-push-' . $atts['push-md'] : null;
-		$class[]	= ( $atts['push-lg']   || $atts['push-lg'] === "0" )        ? ' col-lg-push-' . $atts['push-lg'] : null;
-		$class[]	= ( $atts['push-xl']   || $atts['push-xl'] === "0" )        ? ' col-xl-push-' . $atts['push-xl'] : null;
+			$atts['push_xs']	=> 'push-xs',
+			$atts['push_sm']	=> 'push-sm',
+			$atts['push_lg']	=> 'push-lg',
+			$atts['push_xl']	=> 'push-xl',
+
+		);
+
+		// Loop through all the parameters and build flexbox-friendly Bootstrap classes for them
+		foreach($map_classes as $c) {
+			$out = ( $c[0] ) ?: $c[1];
+			$out .= ( is_numeric($c[0]) ) ?: '-' . $c[0];
+			$class[] = $out;
+		}
 
 		$return = $this->bs_output(
 			sprintf(
