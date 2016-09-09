@@ -208,6 +208,8 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 [Bootstrap media objects documentation](http://getbootstrap.com/layout/responsive-utilities/)
 
+* * *
+
 ### Buttons
 Wrap any link in `[button]` to give it button properties and classes.
 
@@ -226,11 +228,10 @@ Set `block` flag  for block-style buttons
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 type | The type of the button | optional | default, primary, success, info, warning, danger, link | default
+:triangular_flag_on_post: block | Flag whether the button should be a block-level button | optional | N/A | false
+:triangular_flag_on_post: disabled | Flag whether the button be disabled | optional | N/A | false
 size | The size of the button | optional | sm, lg | none
-block | Flag whether the button should be a block-level button | optional | N/A | false
-disabled | Flag whether the button be disabled | optional | N/A | false
 class | Any extra classes you want to add | optional | any text | none
-target | Target for the link | optional | any valid target | none
-data | Data attribute and value pairs separated by a comma. Pairs separated by pipe (see example at [Button Dropdowns](#button-dropdowns)). | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
 [Bootstrap button documentation](http://getbootstrap.com/css/#buttons)
