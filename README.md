@@ -37,15 +37,14 @@ The plugin is tested to work with ```Bootstrap 4``` and ```WordPress 4.6``` and 
 
 Flexbox columns are supported by using "flex" rather than a column width.
 
-	## Grid
-		[row]
+    [row]
 			[column xs="flex"]
 				...
 			[/column]
 			[column xs="flex"]
 				...
 			[/column]
-		[/row]
+    [/row]
 
 The container component is also supported in case your theme doesn't include a container.
 
@@ -60,19 +59,17 @@ The container component is also supported in case your theme doesn't include a c
 		[/row]
 	[/container]
 
-The container-fluid component is supported as a discrete shortcode for cases where you want to wrap a container.
+The container-fluid component is supported as a discrete shortcode.
 
 	[container-fluid]
-		[container]
-			[row]
-				[column sm="6"]
-					...
-				[/column]
-				[column sm="6"]
-					...
-				[/column]
-			[/row]
-		[/container]
+		[row]
+			[column sm="6"]
+				...
+			[/column]
+			[column sm="6"]
+				...
+			[/column]
+		[/row]
 	[/container-fluid]
 
 ### [container] parameters
@@ -210,3 +207,30 @@ class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
 [Bootstrap media objects documentation](http://getbootstrap.com/layout/responsive-utilities/)
+
+### Buttons
+Wrap any link in `[button]` to give it button properties and classes.
+
+	[button type="primary"] ... [/button]
+
+Set button sizes with the `size` parameter
+
+    [button type="primary" size="lg"] ... [/button]
+
+Set `block` flag  for block-style buttons
+
+		[button type="primary" block] ... [/button]
+
+
+#### [button] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+type | The type of the button | optional | default, primary, success, info, warning, danger, link | default
+size | The size of the button | optional | sm, lg | none
+block | Flag whether the button should be a block-level button | optional | N/A | false
+disabled | Flag whether the button be disabled | optional | N/A | false
+class | Any extra classes you want to add | optional | any text | none
+target | Target for the link | optional | any valid target | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe (see example at [Button Dropdowns](#button-dropdowns)). | optional | any text | none
+
+[Bootstrap button documentation](http://getbootstrap.com/css/#buttons)

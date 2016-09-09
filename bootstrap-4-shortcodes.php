@@ -97,6 +97,8 @@ class Boostrap4Shortcodes {
 			'breadcrumb',
 			'active',
 
+			'button',
+
 		);
 		foreach ( $shortcodes as $shortcode ) {
 			$function = 'bs_' . str_replace( '-', '_', $shortcode );
@@ -570,13 +572,58 @@ class Boostrap4Shortcodes {
 
 		$return = $this->bs_output(
 			sprintf(
-				'$s',
+				'%s',
 				$content
 			)
 		);
 
 		return $return;
 	}
+
+
+
+	/**
+	 * Button shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_button( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+			"type"			=> false,
+			"size"			=> false,
+			"dropdown"	=> false,
+			"target"		=> false,
+			"class"			=> false,
+			"title"			=> false,
+			"data"			=> false
+		), $save_atts );
+		print_r($save_atts);
+		$class	= array();
+		$class[]	= 'btn';
+		$class[]  = 'btn-' . $atts['type'];
+		$class[]	= ($this->is_flag('block', $save_atts)) ? 'btn-block' : null;
+		$class[]	= ($this->is_flag('active', $save_atts)) ? 'active' : null;
+		$class[]	= ($this->is_flag('disabled', $save_atts)) ? 'disabled' : null;
+
+		$search_tags	= array('a', 'button', 'input');
+
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $search_tags, $content, $class );
+		$content = $this->adddata( $search_tags, $content, $atts['data'] );
+		if ($this->is_flag('disabled', $atts))
+			$content = $this->addaria( $search_tags, $content, 'disabled', 'true' );
+
+		$return = $this->bs_output(
+			sprintf(
+				'%s',
+				$content
+			)
+		);
+
+		return $return;
+	}
+
 
 
 	/**
@@ -639,6 +686,20 @@ class Boostrap4Shortcodes {
 	function class_output($name, $class, $xclass = array()) {
 		$class = $this->xclass($class, $xclass);
 		return esc_attr(trim(implode(' ', apply_filters( $name . '_shortcode_classes', $class ))));
+	}
+
+
+	/**
+	 * Check if a particular parameter is set as a flag (a parameter without a value) in a shortcode
+	 * @param  string  $flag the flag we're looking for
+	 * @param  array  $atts  an array of the shortcode's attributes
+	 * @return boolean       [description]
+	 */
+	function is_flag( $flag, $atts ) {
+		foreach ( $atts as $key => $value ) {
+			if ( $value === $flag && is_int( $key ) ) return true;
+		}
+		return false;
 	}
 
 
@@ -777,6 +838,40 @@ class Boostrap4Shortcodes {
 		}
 		return $doc->saveHTML($doc->documentElement);
 	}
+
+
+
+	/**
+	 * Parse a shortcode's contents for a tag and add a specified area attributes to each instance
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	function addaria( $finds, $content, $aria, $value ) {
+
+		$doc = $this->processdom($content);
+
+		if(!$finds) {
+			$root = $doc->documentElement;
+			$tag = array($root->tagName);
+		}
+
+		foreach( $finds as $found ){
+			$tags = $doc->getElementsByTagName($found);
+			foreach ($tags as $tag) {
+				// Set the title attribute
+				$tag->setAttribute(
+					'title' . $aria,
+					$value
+				);
+			}
+		}
+		return $doc->saveHTML($doc->documentElement);
+	}
+
 
 
 	/**
