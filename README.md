@@ -26,51 +26,51 @@ The plugin is tested to work with ```Bootstrap 4``` and ```WordPress 4.6``` and 
 ## Layout
 
 ## Grid
-	[row]
-		[column sm="6"]
-			...
-		[/column]
-		[column sm="6"]
-			...
-		[/column]
-	[/row]
+    [row]
+      [column sm="6"]
+        ...
+      [/column]
+      [column sm="6"]
+        ...
+      [/column]
+    [/row]
 
 Flexbox columns are supported by using "flex" rather than a column width.
 
     [row]
-			[column xs="flex"]
-				...
-			[/column]
-			[column xs="flex"]
-				...
-			[/column]
+      [column xs="flex"]
+        ...
+      [/column]
+      [column xs="flex"]
+        ...
+      [/column]
     [/row]
 
 The container component is also supported in case your theme doesn't include a container.
 
-	[container]
-		[row]
-			[column sm="6"]
-				...
-			[/column]
-			[column sm="6"]
-				...
-			[/column]
-		[/row]
-	[/container]
+    [container]
+      [row]
+        [column sm="6"]
+          ...
+        [/column]
+        [column sm="6"]
+          ...
+        [/column]
+      [/row]
+    [/container]
 
 The container-fluid component is supported as a discrete shortcode.
 
-	[container-fluid]
-		[row]
-			[column sm="6"]
-				...
-			[/column]
-			[column sm="6"]
-				...
-			[/column]
-		[/row]
-	[/container-fluid]
+    [container-fluid]
+      [row]
+        [column sm="6"]
+          ...
+        [/column]
+        [column sm="6"]
+          ...
+        [/column]
+      [/row]
+    [/container-fluid]
 
 ### [container] parameters
 Parameter | Description | Required | Values | Default
@@ -121,37 +121,37 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 * * *
 
 ## Media Object
-	[media]
-		[media-object]
-			...
-		[/media-object]
-		[media-body]
-		  [media-heading] ... [/media-heading]
-			...
-		[/media-body]
-	[/media]
+    [media]
+      [media-object]
+        ...
+      [/media-object]
+      [media-body]
+        [media-heading] ... [/media-heading]
+        ...
+      [/media-body]
+    [/media]
 
 ## Media List
     [media-list]
-		  [media]
-			  [media-object]
-				  ...
-			  [/media-object]
-			  [media-body]
-			    [media-heading] ... [/media-heading]
-				  ...
-			  [/media-body]
-		  [/media]
+      [media]
+        [media-object]
+          ...
+        [/media-object]
+        [media-body]
+          [media-heading] ... [/media-heading]
+          ...
+        [/media-body]
+      [/media]
 			[media]
-			  [media-object]
-				  ...
-			  [/media-object]
-			  [media-body]
-			    [media-heading] ... [/media-heading]
-				  ...
-			  [/media-body]
-		  [/media]
-		[/media-list]
+        [media-object]
+          ...
+        [/media-object]
+        [media-body]
+          [media-heading] ... [/media-heading]
+          ...
+        [/media-body]
+      [/media]
+    [/media-list]
 
 ### [media] parameters
 Parameter | Description | Required | Values | Default
@@ -194,9 +194,7 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 * * *
 
 ## Responsive Utilities
-	[hidden down="sm"]
-    ...
-	[/hidden]g
+	[hidden down="sm"] ... [/hidden]
 
 ### [hidden] parameters
 Parameter | Description | Required | Values | Default
@@ -210,28 +208,99 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Buttons
-Wrap any link in `[button]` to give it button properties and classes.
+## Buttons
+Wrap any `a`, `button`, or `input` tag inserted via the WordPress editor in `[button]` to give it button properties and classes.
 
 	[button type="primary"] ... [/button]
 
 Set button sizes with the `size` parameter
 
-    [button type="primary" size="lg"] ... [/button]
+	[button type="primary" size="lg"] ... [/button]
 
 Set `block` flag  for block-style buttons
 
-		[button type="primary" block] ... [/button]
+	[button type="primary" block] ... [/button]
 
 
-#### [button] parameters
+### [button] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
-type | The type of the button | optional | default, primary, success, info, warning, danger, link | default
-:triangular_flag_on_post: block | Flag whether the button should be a block-level button | optional | N/A | false
-:triangular_flag_on_post: disabled | Flag whether the button be disabled | optional | N/A | false
+type | The type of the button | optional | default, primary, success, info, warning, danger, link | primary
+block | Flag whether the button should be a block-level button | optional | :triangular_flag_on_post: (flag) | false
+disabled | Flag whether the button be disabled | optional | :triangular_flag_on_post: (flag) | false
 size | The size of the button | optional | sm, lg | none
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
-[Bootstrap button documentation](http://getbootstrap.com/css/#buttons)
+[Bootstrap button documentation](http://getbootstrap.com/components/buttons/)
+
+* * *
+
+## Button Groups
+Remember that `[button]` must wrap an `a`, `button`, or `input` tag inserted via the WordPress editor.
+
+### Basic example
+    [button-group]
+      [button type="secondary"] ... [/button]
+      [button type="secondary"] ... [/button]
+      [button type="secondary"] ... [/button]
+    [/button-group]
+
+Set the `vertical` flag to make the buttons appear vertically stacked rather than horizontally.
+
+    [button-group]
+      [button type="secondary"] ... [/button]
+      [button type="secondary"] ... [/button]
+      [button type="secondary"] ... [/button]
+    [/button-group]
+
+### Button toolbar
+    [button-toolbar]
+      [button-group]
+        [button type="secondary"] ... [/button]
+        [button type="secondary"] ... [/button]
+        [button type="secondary"] ... [/button]
+      [/button-group]
+        [button-group]
+        [button type="secondary"] ... [/button]
+        [button type="secondary"] ... [/button]
+        [button type="secondary"] ... [/button]
+      [/button-group]
+      [button-group]
+        [button type="secondary"] ... [/button]
+      [/button-group]
+    [/button-toolbar]
+
+### [button-group] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+size | The size of the button group | optional | sm, lg | none
+vertical | Whether button group is vertical | optional | :triangular_flag_on_post: (flag) | false
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+### [button-toolbar] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+[Bootstrap button groups documentation](http://getbootstrap.com/components/button-group/)
+
+* * *
+
+## Cards
+
+	[button type="primary"] ... [/button]
+
+
+
+### [card] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+type | The type of the button | optional | default, primary, success, info, warning, danger, link | primary
+block | Flag whether the button should be a block-level button | optional | :triangular_flag_on_post: (flag) | false
+disabled | Flag whether the button be disabled | optional | :triangular_flag_on_post: (flag) | false
+size | The size of the button | optional | sm, lg | none
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none

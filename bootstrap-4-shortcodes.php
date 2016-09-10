@@ -98,6 +98,11 @@ class Boostrap4Shortcodes {
 			'active',
 
 			'button',
+			'button-group',
+			'button-toolbar',
+
+			'card',
+			'card-block'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -538,7 +543,7 @@ class Boostrap4Shortcodes {
 
 		$return = $this->bs_output(
 			sprintf(
-				'<nav class="%s"%s>%s</div>',
+				'<nav class="%s"%s>%s</nav>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
 				$this->addclass( $search_tags, do_shortcode( $content ), $anchor_class )
@@ -590,10 +595,8 @@ class Boostrap4Shortcodes {
 	 */
 	function bs_button( $save_atts, $content = null ) {
 		$atts = shortcode_atts( array(
-			"type"			=> false,
+			"type"			=> 'primary',
 			"size"			=> false,
-			"dropdown"	=> false,
-			"target"		=> false,
 			"class"			=> false,
 			"title"			=> false,
 			"data"			=> false
@@ -602,6 +605,7 @@ class Boostrap4Shortcodes {
 		$class	= array();
 		$class[]	= 'btn';
 		$class[]  = 'btn-' . $atts['type'];
+		$class[]  = ($atts['size']) ? 'btn-' . $atts['size'] : null;
 		$class[]	= ($this->is_flag('block', $save_atts)) ? 'btn-block' : null;
 		$class[]	= ($this->is_flag('active', $save_atts)) ? 'active' : null;
 		$class[]	= ($this->is_flag('disabled', $save_atts)) ? 'disabled' : null;
@@ -618,6 +622,150 @@ class Boostrap4Shortcodes {
 			sprintf(
 				'%s',
 				$content
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	/**
+	 * Button Group shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_button_group( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"size"	=> false,
+				"class"	=> false,
+				"data"	=> false
+		), $save_atts );
+
+		$class	= array();
+		$class[]	= 'btn-group';
+		$class[]  = ($atts['size']) ? 'btn-group-' . $atts['size'] : null;
+		$class[]	= ($this->is_flag('vertical', $save_atts)) ? 'btn-group-vertical' : null;
+
+		$return = $this->bs_output(
+			sprintf(
+				'<div class="%s" role="group" %s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				do_shortcode( $content )
+			)
+		);
+
+		return $return;
+	}
+
+
+	/**
+	 * Button Toolbar shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_button_toolbar( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class"	=> false,
+				"data"	=> false
+		), $atts );
+
+		$class	= array();
+		$class[]	= 'btn-toolbar';
+
+		$return = $this->bs_output(
+			sprintf(
+				'<div class="%s" role="toolbar" %s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				do_shortcode( $content )
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	/**
+	 * Card shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_card( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"type"	=> false,
+				"class"	=> false,
+				"data"	=> false
+		), $save_atts );
+
+		$class	= array();
+		$class[]	= 'card';
+		$class[]  = ($atts['type']) ? 'card-' . $atts['type'] : null;
+		$class[]	= ($this->is_flag('inverse', $save_atts)) ? 'card-inverse' : null;
+
+		$first_img_class = array();
+		$first_img_class[] = 'card-img-top';
+		$first_img_tags	= array('img');
+
+		$last_img_class = array();
+		$last_img_class[] = 'card-img-bottom';
+		$last_img_tags	= array('img');
+
+		$content = do_shortcode( $content );
+		$content = $this->classfirstchild( $first_img_tags, $content, $first_img_class );
+		$content = $this->classlastchild( $last_img_tags, $content, $last_img_class );
+
+		$return = $this->bs_output(
+			sprintf(
+				'<div class="%s" %s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				$content
+			)
+		);
+
+		return $return;
+	}
+
+
+	/**
+	 * Card Block shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_card_block( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class"	=> false,
+				"data"	=> false
+		), $save_atts );
+
+		$class	= array();
+		$class[]	= 'card-block';
+
+		$p_class = array();
+		$p_class[] = 'card-text';
+		$p_tags	= array('p');
+
+		$blockquote_class = array();
+		$blockquote_class[] = 'card-blockquote';
+		$blockquote_tags	= array('blockquote');
+
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $p_tags, $content, $p_class );
+		$content = $this->addclass( $blockquote_tags, $content, $blockquote_class );
+
+		$return = $this->bs_output(
+			sprintf(
+				'<div class="%s" %s>%s</div>',
+				$this->class_output(__FUNCTION__, $class, $atts['class']),
+				$this->parse_data_attributes( $atts['data'] ),
+				do_shortcode( $content )
 			)
 		);
 
@@ -696,10 +844,12 @@ class Boostrap4Shortcodes {
 	 * @return boolean       [description]
 	 */
 	function is_flag( $flag, $atts ) {
-		foreach ( $atts as $key => $value ) {
-			if ( $value === $flag && is_int( $key ) ) return true;
+		if(is_array($atts)) {
+			foreach ( $atts as $key => $value ) {
+				if ( $value === $flag && is_int( $key ) ) return true;
+			}
+			return false;
 		}
-		return false;
 	}
 
 
@@ -763,13 +913,90 @@ class Boostrap4Shortcodes {
 
 	 $tag = ($tag) ? $tag : 'div';
 
-	 // If there's no root element, set it to $default
+	 // If there's no root element, set it to $tag
 	 if(!$doc->documentElement) {
 			 $element = $doc->createElement($tag, utf8_encode($content));
 			 $doc->appendChild($element);
 		}
 		return $doc;
 	}
+
+
+
+	/**
+	 * Parse a shortcode's contents for a tag that is the first child of its parent, add a class to it
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	function classfirstchild( $finds, $content, $class, $fallback_tag = null ) {
+
+		$doc = $this->processdom($content, $fallback_tag);
+
+		if(!$finds) {
+			$root = $doc->documentElement;
+			$finds = array($root->tagName);
+		}
+
+		foreach( $finds as $found ){
+			$tags = $doc->getElementsByTagName($found);
+			if($tags->length) {
+				$tag = $tags->item(0);
+				// Append the classes in $class to the tag's existing classes
+				$tag->setAttribute(
+					'class',
+					$this->class_output(
+						$this->getCallingFunctionName() . '_addclass',
+						$class,
+						$tag->getAttribute('class')
+					)
+				);
+			}
+		}
+		return $doc->saveHTML($doc->documentElement);
+	}
+
+
+
+	/**
+	 * Parse a shortcode's contents for a tag that is the first child of its parent, add a class to it
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	function classlastchild( $finds, $content, $class, $fallback_tag = null ) {
+
+		$doc = $this->processdom($content, $fallback_tag);
+
+		if(!$finds) {
+			$root = $doc->documentElement;
+			$finds = array($root->tagName);
+		}
+
+		foreach( $finds as $found ){
+			$tags = $doc->getElementsByTagName($found);
+			if($tags->length) {
+				$tag = $tags->item($tags->length - 1);
+				// Append the classes in $class to the tag's existing classes
+				$tag->setAttribute(
+					'class',
+					$this->class_output(
+						$this->getCallingFunctionName() . '_addclass',
+						$class,
+						$tag->getAttribute('class')
+					)
+				);
+			}
+		}
+		return $doc->saveHTML($doc->documentElement);
+	}
+
 
 	/**
 	 * Parse a shortcode's contents for a tag and apply classes to each instance
