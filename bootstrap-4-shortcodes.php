@@ -102,7 +102,10 @@ class Boostrap4Shortcodes {
 			'button-toolbar',
 
 			'card',
-			'card-block'
+			'card-block',
+			'card-title',
+			'card-subtitle'
+
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -775,6 +778,74 @@ class Boostrap4Shortcodes {
 
 
 	/**
+	 * Card title shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_card_title( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+		), $atts );
+
+		$class	= array();
+		$class[]  = 'card-title';
+
+		$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+		$fallback_tag = 'h4';
+
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $search_tags, $content, $class, $fallback_tag );
+		$content = $this->adddata( $search_tags, $content, $atts['data'] );
+
+		$return = $this->bs_output(
+			sprintf(
+				'%s',
+				$content
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	/**
+	 * Card subtitle shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_card_subtitle( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+		), $atts );
+
+		$class	= array();
+		$class[]  = 'card-subtitle';
+
+		$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+		$fallback_tag = 'h6';
+
+		$content = do_shortcode( $content );
+		$content = $this->addclass( $search_tags, $content, $class, $fallback_tag );
+		$content = $this->adddata( $search_tags, $content, $atts['data'] );
+
+		$return = $this->bs_output(
+			sprintf(
+				'%s',
+				$content
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	/**
 	 * Get the name of the function that called the current function
 	 * @param  boolean $completeTrace [description]
 	 * @return string                 The calling function's name
@@ -907,7 +978,7 @@ class Boostrap4Shortcodes {
 	 // Hide warnings while we run this function
 	 $previous_value = libxml_use_internal_errors(TRUE);
 	 $doc = new DOMDocument();
-	 $doc->loadHTML($content);
+	 $doc->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 	 libxml_clear_errors();
 	 libxml_use_internal_errors($previous_value);
 
@@ -935,17 +1006,15 @@ class Boostrap4Shortcodes {
 	function classfirstchild( $finds, $content, $class, $fallback_tag = null ) {
 
 		$doc = $this->processdom($content, $fallback_tag);
+		$xpath = new DOMXPath($doc);
 
 		if(!$finds) {
 			$root = $doc->documentElement;
 			$finds = array($root->tagName);
 		}
-
 		foreach( $finds as $found ){
-			$tags = $doc->getElementsByTagName($found);
-			if($tags->length) {
-				$tag = $tags->item(0);
-				// Append the classes in $class to the tag's existing classes
+			foreach ($xpath->query('*[1]//' . $found) as $tag) {
+			// Append the classes in $class to the tag's existing classes
 				$tag->setAttribute(
 					'class',
 					$this->class_output(
@@ -960,7 +1029,6 @@ class Boostrap4Shortcodes {
 	}
 
 
-
 	/**
 	 * Parse a shortcode's contents for a tag that is the first child of its parent, add a class to it
 	 * @param  [type] $tag     [description]
@@ -973,17 +1041,15 @@ class Boostrap4Shortcodes {
 	function classlastchild( $finds, $content, $class, $fallback_tag = null ) {
 
 		$doc = $this->processdom($content, $fallback_tag);
+		$xpath = new DOMXPath($doc);
 
 		if(!$finds) {
 			$root = $doc->documentElement;
 			$finds = array($root->tagName);
 		}
-
 		foreach( $finds as $found ){
-			$tags = $doc->getElementsByTagName($found);
-			if($tags->length) {
-				$tag = $tags->item($tags->length - 1);
-				// Append the classes in $class to the tag's existing classes
+			foreach ($xpath->query('*[last()]//' . $found) as $tag) {
+			// Append the classes in $class to the tag's existing classes
 				$tag->setAttribute(
 					'class',
 					$this->class_output(
