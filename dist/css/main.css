@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'bss4wp';
+  src: url("../fonts/Bootstrap-Shortcodes-for-WordPress.eot?-o1r0ap") format("embedded-opentype");
+  src: url("../fonts/Bootstrap-Shortcodes-for-WordPress.eot?#iefix-o1r0ap") format("embedded-opentype"), url("../fonts/Bootstrap-Shortcodes-for-WordPress.woff?-o1r0ap") format("woff"), url("../fonts/Bootstrap-Shortcodes-for-WordPress.ttf?-o1r0ap") format("truetype"), url("../fonts/Bootstrap-Shortcodes-for-WordPress.svg?-o1r0ap#Bootstrap-Shortcodes-for-WordPress") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.bs_bootstrap-logo {
+  padding: 0 3px; }
+
+.wp-media-buttons .bootstrap-shortcodes-button {
+  transition: all 0.2s;
+  background-color: #4e396f;
+  border-color: #cdbfe3;
+  border-radius: 5px;
+  color: #cdbfe3 !important;
+  padding: 0;
+  text-align: center; }
+  .wp-media-buttons .bootstrap-shortcodes-button span.bs_bootstrap-logo:before {
+    transition: all 0.2s;
+    color: #cdbfe3 !important; }
+  .wp-media-buttons .bootstrap-shortcodes-button:hover {
+    background-color: #cdbfe3;
+    border-color: #cdbfe3; }
+    .wp-media-buttons .bootstrap-shortcodes-button:hover span.bs_bootstrap-logo:before {
+      color: #4e396f !important; }
+
+.wp-media-buttons .add_media span.bs_bootstrap-logo:before,
+.mce-i-bootstrap-shortcodes:before {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+  content: "B" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  top: -3px;
+  border-color: #cdbfe3;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+#wp_fs_bootstrap-shortcodes {
+  font-size: 14px !important; }

@@ -11,13 +11,22 @@
     "url": "git+https://github.com/MWDelaney/bootstrap-4-shortcodes.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MWDelaney/bootstrap-4-shortcodes/issues"
   },
   "homepage": "https://github.com/MWDelaney/bootstrap-4-shortcodes#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-markdown": "^1.2.0"
+    "gulp-markdown": "^1.2.0",
+		"del": "^2.2.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.1",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.0",
+    "wiredep": "^4.0.0"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }

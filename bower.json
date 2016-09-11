@@ -1,0 +1,13 @@
+{
+	"name": "bootstrap-4-shortcodes",
+	"homepage": "",
+	"authors": [
+		"M. W. Delaney"
+	],
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+	},
+	"overrides": {
+	}
+}
