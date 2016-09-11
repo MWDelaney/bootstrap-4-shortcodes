@@ -15,15 +15,13 @@
 .wp-media-buttons {
 	.bootstrap-shortcodes-button {
 		transition: all 0.2s;
-		background-color: $bs4-primary;
-		border-color: $bs4-text;
 		border-radius: 5px;
-		color: $bs4-text !important;
+		color: $bs4-primary !important;
 		padding: 0;
 		text-align: center;
 		span.bs_bootstrap-logo:before {
 			transition: all 0.2s;
-			color: $bs4-text !important;
+			color: $bs4-primary !important;
 		}
 		&:hover {
 			background-color: $bs4-text;

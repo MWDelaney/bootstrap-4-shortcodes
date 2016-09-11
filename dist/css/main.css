@@ -10,15 +10,13 @@
 
 .wp-media-buttons .bootstrap-shortcodes-button {
   transition: all 0.2s;
-  background-color: #4e396f;
-  border-color: #cdbfe3;
   border-radius: 5px;
-  color: #cdbfe3 !important;
+  color: #4e396f !important;
   padding: 0;
   text-align: center; }
   .wp-media-buttons .bootstrap-shortcodes-button span.bs_bootstrap-logo:before {
     transition: all 0.2s;
-    color: #cdbfe3 !important; }
+    color: #4e396f !important; }
   .wp-media-buttons .bootstrap-shortcodes-button:hover {
     background-color: #cdbfe3;
     border-color: #cdbfe3; }
