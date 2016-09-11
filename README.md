@@ -172,7 +172,7 @@ class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
 #### [media-object] parameters
-__NOTE: media-object should contain an image, or linked image, inserted using the WordPress TinyMCE editor__
+__NOTE: `[media-object]` should contain an image, or linked image, inserted using the WordPress TinyMCE editor__
 
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
@@ -323,6 +323,62 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 	  [/card-block]
 	[/card]
 
+Image caps are supported with the `[card-img]` shortcode and the `top` or `bottom` flag
+
+	[card]
+	  [card-img top]
+
+	    --IMAGE--
+
+	  [/card-img]
+	  [card-block]
+	    [card-title]
+
+	      --HEADING--
+
+	    [/card-title]
+	    ...
+	  [/card-block]
+	[/card]
+
+Image overlay cards are supported with the `[card-img-overlay]` shortcode.
+
+		[card]
+		  [card-img]
+
+		    --IMAGE--
+
+		  [/card-img]
+		  [card-img-overlay]
+		    [card-title]
+
+		      --HEADING--
+
+		    [/card-title]
+		    ...
+		  [/card-img-overlay]
+		[/card]
+
+Card header and card footers are supported with the `[card-header]` and `[card-footer]` shortcodes.
+
+		[card]
+		  [card-header]
+
+		    --HEADING--
+
+		  [/card-header]
+			[card-block]
+		    [card-title]
+
+		      --HEADING--
+
+		    [/card-title]
+		    ...
+		  [/card-block]
+			[card-footer]
+			  ...
+		  [/card-footer]
+		[/card]
 
 #### [card] parameters
 Parameter | Description | Required | Values | Default
@@ -341,7 +397,7 @@ class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
 #### [card-title] parameters
-__NOTE: `[card-title]` should contain heading tag (`h1`, `h2`, `h3`, `h4`, `h5`, or `h6`), inserted using the WordPress editor. If a header tag is not added `h4` will be inserted automatically__
+__NOTE: `[card-title]` should contain a heading tag (`h1`, `h2`, `h3`, `h4`, `h5`, or `h6`), inserted using the WordPress editor. If a heading tag is not added `h4` will be inserted automatically__
 
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
@@ -349,8 +405,38 @@ class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
 
 #### [card-subtitle] parameters
-__NOTE: `[card-subtitle]` should contain heading tag (`h1`, `h2`, `h3`, `h4`, `h5`, or `h6`), inserted using the WordPress editor. If a header tag is not added `h6` will be inserted automatically__
+__NOTE: `[card-subtitle]` should contain a heading tag (`h1`, `h2`, `h3`, `h4`, `h5`, or `h6`), inserted using the WordPress editor. If a heading tag is not added `h6` will be inserted automatically__
 
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+#### [card-img] parameters
+__NOTE: `[card-img]` should contain an image, or linked image, inserted using the WordPress TinyMCE editor__
+
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+top | Flag whether this image cap is at the top of the card | optional | :triangular_flag_on_post: (flag) | false
+bottom | Flag whether this image cap is at the bottom of the card | optional | :triangular_flag_on_post: (flag) | false
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+#### [card-img-overlay] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+#### [card-header] parameters
+__NOTE: `[card-header]` should contain a heading tag (`h1`, `h2`, `h3`, `h4`, `h5`, or `h6`), inserted using the WordPress editor. If a heading tag is not added `div` (no heading) will be inserted automatically__
+
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+#### [card-footer] parameters
 Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none

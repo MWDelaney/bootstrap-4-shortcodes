@@ -104,8 +104,11 @@ class Boostrap4Shortcodes {
 			'card',
 			'card-block',
 			'card-title',
-			'card-subtitle'
-
+			'card-subtitle',
+			'card-img',
+			'card-img-overlay',
+			'card-header',
+			'card-footer'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -711,24 +714,12 @@ class Boostrap4Shortcodes {
 		$class[]  = ($atts['type']) ? 'card-' . $atts['type'] : null;
 		$class[]	= ($this->is_flag('inverse', $save_atts)) ? 'card-inverse' : null;
 
-		$first_img_class = array();
-		$first_img_class[] = 'card-img-top';
-		$first_img_tags	= array('img');
-
-		$last_img_class = array();
-		$last_img_class[] = 'card-img-bottom';
-		$last_img_tags	= array('img');
-
-		$content = do_shortcode( $content );
-		$content = $this->classfirstchild( $first_img_tags, $content, $first_img_class );
-		$content = $this->classlastchild( $last_img_tags, $content, $last_img_class );
-
 		$return = $this->bs_output(
 			sprintf(
 				'<div class="%s" %s>%s</div>',
 				$this->class_output(__FUNCTION__, $class, $atts['class']),
 				$this->parse_data_attributes( $atts['data'] ),
-				$content
+				$content = do_shortcode( $content )
 			)
 		);
 
@@ -845,6 +836,136 @@ class Boostrap4Shortcodes {
 
 
 
+		/**
+		 * Card image shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_card_img( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false
+			), $save_atts );
+
+			$class	= array();
+			$class[]  = 'card-img';
+			$class[0]	= ($this->is_flag('top', $save_atts)) ? 'card-img-top' : null;
+			$class[0]	= ($this->is_flag('bottom', $save_atts)) ? 'card-img-bottom' : null;
+
+			$search_tags = array('img');
+
+			$content = do_shortcode( $content );
+			$content = strip_tags($content, '<img><a>');
+			$content = $this->addclass( $search_tags, $content, $class );
+			$content = $this->adddata( $search_tags, $content, $atts['data'] );
+
+			$return = $this->bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Card Image Overlay shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_card_img_overlay( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class"	=> false,
+					"data"	=> false
+			), $atts );
+
+			$class	= array();
+			$class[]	= 'card-img-overlay';
+
+			$return = $this->bs_output(
+				sprintf(
+					'<div class="%s" %s>%s</div>',
+					$this->class_output(__FUNCTION__, $class, $atts['class']),
+					$this->parse_data_attributes( $atts['data'] ),
+					$content = do_shortcode( $content )
+				)
+			);
+
+			return $return;
+		}
+
+
+		/**
+		 * Card header shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_card_header( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false
+			), $atts );
+
+			$class	= array();
+			$class[]  = 'card-header';
+
+			$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+			$fallback_tag = 'div';
+
+			$content = do_shortcode( $content );
+			$content = $this->addclass( $search_tags, $content, $class, $fallback_tag );
+			$content = $this->adddata( $search_tags, $content, $atts['data'] );
+
+			$return = $this->bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			return $return;
+		}
+
+
+		/**
+		 * Card header shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_card_footer( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false
+			), $atts );
+
+			$class	= array();
+			$class[]  = 'card-footer';
+
+			$search_tags = array('div');
+			$fallback_tag = 'div';
+
+			$content = do_shortcode( $content );
+			$content = $this->addclass( $search_tags, $content, $class, $fallback_tag );
+			$content = $this->adddata( $search_tags, $content, $atts['data'] );
+
+			$return = $this->bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			return $return;
+		}
+
+
 	/**
 	 * Get the name of the function that called the current function
 	 * @param  boolean $completeTrace [description]
@@ -867,7 +988,6 @@ class Boostrap4Shortcodes {
 			}
 			return $str;
 	}
-
 
 
 	/**
@@ -978,6 +1098,7 @@ class Boostrap4Shortcodes {
 	 // Hide warnings while we run this function
 	 $previous_value = libxml_use_internal_errors(TRUE);
 	 $doc = new DOMDocument();
+	 $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
 	 $doc->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 	 libxml_clear_errors();
 	 libxml_use_internal_errors($previous_value);
@@ -993,75 +1114,18 @@ class Boostrap4Shortcodes {
 	}
 
 
-
 	/**
-	 * Parse a shortcode's contents for a tag that is the first child of its parent, add a class to it
-	 * @param  [type] $tag     [description]
-	 * @param  [type] $content [description]
-	 * @param  [type] $class   [description]
-	 * @param  string $title   [description]
-	 * @param  [type] $data    [description]
-	 * @return [type]          [description]
+	 * Remove tags from DOM keeping their children
 	 */
-	function classfirstchild( $finds, $content, $class, $fallback_tag = null ) {
+	 function DOMRemove(DOMNode $from) {
+	     $sibling = $from->firstChild;
+	     do {
+	         $next = $sibling->nextSibling;
+	         $from->parentNode->insertBefore($sibling, $from);
+	     } while ($sibling = $next);
+	     $from->parentNode->removeChild($from);
+	 }
 
-		$doc = $this->processdom($content, $fallback_tag);
-		$xpath = new DOMXPath($doc);
-
-		if(!$finds) {
-			$root = $doc->documentElement;
-			$finds = array($root->tagName);
-		}
-		foreach( $finds as $found ){
-			foreach ($xpath->query('*[1]//' . $found) as $tag) {
-			// Append the classes in $class to the tag's existing classes
-				$tag->setAttribute(
-					'class',
-					$this->class_output(
-						$this->getCallingFunctionName() . '_addclass',
-						$class,
-						$tag->getAttribute('class')
-					)
-				);
-			}
-		}
-		return $doc->saveHTML($doc->documentElement);
-	}
-
-
-	/**
-	 * Parse a shortcode's contents for a tag that is the first child of its parent, add a class to it
-	 * @param  [type] $tag     [description]
-	 * @param  [type] $content [description]
-	 * @param  [type] $class   [description]
-	 * @param  string $title   [description]
-	 * @param  [type] $data    [description]
-	 * @return [type]          [description]
-	 */
-	function classlastchild( $finds, $content, $class, $fallback_tag = null ) {
-
-		$doc = $this->processdom($content, $fallback_tag);
-		$xpath = new DOMXPath($doc);
-
-		if(!$finds) {
-			$root = $doc->documentElement;
-			$finds = array($root->tagName);
-		}
-		foreach( $finds as $found ){
-			foreach ($xpath->query('*[last()]//' . $found) as $tag) {
-			// Append the classes in $class to the tag's existing classes
-				$tag->setAttribute(
-					'class',
-					$this->class_output(
-						$this->getCallingFunctionName() . '_addclass',
-						$class,
-						$tag->getAttribute('class')
-					)
-				);
-			}
-		}
-		return $doc->saveHTML($doc->documentElement);
-	}
 
 
 	/**
