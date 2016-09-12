@@ -1,6 +1,9 @@
 <?php
 
-class BS4Docs {
+namespace MWD\BS4Shortcodes;
+
+
+class Docs {
 
 
 		function __construct() {

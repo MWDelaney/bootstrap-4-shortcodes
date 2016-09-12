@@ -1,6 +1,9 @@
 <?php
 
-class BS4Styles {
+namespace MWD\BS4Shortcodes;
+
+
+class Admin {
 
 	function __construct() {
 
