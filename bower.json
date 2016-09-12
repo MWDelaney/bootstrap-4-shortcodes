@@ -1,13 +1,32 @@
 {
-	"name": "bootstrap-4-shortcodes",
-	"homepage": "",
-	"authors": [
-		"M. W. Delaney"
-	],
-	"license": "MIT",
-	"private": true,
-	"dependencies": {
-	},
+  "name": "bootstrap-4-shortcodes",
+  "homepage": "https://github.com/MWDelaney/bootstrap-4-shortcodes",
+  "authors": [
+    "M. W. Delaney"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.4"
+  },
 	"overrides": {
-	}
+    "bootstrap": {
+      "main": [
+        "./dist/js/bootstrap.min.js",
+				"./scss/bootstrap.scss"
+      ],
+			"dependencies": {
+				"tether": "^1.1.1"
+		  }
+    }
+  },
+  "description": "",
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

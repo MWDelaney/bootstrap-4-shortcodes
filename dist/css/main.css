@@ -1,3 +1,4041 @@
+#bootstrap-4-shortcodes-help {
+  /*!
+ * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
+ * Copyright 2011-2016 The Bootstrap Authors
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+  /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */ }
+  #bootstrap-4-shortcodes-help html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+  #bootstrap-4-shortcodes-help body {
+    margin: 0; }
+  #bootstrap-4-shortcodes-help article,
+  #bootstrap-4-shortcodes-help aside,
+  #bootstrap-4-shortcodes-help details,
+  #bootstrap-4-shortcodes-help figcaption,
+  #bootstrap-4-shortcodes-help figure,
+  #bootstrap-4-shortcodes-help footer,
+  #bootstrap-4-shortcodes-help header,
+  #bootstrap-4-shortcodes-help main,
+  #bootstrap-4-shortcodes-help menu,
+  #bootstrap-4-shortcodes-help nav,
+  #bootstrap-4-shortcodes-help section,
+  #bootstrap-4-shortcodes-help summary {
+    display: block; }
+  #bootstrap-4-shortcodes-help audio,
+  #bootstrap-4-shortcodes-help canvas,
+  #bootstrap-4-shortcodes-help progress,
+  #bootstrap-4-shortcodes-help video {
+    display: inline-block; }
+  #bootstrap-4-shortcodes-help audio:not([controls]) {
+    display: none;
+    height: 0; }
+  #bootstrap-4-shortcodes-help progress {
+    vertical-align: baseline; }
+  #bootstrap-4-shortcodes-help template,
+  #bootstrap-4-shortcodes-help [hidden] {
+    display: none; }
+  #bootstrap-4-shortcodes-help a {
+    background-color: transparent; }
+  #bootstrap-4-shortcodes-help a:active,
+  #bootstrap-4-shortcodes-help a:hover {
+    outline-width: 0; }
+  #bootstrap-4-shortcodes-help abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted; }
+  #bootstrap-4-shortcodes-help b,
+  #bootstrap-4-shortcodes-help strong {
+    font-weight: inherit; }
+  #bootstrap-4-shortcodes-help b,
+  #bootstrap-4-shortcodes-help strong {
+    font-weight: bolder; }
+  #bootstrap-4-shortcodes-help dfn {
+    font-style: italic; }
+  #bootstrap-4-shortcodes-help h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+  #bootstrap-4-shortcodes-help mark {
+    background-color: #ff0;
+    color: #000; }
+  #bootstrap-4-shortcodes-help small {
+    font-size: 80%; }
+  #bootstrap-4-shortcodes-help sub,
+  #bootstrap-4-shortcodes-help sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+  #bootstrap-4-shortcodes-help sub {
+    bottom: -0.25em; }
+  #bootstrap-4-shortcodes-help sup {
+    top: -0.5em; }
+  #bootstrap-4-shortcodes-help img {
+    border-style: none; }
+  #bootstrap-4-shortcodes-help svg:not(:root) {
+    overflow: hidden; }
+  #bootstrap-4-shortcodes-help code,
+  #bootstrap-4-shortcodes-help kbd,
+  #bootstrap-4-shortcodes-help pre,
+  #bootstrap-4-shortcodes-help samp {
+    font-family: monospace, monospace;
+    font-size: 1em; }
+  #bootstrap-4-shortcodes-help figure {
+    margin: 1em 40px; }
+  #bootstrap-4-shortcodes-help hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible; }
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help input,
+  #bootstrap-4-shortcodes-help select,
+  #bootstrap-4-shortcodes-help textarea {
+    font: inherit; }
+  #bootstrap-4-shortcodes-help optgroup {
+    font-weight: bold; }
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help input,
+  #bootstrap-4-shortcodes-help select {
+    overflow: visible; }
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help input,
+  #bootstrap-4-shortcodes-help select,
+  #bootstrap-4-shortcodes-help textarea {
+    margin: 0; }
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help select {
+    text-transform: none; }
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help [type="button"],
+  #bootstrap-4-shortcodes-help [type="reset"],
+  #bootstrap-4-shortcodes-help [type="submit"] {
+    cursor: pointer; }
+  #bootstrap-4-shortcodes-help [disabled] {
+    cursor: default; }
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help html [type="button"],
+  #bootstrap-4-shortcodes-help [type="reset"],
+  #bootstrap-4-shortcodes-help [type="submit"] {
+    -webkit-appearance: button; }
+  #bootstrap-4-shortcodes-help button::-moz-focus-inner,
+  #bootstrap-4-shortcodes-help input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+  #bootstrap-4-shortcodes-help button:-moz-focusring,
+  #bootstrap-4-shortcodes-help input:-moz-focusring {
+    outline: 1px dotted ButtonText; }
+  #bootstrap-4-shortcodes-help fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em; }
+  #bootstrap-4-shortcodes-help legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal; }
+  #bootstrap-4-shortcodes-help textarea {
+    overflow: auto; }
+  #bootstrap-4-shortcodes-help [type="checkbox"],
+  #bootstrap-4-shortcodes-help [type="radio"] {
+    box-sizing: border-box;
+    padding: 0; }
+  #bootstrap-4-shortcodes-help [type="number"]::-webkit-inner-spin-button,
+  #bootstrap-4-shortcodes-help [type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+  #bootstrap-4-shortcodes-help [type="search"] {
+    -webkit-appearance: textfield; }
+  #bootstrap-4-shortcodes-help [type="search"]::-webkit-search-cancel-button,
+  #bootstrap-4-shortcodes-help [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+  @media print {
+    #bootstrap-4-shortcodes-help *,
+    #bootstrap-4-shortcodes-help *::before,
+    #bootstrap-4-shortcodes-help *::after,
+    #bootstrap-4-shortcodes-help *::first-letter,
+    #bootstrap-4-shortcodes-help *::first-line {
+      text-shadow: none !important;
+      box-shadow: none !important; }
+    #bootstrap-4-shortcodes-help a,
+    #bootstrap-4-shortcodes-help a:visited {
+      text-decoration: underline; }
+    #bootstrap-4-shortcodes-help abbr[title]::after {
+      content: " (" attr(title) ")"; }
+    #bootstrap-4-shortcodes-help pre,
+    #bootstrap-4-shortcodes-help blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid; }
+    #bootstrap-4-shortcodes-help thead {
+      display: table-header-group; }
+    #bootstrap-4-shortcodes-help tr,
+    #bootstrap-4-shortcodes-help img {
+      page-break-inside: avoid; }
+    #bootstrap-4-shortcodes-help p,
+    #bootstrap-4-shortcodes-help h2,
+    #bootstrap-4-shortcodes-help h3 {
+      orphans: 3;
+      widows: 3; }
+    #bootstrap-4-shortcodes-help h2,
+    #bootstrap-4-shortcodes-help h3 {
+      page-break-after: avoid; }
+    #bootstrap-4-shortcodes-help .navbar {
+      display: none; }
+    #bootstrap-4-shortcodes-help .btn > .caret,
+    #bootstrap-4-shortcodes-help .dropup > .btn > .caret {
+      border-top-color: #000 !important; }
+    #bootstrap-4-shortcodes-help .tag {
+      border: 1px solid #000; }
+    #bootstrap-4-shortcodes-help .table {
+      border-collapse: collapse !important; }
+      #bootstrap-4-shortcodes-help .table td,
+      #bootstrap-4-shortcodes-help .table th {
+        background-color: #fff !important; }
+    #bootstrap-4-shortcodes-help .table-bordered th,
+    #bootstrap-4-shortcodes-help .table-bordered td {
+      border: 1px solid #ddd !important; } }
+  #bootstrap-4-shortcodes-help html {
+    box-sizing: border-box; }
+  #bootstrap-4-shortcodes-help *,
+  #bootstrap-4-shortcodes-help *::before,
+  #bootstrap-4-shortcodes-help *::after {
+    box-sizing: inherit; }
+
+@-ms-viewport {
+  width: device-width; }
+  #bootstrap-4-shortcodes-help html {
+    font-size: 16px;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent; }
+  #bootstrap-4-shortcodes-help body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #373a3c;
+    background-color: #fff; }
+  #bootstrap-4-shortcodes-help [tabindex="-1"]:focus {
+    outline: none !important; }
+  #bootstrap-4-shortcodes-help h1, #bootstrap-4-shortcodes-help h2, #bootstrap-4-shortcodes-help h3, #bootstrap-4-shortcodes-help h4, #bootstrap-4-shortcodes-help h5, #bootstrap-4-shortcodes-help h6 {
+    margin-top: 0;
+    margin-bottom: .5rem; }
+  #bootstrap-4-shortcodes-help p {
+    margin-top: 0;
+    margin-bottom: 1rem; }
+  #bootstrap-4-shortcodes-help abbr[title],
+  #bootstrap-4-shortcodes-help abbr[data-original-title] {
+    cursor: help;
+    border-bottom: 1px dotted #818a91; }
+  #bootstrap-4-shortcodes-help address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit; }
+  #bootstrap-4-shortcodes-help ol,
+  #bootstrap-4-shortcodes-help ul,
+  #bootstrap-4-shortcodes-help dl {
+    margin-top: 0;
+    margin-bottom: 1rem; }
+  #bootstrap-4-shortcodes-help ol ol,
+  #bootstrap-4-shortcodes-help ul ul,
+  #bootstrap-4-shortcodes-help ol ul,
+  #bootstrap-4-shortcodes-help ul ol {
+    margin-bottom: 0; }
+  #bootstrap-4-shortcodes-help dt {
+    font-weight: bold; }
+  #bootstrap-4-shortcodes-help dd {
+    margin-bottom: .5rem;
+    margin-left: 0; }
+  #bootstrap-4-shortcodes-help blockquote {
+    margin: 0 0 1rem; }
+  #bootstrap-4-shortcodes-help a {
+    color: #0275d8;
+    text-decoration: none; }
+    #bootstrap-4-shortcodes-help a:focus, #bootstrap-4-shortcodes-help a:hover {
+      color: #014c8c;
+      text-decoration: underline; }
+    #bootstrap-4-shortcodes-help a:focus {
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+  #bootstrap-4-shortcodes-help a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none; }
+    #bootstrap-4-shortcodes-help a:not([href]):not([tabindex]):focus, #bootstrap-4-shortcodes-help a:not([href]):not([tabindex]):hover {
+      color: inherit;
+      text-decoration: none; }
+    #bootstrap-4-shortcodes-help a:not([href]):not([tabindex]):focus {
+      outline: none; }
+  #bootstrap-4-shortcodes-help pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto; }
+  #bootstrap-4-shortcodes-help figure {
+    margin: 0 0 1rem; }
+  #bootstrap-4-shortcodes-help img {
+    vertical-align: middle; }
+  #bootstrap-4-shortcodes-help [role="button"] {
+    cursor: pointer; }
+  #bootstrap-4-shortcodes-help a,
+  #bootstrap-4-shortcodes-help area,
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help [role="button"],
+  #bootstrap-4-shortcodes-help input,
+  #bootstrap-4-shortcodes-help label,
+  #bootstrap-4-shortcodes-help select,
+  #bootstrap-4-shortcodes-help summary,
+  #bootstrap-4-shortcodes-help textarea {
+    touch-action: manipulation; }
+  #bootstrap-4-shortcodes-help table {
+    border-collapse: collapse;
+    background-color: transparent; }
+  #bootstrap-4-shortcodes-help caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #818a91;
+    text-align: left;
+    caption-side: bottom; }
+  #bootstrap-4-shortcodes-help th {
+    text-align: left; }
+  #bootstrap-4-shortcodes-help label {
+    display: inline-block;
+    margin-bottom: .5rem; }
+  #bootstrap-4-shortcodes-help button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color; }
+  #bootstrap-4-shortcodes-help input,
+  #bootstrap-4-shortcodes-help button,
+  #bootstrap-4-shortcodes-help select,
+  #bootstrap-4-shortcodes-help textarea {
+    margin: 0;
+    line-height: inherit;
+    border-radius: 0; }
+  #bootstrap-4-shortcodes-help input[type="radio"]:disabled,
+  #bootstrap-4-shortcodes-help input[type="checkbox"]:disabled {
+    cursor: not-allowed; }
+  #bootstrap-4-shortcodes-help input[type="date"],
+  #bootstrap-4-shortcodes-help input[type="time"],
+  #bootstrap-4-shortcodes-help input[type="datetime-local"],
+  #bootstrap-4-shortcodes-help input[type="month"] {
+    -webkit-appearance: listbox; }
+  #bootstrap-4-shortcodes-help textarea {
+    resize: vertical; }
+  #bootstrap-4-shortcodes-help fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0; }
+  #bootstrap-4-shortcodes-help legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit; }
+  #bootstrap-4-shortcodes-help input[type="search"] {
+    -webkit-appearance: none; }
+  #bootstrap-4-shortcodes-help output {
+    display: inline-block; }
+  #bootstrap-4-shortcodes-help [hidden] {
+    display: none !important; }
+  #bootstrap-4-shortcodes-help h1, #bootstrap-4-shortcodes-help h2, #bootstrap-4-shortcodes-help h3, #bootstrap-4-shortcodes-help h4, #bootstrap-4-shortcodes-help h5, #bootstrap-4-shortcodes-help h6,
+  #bootstrap-4-shortcodes-help .h1, #bootstrap-4-shortcodes-help .h2, #bootstrap-4-shortcodes-help .h3, #bootstrap-4-shortcodes-help .h4, #bootstrap-4-shortcodes-help .h5, #bootstrap-4-shortcodes-help .h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit; }
+  #bootstrap-4-shortcodes-help h1, #bootstrap-4-shortcodes-help .h1 {
+    font-size: 2.5rem; }
+  #bootstrap-4-shortcodes-help h2, #bootstrap-4-shortcodes-help .h2 {
+    font-size: 2rem; }
+  #bootstrap-4-shortcodes-help h3, #bootstrap-4-shortcodes-help .h3 {
+    font-size: 1.75rem; }
+  #bootstrap-4-shortcodes-help h4, #bootstrap-4-shortcodes-help .h4 {
+    font-size: 1.5rem; }
+  #bootstrap-4-shortcodes-help h5, #bootstrap-4-shortcodes-help .h5 {
+    font-size: 1.25rem; }
+  #bootstrap-4-shortcodes-help h6, #bootstrap-4-shortcodes-help .h6 {
+    font-size: 1rem; }
+  #bootstrap-4-shortcodes-help .lead {
+    font-size: 1.25rem;
+    font-weight: 300; }
+  #bootstrap-4-shortcodes-help .display-1 {
+    font-size: 6rem;
+    font-weight: 300; }
+  #bootstrap-4-shortcodes-help .display-2 {
+    font-size: 5.5rem;
+    font-weight: 300; }
+  #bootstrap-4-shortcodes-help .display-3 {
+    font-size: 4.5rem;
+    font-weight: 300; }
+  #bootstrap-4-shortcodes-help .display-4 {
+    font-size: 3.5rem;
+    font-weight: 300; }
+  #bootstrap-4-shortcodes-help hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  #bootstrap-4-shortcodes-help small,
+  #bootstrap-4-shortcodes-help .small {
+    font-size: 80%;
+    font-weight: normal; }
+  #bootstrap-4-shortcodes-help mark,
+  #bootstrap-4-shortcodes-help .mark {
+    padding: 0.2em;
+    background-color: #fcf8e3; }
+  #bootstrap-4-shortcodes-help .list-unstyled {
+    padding-left: 0;
+    list-style: none; }
+  #bootstrap-4-shortcodes-help .list-inline {
+    padding-left: 0;
+    list-style: none; }
+  #bootstrap-4-shortcodes-help .list-inline-item {
+    display: inline-block; }
+    #bootstrap-4-shortcodes-help .list-inline-item:not(:last-child) {
+      margin-right: 5px; }
+  #bootstrap-4-shortcodes-help .initialism {
+    font-size: 90%;
+    text-transform: uppercase; }
+  #bootstrap-4-shortcodes-help .blockquote {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-left: 0.25rem solid #eceeef; }
+  #bootstrap-4-shortcodes-help .blockquote-footer {
+    display: block;
+    font-size: 80%;
+    color: #818a91; }
+    #bootstrap-4-shortcodes-help .blockquote-footer::before {
+      content: "\2014 \00A0"; }
+  #bootstrap-4-shortcodes-help .blockquote-reverse {
+    padding-right: 1rem;
+    padding-left: 0;
+    text-align: right;
+    border-right: 0.25rem solid #eceeef;
+    border-left: 0; }
+  #bootstrap-4-shortcodes-help .blockquote-reverse .blockquote-footer::before {
+    content: ""; }
+  #bootstrap-4-shortcodes-help .blockquote-reverse .blockquote-footer::after {
+    content: "\00A0 \2014"; }
+  #bootstrap-4-shortcodes-help dl.row > dd + dt {
+    clear: left; }
+  #bootstrap-4-shortcodes-help .img-fluid, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item > img, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto; }
+  #bootstrap-4-shortcodes-help .img-rounded {
+    border-radius: 0.3rem; }
+  #bootstrap-4-shortcodes-help .img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto; }
+  #bootstrap-4-shortcodes-help .img-circle {
+    border-radius: 50%; }
+  #bootstrap-4-shortcodes-help .figure {
+    display: inline-block; }
+  #bootstrap-4-shortcodes-help .figure-img {
+    margin-bottom: 0.5rem;
+    line-height: 1; }
+  #bootstrap-4-shortcodes-help .figure-caption {
+    font-size: 90%;
+    color: #818a91; }
+  #bootstrap-4-shortcodes-help code,
+  #bootstrap-4-shortcodes-help kbd,
+  #bootstrap-4-shortcodes-help pre,
+  #bootstrap-4-shortcodes-help samp {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  #bootstrap-4-shortcodes-help code {
+    padding: 0.2rem 0.4rem;
+    font-size: 90%;
+    color: #bd4147;
+    background-color: #f7f7f9;
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help kbd {
+    padding: 0.2rem 0.4rem;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 0.2rem; }
+    #bootstrap-4-shortcodes-help kbd kbd {
+      padding: 0;
+      font-size: 100%;
+      font-weight: bold; }
+  #bootstrap-4-shortcodes-help pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 90%;
+    color: #373a3c; }
+    #bootstrap-4-shortcodes-help pre code {
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+      background-color: transparent;
+      border-radius: 0; }
+  #bootstrap-4-shortcodes-help .pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll; }
+  #bootstrap-4-shortcodes-help .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+    #bootstrap-4-shortcodes-help .container::after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media (min-width: 544px) {
+      #bootstrap-4-shortcodes-help .container {
+        max-width: 576px; } }
+    @media (min-width: 768px) {
+      #bootstrap-4-shortcodes-help .container {
+        max-width: 720px; } }
+    @media (min-width: 992px) {
+      #bootstrap-4-shortcodes-help .container {
+        max-width: 940px; } }
+    @media (min-width: 1200px) {
+      #bootstrap-4-shortcodes-help .container {
+        max-width: 1140px; } }
+  #bootstrap-4-shortcodes-help .container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+    #bootstrap-4-shortcodes-help .container-fluid::after {
+      content: "";
+      display: table;
+      clear: both; }
+  #bootstrap-4-shortcodes-help .row {
+    margin-left: -15px;
+    margin-right: -15px; }
+    #bootstrap-4-shortcodes-help .row::after {
+      content: "";
+      display: table;
+      clear: both; }
+  #bootstrap-4-shortcodes-help .col-xs-1, #bootstrap-4-shortcodes-help .col-xs-2, #bootstrap-4-shortcodes-help .col-xs-3, #bootstrap-4-shortcodes-help .col-xs-4, #bootstrap-4-shortcodes-help .col-xs-5, #bootstrap-4-shortcodes-help .col-xs-6, #bootstrap-4-shortcodes-help .col-xs-7, #bootstrap-4-shortcodes-help .col-xs-8, #bootstrap-4-shortcodes-help .col-xs-9, #bootstrap-4-shortcodes-help .col-xs-10, #bootstrap-4-shortcodes-help .col-xs-11, #bootstrap-4-shortcodes-help .col-xs-12, #bootstrap-4-shortcodes-help .col-sm-1, #bootstrap-4-shortcodes-help .col-sm-2, #bootstrap-4-shortcodes-help .col-sm-3, #bootstrap-4-shortcodes-help .col-sm-4, #bootstrap-4-shortcodes-help .col-sm-5, #bootstrap-4-shortcodes-help .col-sm-6, #bootstrap-4-shortcodes-help .col-sm-7, #bootstrap-4-shortcodes-help .col-sm-8, #bootstrap-4-shortcodes-help .col-sm-9, #bootstrap-4-shortcodes-help .col-sm-10, #bootstrap-4-shortcodes-help .col-sm-11, #bootstrap-4-shortcodes-help .col-sm-12, #bootstrap-4-shortcodes-help .col-md-1, #bootstrap-4-shortcodes-help .col-md-2, #bootstrap-4-shortcodes-help .col-md-3, #bootstrap-4-shortcodes-help .col-md-4, #bootstrap-4-shortcodes-help .col-md-5, #bootstrap-4-shortcodes-help .col-md-6, #bootstrap-4-shortcodes-help .col-md-7, #bootstrap-4-shortcodes-help .col-md-8, #bootstrap-4-shortcodes-help .col-md-9, #bootstrap-4-shortcodes-help .col-md-10, #bootstrap-4-shortcodes-help .col-md-11, #bootstrap-4-shortcodes-help .col-md-12, #bootstrap-4-shortcodes-help .col-lg-1, #bootstrap-4-shortcodes-help .col-lg-2, #bootstrap-4-shortcodes-help .col-lg-3, #bootstrap-4-shortcodes-help .col-lg-4, #bootstrap-4-shortcodes-help .col-lg-5, #bootstrap-4-shortcodes-help .col-lg-6, #bootstrap-4-shortcodes-help .col-lg-7, #bootstrap-4-shortcodes-help .col-lg-8, #bootstrap-4-shortcodes-help .col-lg-9, #bootstrap-4-shortcodes-help .col-lg-10, #bootstrap-4-shortcodes-help .col-lg-11, #bootstrap-4-shortcodes-help .col-lg-12, #bootstrap-4-shortcodes-help .col-xl-1, #bootstrap-4-shortcodes-help .col-xl-2, #bootstrap-4-shortcodes-help .col-xl-3, #bootstrap-4-shortcodes-help .col-xl-4, #bootstrap-4-shortcodes-help .col-xl-5, #bootstrap-4-shortcodes-help .col-xl-6, #bootstrap-4-shortcodes-help .col-xl-7, #bootstrap-4-shortcodes-help .col-xl-8, #bootstrap-4-shortcodes-help .col-xl-9, #bootstrap-4-shortcodes-help .col-xl-10, #bootstrap-4-shortcodes-help .col-xl-11, #bootstrap-4-shortcodes-help .col-xl-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px; }
+  #bootstrap-4-shortcodes-help .col-xs-1 {
+    float: left;
+    width: 8.33333%; }
+  #bootstrap-4-shortcodes-help .col-xs-2 {
+    float: left;
+    width: 16.66667%; }
+  #bootstrap-4-shortcodes-help .col-xs-3 {
+    float: left;
+    width: 25%; }
+  #bootstrap-4-shortcodes-help .col-xs-4 {
+    float: left;
+    width: 33.33333%; }
+  #bootstrap-4-shortcodes-help .col-xs-5 {
+    float: left;
+    width: 41.66667%; }
+  #bootstrap-4-shortcodes-help .col-xs-6 {
+    float: left;
+    width: 50%; }
+  #bootstrap-4-shortcodes-help .col-xs-7 {
+    float: left;
+    width: 58.33333%; }
+  #bootstrap-4-shortcodes-help .col-xs-8 {
+    float: left;
+    width: 66.66667%; }
+  #bootstrap-4-shortcodes-help .col-xs-9 {
+    float: left;
+    width: 75%; }
+  #bootstrap-4-shortcodes-help .col-xs-10 {
+    float: left;
+    width: 83.33333%; }
+  #bootstrap-4-shortcodes-help .col-xs-11 {
+    float: left;
+    width: 91.66667%; }
+  #bootstrap-4-shortcodes-help .col-xs-12 {
+    float: left;
+    width: 100%; }
+  #bootstrap-4-shortcodes-help .pull-xs-0 {
+    right: auto; }
+  #bootstrap-4-shortcodes-help .pull-xs-1 {
+    right: 8.33333%; }
+  #bootstrap-4-shortcodes-help .pull-xs-2 {
+    right: 16.66667%; }
+  #bootstrap-4-shortcodes-help .pull-xs-3 {
+    right: 25%; }
+  #bootstrap-4-shortcodes-help .pull-xs-4 {
+    right: 33.33333%; }
+  #bootstrap-4-shortcodes-help .pull-xs-5 {
+    right: 41.66667%; }
+  #bootstrap-4-shortcodes-help .pull-xs-6 {
+    right: 50%; }
+  #bootstrap-4-shortcodes-help .pull-xs-7 {
+    right: 58.33333%; }
+  #bootstrap-4-shortcodes-help .pull-xs-8 {
+    right: 66.66667%; }
+  #bootstrap-4-shortcodes-help .pull-xs-9 {
+    right: 75%; }
+  #bootstrap-4-shortcodes-help .pull-xs-10 {
+    right: 83.33333%; }
+  #bootstrap-4-shortcodes-help .pull-xs-11 {
+    right: 91.66667%; }
+  #bootstrap-4-shortcodes-help .pull-xs-12 {
+    right: 100%; }
+  #bootstrap-4-shortcodes-help .push-xs-0 {
+    left: auto; }
+  #bootstrap-4-shortcodes-help .push-xs-1 {
+    left: 8.33333%; }
+  #bootstrap-4-shortcodes-help .push-xs-2 {
+    left: 16.66667%; }
+  #bootstrap-4-shortcodes-help .push-xs-3 {
+    left: 25%; }
+  #bootstrap-4-shortcodes-help .push-xs-4 {
+    left: 33.33333%; }
+  #bootstrap-4-shortcodes-help .push-xs-5 {
+    left: 41.66667%; }
+  #bootstrap-4-shortcodes-help .push-xs-6 {
+    left: 50%; }
+  #bootstrap-4-shortcodes-help .push-xs-7 {
+    left: 58.33333%; }
+  #bootstrap-4-shortcodes-help .push-xs-8 {
+    left: 66.66667%; }
+  #bootstrap-4-shortcodes-help .push-xs-9 {
+    left: 75%; }
+  #bootstrap-4-shortcodes-help .push-xs-10 {
+    left: 83.33333%; }
+  #bootstrap-4-shortcodes-help .push-xs-11 {
+    left: 91.66667%; }
+  #bootstrap-4-shortcodes-help .push-xs-12 {
+    left: 100%; }
+  #bootstrap-4-shortcodes-help .offset-xs-1 {
+    margin-left: 8.33333%; }
+  #bootstrap-4-shortcodes-help .offset-xs-2 {
+    margin-left: 16.66667%; }
+  #bootstrap-4-shortcodes-help .offset-xs-3 {
+    margin-left: 25%; }
+  #bootstrap-4-shortcodes-help .offset-xs-4 {
+    margin-left: 33.33333%; }
+  #bootstrap-4-shortcodes-help .offset-xs-5 {
+    margin-left: 41.66667%; }
+  #bootstrap-4-shortcodes-help .offset-xs-6 {
+    margin-left: 50%; }
+  #bootstrap-4-shortcodes-help .offset-xs-7 {
+    margin-left: 58.33333%; }
+  #bootstrap-4-shortcodes-help .offset-xs-8 {
+    margin-left: 66.66667%; }
+  #bootstrap-4-shortcodes-help .offset-xs-9 {
+    margin-left: 75%; }
+  #bootstrap-4-shortcodes-help .offset-xs-10 {
+    margin-left: 83.33333%; }
+  #bootstrap-4-shortcodes-help .offset-xs-11 {
+    margin-left: 91.66667%; }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .col-sm-1 {
+      float: left;
+      width: 8.33333%; }
+    #bootstrap-4-shortcodes-help .col-sm-2 {
+      float: left;
+      width: 16.66667%; }
+    #bootstrap-4-shortcodes-help .col-sm-3 {
+      float: left;
+      width: 25%; }
+    #bootstrap-4-shortcodes-help .col-sm-4 {
+      float: left;
+      width: 33.33333%; }
+    #bootstrap-4-shortcodes-help .col-sm-5 {
+      float: left;
+      width: 41.66667%; }
+    #bootstrap-4-shortcodes-help .col-sm-6 {
+      float: left;
+      width: 50%; }
+    #bootstrap-4-shortcodes-help .col-sm-7 {
+      float: left;
+      width: 58.33333%; }
+    #bootstrap-4-shortcodes-help .col-sm-8 {
+      float: left;
+      width: 66.66667%; }
+    #bootstrap-4-shortcodes-help .col-sm-9 {
+      float: left;
+      width: 75%; }
+    #bootstrap-4-shortcodes-help .col-sm-10 {
+      float: left;
+      width: 83.33333%; }
+    #bootstrap-4-shortcodes-help .col-sm-11 {
+      float: left;
+      width: 91.66667%; }
+    #bootstrap-4-shortcodes-help .col-sm-12 {
+      float: left;
+      width: 100%; }
+    #bootstrap-4-shortcodes-help .pull-sm-0 {
+      right: auto; }
+    #bootstrap-4-shortcodes-help .pull-sm-1 {
+      right: 8.33333%; }
+    #bootstrap-4-shortcodes-help .pull-sm-2 {
+      right: 16.66667%; }
+    #bootstrap-4-shortcodes-help .pull-sm-3 {
+      right: 25%; }
+    #bootstrap-4-shortcodes-help .pull-sm-4 {
+      right: 33.33333%; }
+    #bootstrap-4-shortcodes-help .pull-sm-5 {
+      right: 41.66667%; }
+    #bootstrap-4-shortcodes-help .pull-sm-6 {
+      right: 50%; }
+    #bootstrap-4-shortcodes-help .pull-sm-7 {
+      right: 58.33333%; }
+    #bootstrap-4-shortcodes-help .pull-sm-8 {
+      right: 66.66667%; }
+    #bootstrap-4-shortcodes-help .pull-sm-9 {
+      right: 75%; }
+    #bootstrap-4-shortcodes-help .pull-sm-10 {
+      right: 83.33333%; }
+    #bootstrap-4-shortcodes-help .pull-sm-11 {
+      right: 91.66667%; }
+    #bootstrap-4-shortcodes-help .pull-sm-12 {
+      right: 100%; }
+    #bootstrap-4-shortcodes-help .push-sm-0 {
+      left: auto; }
+    #bootstrap-4-shortcodes-help .push-sm-1 {
+      left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .push-sm-2 {
+      left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .push-sm-3 {
+      left: 25%; }
+    #bootstrap-4-shortcodes-help .push-sm-4 {
+      left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .push-sm-5 {
+      left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .push-sm-6 {
+      left: 50%; }
+    #bootstrap-4-shortcodes-help .push-sm-7 {
+      left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .push-sm-8 {
+      left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .push-sm-9 {
+      left: 75%; }
+    #bootstrap-4-shortcodes-help .push-sm-10 {
+      left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .push-sm-11 {
+      left: 91.66667%; }
+    #bootstrap-4-shortcodes-help .push-sm-12 {
+      left: 100%; }
+    #bootstrap-4-shortcodes-help .offset-sm-0 {
+      margin-left: 0%; }
+    #bootstrap-4-shortcodes-help .offset-sm-1 {
+      margin-left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .offset-sm-2 {
+      margin-left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .offset-sm-3 {
+      margin-left: 25%; }
+    #bootstrap-4-shortcodes-help .offset-sm-4 {
+      margin-left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .offset-sm-5 {
+      margin-left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .offset-sm-6 {
+      margin-left: 50%; }
+    #bootstrap-4-shortcodes-help .offset-sm-7 {
+      margin-left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .offset-sm-8 {
+      margin-left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .offset-sm-9 {
+      margin-left: 75%; }
+    #bootstrap-4-shortcodes-help .offset-sm-10 {
+      margin-left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .offset-sm-11 {
+      margin-left: 91.66667%; } }
+  @media (min-width: 768px) {
+    #bootstrap-4-shortcodes-help .col-md-1 {
+      float: left;
+      width: 8.33333%; }
+    #bootstrap-4-shortcodes-help .col-md-2 {
+      float: left;
+      width: 16.66667%; }
+    #bootstrap-4-shortcodes-help .col-md-3 {
+      float: left;
+      width: 25%; }
+    #bootstrap-4-shortcodes-help .col-md-4 {
+      float: left;
+      width: 33.33333%; }
+    #bootstrap-4-shortcodes-help .col-md-5 {
+      float: left;
+      width: 41.66667%; }
+    #bootstrap-4-shortcodes-help .col-md-6 {
+      float: left;
+      width: 50%; }
+    #bootstrap-4-shortcodes-help .col-md-7 {
+      float: left;
+      width: 58.33333%; }
+    #bootstrap-4-shortcodes-help .col-md-8 {
+      float: left;
+      width: 66.66667%; }
+    #bootstrap-4-shortcodes-help .col-md-9 {
+      float: left;
+      width: 75%; }
+    #bootstrap-4-shortcodes-help .col-md-10 {
+      float: left;
+      width: 83.33333%; }
+    #bootstrap-4-shortcodes-help .col-md-11 {
+      float: left;
+      width: 91.66667%; }
+    #bootstrap-4-shortcodes-help .col-md-12 {
+      float: left;
+      width: 100%; }
+    #bootstrap-4-shortcodes-help .pull-md-0 {
+      right: auto; }
+    #bootstrap-4-shortcodes-help .pull-md-1 {
+      right: 8.33333%; }
+    #bootstrap-4-shortcodes-help .pull-md-2 {
+      right: 16.66667%; }
+    #bootstrap-4-shortcodes-help .pull-md-3 {
+      right: 25%; }
+    #bootstrap-4-shortcodes-help .pull-md-4 {
+      right: 33.33333%; }
+    #bootstrap-4-shortcodes-help .pull-md-5 {
+      right: 41.66667%; }
+    #bootstrap-4-shortcodes-help .pull-md-6 {
+      right: 50%; }
+    #bootstrap-4-shortcodes-help .pull-md-7 {
+      right: 58.33333%; }
+    #bootstrap-4-shortcodes-help .pull-md-8 {
+      right: 66.66667%; }
+    #bootstrap-4-shortcodes-help .pull-md-9 {
+      right: 75%; }
+    #bootstrap-4-shortcodes-help .pull-md-10 {
+      right: 83.33333%; }
+    #bootstrap-4-shortcodes-help .pull-md-11 {
+      right: 91.66667%; }
+    #bootstrap-4-shortcodes-help .pull-md-12 {
+      right: 100%; }
+    #bootstrap-4-shortcodes-help .push-md-0 {
+      left: auto; }
+    #bootstrap-4-shortcodes-help .push-md-1 {
+      left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .push-md-2 {
+      left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .push-md-3 {
+      left: 25%; }
+    #bootstrap-4-shortcodes-help .push-md-4 {
+      left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .push-md-5 {
+      left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .push-md-6 {
+      left: 50%; }
+    #bootstrap-4-shortcodes-help .push-md-7 {
+      left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .push-md-8 {
+      left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .push-md-9 {
+      left: 75%; }
+    #bootstrap-4-shortcodes-help .push-md-10 {
+      left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .push-md-11 {
+      left: 91.66667%; }
+    #bootstrap-4-shortcodes-help .push-md-12 {
+      left: 100%; }
+    #bootstrap-4-shortcodes-help .offset-md-0 {
+      margin-left: 0%; }
+    #bootstrap-4-shortcodes-help .offset-md-1 {
+      margin-left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .offset-md-2 {
+      margin-left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .offset-md-3 {
+      margin-left: 25%; }
+    #bootstrap-4-shortcodes-help .offset-md-4 {
+      margin-left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .offset-md-5 {
+      margin-left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .offset-md-6 {
+      margin-left: 50%; }
+    #bootstrap-4-shortcodes-help .offset-md-7 {
+      margin-left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .offset-md-8 {
+      margin-left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .offset-md-9 {
+      margin-left: 75%; }
+    #bootstrap-4-shortcodes-help .offset-md-10 {
+      margin-left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .offset-md-11 {
+      margin-left: 91.66667%; } }
+  @media (min-width: 992px) {
+    #bootstrap-4-shortcodes-help .col-lg-1 {
+      float: left;
+      width: 8.33333%; }
+    #bootstrap-4-shortcodes-help .col-lg-2 {
+      float: left;
+      width: 16.66667%; }
+    #bootstrap-4-shortcodes-help .col-lg-3 {
+      float: left;
+      width: 25%; }
+    #bootstrap-4-shortcodes-help .col-lg-4 {
+      float: left;
+      width: 33.33333%; }
+    #bootstrap-4-shortcodes-help .col-lg-5 {
+      float: left;
+      width: 41.66667%; }
+    #bootstrap-4-shortcodes-help .col-lg-6 {
+      float: left;
+      width: 50%; }
+    #bootstrap-4-shortcodes-help .col-lg-7 {
+      float: left;
+      width: 58.33333%; }
+    #bootstrap-4-shortcodes-help .col-lg-8 {
+      float: left;
+      width: 66.66667%; }
+    #bootstrap-4-shortcodes-help .col-lg-9 {
+      float: left;
+      width: 75%; }
+    #bootstrap-4-shortcodes-help .col-lg-10 {
+      float: left;
+      width: 83.33333%; }
+    #bootstrap-4-shortcodes-help .col-lg-11 {
+      float: left;
+      width: 91.66667%; }
+    #bootstrap-4-shortcodes-help .col-lg-12 {
+      float: left;
+      width: 100%; }
+    #bootstrap-4-shortcodes-help .pull-lg-0 {
+      right: auto; }
+    #bootstrap-4-shortcodes-help .pull-lg-1 {
+      right: 8.33333%; }
+    #bootstrap-4-shortcodes-help .pull-lg-2 {
+      right: 16.66667%; }
+    #bootstrap-4-shortcodes-help .pull-lg-3 {
+      right: 25%; }
+    #bootstrap-4-shortcodes-help .pull-lg-4 {
+      right: 33.33333%; }
+    #bootstrap-4-shortcodes-help .pull-lg-5 {
+      right: 41.66667%; }
+    #bootstrap-4-shortcodes-help .pull-lg-6 {
+      right: 50%; }
+    #bootstrap-4-shortcodes-help .pull-lg-7 {
+      right: 58.33333%; }
+    #bootstrap-4-shortcodes-help .pull-lg-8 {
+      right: 66.66667%; }
+    #bootstrap-4-shortcodes-help .pull-lg-9 {
+      right: 75%; }
+    #bootstrap-4-shortcodes-help .pull-lg-10 {
+      right: 83.33333%; }
+    #bootstrap-4-shortcodes-help .pull-lg-11 {
+      right: 91.66667%; }
+    #bootstrap-4-shortcodes-help .pull-lg-12 {
+      right: 100%; }
+    #bootstrap-4-shortcodes-help .push-lg-0 {
+      left: auto; }
+    #bootstrap-4-shortcodes-help .push-lg-1 {
+      left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .push-lg-2 {
+      left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .push-lg-3 {
+      left: 25%; }
+    #bootstrap-4-shortcodes-help .push-lg-4 {
+      left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .push-lg-5 {
+      left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .push-lg-6 {
+      left: 50%; }
+    #bootstrap-4-shortcodes-help .push-lg-7 {
+      left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .push-lg-8 {
+      left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .push-lg-9 {
+      left: 75%; }
+    #bootstrap-4-shortcodes-help .push-lg-10 {
+      left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .push-lg-11 {
+      left: 91.66667%; }
+    #bootstrap-4-shortcodes-help .push-lg-12 {
+      left: 100%; }
+    #bootstrap-4-shortcodes-help .offset-lg-0 {
+      margin-left: 0%; }
+    #bootstrap-4-shortcodes-help .offset-lg-1 {
+      margin-left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .offset-lg-2 {
+      margin-left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .offset-lg-3 {
+      margin-left: 25%; }
+    #bootstrap-4-shortcodes-help .offset-lg-4 {
+      margin-left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .offset-lg-5 {
+      margin-left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .offset-lg-6 {
+      margin-left: 50%; }
+    #bootstrap-4-shortcodes-help .offset-lg-7 {
+      margin-left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .offset-lg-8 {
+      margin-left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .offset-lg-9 {
+      margin-left: 75%; }
+    #bootstrap-4-shortcodes-help .offset-lg-10 {
+      margin-left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .offset-lg-11 {
+      margin-left: 91.66667%; } }
+  @media (min-width: 1200px) {
+    #bootstrap-4-shortcodes-help .col-xl-1 {
+      float: left;
+      width: 8.33333%; }
+    #bootstrap-4-shortcodes-help .col-xl-2 {
+      float: left;
+      width: 16.66667%; }
+    #bootstrap-4-shortcodes-help .col-xl-3 {
+      float: left;
+      width: 25%; }
+    #bootstrap-4-shortcodes-help .col-xl-4 {
+      float: left;
+      width: 33.33333%; }
+    #bootstrap-4-shortcodes-help .col-xl-5 {
+      float: left;
+      width: 41.66667%; }
+    #bootstrap-4-shortcodes-help .col-xl-6 {
+      float: left;
+      width: 50%; }
+    #bootstrap-4-shortcodes-help .col-xl-7 {
+      float: left;
+      width: 58.33333%; }
+    #bootstrap-4-shortcodes-help .col-xl-8 {
+      float: left;
+      width: 66.66667%; }
+    #bootstrap-4-shortcodes-help .col-xl-9 {
+      float: left;
+      width: 75%; }
+    #bootstrap-4-shortcodes-help .col-xl-10 {
+      float: left;
+      width: 83.33333%; }
+    #bootstrap-4-shortcodes-help .col-xl-11 {
+      float: left;
+      width: 91.66667%; }
+    #bootstrap-4-shortcodes-help .col-xl-12 {
+      float: left;
+      width: 100%; }
+    #bootstrap-4-shortcodes-help .pull-xl-0 {
+      right: auto; }
+    #bootstrap-4-shortcodes-help .pull-xl-1 {
+      right: 8.33333%; }
+    #bootstrap-4-shortcodes-help .pull-xl-2 {
+      right: 16.66667%; }
+    #bootstrap-4-shortcodes-help .pull-xl-3 {
+      right: 25%; }
+    #bootstrap-4-shortcodes-help .pull-xl-4 {
+      right: 33.33333%; }
+    #bootstrap-4-shortcodes-help .pull-xl-5 {
+      right: 41.66667%; }
+    #bootstrap-4-shortcodes-help .pull-xl-6 {
+      right: 50%; }
+    #bootstrap-4-shortcodes-help .pull-xl-7 {
+      right: 58.33333%; }
+    #bootstrap-4-shortcodes-help .pull-xl-8 {
+      right: 66.66667%; }
+    #bootstrap-4-shortcodes-help .pull-xl-9 {
+      right: 75%; }
+    #bootstrap-4-shortcodes-help .pull-xl-10 {
+      right: 83.33333%; }
+    #bootstrap-4-shortcodes-help .pull-xl-11 {
+      right: 91.66667%; }
+    #bootstrap-4-shortcodes-help .pull-xl-12 {
+      right: 100%; }
+    #bootstrap-4-shortcodes-help .push-xl-0 {
+      left: auto; }
+    #bootstrap-4-shortcodes-help .push-xl-1 {
+      left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .push-xl-2 {
+      left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .push-xl-3 {
+      left: 25%; }
+    #bootstrap-4-shortcodes-help .push-xl-4 {
+      left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .push-xl-5 {
+      left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .push-xl-6 {
+      left: 50%; }
+    #bootstrap-4-shortcodes-help .push-xl-7 {
+      left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .push-xl-8 {
+      left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .push-xl-9 {
+      left: 75%; }
+    #bootstrap-4-shortcodes-help .push-xl-10 {
+      left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .push-xl-11 {
+      left: 91.66667%; }
+    #bootstrap-4-shortcodes-help .push-xl-12 {
+      left: 100%; }
+    #bootstrap-4-shortcodes-help .offset-xl-0 {
+      margin-left: 0%; }
+    #bootstrap-4-shortcodes-help .offset-xl-1 {
+      margin-left: 8.33333%; }
+    #bootstrap-4-shortcodes-help .offset-xl-2 {
+      margin-left: 16.66667%; }
+    #bootstrap-4-shortcodes-help .offset-xl-3 {
+      margin-left: 25%; }
+    #bootstrap-4-shortcodes-help .offset-xl-4 {
+      margin-left: 33.33333%; }
+    #bootstrap-4-shortcodes-help .offset-xl-5 {
+      margin-left: 41.66667%; }
+    #bootstrap-4-shortcodes-help .offset-xl-6 {
+      margin-left: 50%; }
+    #bootstrap-4-shortcodes-help .offset-xl-7 {
+      margin-left: 58.33333%; }
+    #bootstrap-4-shortcodes-help .offset-xl-8 {
+      margin-left: 66.66667%; }
+    #bootstrap-4-shortcodes-help .offset-xl-9 {
+      margin-left: 75%; }
+    #bootstrap-4-shortcodes-help .offset-xl-10 {
+      margin-left: 83.33333%; }
+    #bootstrap-4-shortcodes-help .offset-xl-11 {
+      margin-left: 91.66667%; } }
+  #bootstrap-4-shortcodes-help .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem; }
+    #bootstrap-4-shortcodes-help .table th,
+    #bootstrap-4-shortcodes-help .table td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #eceeef; }
+    #bootstrap-4-shortcodes-help .table thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #eceeef; }
+    #bootstrap-4-shortcodes-help .table tbody + tbody {
+      border-top: 2px solid #eceeef; }
+    #bootstrap-4-shortcodes-help .table .table {
+      background-color: #fff; }
+  #bootstrap-4-shortcodes-help .table-sm th,
+  #bootstrap-4-shortcodes-help .table-sm td {
+    padding: 0.3rem; }
+  #bootstrap-4-shortcodes-help .table-bordered {
+    border: 1px solid #eceeef; }
+    #bootstrap-4-shortcodes-help .table-bordered th,
+    #bootstrap-4-shortcodes-help .table-bordered td {
+      border: 1px solid #eceeef; }
+    #bootstrap-4-shortcodes-help .table-bordered thead th,
+    #bootstrap-4-shortcodes-help .table-bordered thead td {
+      border-bottom-width: 2px; }
+  #bootstrap-4-shortcodes-help .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05); }
+  #bootstrap-4-shortcodes-help .table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075); }
+  #bootstrap-4-shortcodes-help .table-active,
+  #bootstrap-4-shortcodes-help .table-active > th,
+  #bootstrap-4-shortcodes-help .table-active > td {
+    background-color: rgba(0, 0, 0, 0.075); }
+  #bootstrap-4-shortcodes-help .table-hover .table-active:hover {
+    background-color: rgba(0, 0, 0, 0.075); }
+    #bootstrap-4-shortcodes-help .table-hover .table-active:hover > td,
+    #bootstrap-4-shortcodes-help .table-hover .table-active:hover > th {
+      background-color: rgba(0, 0, 0, 0.075); }
+  #bootstrap-4-shortcodes-help .table-success,
+  #bootstrap-4-shortcodes-help .table-success > th,
+  #bootstrap-4-shortcodes-help .table-success > td {
+    background-color: #dff0d8; }
+  #bootstrap-4-shortcodes-help .table-hover .table-success:hover {
+    background-color: #d0e9c6; }
+    #bootstrap-4-shortcodes-help .table-hover .table-success:hover > td,
+    #bootstrap-4-shortcodes-help .table-hover .table-success:hover > th {
+      background-color: #d0e9c6; }
+  #bootstrap-4-shortcodes-help .table-info,
+  #bootstrap-4-shortcodes-help .table-info > th,
+  #bootstrap-4-shortcodes-help .table-info > td {
+    background-color: #d9edf7; }
+  #bootstrap-4-shortcodes-help .table-hover .table-info:hover {
+    background-color: #c4e3f3; }
+    #bootstrap-4-shortcodes-help .table-hover .table-info:hover > td,
+    #bootstrap-4-shortcodes-help .table-hover .table-info:hover > th {
+      background-color: #c4e3f3; }
+  #bootstrap-4-shortcodes-help .table-warning,
+  #bootstrap-4-shortcodes-help .table-warning > th,
+  #bootstrap-4-shortcodes-help .table-warning > td {
+    background-color: #fcf8e3; }
+  #bootstrap-4-shortcodes-help .table-hover .table-warning:hover {
+    background-color: #faf2cc; }
+    #bootstrap-4-shortcodes-help .table-hover .table-warning:hover > td,
+    #bootstrap-4-shortcodes-help .table-hover .table-warning:hover > th {
+      background-color: #faf2cc; }
+  #bootstrap-4-shortcodes-help .table-danger,
+  #bootstrap-4-shortcodes-help .table-danger > th,
+  #bootstrap-4-shortcodes-help .table-danger > td {
+    background-color: #f2dede; }
+  #bootstrap-4-shortcodes-help .table-hover .table-danger:hover {
+    background-color: #ebcccc; }
+    #bootstrap-4-shortcodes-help .table-hover .table-danger:hover > td,
+    #bootstrap-4-shortcodes-help .table-hover .table-danger:hover > th {
+      background-color: #ebcccc; }
+  #bootstrap-4-shortcodes-help .thead-inverse th {
+    color: #fff;
+    background-color: #373a3c; }
+  #bootstrap-4-shortcodes-help .thead-default th {
+    color: #55595c;
+    background-color: #eceeef; }
+  #bootstrap-4-shortcodes-help .table-inverse {
+    color: #eceeef;
+    background-color: #373a3c; }
+    #bootstrap-4-shortcodes-help .table-inverse th,
+    #bootstrap-4-shortcodes-help .table-inverse td,
+    #bootstrap-4-shortcodes-help .table-inverse thead th {
+      border-color: #55595c; }
+    #bootstrap-4-shortcodes-help .table-inverse.table-bordered {
+      border: 0; }
+  #bootstrap-4-shortcodes-help .table-responsive {
+    display: block;
+    width: 100%;
+    min-height: .01%;
+    overflow-x: auto; }
+  #bootstrap-4-shortcodes-help .table-reflow thead {
+    float: left; }
+  #bootstrap-4-shortcodes-help .table-reflow tbody {
+    display: block;
+    white-space: nowrap; }
+  #bootstrap-4-shortcodes-help .table-reflow th,
+  #bootstrap-4-shortcodes-help .table-reflow td {
+    border-top: 1px solid #eceeef;
+    border-left: 1px solid #eceeef; }
+    #bootstrap-4-shortcodes-help .table-reflow th:last-child,
+    #bootstrap-4-shortcodes-help .table-reflow td:last-child {
+      border-right: 1px solid #eceeef; }
+  #bootstrap-4-shortcodes-help .table-reflow thead:last-child tr:last-child th,
+  #bootstrap-4-shortcodes-help .table-reflow thead:last-child tr:last-child td,
+  #bootstrap-4-shortcodes-help .table-reflow tbody:last-child tr:last-child th,
+  #bootstrap-4-shortcodes-help .table-reflow tbody:last-child tr:last-child td,
+  #bootstrap-4-shortcodes-help .table-reflow tfoot:last-child tr:last-child th,
+  #bootstrap-4-shortcodes-help .table-reflow tfoot:last-child tr:last-child td {
+    border-bottom: 1px solid #eceeef; }
+  #bootstrap-4-shortcodes-help .table-reflow tr {
+    float: left; }
+    #bootstrap-4-shortcodes-help .table-reflow tr th,
+    #bootstrap-4-shortcodes-help .table-reflow tr td {
+      display: block !important;
+      border: 1px solid #eceeef; }
+  #bootstrap-4-shortcodes-help .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .form-control::-ms-expand {
+      background-color: transparent;
+      border: 0; }
+    #bootstrap-4-shortcodes-help .form-control:focus {
+      color: #55595c;
+      background-color: #fff;
+      border-color: #66afe9;
+      outline: none; }
+    #bootstrap-4-shortcodes-help .form-control::placeholder {
+      color: #999;
+      opacity: 1; }
+    #bootstrap-4-shortcodes-help .form-control:disabled, #bootstrap-4-shortcodes-help .form-control[readonly] {
+      background-color: #eceeef;
+      opacity: 1; }
+    #bootstrap-4-shortcodes-help .form-control:disabled {
+      cursor: not-allowed; }
+  #bootstrap-4-shortcodes-help select.form-control:not([size]):not([multiple]) {
+    height: 2.5rem; }
+  #bootstrap-4-shortcodes-help select.form-control:focus::-ms-value {
+    color: #55595c;
+    background-color: #fff; }
+  #bootstrap-4-shortcodes-help .form-control-file,
+  #bootstrap-4-shortcodes-help .form-control-range {
+    display: block; }
+  #bootstrap-4-shortcodes-help .col-form-label {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0; }
+  #bootstrap-4-shortcodes-help .col-form-label-lg {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.25rem; }
+  #bootstrap-4-shortcodes-help .col-form-label-sm {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.875rem; }
+  #bootstrap-4-shortcodes-help .col-form-legend {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1rem; }
+  #bootstrap-4-shortcodes-help .form-control-static {
+    min-height: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0; }
+    #bootstrap-4-shortcodes-help .form-control-static.form-control-sm, #bootstrap-4-shortcodes-help .input-group-sm > .form-control-static.form-control, #bootstrap-4-shortcodes-help .input-group-sm > .form-control-static.input-group-addon, #bootstrap-4-shortcodes-help .input-group-sm > .input-group-btn > .form-control-static.btn, #bootstrap-4-shortcodes-help .form-control-static.form-control-lg, #bootstrap-4-shortcodes-help .input-group-lg > .form-control-static.form-control, #bootstrap-4-shortcodes-help .input-group-lg > .form-control-static.input-group-addon, #bootstrap-4-shortcodes-help .input-group-lg > .input-group-btn > .form-control-static.btn {
+      padding-right: 0;
+      padding-left: 0; }
+  #bootstrap-4-shortcodes-help .form-control-sm, #bootstrap-4-shortcodes-help .input-group-sm > .form-control, #bootstrap-4-shortcodes-help .input-group-sm > .input-group-addon, #bootstrap-4-shortcodes-help .input-group-sm > .input-group-btn > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem; }
+  #bootstrap-4-shortcodes-help select.form-control-sm:not([size]):not([multiple]), #bootstrap-4-shortcodes-help .input-group-sm > select.form-control:not([size]):not([multiple]), #bootstrap-4-shortcodes-help .input-group-sm > select.input-group-addon:not([size]):not([multiple]), #bootstrap-4-shortcodes-help .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
+    height: 1.8125rem; }
+  #bootstrap-4-shortcodes-help .form-control-lg, #bootstrap-4-shortcodes-help .input-group-lg > .form-control, #bootstrap-4-shortcodes-help .input-group-lg > .input-group-addon, #bootstrap-4-shortcodes-help .input-group-lg > .input-group-btn > .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem; }
+  #bootstrap-4-shortcodes-help select.form-control-lg:not([size]):not([multiple]), #bootstrap-4-shortcodes-help .input-group-lg > select.form-control:not([size]):not([multiple]), #bootstrap-4-shortcodes-help .input-group-lg > select.input-group-addon:not([size]):not([multiple]), #bootstrap-4-shortcodes-help .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
+    height: 3.16667rem; }
+  #bootstrap-4-shortcodes-help .form-group {
+    margin-bottom: 1rem; }
+  #bootstrap-4-shortcodes-help .form-text {
+    display: block;
+    margin-top: 0.25rem; }
+  #bootstrap-4-shortcodes-help .form-check {
+    position: relative;
+    display: block;
+    margin-bottom: 0.75rem; }
+    #bootstrap-4-shortcodes-help .form-check + .form-check {
+      margin-top: -.25rem; }
+    #bootstrap-4-shortcodes-help .form-check.disabled .form-check-label {
+      color: #818a91;
+      cursor: not-allowed; }
+  #bootstrap-4-shortcodes-help .form-check-label {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    cursor: pointer; }
+  #bootstrap-4-shortcodes-help .form-check-input {
+    position: absolute;
+    margin-top: .25rem;
+    margin-left: -1.25rem; }
+    #bootstrap-4-shortcodes-help .form-check-input:only-child {
+      position: static; }
+  #bootstrap-4-shortcodes-help .form-check-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    vertical-align: middle;
+    cursor: pointer; }
+    #bootstrap-4-shortcodes-help .form-check-inline + .form-check-inline {
+      margin-left: .75rem; }
+    #bootstrap-4-shortcodes-help .form-check-inline.disabled {
+      cursor: not-allowed; }
+  #bootstrap-4-shortcodes-help .form-control-feedback {
+    margin-top: 0.25rem; }
+  #bootstrap-4-shortcodes-help .form-control-success,
+  #bootstrap-4-shortcodes-help .form-control-warning,
+  #bootstrap-4-shortcodes-help .form-control-danger {
+    padding-right: 2.25rem;
+    background-repeat: no-repeat;
+    background-position: center right 0.625rem;
+    background-size: 1.25rem 1.25rem; }
+  #bootstrap-4-shortcodes-help .has-success .form-control-feedback,
+  #bootstrap-4-shortcodes-help .has-success .form-control-label,
+  #bootstrap-4-shortcodes-help .has-success .form-check-label,
+  #bootstrap-4-shortcodes-help .has-success .form-check-inline,
+  #bootstrap-4-shortcodes-help .has-success .custom-control {
+    color: #5cb85c; }
+  #bootstrap-4-shortcodes-help .has-success .form-control {
+    border-color: #5cb85c; }
+  #bootstrap-4-shortcodes-help .has-success .input-group-addon {
+    color: #5cb85c;
+    border-color: #5cb85c;
+    background-color: #eaf6ea; }
+  #bootstrap-4-shortcodes-help .has-success .form-control-feedback {
+    color: #5cb85c; }
+  #bootstrap-4-shortcodes-help .has-success .form-control-success {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"); }
+  #bootstrap-4-shortcodes-help .has-warning .form-control-feedback,
+  #bootstrap-4-shortcodes-help .has-warning .form-control-label,
+  #bootstrap-4-shortcodes-help .has-warning .form-check-label,
+  #bootstrap-4-shortcodes-help .has-warning .form-check-inline,
+  #bootstrap-4-shortcodes-help .has-warning .custom-control {
+    color: #f0ad4e; }
+  #bootstrap-4-shortcodes-help .has-warning .form-control {
+    border-color: #f0ad4e; }
+  #bootstrap-4-shortcodes-help .has-warning .input-group-addon {
+    color: #f0ad4e;
+    border-color: #f0ad4e;
+    background-color: white; }
+  #bootstrap-4-shortcodes-help .has-warning .form-control-feedback {
+    color: #f0ad4e; }
+  #bootstrap-4-shortcodes-help .has-warning .form-control-warning {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23f0ad4e' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"); }
+  #bootstrap-4-shortcodes-help .has-danger .form-control-feedback,
+  #bootstrap-4-shortcodes-help .has-danger .form-control-label,
+  #bootstrap-4-shortcodes-help .has-danger .form-check-label,
+  #bootstrap-4-shortcodes-help .has-danger .form-check-inline,
+  #bootstrap-4-shortcodes-help .has-danger .custom-control {
+    color: #d9534f; }
+  #bootstrap-4-shortcodes-help .has-danger .form-control {
+    border-color: #d9534f; }
+  #bootstrap-4-shortcodes-help .has-danger .input-group-addon {
+    color: #d9534f;
+    border-color: #d9534f;
+    background-color: #fdf7f7; }
+  #bootstrap-4-shortcodes-help .has-danger .form-control-feedback {
+    color: #d9534f; }
+  #bootstrap-4-shortcodes-help .has-danger .form-control-danger {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"); }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .form-inline .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle; }
+    #bootstrap-4-shortcodes-help .form-inline .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle; }
+    #bootstrap-4-shortcodes-help .form-inline .form-control-static {
+      display: inline-block; }
+    #bootstrap-4-shortcodes-help .form-inline .input-group {
+      display: inline-table;
+      vertical-align: middle; }
+      #bootstrap-4-shortcodes-help .form-inline .input-group .input-group-addon,
+      #bootstrap-4-shortcodes-help .form-inline .input-group .input-group-btn,
+      #bootstrap-4-shortcodes-help .form-inline .input-group .form-control {
+        width: auto; }
+    #bootstrap-4-shortcodes-help .form-inline .input-group > .form-control {
+      width: 100%; }
+    #bootstrap-4-shortcodes-help .form-inline .form-control-label {
+      margin-bottom: 0;
+      vertical-align: middle; }
+    #bootstrap-4-shortcodes-help .form-inline .form-check {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      vertical-align: middle; }
+    #bootstrap-4-shortcodes-help .form-inline .form-check-label {
+      padding-left: 0; }
+    #bootstrap-4-shortcodes-help .form-inline .form-check-input {
+      position: relative;
+      margin-left: 0; }
+    #bootstrap-4-shortcodes-help .form-inline .has-feedback .form-control-feedback {
+      top: 0; } }
+  #bootstrap-4-shortcodes-help .btn {
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .btn:focus, #bootstrap-4-shortcodes-help .btn.focus, #bootstrap-4-shortcodes-help .btn:active:focus, #bootstrap-4-shortcodes-help .btn:active.focus, #bootstrap-4-shortcodes-help .btn.active:focus, #bootstrap-4-shortcodes-help .btn.active.focus {
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    #bootstrap-4-shortcodes-help .btn:focus, #bootstrap-4-shortcodes-help .btn:hover {
+      text-decoration: none; }
+    #bootstrap-4-shortcodes-help .btn.focus {
+      text-decoration: none; }
+    #bootstrap-4-shortcodes-help .btn:active, #bootstrap-4-shortcodes-help .btn.active {
+      background-image: none;
+      outline: 0; }
+    #bootstrap-4-shortcodes-help .btn.disabled, #bootstrap-4-shortcodes-help .btn:disabled {
+      cursor: not-allowed;
+      opacity: .65; }
+  #bootstrap-4-shortcodes-help a.btn.disabled,
+  #bootstrap-4-shortcodes-help fieldset[disabled] a.btn {
+    pointer-events: none; }
+  #bootstrap-4-shortcodes-help .btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .btn-primary:hover {
+      color: #fff;
+      background-color: #025aa5;
+      border-color: #01549b; }
+    #bootstrap-4-shortcodes-help .btn-primary:focus, #bootstrap-4-shortcodes-help .btn-primary.focus {
+      color: #fff;
+      background-color: #025aa5;
+      border-color: #01549b; }
+    #bootstrap-4-shortcodes-help .btn-primary:active, #bootstrap-4-shortcodes-help .btn-primary.active,
+    .open > #bootstrap-4-shortcodes-help .btn-primary.dropdown-toggle {
+      color: #fff;
+      background-color: #025aa5;
+      border-color: #01549b;
+      background-image: none; }
+      #bootstrap-4-shortcodes-help .btn-primary:active:hover, #bootstrap-4-shortcodes-help .btn-primary:active:focus, #bootstrap-4-shortcodes-help .btn-primary:active.focus, #bootstrap-4-shortcodes-help .btn-primary.active:hover, #bootstrap-4-shortcodes-help .btn-primary.active:focus, #bootstrap-4-shortcodes-help .btn-primary.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-primary.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-primary.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-primary.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #014682;
+        border-color: #01315a; }
+    #bootstrap-4-shortcodes-help .btn-primary.disabled:focus, #bootstrap-4-shortcodes-help .btn-primary.disabled.focus, #bootstrap-4-shortcodes-help .btn-primary:disabled:focus, #bootstrap-4-shortcodes-help .btn-primary:disabled.focus {
+      background-color: #0275d8;
+      border-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .btn-primary.disabled:hover, #bootstrap-4-shortcodes-help .btn-primary:disabled:hover {
+      background-color: #0275d8;
+      border-color: #0275d8; }
+  #bootstrap-4-shortcodes-help .btn-secondary {
+    color: #373a3c;
+    background-color: #fff;
+    border-color: #ccc; }
+    #bootstrap-4-shortcodes-help .btn-secondary:hover {
+      color: #373a3c;
+      background-color: #e6e6e6;
+      border-color: #adadad; }
+    #bootstrap-4-shortcodes-help .btn-secondary:focus, #bootstrap-4-shortcodes-help .btn-secondary.focus {
+      color: #373a3c;
+      background-color: #e6e6e6;
+      border-color: #adadad; }
+    #bootstrap-4-shortcodes-help .btn-secondary:active, #bootstrap-4-shortcodes-help .btn-secondary.active,
+    .open > #bootstrap-4-shortcodes-help .btn-secondary.dropdown-toggle {
+      color: #373a3c;
+      background-color: #e6e6e6;
+      border-color: #adadad;
+      background-image: none; }
+      #bootstrap-4-shortcodes-help .btn-secondary:active:hover, #bootstrap-4-shortcodes-help .btn-secondary:active:focus, #bootstrap-4-shortcodes-help .btn-secondary:active.focus, #bootstrap-4-shortcodes-help .btn-secondary.active:hover, #bootstrap-4-shortcodes-help .btn-secondary.active:focus, #bootstrap-4-shortcodes-help .btn-secondary.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-secondary.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-secondary.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-secondary.dropdown-toggle.focus {
+        color: #373a3c;
+        background-color: #d4d4d4;
+        border-color: #8c8c8c; }
+    #bootstrap-4-shortcodes-help .btn-secondary.disabled:focus, #bootstrap-4-shortcodes-help .btn-secondary.disabled.focus, #bootstrap-4-shortcodes-help .btn-secondary:disabled:focus, #bootstrap-4-shortcodes-help .btn-secondary:disabled.focus {
+      background-color: #fff;
+      border-color: #ccc; }
+    #bootstrap-4-shortcodes-help .btn-secondary.disabled:hover, #bootstrap-4-shortcodes-help .btn-secondary:disabled:hover {
+      background-color: #fff;
+      border-color: #ccc; }
+  #bootstrap-4-shortcodes-help .btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #5bc0de; }
+    #bootstrap-4-shortcodes-help .btn-info:hover {
+      color: #fff;
+      background-color: #31b0d5;
+      border-color: #2aabd2; }
+    #bootstrap-4-shortcodes-help .btn-info:focus, #bootstrap-4-shortcodes-help .btn-info.focus {
+      color: #fff;
+      background-color: #31b0d5;
+      border-color: #2aabd2; }
+    #bootstrap-4-shortcodes-help .btn-info:active, #bootstrap-4-shortcodes-help .btn-info.active,
+    .open > #bootstrap-4-shortcodes-help .btn-info.dropdown-toggle {
+      color: #fff;
+      background-color: #31b0d5;
+      border-color: #2aabd2;
+      background-image: none; }
+      #bootstrap-4-shortcodes-help .btn-info:active:hover, #bootstrap-4-shortcodes-help .btn-info:active:focus, #bootstrap-4-shortcodes-help .btn-info:active.focus, #bootstrap-4-shortcodes-help .btn-info.active:hover, #bootstrap-4-shortcodes-help .btn-info.active:focus, #bootstrap-4-shortcodes-help .btn-info.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-info.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-info.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-info.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #269abc;
+        border-color: #1f7e9a; }
+    #bootstrap-4-shortcodes-help .btn-info.disabled:focus, #bootstrap-4-shortcodes-help .btn-info.disabled.focus, #bootstrap-4-shortcodes-help .btn-info:disabled:focus, #bootstrap-4-shortcodes-help .btn-info:disabled.focus {
+      background-color: #5bc0de;
+      border-color: #5bc0de; }
+    #bootstrap-4-shortcodes-help .btn-info.disabled:hover, #bootstrap-4-shortcodes-help .btn-info:disabled:hover {
+      background-color: #5bc0de;
+      border-color: #5bc0de; }
+  #bootstrap-4-shortcodes-help .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .btn-success:hover {
+      color: #fff;
+      background-color: #449d44;
+      border-color: #419641; }
+    #bootstrap-4-shortcodes-help .btn-success:focus, #bootstrap-4-shortcodes-help .btn-success.focus {
+      color: #fff;
+      background-color: #449d44;
+      border-color: #419641; }
+    #bootstrap-4-shortcodes-help .btn-success:active, #bootstrap-4-shortcodes-help .btn-success.active,
+    .open > #bootstrap-4-shortcodes-help .btn-success.dropdown-toggle {
+      color: #fff;
+      background-color: #449d44;
+      border-color: #419641;
+      background-image: none; }
+      #bootstrap-4-shortcodes-help .btn-success:active:hover, #bootstrap-4-shortcodes-help .btn-success:active:focus, #bootstrap-4-shortcodes-help .btn-success:active.focus, #bootstrap-4-shortcodes-help .btn-success.active:hover, #bootstrap-4-shortcodes-help .btn-success.active:focus, #bootstrap-4-shortcodes-help .btn-success.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-success.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-success.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-success.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #398439;
+        border-color: #2d672d; }
+    #bootstrap-4-shortcodes-help .btn-success.disabled:focus, #bootstrap-4-shortcodes-help .btn-success.disabled.focus, #bootstrap-4-shortcodes-help .btn-success:disabled:focus, #bootstrap-4-shortcodes-help .btn-success:disabled.focus {
+      background-color: #5cb85c;
+      border-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .btn-success.disabled:hover, #bootstrap-4-shortcodes-help .btn-success:disabled:hover {
+      background-color: #5cb85c;
+      border-color: #5cb85c; }
+  #bootstrap-4-shortcodes-help .btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .btn-warning:hover {
+      color: #fff;
+      background-color: #ec971f;
+      border-color: #eb9316; }
+    #bootstrap-4-shortcodes-help .btn-warning:focus, #bootstrap-4-shortcodes-help .btn-warning.focus {
+      color: #fff;
+      background-color: #ec971f;
+      border-color: #eb9316; }
+    #bootstrap-4-shortcodes-help .btn-warning:active, #bootstrap-4-shortcodes-help .btn-warning.active,
+    .open > #bootstrap-4-shortcodes-help .btn-warning.dropdown-toggle {
+      color: #fff;
+      background-color: #ec971f;
+      border-color: #eb9316;
+      background-image: none; }
+      #bootstrap-4-shortcodes-help .btn-warning:active:hover, #bootstrap-4-shortcodes-help .btn-warning:active:focus, #bootstrap-4-shortcodes-help .btn-warning:active.focus, #bootstrap-4-shortcodes-help .btn-warning.active:hover, #bootstrap-4-shortcodes-help .btn-warning.active:focus, #bootstrap-4-shortcodes-help .btn-warning.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-warning.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-warning.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-warning.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #d58512;
+        border-color: #b06d0f; }
+    #bootstrap-4-shortcodes-help .btn-warning.disabled:focus, #bootstrap-4-shortcodes-help .btn-warning.disabled.focus, #bootstrap-4-shortcodes-help .btn-warning:disabled:focus, #bootstrap-4-shortcodes-help .btn-warning:disabled.focus {
+      background-color: #f0ad4e;
+      border-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .btn-warning.disabled:hover, #bootstrap-4-shortcodes-help .btn-warning:disabled:hover {
+      background-color: #f0ad4e;
+      border-color: #f0ad4e; }
+  #bootstrap-4-shortcodes-help .btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .btn-danger:hover {
+      color: #fff;
+      background-color: #c9302c;
+      border-color: #c12e2a; }
+    #bootstrap-4-shortcodes-help .btn-danger:focus, #bootstrap-4-shortcodes-help .btn-danger.focus {
+      color: #fff;
+      background-color: #c9302c;
+      border-color: #c12e2a; }
+    #bootstrap-4-shortcodes-help .btn-danger:active, #bootstrap-4-shortcodes-help .btn-danger.active,
+    .open > #bootstrap-4-shortcodes-help .btn-danger.dropdown-toggle {
+      color: #fff;
+      background-color: #c9302c;
+      border-color: #c12e2a;
+      background-image: none; }
+      #bootstrap-4-shortcodes-help .btn-danger:active:hover, #bootstrap-4-shortcodes-help .btn-danger:active:focus, #bootstrap-4-shortcodes-help .btn-danger:active.focus, #bootstrap-4-shortcodes-help .btn-danger.active:hover, #bootstrap-4-shortcodes-help .btn-danger.active:focus, #bootstrap-4-shortcodes-help .btn-danger.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-danger.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-danger.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-danger.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #ac2925;
+        border-color: #8b211e; }
+    #bootstrap-4-shortcodes-help .btn-danger.disabled:focus, #bootstrap-4-shortcodes-help .btn-danger.disabled.focus, #bootstrap-4-shortcodes-help .btn-danger:disabled:focus, #bootstrap-4-shortcodes-help .btn-danger:disabled.focus {
+      background-color: #d9534f;
+      border-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .btn-danger.disabled:hover, #bootstrap-4-shortcodes-help .btn-danger:disabled:hover {
+      background-color: #d9534f;
+      border-color: #d9534f; }
+  #bootstrap-4-shortcodes-help .btn-outline-primary {
+    color: #0275d8;
+    background-image: none;
+    background-color: transparent;
+    border-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .btn-outline-primary:hover {
+      color: #fff;
+      background-color: #0275d8;
+      border-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .btn-outline-primary:focus, #bootstrap-4-shortcodes-help .btn-outline-primary.focus {
+      color: #fff;
+      background-color: #0275d8;
+      border-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .btn-outline-primary:active, #bootstrap-4-shortcodes-help .btn-outline-primary.active,
+    .open > #bootstrap-4-shortcodes-help .btn-outline-primary.dropdown-toggle {
+      color: #fff;
+      background-color: #0275d8;
+      border-color: #0275d8; }
+      #bootstrap-4-shortcodes-help .btn-outline-primary:active:hover, #bootstrap-4-shortcodes-help .btn-outline-primary:active:focus, #bootstrap-4-shortcodes-help .btn-outline-primary:active.focus, #bootstrap-4-shortcodes-help .btn-outline-primary.active:hover, #bootstrap-4-shortcodes-help .btn-outline-primary.active:focus, #bootstrap-4-shortcodes-help .btn-outline-primary.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-primary.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-primary.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-primary.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #014682;
+        border-color: #01315a; }
+    #bootstrap-4-shortcodes-help .btn-outline-primary.disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-primary.disabled.focus, #bootstrap-4-shortcodes-help .btn-outline-primary:disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-primary:disabled.focus {
+      border-color: #43a7fd; }
+    #bootstrap-4-shortcodes-help .btn-outline-primary.disabled:hover, #bootstrap-4-shortcodes-help .btn-outline-primary:disabled:hover {
+      border-color: #43a7fd; }
+  #bootstrap-4-shortcodes-help .btn-outline-secondary {
+    color: #ccc;
+    background-image: none;
+    background-color: transparent;
+    border-color: #ccc; }
+    #bootstrap-4-shortcodes-help .btn-outline-secondary:hover {
+      color: #fff;
+      background-color: #ccc;
+      border-color: #ccc; }
+    #bootstrap-4-shortcodes-help .btn-outline-secondary:focus, #bootstrap-4-shortcodes-help .btn-outline-secondary.focus {
+      color: #fff;
+      background-color: #ccc;
+      border-color: #ccc; }
+    #bootstrap-4-shortcodes-help .btn-outline-secondary:active, #bootstrap-4-shortcodes-help .btn-outline-secondary.active,
+    .open > #bootstrap-4-shortcodes-help .btn-outline-secondary.dropdown-toggle {
+      color: #fff;
+      background-color: #ccc;
+      border-color: #ccc; }
+      #bootstrap-4-shortcodes-help .btn-outline-secondary:active:hover, #bootstrap-4-shortcodes-help .btn-outline-secondary:active:focus, #bootstrap-4-shortcodes-help .btn-outline-secondary:active.focus, #bootstrap-4-shortcodes-help .btn-outline-secondary.active:hover, #bootstrap-4-shortcodes-help .btn-outline-secondary.active:focus, #bootstrap-4-shortcodes-help .btn-outline-secondary.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-secondary.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-secondary.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-secondary.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #a1a1a1;
+        border-color: #8c8c8c; }
+    #bootstrap-4-shortcodes-help .btn-outline-secondary.disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-secondary.disabled.focus, #bootstrap-4-shortcodes-help .btn-outline-secondary:disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-secondary:disabled.focus {
+      border-color: white; }
+    #bootstrap-4-shortcodes-help .btn-outline-secondary.disabled:hover, #bootstrap-4-shortcodes-help .btn-outline-secondary:disabled:hover {
+      border-color: white; }
+  #bootstrap-4-shortcodes-help .btn-outline-info {
+    color: #5bc0de;
+    background-image: none;
+    background-color: transparent;
+    border-color: #5bc0de; }
+    #bootstrap-4-shortcodes-help .btn-outline-info:hover {
+      color: #fff;
+      background-color: #5bc0de;
+      border-color: #5bc0de; }
+    #bootstrap-4-shortcodes-help .btn-outline-info:focus, #bootstrap-4-shortcodes-help .btn-outline-info.focus {
+      color: #fff;
+      background-color: #5bc0de;
+      border-color: #5bc0de; }
+    #bootstrap-4-shortcodes-help .btn-outline-info:active, #bootstrap-4-shortcodes-help .btn-outline-info.active,
+    .open > #bootstrap-4-shortcodes-help .btn-outline-info.dropdown-toggle {
+      color: #fff;
+      background-color: #5bc0de;
+      border-color: #5bc0de; }
+      #bootstrap-4-shortcodes-help .btn-outline-info:active:hover, #bootstrap-4-shortcodes-help .btn-outline-info:active:focus, #bootstrap-4-shortcodes-help .btn-outline-info:active.focus, #bootstrap-4-shortcodes-help .btn-outline-info.active:hover, #bootstrap-4-shortcodes-help .btn-outline-info.active:focus, #bootstrap-4-shortcodes-help .btn-outline-info.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-info.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-info.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-info.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #269abc;
+        border-color: #1f7e9a; }
+    #bootstrap-4-shortcodes-help .btn-outline-info.disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-info.disabled.focus, #bootstrap-4-shortcodes-help .btn-outline-info:disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-info:disabled.focus {
+      border-color: #b0e1ef; }
+    #bootstrap-4-shortcodes-help .btn-outline-info.disabled:hover, #bootstrap-4-shortcodes-help .btn-outline-info:disabled:hover {
+      border-color: #b0e1ef; }
+  #bootstrap-4-shortcodes-help .btn-outline-success {
+    color: #5cb85c;
+    background-image: none;
+    background-color: transparent;
+    border-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .btn-outline-success:hover {
+      color: #fff;
+      background-color: #5cb85c;
+      border-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .btn-outline-success:focus, #bootstrap-4-shortcodes-help .btn-outline-success.focus {
+      color: #fff;
+      background-color: #5cb85c;
+      border-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .btn-outline-success:active, #bootstrap-4-shortcodes-help .btn-outline-success.active,
+    .open > #bootstrap-4-shortcodes-help .btn-outline-success.dropdown-toggle {
+      color: #fff;
+      background-color: #5cb85c;
+      border-color: #5cb85c; }
+      #bootstrap-4-shortcodes-help .btn-outline-success:active:hover, #bootstrap-4-shortcodes-help .btn-outline-success:active:focus, #bootstrap-4-shortcodes-help .btn-outline-success:active.focus, #bootstrap-4-shortcodes-help .btn-outline-success.active:hover, #bootstrap-4-shortcodes-help .btn-outline-success.active:focus, #bootstrap-4-shortcodes-help .btn-outline-success.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-success.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-success.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-success.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #398439;
+        border-color: #2d672d; }
+    #bootstrap-4-shortcodes-help .btn-outline-success.disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-success.disabled.focus, #bootstrap-4-shortcodes-help .btn-outline-success:disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-success:disabled.focus {
+      border-color: #a3d7a3; }
+    #bootstrap-4-shortcodes-help .btn-outline-success.disabled:hover, #bootstrap-4-shortcodes-help .btn-outline-success:disabled:hover {
+      border-color: #a3d7a3; }
+  #bootstrap-4-shortcodes-help .btn-outline-warning {
+    color: #f0ad4e;
+    background-image: none;
+    background-color: transparent;
+    border-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .btn-outline-warning:hover {
+      color: #fff;
+      background-color: #f0ad4e;
+      border-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .btn-outline-warning:focus, #bootstrap-4-shortcodes-help .btn-outline-warning.focus {
+      color: #fff;
+      background-color: #f0ad4e;
+      border-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .btn-outline-warning:active, #bootstrap-4-shortcodes-help .btn-outline-warning.active,
+    .open > #bootstrap-4-shortcodes-help .btn-outline-warning.dropdown-toggle {
+      color: #fff;
+      background-color: #f0ad4e;
+      border-color: #f0ad4e; }
+      #bootstrap-4-shortcodes-help .btn-outline-warning:active:hover, #bootstrap-4-shortcodes-help .btn-outline-warning:active:focus, #bootstrap-4-shortcodes-help .btn-outline-warning:active.focus, #bootstrap-4-shortcodes-help .btn-outline-warning.active:hover, #bootstrap-4-shortcodes-help .btn-outline-warning.active:focus, #bootstrap-4-shortcodes-help .btn-outline-warning.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-warning.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-warning.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-warning.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #d58512;
+        border-color: #b06d0f; }
+    #bootstrap-4-shortcodes-help .btn-outline-warning.disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-warning.disabled.focus, #bootstrap-4-shortcodes-help .btn-outline-warning:disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-warning:disabled.focus {
+      border-color: #f8d9ac; }
+    #bootstrap-4-shortcodes-help .btn-outline-warning.disabled:hover, #bootstrap-4-shortcodes-help .btn-outline-warning:disabled:hover {
+      border-color: #f8d9ac; }
+  #bootstrap-4-shortcodes-help .btn-outline-danger {
+    color: #d9534f;
+    background-image: none;
+    background-color: transparent;
+    border-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .btn-outline-danger:hover {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .btn-outline-danger:focus, #bootstrap-4-shortcodes-help .btn-outline-danger.focus {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .btn-outline-danger:active, #bootstrap-4-shortcodes-help .btn-outline-danger.active,
+    .open > #bootstrap-4-shortcodes-help .btn-outline-danger.dropdown-toggle {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d9534f; }
+      #bootstrap-4-shortcodes-help .btn-outline-danger:active:hover, #bootstrap-4-shortcodes-help .btn-outline-danger:active:focus, #bootstrap-4-shortcodes-help .btn-outline-danger:active.focus, #bootstrap-4-shortcodes-help .btn-outline-danger.active:hover, #bootstrap-4-shortcodes-help .btn-outline-danger.active:focus, #bootstrap-4-shortcodes-help .btn-outline-danger.active.focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-danger.dropdown-toggle:hover,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-danger.dropdown-toggle:focus,
+      .open > #bootstrap-4-shortcodes-help .btn-outline-danger.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #ac2925;
+        border-color: #8b211e; }
+    #bootstrap-4-shortcodes-help .btn-outline-danger.disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-danger.disabled.focus, #bootstrap-4-shortcodes-help .btn-outline-danger:disabled:focus, #bootstrap-4-shortcodes-help .btn-outline-danger:disabled.focus {
+      border-color: #eba5a3; }
+    #bootstrap-4-shortcodes-help .btn-outline-danger.disabled:hover, #bootstrap-4-shortcodes-help .btn-outline-danger:disabled:hover {
+      border-color: #eba5a3; }
+  #bootstrap-4-shortcodes-help .btn-link {
+    font-weight: normal;
+    color: #0275d8;
+    border-radius: 0; }
+    #bootstrap-4-shortcodes-help .btn-link, #bootstrap-4-shortcodes-help .btn-link:active, #bootstrap-4-shortcodes-help .btn-link.active, #bootstrap-4-shortcodes-help .btn-link:disabled {
+      background-color: transparent; }
+    #bootstrap-4-shortcodes-help .btn-link, #bootstrap-4-shortcodes-help .btn-link:focus, #bootstrap-4-shortcodes-help .btn-link:active {
+      border-color: transparent; }
+    #bootstrap-4-shortcodes-help .btn-link:hover {
+      border-color: transparent; }
+    #bootstrap-4-shortcodes-help .btn-link:focus, #bootstrap-4-shortcodes-help .btn-link:hover {
+      color: #014c8c;
+      text-decoration: underline;
+      background-color: transparent; }
+    #bootstrap-4-shortcodes-help .btn-link:disabled:focus, #bootstrap-4-shortcodes-help .btn-link:disabled:hover {
+      color: #818a91;
+      text-decoration: none; }
+  #bootstrap-4-shortcodes-help .btn-lg, #bootstrap-4-shortcodes-help .btn-group-lg > .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem; }
+  #bootstrap-4-shortcodes-help .btn-sm, #bootstrap-4-shortcodes-help .btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem; }
+  #bootstrap-4-shortcodes-help .btn-block {
+    display: block;
+    width: 100%; }
+  #bootstrap-4-shortcodes-help .btn-block + .btn-block {
+    margin-top: 0.5rem; }
+  #bootstrap-4-shortcodes-help input[type="submit"].btn-block,
+  #bootstrap-4-shortcodes-help input[type="reset"].btn-block,
+  #bootstrap-4-shortcodes-help input[type="button"].btn-block {
+    width: 100%; }
+  #bootstrap-4-shortcodes-help .fade {
+    opacity: 0;
+    transition: opacity .15s linear; }
+    #bootstrap-4-shortcodes-help .fade.in {
+      opacity: 1; }
+  #bootstrap-4-shortcodes-help .collapse {
+    display: none; }
+    #bootstrap-4-shortcodes-help .collapse.in {
+      display: block; }
+  #bootstrap-4-shortcodes-help .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height; }
+  #bootstrap-4-shortcodes-help .dropup,
+  #bootstrap-4-shortcodes-help .dropdown {
+    position: relative; }
+  #bootstrap-4-shortcodes-help .dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent; }
+  #bootstrap-4-shortcodes-help .dropdown-toggle:focus {
+    outline: 0; }
+  #bootstrap-4-shortcodes-help .dropup .dropdown-toggle::after {
+    border-top: 0;
+    border-bottom: 0.3em solid; }
+  #bootstrap-4-shortcodes-help .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 1rem;
+    color: #373a3c;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .dropdown-divider {
+    height: 1px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    background-color: #e5e5e5; }
+  #bootstrap-4-shortcodes-help .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    color: #373a3c;
+    text-align: inherit;
+    white-space: nowrap;
+    background: none;
+    border: 0; }
+    #bootstrap-4-shortcodes-help .dropdown-item:focus, #bootstrap-4-shortcodes-help .dropdown-item:hover {
+      color: #2b2d2f;
+      text-decoration: none;
+      background-color: #f5f5f5; }
+    #bootstrap-4-shortcodes-help .dropdown-item.active, #bootstrap-4-shortcodes-help .dropdown-item.active:focus, #bootstrap-4-shortcodes-help .dropdown-item.active:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: #0275d8;
+      outline: 0; }
+    #bootstrap-4-shortcodes-help .dropdown-item.disabled, #bootstrap-4-shortcodes-help .dropdown-item.disabled:focus, #bootstrap-4-shortcodes-help .dropdown-item.disabled:hover {
+      color: #818a91; }
+    #bootstrap-4-shortcodes-help .dropdown-item.disabled:focus, #bootstrap-4-shortcodes-help .dropdown-item.disabled:hover {
+      text-decoration: none;
+      cursor: not-allowed;
+      background-color: transparent;
+      background-image: none;
+      filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)"; }
+  #bootstrap-4-shortcodes-help .open > .dropdown-menu {
+    display: block; }
+  #bootstrap-4-shortcodes-help .open > a {
+    outline: 0; }
+  #bootstrap-4-shortcodes-help .dropdown-menu-right {
+    right: 0;
+    left: auto; }
+  #bootstrap-4-shortcodes-help .dropdown-menu-left {
+    right: auto;
+    left: 0; }
+  #bootstrap-4-shortcodes-help .dropdown-header {
+    display: block;
+    padding: 5px 20px;
+    font-size: 0.875rem;
+    color: #818a91;
+    white-space: nowrap; }
+  #bootstrap-4-shortcodes-help .dropdown-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 990; }
+  #bootstrap-4-shortcodes-help .dropup .caret,
+  #bootstrap-4-shortcodes-help .navbar-fixed-bottom .dropdown .caret {
+    content: "";
+    border-top: 0;
+    border-bottom: 0.3em solid; }
+  #bootstrap-4-shortcodes-help .dropup .dropdown-menu,
+  #bootstrap-4-shortcodes-help .navbar-fixed-bottom .dropdown .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px; }
+  #bootstrap-4-shortcodes-help .btn-group,
+  #bootstrap-4-shortcodes-help .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle; }
+    #bootstrap-4-shortcodes-help .btn-group > .btn,
+    #bootstrap-4-shortcodes-help .btn-group-vertical > .btn {
+      position: relative;
+      float: left; }
+      #bootstrap-4-shortcodes-help .btn-group > .btn:focus, #bootstrap-4-shortcodes-help .btn-group > .btn:active, #bootstrap-4-shortcodes-help .btn-group > .btn.active,
+      #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:focus,
+      #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:active,
+      #bootstrap-4-shortcodes-help .btn-group-vertical > .btn.active {
+        z-index: 2; }
+      #bootstrap-4-shortcodes-help .btn-group > .btn:hover,
+      #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:hover {
+        z-index: 2; }
+  #bootstrap-4-shortcodes-help .btn-group .btn + .btn,
+  #bootstrap-4-shortcodes-help .btn-group .btn + .btn-group,
+  #bootstrap-4-shortcodes-help .btn-group .btn-group + .btn,
+  #bootstrap-4-shortcodes-help .btn-group .btn-group + .btn-group {
+    margin-left: -1px; }
+  #bootstrap-4-shortcodes-help .btn-toolbar {
+    margin-left: -0.5rem; }
+    #bootstrap-4-shortcodes-help .btn-toolbar::after {
+      content: "";
+      display: table;
+      clear: both; }
+    #bootstrap-4-shortcodes-help .btn-toolbar .btn-group,
+    #bootstrap-4-shortcodes-help .btn-toolbar .input-group {
+      float: left; }
+    #bootstrap-4-shortcodes-help .btn-toolbar > .btn,
+    #bootstrap-4-shortcodes-help .btn-toolbar > .btn-group,
+    #bootstrap-4-shortcodes-help .btn-toolbar > .input-group {
+      margin-left: 0.5rem; }
+  #bootstrap-4-shortcodes-help .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group > .btn:first-child {
+    margin-left: 0; }
+    #bootstrap-4-shortcodes-help .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group > .btn:last-child:not(:first-child),
+  #bootstrap-4-shortcodes-help .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group > .btn-group {
+    float: left; }
+  #bootstrap-4-shortcodes-help .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+  #bootstrap-4-shortcodes-help .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group .dropdown-toggle:active,
+  #bootstrap-4-shortcodes-help .btn-group.open .dropdown-toggle {
+    outline: 0; }
+  #bootstrap-4-shortcodes-help .btn + .dropdown-toggle-split {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem; }
+    #bootstrap-4-shortcodes-help .btn + .dropdown-toggle-split::after {
+      margin-left: 0; }
+  #bootstrap-4-shortcodes-help .btn-sm + .dropdown-toggle-split, #bootstrap-4-shortcodes-help .btn-group-sm > .btn + .dropdown-toggle-split {
+    padding-right: 0.375rem;
+    padding-left: 0.375rem; }
+  #bootstrap-4-shortcodes-help .btn-lg + .dropdown-toggle-split, #bootstrap-4-shortcodes-help .btn-group-lg > .btn + .dropdown-toggle-split {
+    padding-right: 1.125rem;
+    padding-left: 1.125rem; }
+  #bootstrap-4-shortcodes-help .btn .caret {
+    margin-left: 0; }
+  #bootstrap-4-shortcodes-help .btn-lg .caret, #bootstrap-4-shortcodes-help .btn-group-lg > .btn .caret {
+    border-width: 0.3em 0.3em 0;
+    border-bottom-width: 0; }
+  #bootstrap-4-shortcodes-help .dropup .btn-lg .caret, #bootstrap-4-shortcodes-help .dropup .btn-group-lg > .btn .caret {
+    border-width: 0 0.3em 0.3em; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn,
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group,
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group::after {
+    content: "";
+    display: table;
+    clear: both; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group > .btn {
+    float: none; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn + .btn,
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn + .btn-group,
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group + .btn,
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group + .btn-group {
+    margin-top: -1px;
+    margin-left: 0; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:first-child:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:last-child:not(:first-child) {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  #bootstrap-4-shortcodes-help .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0; }
+  #bootstrap-4-shortcodes-help [data-toggle="buttons"] > .btn input[type="radio"],
+  #bootstrap-4-shortcodes-help [data-toggle="buttons"] > .btn input[type="checkbox"],
+  #bootstrap-4-shortcodes-help [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+  #bootstrap-4-shortcodes-help [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none; }
+  #bootstrap-4-shortcodes-help .input-group {
+    position: relative;
+    width: 100%;
+    display: table;
+    border-collapse: separate; }
+    #bootstrap-4-shortcodes-help .input-group .form-control {
+      position: relative;
+      z-index: 2;
+      float: left;
+      width: 100%;
+      margin-bottom: 0; }
+      #bootstrap-4-shortcodes-help .input-group .form-control:focus, #bootstrap-4-shortcodes-help .input-group .form-control:active, #bootstrap-4-shortcodes-help .input-group .form-control:hover {
+        z-index: 3; }
+  #bootstrap-4-shortcodes-help .input-group-addon,
+  #bootstrap-4-shortcodes-help .input-group-btn,
+  #bootstrap-4-shortcodes-help .input-group .form-control {
+    display: table-cell; }
+    #bootstrap-4-shortcodes-help .input-group-addon:not(:first-child):not(:last-child),
+    #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child):not(:last-child),
+    #bootstrap-4-shortcodes-help .input-group .form-control:not(:first-child):not(:last-child) {
+      border-radius: 0; }
+  #bootstrap-4-shortcodes-help .input-group-addon,
+  #bootstrap-4-shortcodes-help .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle; }
+  #bootstrap-4-shortcodes-help .input-group-addon {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.25;
+    color: #55595c;
+    text-align: center;
+    background-color: #eceeef;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .input-group-addon.form-control-sm, #bootstrap-4-shortcodes-help .input-group-sm > .input-group-addon, #bootstrap-4-shortcodes-help .input-group-sm > .input-group-btn > .input-group-addon.btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      border-radius: 0.2rem; }
+    #bootstrap-4-shortcodes-help .input-group-addon.form-control-lg, #bootstrap-4-shortcodes-help .input-group-lg > .input-group-addon, #bootstrap-4-shortcodes-help .input-group-lg > .input-group-btn > .input-group-addon.btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.25rem;
+      border-radius: 0.3rem; }
+    #bootstrap-4-shortcodes-help .input-group-addon input[type="radio"],
+    #bootstrap-4-shortcodes-help .input-group-addon input[type="checkbox"] {
+      margin-top: 0; }
+  #bootstrap-4-shortcodes-help .input-group .form-control:not(:last-child),
+  #bootstrap-4-shortcodes-help .input-group-addon:not(:last-child),
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:last-child) > .btn,
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:last-child) > .btn-group > .btn,
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:last-child) > .dropdown-toggle,
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+  #bootstrap-4-shortcodes-help .input-group-addon:not(:last-child) {
+    border-right: 0; }
+  #bootstrap-4-shortcodes-help .input-group .form-control:not(:first-child),
+  #bootstrap-4-shortcodes-help .input-group-addon:not(:first-child),
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn,
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn-group > .btn,
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .dropdown-toggle,
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:last-child) > .btn:not(:first-child),
+  #bootstrap-4-shortcodes-help .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  #bootstrap-4-shortcodes-help .form-control + .input-group-addon:not(:first-child) {
+    border-left: 0; }
+  #bootstrap-4-shortcodes-help .input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap; }
+    #bootstrap-4-shortcodes-help .input-group-btn > .btn {
+      position: relative; }
+      #bootstrap-4-shortcodes-help .input-group-btn > .btn + .btn {
+        margin-left: -1px; }
+      #bootstrap-4-shortcodes-help .input-group-btn > .btn:focus, #bootstrap-4-shortcodes-help .input-group-btn > .btn:active, #bootstrap-4-shortcodes-help .input-group-btn > .btn:hover {
+        z-index: 3; }
+    #bootstrap-4-shortcodes-help .input-group-btn:not(:last-child) > .btn,
+    #bootstrap-4-shortcodes-help .input-group-btn:not(:last-child) > .btn-group {
+      margin-right: -1px; }
+    #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn,
+    #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn-group {
+      z-index: 2;
+      margin-left: -1px; }
+      #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn:focus, #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn:active, #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn:hover,
+      #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn-group:focus,
+      #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn-group:active,
+      #bootstrap-4-shortcodes-help .input-group-btn:not(:first-child) > .btn-group:hover {
+        z-index: 3; }
+  #bootstrap-4-shortcodes-help .custom-control {
+    position: relative;
+    display: inline;
+    padding-left: 1.5rem;
+    cursor: pointer; }
+    #bootstrap-4-shortcodes-help .custom-control + .custom-control {
+      margin-left: 1rem; }
+  #bootstrap-4-shortcodes-help .custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0; }
+    #bootstrap-4-shortcodes-help .custom-control-input:checked ~ .custom-control-indicator {
+      color: #fff;
+      background-color: #0074d9; }
+    #bootstrap-4-shortcodes-help .custom-control-input:focus ~ .custom-control-indicator {
+      box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #0074d9; }
+    #bootstrap-4-shortcodes-help .custom-control-input:active ~ .custom-control-indicator {
+      color: #fff;
+      background-color: #84c6ff; }
+    #bootstrap-4-shortcodes-help .custom-control-input:disabled ~ .custom-control-indicator {
+      cursor: not-allowed;
+      background-color: #eee; }
+    #bootstrap-4-shortcodes-help .custom-control-input:disabled ~ .custom-control-description {
+      color: #767676;
+      cursor: not-allowed; }
+  #bootstrap-4-shortcodes-help .custom-control-indicator {
+    position: absolute;
+    top: .0625rem;
+    left: 0;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    user-select: none;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%; }
+  #bootstrap-4-shortcodes-help .custom-checkbox .custom-control-indicator {
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
+  #bootstrap-4-shortcodes-help .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
+    background-color: #0074d9;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E"); }
+  #bootstrap-4-shortcodes-help .custom-radio .custom-control-indicator {
+    border-radius: 50%; }
+  #bootstrap-4-shortcodes-help .custom-radio .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E"); }
+  #bootstrap-4-shortcodes-help .custom-controls-stacked .custom-control {
+    display: inline; }
+    #bootstrap-4-shortcodes-help .custom-controls-stacked .custom-control::after {
+      display: block;
+      margin-bottom: 0.25rem;
+      content: ""; }
+    #bootstrap-4-shortcodes-help .custom-controls-stacked .custom-control + .custom-control {
+      margin-left: 0; }
+  #bootstrap-4-shortcodes-help .custom-select {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    padding-right: 0.75rem \9;
+    color: #55595c;
+    vertical-align: middle;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-image: none \9;
+    background-size: 8px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+    #bootstrap-4-shortcodes-help .custom-select:focus {
+      border-color: #51a7e8;
+      outline: none; }
+      #bootstrap-4-shortcodes-help .custom-select:focus::-ms-value {
+        color: #55595c;
+        background-color: #fff; }
+    #bootstrap-4-shortcodes-help .custom-select:disabled {
+      color: #818a91;
+      cursor: not-allowed;
+      background-color: #eceeef; }
+    #bootstrap-4-shortcodes-help .custom-select::-ms-expand {
+      opacity: 0; }
+  #bootstrap-4-shortcodes-help .custom-select-sm {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    font-size: 75%; }
+  #bootstrap-4-shortcodes-help .custom-file {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    height: 2.5rem;
+    cursor: pointer; }
+  #bootstrap-4-shortcodes-help .custom-file-input {
+    min-width: 14rem;
+    max-width: 100%;
+    margin: 0;
+    filter: alpha(opacity=0);
+    opacity: 0; }
+  #bootstrap-4-shortcodes-help .custom-file-control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    user-select: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .custom-file-control:lang(en)::after {
+      content: "Choose file..."; }
+    #bootstrap-4-shortcodes-help .custom-file-control::before {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      z-index: 6;
+      display: block;
+      height: 2.5rem;
+      padding: 0.5rem 1rem;
+      line-height: 1.5;
+      color: #555;
+      background-color: #eee;
+      border: 1px solid #ddd;
+      border-radius: 0 0.25rem 0.25rem 0; }
+    #bootstrap-4-shortcodes-help .custom-file-control:lang(en)::before {
+      content: "Browse"; }
+  #bootstrap-4-shortcodes-help .nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none; }
+  #bootstrap-4-shortcodes-help .nav-link {
+    display: inline-block; }
+    #bootstrap-4-shortcodes-help .nav-link:focus, #bootstrap-4-shortcodes-help .nav-link:hover {
+      text-decoration: none; }
+    #bootstrap-4-shortcodes-help .nav-link.disabled {
+      color: #818a91; }
+      #bootstrap-4-shortcodes-help .nav-link.disabled, #bootstrap-4-shortcodes-help .nav-link.disabled:focus, #bootstrap-4-shortcodes-help .nav-link.disabled:hover {
+        color: #818a91;
+        cursor: not-allowed;
+        background-color: transparent; }
+  #bootstrap-4-shortcodes-help .nav-inline .nav-item {
+    display: inline-block; }
+  #bootstrap-4-shortcodes-help .nav-inline .nav-item + .nav-item,
+  #bootstrap-4-shortcodes-help .nav-inline .nav-link + .nav-link {
+    margin-left: 1rem; }
+  #bootstrap-4-shortcodes-help .nav-tabs {
+    border-bottom: 1px solid #ddd; }
+    #bootstrap-4-shortcodes-help .nav-tabs::after {
+      content: "";
+      display: table;
+      clear: both; }
+    #bootstrap-4-shortcodes-help .nav-tabs .nav-item {
+      float: left;
+      margin-bottom: -1px; }
+      #bootstrap-4-shortcodes-help .nav-tabs .nav-item + .nav-item {
+        margin-left: 0.2rem; }
+    #bootstrap-4-shortcodes-help .nav-tabs .nav-link {
+      display: block;
+      padding: 0.5em 1em;
+      border: 1px solid transparent;
+      border-top-right-radius: 0.25rem;
+      border-top-left-radius: 0.25rem; }
+      #bootstrap-4-shortcodes-help .nav-tabs .nav-link:focus, #bootstrap-4-shortcodes-help .nav-tabs .nav-link:hover {
+        border-color: #eceeef #eceeef #ddd; }
+      #bootstrap-4-shortcodes-help .nav-tabs .nav-link.disabled, #bootstrap-4-shortcodes-help .nav-tabs .nav-link.disabled:focus, #bootstrap-4-shortcodes-help .nav-tabs .nav-link.disabled:hover {
+        color: #818a91;
+        background-color: transparent;
+        border-color: transparent; }
+    #bootstrap-4-shortcodes-help .nav-tabs .nav-link.active, #bootstrap-4-shortcodes-help .nav-tabs .nav-link.active:focus, #bootstrap-4-shortcodes-help .nav-tabs .nav-link.active:hover,
+    #bootstrap-4-shortcodes-help .nav-tabs .nav-item.open .nav-link,
+    #bootstrap-4-shortcodes-help .nav-tabs .nav-item.open .nav-link:focus,
+    #bootstrap-4-shortcodes-help .nav-tabs .nav-item.open .nav-link:hover {
+      color: #55595c;
+      background-color: #fff;
+      border-color: #ddd #ddd transparent; }
+    #bootstrap-4-shortcodes-help .nav-tabs .dropdown-menu {
+      margin-top: -1px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0; }
+  #bootstrap-4-shortcodes-help .nav-pills::after {
+    content: "";
+    display: table;
+    clear: both; }
+  #bootstrap-4-shortcodes-help .nav-pills .nav-item {
+    float: left; }
+    #bootstrap-4-shortcodes-help .nav-pills .nav-item + .nav-item {
+      margin-left: 0.2rem; }
+  #bootstrap-4-shortcodes-help .nav-pills .nav-link {
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .nav-pills .nav-link.active, #bootstrap-4-shortcodes-help .nav-pills .nav-link.active:focus, #bootstrap-4-shortcodes-help .nav-pills .nav-link.active:hover,
+  #bootstrap-4-shortcodes-help .nav-pills .nav-item.open .nav-link,
+  #bootstrap-4-shortcodes-help .nav-pills .nav-item.open .nav-link:focus,
+  #bootstrap-4-shortcodes-help .nav-pills .nav-item.open .nav-link:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #0275d8; }
+  #bootstrap-4-shortcodes-help .nav-stacked .nav-item {
+    display: block;
+    float: none; }
+    #bootstrap-4-shortcodes-help .nav-stacked .nav-item + .nav-item {
+      margin-top: 0.2rem;
+      margin-left: 0; }
+  #bootstrap-4-shortcodes-help .tab-content > .tab-pane {
+    display: none; }
+  #bootstrap-4-shortcodes-help .tab-content > .active {
+    display: block; }
+  #bootstrap-4-shortcodes-help .navbar {
+    position: relative;
+    padding: 0.5rem 1rem; }
+    #bootstrap-4-shortcodes-help .navbar::after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media (min-width: 544px) {
+      #bootstrap-4-shortcodes-help .navbar {
+        border-radius: 0.25rem; } }
+  #bootstrap-4-shortcodes-help .navbar-full {
+    z-index: 1000; }
+    @media (min-width: 544px) {
+      #bootstrap-4-shortcodes-help .navbar-full {
+        border-radius: 0; } }
+  #bootstrap-4-shortcodes-help .navbar-fixed-top,
+  #bootstrap-4-shortcodes-help .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030; }
+    @media (min-width: 544px) {
+      #bootstrap-4-shortcodes-help .navbar-fixed-top,
+      #bootstrap-4-shortcodes-help .navbar-fixed-bottom {
+        border-radius: 0; } }
+  #bootstrap-4-shortcodes-help .navbar-fixed-top {
+    top: 0; }
+  #bootstrap-4-shortcodes-help .navbar-fixed-bottom {
+    bottom: 0; }
+  #bootstrap-4-shortcodes-help .navbar-sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    width: 100%; }
+    @media (min-width: 544px) {
+      #bootstrap-4-shortcodes-help .navbar-sticky-top {
+        border-radius: 0; } }
+  #bootstrap-4-shortcodes-help .navbar-brand {
+    float: left;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 1rem;
+    font-size: 1.25rem; }
+    #bootstrap-4-shortcodes-help .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-brand:hover {
+      text-decoration: none; }
+    #bootstrap-4-shortcodes-help .navbar-brand > img {
+      display: block; }
+  #bootstrap-4-shortcodes-help .navbar-divider {
+    float: left;
+    width: 1px;
+    padding-top: .425rem;
+    padding-bottom: .425rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    overflow: hidden; }
+    #bootstrap-4-shortcodes-help .navbar-divider::before {
+      content: "\00a0"; }
+  #bootstrap-4-shortcodes-help .navbar-toggler {
+    padding: .5rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .navbar-toggler:focus, #bootstrap-4-shortcodes-help .navbar-toggler:hover {
+      text-decoration: none; }
+  #bootstrap-4-shortcodes-help .navbar-nav .nav-item {
+    float: left; }
+  #bootstrap-4-shortcodes-help .navbar-nav .nav-link {
+    display: block;
+    padding-top: .425rem;
+    padding-bottom: .425rem; }
+    #bootstrap-4-shortcodes-help .navbar-nav .nav-link + .nav-link {
+      margin-left: 1rem; }
+  #bootstrap-4-shortcodes-help .navbar-nav .nav-item + .nav-item {
+    margin-left: 1rem; }
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, 0.8); }
+    #bootstrap-4-shortcodes-help .navbar-light .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-light .navbar-brand:hover {
+      color: rgba(0, 0, 0, 0.8); }
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.3); }
+    #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link:focus, #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link:hover {
+      color: rgba(0, 0, 0, 0.6); }
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .open > .nav-link, #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .open > .nav-link:focus, #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .open > .nav-link:hover,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .active > .nav-link,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .active > .nav-link:focus,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .active > .nav-link:hover,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.open,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.open:focus,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.open:hover,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.active,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.active:focus,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.active:hover {
+    color: rgba(0, 0, 0, 0.8); }
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-divider {
+    background-color: rgba(0, 0, 0, 0.075); }
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand {
+    color: white; }
+    #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand:hover {
+      color: white; }
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5); }
+    #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link:focus, #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link:hover {
+      color: rgba(255, 255, 255, 0.75); }
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .open > .nav-link, #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .open > .nav-link:focus, #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .open > .nav-link:hover,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .active > .nav-link,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .active > .nav-link:focus,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .active > .nav-link:hover,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.open,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.open:focus,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.open:hover,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.active,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.active:focus,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.active:hover {
+    color: white; }
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-divider {
+    background-color: rgba(255, 255, 255, 0.075); }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-xs::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 543px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xs .navbar-nav .nav-item {
+      float: none;
+      margin-left: 0; } }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xs {
+      display: block !important; } }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-sm::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 767px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-sm .navbar-nav .nav-item {
+      float: none;
+      margin-left: 0; } }
+  @media (min-width: 768px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-sm {
+      display: block !important; } }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-md::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 991px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-md .navbar-nav .nav-item {
+      float: none;
+      margin-left: 0; } }
+  @media (min-width: 992px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-md {
+      display: block !important; } }
+  #bootstrap-4-shortcodes-help .card {
+    position: relative;
+    display: block;
+    margin-bottom: 0.75rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.125); }
+  #bootstrap-4-shortcodes-help .card-block {
+    padding: 1.25rem; }
+    #bootstrap-4-shortcodes-help .card-block::after {
+      content: "";
+      display: table;
+      clear: both; }
+  #bootstrap-4-shortcodes-help .card-title {
+    margin-bottom: 0.75rem; }
+  #bootstrap-4-shortcodes-help .card-subtitle {
+    margin-top: -0.375rem;
+    margin-bottom: 0; }
+  #bootstrap-4-shortcodes-help .card-text:last-child {
+    margin-bottom: 0; }
+  #bootstrap-4-shortcodes-help .card-link:hover {
+    text-decoration: none; }
+  #bootstrap-4-shortcodes-help .card-link + .card-link {
+    margin-left: 1.25rem; }
+  #bootstrap-4-shortcodes-help .card > .list-group:first-child .list-group-item:first-child {
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .card > .list-group:last-child .list-group-item:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .card-header {
+    padding: 0.75rem 1.25rem;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+    #bootstrap-4-shortcodes-help .card-header::after {
+      content: "";
+      display: table;
+      clear: both; }
+    #bootstrap-4-shortcodes-help .card-header:first-child {
+      border-radius: 0.25rem 0.25rem 0 0; }
+  #bootstrap-4-shortcodes-help .card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: #f5f5f5;
+    border-top: 1px solid rgba(0, 0, 0, 0.125); }
+    #bootstrap-4-shortcodes-help .card-footer::after {
+      content: "";
+      display: table;
+      clear: both; }
+    #bootstrap-4-shortcodes-help .card-footer:last-child {
+      border-radius: 0 0 0.25rem 0.25rem; }
+  #bootstrap-4-shortcodes-help .card-header-tabs {
+    margin-right: -0.625rem;
+    margin-bottom: -0.75rem;
+    margin-left: -0.625rem;
+    border-bottom: 0; }
+  #bootstrap-4-shortcodes-help .card-header-pills {
+    margin-right: -0.625rem;
+    margin-left: -0.625rem; }
+  #bootstrap-4-shortcodes-help .card-primary {
+    background-color: #0275d8;
+    border-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .card-primary .card-header,
+    #bootstrap-4-shortcodes-help .card-primary .card-footer {
+      background-color: transparent; }
+  #bootstrap-4-shortcodes-help .card-success {
+    background-color: #5cb85c;
+    border-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .card-success .card-header,
+    #bootstrap-4-shortcodes-help .card-success .card-footer {
+      background-color: transparent; }
+  #bootstrap-4-shortcodes-help .card-info {
+    background-color: #5bc0de;
+    border-color: #5bc0de; }
+    #bootstrap-4-shortcodes-help .card-info .card-header,
+    #bootstrap-4-shortcodes-help .card-info .card-footer {
+      background-color: transparent; }
+  #bootstrap-4-shortcodes-help .card-warning {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .card-warning .card-header,
+    #bootstrap-4-shortcodes-help .card-warning .card-footer {
+      background-color: transparent; }
+  #bootstrap-4-shortcodes-help .card-danger {
+    background-color: #d9534f;
+    border-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .card-danger .card-header,
+    #bootstrap-4-shortcodes-help .card-danger .card-footer {
+      background-color: transparent; }
+  #bootstrap-4-shortcodes-help .card-outline-primary {
+    background-color: transparent;
+    border-color: #0275d8; }
+  #bootstrap-4-shortcodes-help .card-outline-secondary {
+    background-color: transparent;
+    border-color: #ccc; }
+  #bootstrap-4-shortcodes-help .card-outline-info {
+    background-color: transparent;
+    border-color: #5bc0de; }
+  #bootstrap-4-shortcodes-help .card-outline-success {
+    background-color: transparent;
+    border-color: #5cb85c; }
+  #bootstrap-4-shortcodes-help .card-outline-warning {
+    background-color: transparent;
+    border-color: #f0ad4e; }
+  #bootstrap-4-shortcodes-help .card-outline-danger {
+    background-color: transparent;
+    border-color: #d9534f; }
+  #bootstrap-4-shortcodes-help .card-inverse .card-header,
+  #bootstrap-4-shortcodes-help .card-inverse .card-footer {
+    border-color: rgba(255, 255, 255, 0.2); }
+  #bootstrap-4-shortcodes-help .card-inverse .card-header,
+  #bootstrap-4-shortcodes-help .card-inverse .card-footer,
+  #bootstrap-4-shortcodes-help .card-inverse .card-title,
+  #bootstrap-4-shortcodes-help .card-inverse .card-blockquote {
+    color: #fff; }
+  #bootstrap-4-shortcodes-help .card-inverse .card-link,
+  #bootstrap-4-shortcodes-help .card-inverse .card-text,
+  #bootstrap-4-shortcodes-help .card-inverse .card-subtitle,
+  #bootstrap-4-shortcodes-help .card-inverse .card-blockquote .blockquote-footer {
+    color: rgba(255, 255, 255, 0.65); }
+  #bootstrap-4-shortcodes-help .card-inverse .card-link:focus, #bootstrap-4-shortcodes-help .card-inverse .card-link:hover {
+    color: #fff; }
+  #bootstrap-4-shortcodes-help .card-blockquote {
+    padding: 0;
+    margin-bottom: 0;
+    border-left: 0; }
+  #bootstrap-4-shortcodes-help .card-img {
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem; }
+  #bootstrap-4-shortcodes-help .card-img-top {
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .card-img-bottom {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .card-deck {
+      display: table;
+      width: 100%;
+      margin-bottom: 0.75rem;
+      table-layout: fixed;
+      border-spacing: 1.25rem 0; }
+      #bootstrap-4-shortcodes-help .card-deck .card {
+        display: table-cell;
+        margin-bottom: 0;
+        vertical-align: top; }
+    #bootstrap-4-shortcodes-help .card-deck-wrapper {
+      margin-right: -1.25rem;
+      margin-left: -1.25rem; } }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .card-group {
+      display: table;
+      width: 100%;
+      table-layout: fixed; }
+      #bootstrap-4-shortcodes-help .card-group .card {
+        display: table-cell;
+        vertical-align: top; }
+        #bootstrap-4-shortcodes-help .card-group .card + .card {
+          margin-left: 0;
+          border-left: 0; }
+        #bootstrap-4-shortcodes-help .card-group .card:first-child {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0; }
+          #bootstrap-4-shortcodes-help .card-group .card:first-child .card-img-top {
+            border-top-right-radius: 0; }
+          #bootstrap-4-shortcodes-help .card-group .card:first-child .card-img-bottom {
+            border-bottom-right-radius: 0; }
+        #bootstrap-4-shortcodes-help .card-group .card:last-child {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0; }
+          #bootstrap-4-shortcodes-help .card-group .card:last-child .card-img-top {
+            border-top-left-radius: 0; }
+          #bootstrap-4-shortcodes-help .card-group .card:last-child .card-img-bottom {
+            border-bottom-left-radius: 0; }
+        #bootstrap-4-shortcodes-help .card-group .card:not(:first-child):not(:last-child) {
+          border-radius: 0; }
+          #bootstrap-4-shortcodes-help .card-group .card:not(:first-child):not(:last-child) .card-img-top,
+          #bootstrap-4-shortcodes-help .card-group .card:not(:first-child):not(:last-child) .card-img-bottom {
+            border-radius: 0; } }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .card-columns {
+      column-count: 3;
+      column-gap: 1.25rem; }
+      #bootstrap-4-shortcodes-help .card-columns .card {
+        width: 100%; } }
+  #bootstrap-4-shortcodes-help .breadcrumb {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #eceeef;
+    border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .breadcrumb::after {
+      content: "";
+      display: table;
+      clear: both; }
+  #bootstrap-4-shortcodes-help .breadcrumb-item {
+    float: left; }
+    #bootstrap-4-shortcodes-help .breadcrumb-item + .breadcrumb-item::before {
+      display: inline-block;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      color: #818a91;
+      content: "/"; }
+    #bootstrap-4-shortcodes-help .breadcrumb-item + .breadcrumb-item:hover::before {
+      text-decoration: underline; }
+    #bootstrap-4-shortcodes-help .breadcrumb-item + .breadcrumb-item:hover::before {
+      text-decoration: none; }
+    #bootstrap-4-shortcodes-help .breadcrumb-item.active {
+      color: #818a91; }
+  #bootstrap-4-shortcodes-help .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .page-item {
+    display: inline; }
+    #bootstrap-4-shortcodes-help .page-item:first-child .page-link {
+      margin-left: 0;
+      border-bottom-left-radius: 0.25rem;
+      border-top-left-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .page-item:last-child .page-link {
+      border-bottom-right-radius: 0.25rem;
+      border-top-right-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .page-item.active .page-link, #bootstrap-4-shortcodes-help .page-item.active .page-link:focus, #bootstrap-4-shortcodes-help .page-item.active .page-link:hover {
+      z-index: 2;
+      color: #fff;
+      cursor: default;
+      background-color: #0275d8;
+      border-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .page-item.disabled .page-link, #bootstrap-4-shortcodes-help .page-item.disabled .page-link:focus, #bootstrap-4-shortcodes-help .page-item.disabled .page-link:hover {
+      color: #818a91;
+      pointer-events: none;
+      cursor: not-allowed;
+      background-color: #fff;
+      border-color: #ddd; }
+  #bootstrap-4-shortcodes-help .page-link {
+    position: relative;
+    float: left;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    color: #0275d8;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd; }
+    #bootstrap-4-shortcodes-help .page-link:focus, #bootstrap-4-shortcodes-help .page-link:hover {
+      color: #014c8c;
+      background-color: #eceeef;
+      border-color: #ddd; }
+  #bootstrap-4-shortcodes-help .pagination-lg .page-link {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem; }
+  #bootstrap-4-shortcodes-help .pagination-lg .page-item:first-child .page-link {
+    border-bottom-left-radius: 0.3rem;
+    border-top-left-radius: 0.3rem; }
+  #bootstrap-4-shortcodes-help .pagination-lg .page-item:last-child .page-link {
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem; }
+  #bootstrap-4-shortcodes-help .pagination-sm .page-link {
+    padding: 0.275rem 0.75rem;
+    font-size: 0.875rem; }
+  #bootstrap-4-shortcodes-help .pagination-sm .page-item:first-child .page-link {
+    border-bottom-left-radius: 0.2rem;
+    border-top-left-radius: 0.2rem; }
+  #bootstrap-4-shortcodes-help .pagination-sm .page-item:last-child .page-link {
+    border-bottom-right-radius: 0.2rem;
+    border-top-right-radius: 0.2rem; }
+  #bootstrap-4-shortcodes-help .tag {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .tag:empty {
+      display: none; }
+  #bootstrap-4-shortcodes-help .btn .tag {
+    position: relative;
+    top: -1px; }
+  #bootstrap-4-shortcodes-help a.tag:focus, #bootstrap-4-shortcodes-help a.tag:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer; }
+  #bootstrap-4-shortcodes-help .tag-pill {
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem; }
+  #bootstrap-4-shortcodes-help .tag-default {
+    background-color: #818a91; }
+    #bootstrap-4-shortcodes-help .tag-default[href]:focus, #bootstrap-4-shortcodes-help .tag-default[href]:hover {
+      background-color: #687077; }
+  #bootstrap-4-shortcodes-help .tag-primary {
+    background-color: #0275d8; }
+    #bootstrap-4-shortcodes-help .tag-primary[href]:focus, #bootstrap-4-shortcodes-help .tag-primary[href]:hover {
+      background-color: #025aa5; }
+  #bootstrap-4-shortcodes-help .tag-success {
+    background-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .tag-success[href]:focus, #bootstrap-4-shortcodes-help .tag-success[href]:hover {
+      background-color: #449d44; }
+  #bootstrap-4-shortcodes-help .tag-info {
+    background-color: #5bc0de; }
+    #bootstrap-4-shortcodes-help .tag-info[href]:focus, #bootstrap-4-shortcodes-help .tag-info[href]:hover {
+      background-color: #31b0d5; }
+  #bootstrap-4-shortcodes-help .tag-warning {
+    background-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .tag-warning[href]:focus, #bootstrap-4-shortcodes-help .tag-warning[href]:hover {
+      background-color: #ec971f; }
+  #bootstrap-4-shortcodes-help .tag-danger {
+    background-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .tag-danger[href]:focus, #bootstrap-4-shortcodes-help .tag-danger[href]:hover {
+      background-color: #c9302c; }
+  #bootstrap-4-shortcodes-help .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #eceeef;
+    border-radius: 0.3rem; }
+    @media (min-width: 544px) {
+      #bootstrap-4-shortcodes-help .jumbotron {
+        padding: 4rem 2rem; } }
+  #bootstrap-4-shortcodes-help .jumbotron-hr {
+    border-top-color: #d0d5d8; }
+  #bootstrap-4-shortcodes-help .jumbotron-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0; }
+  #bootstrap-4-shortcodes-help .alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .alert-heading {
+    color: inherit; }
+  #bootstrap-4-shortcodes-help .alert-link {
+    font-weight: bold; }
+  #bootstrap-4-shortcodes-help .alert-dismissible {
+    padding-right: 2rem; }
+    #bootstrap-4-shortcodes-help .alert-dismissible .close {
+      position: relative;
+      top: -.125rem;
+      right: -1rem;
+      color: inherit; }
+  #bootstrap-4-shortcodes-help .alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d; }
+    #bootstrap-4-shortcodes-help .alert-success hr {
+      border-top-color: #c1e2b3; }
+    #bootstrap-4-shortcodes-help .alert-success .alert-link {
+      color: #2b542c; }
+  #bootstrap-4-shortcodes-help .alert-info {
+    background-color: #d9edf7;
+    border-color: #bcdff1;
+    color: #31708f; }
+    #bootstrap-4-shortcodes-help .alert-info hr {
+      border-top-color: #a6d5ec; }
+    #bootstrap-4-shortcodes-help .alert-info .alert-link {
+      color: #245269; }
+  #bootstrap-4-shortcodes-help .alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faf2cc;
+    color: #8a6d3b; }
+    #bootstrap-4-shortcodes-help .alert-warning hr {
+      border-top-color: #f7ecb5; }
+    #bootstrap-4-shortcodes-help .alert-warning .alert-link {
+      color: #66512c; }
+  #bootstrap-4-shortcodes-help .alert-danger {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442; }
+    #bootstrap-4-shortcodes-help .alert-danger hr {
+      border-top-color: #e4b9b9; }
+    #bootstrap-4-shortcodes-help .alert-danger .alert-link {
+      color: #843534; }
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0; }
+  to {
+    background-position: 0 0; } }
+  #bootstrap-4-shortcodes-help .progress {
+    display: block;
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 1rem; }
+  #bootstrap-4-shortcodes-help .progress[value] {
+    background-color: #eee;
+    border: 0;
+    appearance: none;
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .progress[value]::-ms-fill {
+    background-color: #0074d9;
+    border: 0; }
+  #bootstrap-4-shortcodes-help .progress[value]::-moz-progress-bar {
+    background-color: #0074d9;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .progress[value]::-webkit-progress-value {
+    background-color: #0074d9;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .progress[value="100"]::-moz-progress-bar {
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .progress[value="100"]::-webkit-progress-value {
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help base::-moz-progress-bar,
+  #bootstrap-4-shortcodes-help .progress[value] {
+    background-color: #eee;
+    border-radius: 0.25rem; }
+  @media screen and (min-width: 0\0) {
+    #bootstrap-4-shortcodes-help .progress {
+      background-color: #eee;
+      border-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .progress-bar {
+      display: inline-block;
+      height: 1rem;
+      text-indent: -999rem;
+      background-color: #0074d9;
+      border-bottom-left-radius: 0.25rem;
+      border-top-left-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .progress[width="100%"] {
+      border-bottom-right-radius: 0.25rem;
+      border-top-right-radius: 0.25rem; } }
+  #bootstrap-4-shortcodes-help .progress-striped[value]::-webkit-progress-value {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem; }
+  #bootstrap-4-shortcodes-help .progress-striped[value]::-moz-progress-bar {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem; }
+  #bootstrap-4-shortcodes-help .progress-striped[value]::-ms-fill {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem; }
+  @media screen and (min-width: 0\0) {
+    #bootstrap-4-shortcodes-help .progress-bar-striped {
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-size: 1rem 1rem; } }
+  #bootstrap-4-shortcodes-help .progress-animated[value]::-webkit-progress-value {
+    animation: progress-bar-stripes 2s linear infinite; }
+  #bootstrap-4-shortcodes-help .progress-animated[value]::-moz-progress-bar {
+    animation: progress-bar-stripes 2s linear infinite; }
+  @media screen and (min-width: 0\0) {
+    #bootstrap-4-shortcodes-help .progress-animated .progress-bar-striped {
+      animation: progress-bar-stripes 2s linear infinite; } }
+  #bootstrap-4-shortcodes-help .progress-success[value]::-webkit-progress-value {
+    background-color: #5cb85c; }
+  #bootstrap-4-shortcodes-help .progress-success[value]::-moz-progress-bar {
+    background-color: #5cb85c; }
+  #bootstrap-4-shortcodes-help .progress-success[value]::-ms-fill {
+    background-color: #5cb85c; }
+  @media screen and (min-width: 0\0) {
+    #bootstrap-4-shortcodes-help .progress-success .progress-bar {
+      background-color: #5cb85c; } }
+  #bootstrap-4-shortcodes-help .progress-info[value]::-webkit-progress-value {
+    background-color: #5bc0de; }
+  #bootstrap-4-shortcodes-help .progress-info[value]::-moz-progress-bar {
+    background-color: #5bc0de; }
+  #bootstrap-4-shortcodes-help .progress-info[value]::-ms-fill {
+    background-color: #5bc0de; }
+  @media screen and (min-width: 0\0) {
+    #bootstrap-4-shortcodes-help .progress-info .progress-bar {
+      background-color: #5bc0de; } }
+  #bootstrap-4-shortcodes-help .progress-warning[value]::-webkit-progress-value {
+    background-color: #f0ad4e; }
+  #bootstrap-4-shortcodes-help .progress-warning[value]::-moz-progress-bar {
+    background-color: #f0ad4e; }
+  #bootstrap-4-shortcodes-help .progress-warning[value]::-ms-fill {
+    background-color: #f0ad4e; }
+  @media screen and (min-width: 0\0) {
+    #bootstrap-4-shortcodes-help .progress-warning .progress-bar {
+      background-color: #f0ad4e; } }
+  #bootstrap-4-shortcodes-help .progress-danger[value]::-webkit-progress-value {
+    background-color: #d9534f; }
+  #bootstrap-4-shortcodes-help .progress-danger[value]::-moz-progress-bar {
+    background-color: #d9534f; }
+  #bootstrap-4-shortcodes-help .progress-danger[value]::-ms-fill {
+    background-color: #d9534f; }
+  @media screen and (min-width: 0\0) {
+    #bootstrap-4-shortcodes-help .progress-danger .progress-bar {
+      background-color: #d9534f; } }
+  #bootstrap-4-shortcodes-help .media,
+  #bootstrap-4-shortcodes-help .media-body {
+    overflow: hidden; }
+  #bootstrap-4-shortcodes-help .media-body {
+    width: 10000px; }
+  #bootstrap-4-shortcodes-help .media-left,
+  #bootstrap-4-shortcodes-help .media-right,
+  #bootstrap-4-shortcodes-help .media-body {
+    display: table-cell;
+    vertical-align: top; }
+  #bootstrap-4-shortcodes-help .media-middle {
+    vertical-align: middle; }
+  #bootstrap-4-shortcodes-help .media-bottom {
+    vertical-align: bottom; }
+  #bootstrap-4-shortcodes-help .media-object {
+    display: block; }
+    #bootstrap-4-shortcodes-help .media-object.img-thumbnail {
+      max-width: none; }
+  #bootstrap-4-shortcodes-help .media-right {
+    padding-left: 10px; }
+  #bootstrap-4-shortcodes-help .media-left {
+    padding-right: 10px; }
+  #bootstrap-4-shortcodes-help .media-heading {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  #bootstrap-4-shortcodes-help .media-list {
+    padding-left: 0;
+    list-style: none; }
+  #bootstrap-4-shortcodes-help .list-group {
+    padding-left: 0;
+    margin-bottom: 0; }
+  #bootstrap-4-shortcodes-help .list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd; }
+    #bootstrap-4-shortcodes-help .list-group-item:first-child {
+      border-top-right-radius: 0.25rem;
+      border-top-left-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .list-group-item:last-child {
+      margin-bottom: 0;
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem; }
+    #bootstrap-4-shortcodes-help .list-group-item.disabled, #bootstrap-4-shortcodes-help .list-group-item.disabled:focus, #bootstrap-4-shortcodes-help .list-group-item.disabled:hover {
+      color: #818a91;
+      cursor: not-allowed;
+      background-color: #eceeef; }
+      #bootstrap-4-shortcodes-help .list-group-item.disabled .list-group-item-heading, #bootstrap-4-shortcodes-help .list-group-item.disabled:focus .list-group-item-heading, #bootstrap-4-shortcodes-help .list-group-item.disabled:hover .list-group-item-heading {
+        color: inherit; }
+      #bootstrap-4-shortcodes-help .list-group-item.disabled .list-group-item-text, #bootstrap-4-shortcodes-help .list-group-item.disabled:focus .list-group-item-text, #bootstrap-4-shortcodes-help .list-group-item.disabled:hover .list-group-item-text {
+        color: #818a91; }
+    #bootstrap-4-shortcodes-help .list-group-item.active, #bootstrap-4-shortcodes-help .list-group-item.active:focus, #bootstrap-4-shortcodes-help .list-group-item.active:hover {
+      z-index: 2;
+      color: #fff;
+      text-decoration: none;
+      background-color: #0275d8;
+      border-color: #0275d8; }
+      #bootstrap-4-shortcodes-help .list-group-item.active .list-group-item-heading,
+      #bootstrap-4-shortcodes-help .list-group-item.active .list-group-item-heading > small,
+      #bootstrap-4-shortcodes-help .list-group-item.active .list-group-item-heading > .small, #bootstrap-4-shortcodes-help .list-group-item.active:focus .list-group-item-heading,
+      #bootstrap-4-shortcodes-help .list-group-item.active:focus .list-group-item-heading > small,
+      #bootstrap-4-shortcodes-help .list-group-item.active:focus .list-group-item-heading > .small, #bootstrap-4-shortcodes-help .list-group-item.active:hover .list-group-item-heading,
+      #bootstrap-4-shortcodes-help .list-group-item.active:hover .list-group-item-heading > small,
+      #bootstrap-4-shortcodes-help .list-group-item.active:hover .list-group-item-heading > .small {
+        color: inherit; }
+      #bootstrap-4-shortcodes-help .list-group-item.active .list-group-item-text, #bootstrap-4-shortcodes-help .list-group-item.active:focus .list-group-item-text, #bootstrap-4-shortcodes-help .list-group-item.active:hover .list-group-item-text {
+        color: #a8d6fe; }
+  #bootstrap-4-shortcodes-help .list-group-flush .list-group-item {
+    border-radius: 0; }
+  #bootstrap-4-shortcodes-help .list-group-item-action {
+    width: 100%;
+    color: #555;
+    text-align: inherit; }
+    #bootstrap-4-shortcodes-help .list-group-item-action .list-group-item-heading {
+      color: #333; }
+    #bootstrap-4-shortcodes-help .list-group-item-action:focus, #bootstrap-4-shortcodes-help .list-group-item-action:hover {
+      color: #555;
+      text-decoration: none;
+      background-color: #f5f5f5; }
+  #bootstrap-4-shortcodes-help .list-group-item-success {
+    color: #3c763d;
+    background-color: #dff0d8; }
+  #bootstrap-4-shortcodes-help a.list-group-item-success,
+  #bootstrap-4-shortcodes-help button.list-group-item-success {
+    color: #3c763d; }
+    #bootstrap-4-shortcodes-help a.list-group-item-success .list-group-item-heading,
+    #bootstrap-4-shortcodes-help button.list-group-item-success .list-group-item-heading {
+      color: inherit; }
+    #bootstrap-4-shortcodes-help a.list-group-item-success:focus, #bootstrap-4-shortcodes-help a.list-group-item-success:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-success:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-success:hover {
+      color: #3c763d;
+      background-color: #d0e9c6; }
+    #bootstrap-4-shortcodes-help a.list-group-item-success.active, #bootstrap-4-shortcodes-help a.list-group-item-success.active:focus, #bootstrap-4-shortcodes-help a.list-group-item-success.active:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-success.active,
+    #bootstrap-4-shortcodes-help button.list-group-item-success.active:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-success.active:hover {
+      color: #fff;
+      background-color: #3c763d;
+      border-color: #3c763d; }
+  #bootstrap-4-shortcodes-help .list-group-item-info {
+    color: #31708f;
+    background-color: #d9edf7; }
+  #bootstrap-4-shortcodes-help a.list-group-item-info,
+  #bootstrap-4-shortcodes-help button.list-group-item-info {
+    color: #31708f; }
+    #bootstrap-4-shortcodes-help a.list-group-item-info .list-group-item-heading,
+    #bootstrap-4-shortcodes-help button.list-group-item-info .list-group-item-heading {
+      color: inherit; }
+    #bootstrap-4-shortcodes-help a.list-group-item-info:focus, #bootstrap-4-shortcodes-help a.list-group-item-info:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-info:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-info:hover {
+      color: #31708f;
+      background-color: #c4e3f3; }
+    #bootstrap-4-shortcodes-help a.list-group-item-info.active, #bootstrap-4-shortcodes-help a.list-group-item-info.active:focus, #bootstrap-4-shortcodes-help a.list-group-item-info.active:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-info.active,
+    #bootstrap-4-shortcodes-help button.list-group-item-info.active:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-info.active:hover {
+      color: #fff;
+      background-color: #31708f;
+      border-color: #31708f; }
+  #bootstrap-4-shortcodes-help .list-group-item-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3; }
+  #bootstrap-4-shortcodes-help a.list-group-item-warning,
+  #bootstrap-4-shortcodes-help button.list-group-item-warning {
+    color: #8a6d3b; }
+    #bootstrap-4-shortcodes-help a.list-group-item-warning .list-group-item-heading,
+    #bootstrap-4-shortcodes-help button.list-group-item-warning .list-group-item-heading {
+      color: inherit; }
+    #bootstrap-4-shortcodes-help a.list-group-item-warning:focus, #bootstrap-4-shortcodes-help a.list-group-item-warning:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-warning:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-warning:hover {
+      color: #8a6d3b;
+      background-color: #faf2cc; }
+    #bootstrap-4-shortcodes-help a.list-group-item-warning.active, #bootstrap-4-shortcodes-help a.list-group-item-warning.active:focus, #bootstrap-4-shortcodes-help a.list-group-item-warning.active:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-warning.active,
+    #bootstrap-4-shortcodes-help button.list-group-item-warning.active:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-warning.active:hover {
+      color: #fff;
+      background-color: #8a6d3b;
+      border-color: #8a6d3b; }
+  #bootstrap-4-shortcodes-help .list-group-item-danger {
+    color: #a94442;
+    background-color: #f2dede; }
+  #bootstrap-4-shortcodes-help a.list-group-item-danger,
+  #bootstrap-4-shortcodes-help button.list-group-item-danger {
+    color: #a94442; }
+    #bootstrap-4-shortcodes-help a.list-group-item-danger .list-group-item-heading,
+    #bootstrap-4-shortcodes-help button.list-group-item-danger .list-group-item-heading {
+      color: inherit; }
+    #bootstrap-4-shortcodes-help a.list-group-item-danger:focus, #bootstrap-4-shortcodes-help a.list-group-item-danger:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-danger:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-danger:hover {
+      color: #a94442;
+      background-color: #ebcccc; }
+    #bootstrap-4-shortcodes-help a.list-group-item-danger.active, #bootstrap-4-shortcodes-help a.list-group-item-danger.active:focus, #bootstrap-4-shortcodes-help a.list-group-item-danger.active:hover,
+    #bootstrap-4-shortcodes-help button.list-group-item-danger.active,
+    #bootstrap-4-shortcodes-help button.list-group-item-danger.active:focus,
+    #bootstrap-4-shortcodes-help button.list-group-item-danger.active:hover {
+      color: #fff;
+      background-color: #a94442;
+      border-color: #a94442; }
+  #bootstrap-4-shortcodes-help .list-group-item-heading {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  #bootstrap-4-shortcodes-help .list-group-item-text {
+    margin-bottom: 0;
+    line-height: 1.3; }
+  #bootstrap-4-shortcodes-help .embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden; }
+    #bootstrap-4-shortcodes-help .embed-responsive .embed-responsive-item,
+    #bootstrap-4-shortcodes-help .embed-responsive iframe,
+    #bootstrap-4-shortcodes-help .embed-responsive embed,
+    #bootstrap-4-shortcodes-help .embed-responsive object,
+    #bootstrap-4-shortcodes-help .embed-responsive video {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0; }
+  #bootstrap-4-shortcodes-help .embed-responsive-21by9 {
+    padding-bottom: 42.85714%; }
+  #bootstrap-4-shortcodes-help .embed-responsive-16by9 {
+    padding-bottom: 56.25%; }
+  #bootstrap-4-shortcodes-help .embed-responsive-4by3 {
+    padding-bottom: 75%; }
+  #bootstrap-4-shortcodes-help .embed-responsive-1by1 {
+    padding-bottom: 100%; }
+  #bootstrap-4-shortcodes-help .close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2; }
+    #bootstrap-4-shortcodes-help .close:focus, #bootstrap-4-shortcodes-help .close:hover {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .5; }
+  #bootstrap-4-shortcodes-help button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none; }
+  #bootstrap-4-shortcodes-help .modal-open {
+    overflow: hidden; }
+  #bootstrap-4-shortcodes-help .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    -webkit-overflow-scrolling: touch; }
+    #bootstrap-4-shortcodes-help .modal.fade .modal-dialog {
+      transition: transform .3s ease-out;
+      transform: translate(0, -25%); }
+    #bootstrap-4-shortcodes-help .modal.in .modal-dialog {
+      transform: translate(0, 0); }
+  #bootstrap-4-shortcodes-help .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto; }
+  #bootstrap-4-shortcodes-help .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px; }
+  #bootstrap-4-shortcodes-help .modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0; }
+  #bootstrap-4-shortcodes-help .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: #000; }
+    #bootstrap-4-shortcodes-help .modal-backdrop.fade {
+      opacity: 0; }
+    #bootstrap-4-shortcodes-help .modal-backdrop.in {
+      opacity: 0.5; }
+  #bootstrap-4-shortcodes-help .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5; }
+    #bootstrap-4-shortcodes-help .modal-header::after {
+      content: "";
+      display: table;
+      clear: both; }
+  #bootstrap-4-shortcodes-help .modal-header .close {
+    margin-top: -2px; }
+  #bootstrap-4-shortcodes-help .modal-title {
+    margin: 0;
+    line-height: 1.5; }
+  #bootstrap-4-shortcodes-help .modal-body {
+    position: relative;
+    padding: 15px; }
+  #bootstrap-4-shortcodes-help .modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5; }
+    #bootstrap-4-shortcodes-help .modal-footer::after {
+      content: "";
+      display: table;
+      clear: both; }
+  #bootstrap-4-shortcodes-help .modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll; }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .modal-dialog {
+      max-width: 600px;
+      margin: 30px auto; }
+    #bootstrap-4-shortcodes-help .modal-sm {
+      max-width: 300px; } }
+  @media (min-width: 992px) {
+    #bootstrap-4-shortcodes-help .modal-lg {
+      max-width: 900px; } }
+  #bootstrap-4-shortcodes-help .tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-break: auto;
+    line-height: 1.5;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    white-space: normal;
+    word-break: normal;
+    word-spacing: normal;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+    opacity: 0; }
+    #bootstrap-4-shortcodes-help .tooltip.in {
+      opacity: 0.9; }
+    #bootstrap-4-shortcodes-help .tooltip.tooltip-top, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-bottom {
+      padding: 5px 0;
+      margin-top: -3px; }
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-top .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-bottom .tooltip-arrow {
+        bottom: 0;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px 5px 0;
+        border-top-color: #000; }
+    #bootstrap-4-shortcodes-help .tooltip.tooltip-right, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-left {
+      padding: 0 5px;
+      margin-left: 3px; }
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-right .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-left .tooltip-arrow {
+        top: 50%;
+        left: 0;
+        margin-top: -5px;
+        border-width: 5px 5px 5px 0;
+        border-right-color: #000; }
+    #bootstrap-4-shortcodes-help .tooltip.tooltip-bottom, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-top {
+      padding: 5px 0;
+      margin-top: 3px; }
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-bottom .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-top .tooltip-arrow {
+        top: 0;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 0 5px 5px;
+        border-bottom-color: #000; }
+    #bootstrap-4-shortcodes-help .tooltip.tooltip-left, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-right {
+      padding: 0 5px;
+      margin-left: -3px; }
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-left .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-right .tooltip-arrow {
+        top: 50%;
+        right: 0;
+        margin-top: -5px;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #000; }
+  #bootstrap-4-shortcodes-help .tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid; }
+  #bootstrap-4-shortcodes-help .popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: block;
+    max-width: 276px;
+    padding: 1px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-break: auto;
+    line-height: 1.5;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    white-space: normal;
+    word-break: normal;
+    word-spacing: normal;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem; }
+    #bootstrap-4-shortcodes-help .popover.popover-top, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom {
+      margin-top: -10px; }
+      #bootstrap-4-shortcodes-help .popover.popover-top .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom .popover-arrow {
+        bottom: -11px;
+        left: 50%;
+        margin-left: -11px;
+        border-top-color: rgba(0, 0, 0, 0.25);
+        border-bottom-width: 0; }
+        #bootstrap-4-shortcodes-help .popover.popover-top .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom .popover-arrow::after {
+          bottom: 1px;
+          margin-left: -10px;
+          content: "";
+          border-top-color: #fff;
+          border-bottom-width: 0; }
+    #bootstrap-4-shortcodes-help .popover.popover-right, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left {
+      margin-left: 10px; }
+      #bootstrap-4-shortcodes-help .popover.popover-right .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left .popover-arrow {
+        top: 50%;
+        left: -11px;
+        margin-top: -11px;
+        border-right-color: rgba(0, 0, 0, 0.25);
+        border-left-width: 0; }
+        #bootstrap-4-shortcodes-help .popover.popover-right .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left .popover-arrow::after {
+          bottom: -10px;
+          left: 1px;
+          content: "";
+          border-right-color: #fff;
+          border-left-width: 0; }
+    #bootstrap-4-shortcodes-help .popover.popover-bottom, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top {
+      margin-top: 10px; }
+      #bootstrap-4-shortcodes-help .popover.popover-bottom .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top .popover-arrow {
+        top: -11px;
+        left: 50%;
+        margin-left: -11px;
+        border-top-width: 0;
+        border-bottom-color: rgba(0, 0, 0, 0.25); }
+        #bootstrap-4-shortcodes-help .popover.popover-bottom .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top .popover-arrow::after {
+          top: 1px;
+          margin-left: -10px;
+          content: "";
+          border-top-width: 0;
+          border-bottom-color: #fff; }
+    #bootstrap-4-shortcodes-help .popover.popover-left, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right {
+      margin-left: -10px; }
+      #bootstrap-4-shortcodes-help .popover.popover-left .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right .popover-arrow {
+        top: 50%;
+        right: -11px;
+        margin-top: -11px;
+        border-right-width: 0;
+        border-left-color: rgba(0, 0, 0, 0.25); }
+        #bootstrap-4-shortcodes-help .popover.popover-left .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right .popover-arrow::after {
+          right: 1px;
+          bottom: -10px;
+          content: "";
+          border-right-width: 0;
+          border-left-color: #fff; }
+  #bootstrap-4-shortcodes-help .popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 0.2375rem 0.2375rem 0 0; }
+    #bootstrap-4-shortcodes-help .popover-title:empty {
+      display: none; }
+  #bootstrap-4-shortcodes-help .popover-content {
+    padding: 9px 14px; }
+  #bootstrap-4-shortcodes-help .popover-arrow, #bootstrap-4-shortcodes-help .popover-arrow::after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid; }
+  #bootstrap-4-shortcodes-help .popover-arrow {
+    border-width: 11px; }
+  #bootstrap-4-shortcodes-help .popover-arrow::after {
+    content: "";
+    border-width: 10px; }
+  #bootstrap-4-shortcodes-help .carousel {
+    position: relative; }
+  #bootstrap-4-shortcodes-help .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item {
+      position: relative;
+      display: none;
+      transition: .6s ease-in-out left; }
+      #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item > img,
+      #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item > a > img {
+        line-height: 1; }
+      @media all and (transform-3d), (-webkit-transform-3d) {
+        #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item {
+          transition: transform .6s ease-in-out;
+          backface-visibility: hidden;
+          perspective: 1000px; }
+          #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item.next, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item.active.right {
+            left: 0;
+            transform: translate3d(100%, 0, 0); }
+          #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item.prev, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item.active.left {
+            left: 0;
+            transform: translate3d(-100%, 0, 0); }
+          #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item.next.left, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item.prev.right, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item.active {
+            left: 0;
+            transform: translate3d(0, 0, 0); } }
+    #bootstrap-4-shortcodes-help .carousel-inner > .active,
+    #bootstrap-4-shortcodes-help .carousel-inner > .next,
+    #bootstrap-4-shortcodes-help .carousel-inner > .prev {
+      display: block; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .active {
+      left: 0; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .next,
+    #bootstrap-4-shortcodes-help .carousel-inner > .prev {
+      position: absolute;
+      top: 0;
+      width: 100%; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .next {
+      left: 100%; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .prev {
+      left: -100%; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .next.left,
+    #bootstrap-4-shortcodes-help .carousel-inner > .prev.right {
+      left: 0; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .active.left {
+      left: -100%; }
+    #bootstrap-4-shortcodes-help .carousel-inner > .active.right {
+      left: 100%; }
+  #bootstrap-4-shortcodes-help .carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    opacity: 0.5; }
+    #bootstrap-4-shortcodes-help .carousel-control.left {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
+    #bootstrap-4-shortcodes-help .carousel-control.right {
+      right: 0;
+      left: auto;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
+    #bootstrap-4-shortcodes-help .carousel-control:focus, #bootstrap-4-shortcodes-help .carousel-control:hover {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: .9; }
+    #bootstrap-4-shortcodes-help .carousel-control .icon-prev,
+    #bootstrap-4-shortcodes-help .carousel-control .icon-next {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      font-family: serif;
+      line-height: 1; }
+    #bootstrap-4-shortcodes-help .carousel-control .icon-prev {
+      left: 50%;
+      margin-left: -10px; }
+    #bootstrap-4-shortcodes-help .carousel-control .icon-next {
+      right: 50%;
+      margin-right: -10px; }
+    #bootstrap-4-shortcodes-help .carousel-control .icon-prev::before {
+      content: "\2039"; }
+    #bootstrap-4-shortcodes-help .carousel-control .icon-next::before {
+      content: "\203a"; }
+  #bootstrap-4-shortcodes-help .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none; }
+    #bootstrap-4-shortcodes-help .carousel-indicators li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 1px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 10px; }
+    #bootstrap-4-shortcodes-help .carousel-indicators .active {
+      width: 12px;
+      height: 12px;
+      margin: 0;
+      background-color: #fff; }
+  #bootstrap-4-shortcodes-help .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+    #bootstrap-4-shortcodes-help .carousel-caption .btn {
+      text-shadow: none; }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .carousel-control .icon-prev,
+    #bootstrap-4-shortcodes-help .carousel-control .icon-next {
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;
+      font-size: 30px; }
+    #bootstrap-4-shortcodes-help .carousel-control .icon-prev {
+      margin-left: -15px; }
+    #bootstrap-4-shortcodes-help .carousel-control .icon-next {
+      margin-right: -15px; }
+    #bootstrap-4-shortcodes-help .carousel-caption {
+      right: 20%;
+      left: 20%;
+      padding-bottom: 30px; }
+    #bootstrap-4-shortcodes-help .carousel-indicators {
+      bottom: 20px; } }
+  #bootstrap-4-shortcodes-help .bg-faded {
+    background-color: #f7f7f9; }
+  #bootstrap-4-shortcodes-help .bg-primary {
+    color: #fff !important;
+    background-color: #0275d8 !important; }
+  #bootstrap-4-shortcodes-help a.bg-primary:focus, #bootstrap-4-shortcodes-help a.bg-primary:hover {
+    background-color: #025aa5 !important; }
+  #bootstrap-4-shortcodes-help .bg-success {
+    color: #fff !important;
+    background-color: #5cb85c !important; }
+  #bootstrap-4-shortcodes-help a.bg-success:focus, #bootstrap-4-shortcodes-help a.bg-success:hover {
+    background-color: #449d44 !important; }
+  #bootstrap-4-shortcodes-help .bg-info {
+    color: #fff !important;
+    background-color: #5bc0de !important; }
+  #bootstrap-4-shortcodes-help a.bg-info:focus, #bootstrap-4-shortcodes-help a.bg-info:hover {
+    background-color: #31b0d5 !important; }
+  #bootstrap-4-shortcodes-help .bg-warning {
+    color: #fff !important;
+    background-color: #f0ad4e !important; }
+  #bootstrap-4-shortcodes-help a.bg-warning:focus, #bootstrap-4-shortcodes-help a.bg-warning:hover {
+    background-color: #ec971f !important; }
+  #bootstrap-4-shortcodes-help .bg-danger {
+    color: #fff !important;
+    background-color: #d9534f !important; }
+  #bootstrap-4-shortcodes-help a.bg-danger:focus, #bootstrap-4-shortcodes-help a.bg-danger:hover {
+    background-color: #c9302c !important; }
+  #bootstrap-4-shortcodes-help .bg-inverse {
+    color: #fff !important;
+    background-color: #373a3c !important; }
+  #bootstrap-4-shortcodes-help a.bg-inverse:focus, #bootstrap-4-shortcodes-help a.bg-inverse:hover {
+    background-color: #1f2021 !important; }
+  #bootstrap-4-shortcodes-help .clearfix::after {
+    content: "";
+    display: table;
+    clear: both; }
+  #bootstrap-4-shortcodes-help .d-block {
+    display: block !important; }
+  #bootstrap-4-shortcodes-help .d-inline-block {
+    display: inline-block !important; }
+  #bootstrap-4-shortcodes-help .d-inline {
+    display: inline !important; }
+  #bootstrap-4-shortcodes-help .pull-xs-left {
+    float: left !important; }
+  #bootstrap-4-shortcodes-help .pull-xs-right {
+    float: right !important; }
+  #bootstrap-4-shortcodes-help .pull-xs-none {
+    float: none !important; }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .pull-sm-left {
+      float: left !important; }
+    #bootstrap-4-shortcodes-help .pull-sm-right {
+      float: right !important; }
+    #bootstrap-4-shortcodes-help .pull-sm-none {
+      float: none !important; } }
+  @media (min-width: 768px) {
+    #bootstrap-4-shortcodes-help .pull-md-left {
+      float: left !important; }
+    #bootstrap-4-shortcodes-help .pull-md-right {
+      float: right !important; }
+    #bootstrap-4-shortcodes-help .pull-md-none {
+      float: none !important; } }
+  @media (min-width: 992px) {
+    #bootstrap-4-shortcodes-help .pull-lg-left {
+      float: left !important; }
+    #bootstrap-4-shortcodes-help .pull-lg-right {
+      float: right !important; }
+    #bootstrap-4-shortcodes-help .pull-lg-none {
+      float: none !important; } }
+  @media (min-width: 1200px) {
+    #bootstrap-4-shortcodes-help .pull-xl-left {
+      float: left !important; }
+    #bootstrap-4-shortcodes-help .pull-xl-right {
+      float: right !important; }
+    #bootstrap-4-shortcodes-help .pull-xl-none {
+      float: none !important; } }
+  #bootstrap-4-shortcodes-help .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0; }
+  #bootstrap-4-shortcodes-help .sr-only-focusable:active, #bootstrap-4-shortcodes-help .sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto; }
+  #bootstrap-4-shortcodes-help .w-100 {
+    width: 100% !important; }
+  #bootstrap-4-shortcodes-help .m-x-auto {
+    margin-right: auto !important;
+    margin-left: auto !important; }
+  #bootstrap-4-shortcodes-help .m-a-0 {
+    margin: 0 0 !important; }
+  #bootstrap-4-shortcodes-help .m-t-0 {
+    margin-top: 0 !important; }
+  #bootstrap-4-shortcodes-help .m-r-0 {
+    margin-right: 0 !important; }
+  #bootstrap-4-shortcodes-help .m-b-0 {
+    margin-bottom: 0 !important; }
+  #bootstrap-4-shortcodes-help .m-l-0 {
+    margin-left: 0 !important; }
+  #bootstrap-4-shortcodes-help .m-x-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important; }
+  #bootstrap-4-shortcodes-help .m-y-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; }
+  #bootstrap-4-shortcodes-help .m-a-1 {
+    margin: 1rem 1rem !important; }
+  #bootstrap-4-shortcodes-help .m-t-1 {
+    margin-top: 1rem !important; }
+  #bootstrap-4-shortcodes-help .m-r-1 {
+    margin-right: 1rem !important; }
+  #bootstrap-4-shortcodes-help .m-b-1 {
+    margin-bottom: 1rem !important; }
+  #bootstrap-4-shortcodes-help .m-l-1 {
+    margin-left: 1rem !important; }
+  #bootstrap-4-shortcodes-help .m-x-1 {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important; }
+  #bootstrap-4-shortcodes-help .m-y-1 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important; }
+  #bootstrap-4-shortcodes-help .m-a-2 {
+    margin: 1.5rem 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .m-t-2 {
+    margin-top: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .m-r-2 {
+    margin-right: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .m-b-2 {
+    margin-bottom: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .m-l-2 {
+    margin-left: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .m-x-2 {
+    margin-right: 1.5rem !important;
+    margin-left: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .m-y-2 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .m-a-3 {
+    margin: 3rem 3rem !important; }
+  #bootstrap-4-shortcodes-help .m-t-3 {
+    margin-top: 3rem !important; }
+  #bootstrap-4-shortcodes-help .m-r-3 {
+    margin-right: 3rem !important; }
+  #bootstrap-4-shortcodes-help .m-b-3 {
+    margin-bottom: 3rem !important; }
+  #bootstrap-4-shortcodes-help .m-l-3 {
+    margin-left: 3rem !important; }
+  #bootstrap-4-shortcodes-help .m-x-3 {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important; }
+  #bootstrap-4-shortcodes-help .m-y-3 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important; }
+  #bootstrap-4-shortcodes-help .p-a-0 {
+    padding: 0 0 !important; }
+  #bootstrap-4-shortcodes-help .p-t-0 {
+    padding-top: 0 !important; }
+  #bootstrap-4-shortcodes-help .p-r-0 {
+    padding-right: 0 !important; }
+  #bootstrap-4-shortcodes-help .p-b-0 {
+    padding-bottom: 0 !important; }
+  #bootstrap-4-shortcodes-help .p-l-0 {
+    padding-left: 0 !important; }
+  #bootstrap-4-shortcodes-help .p-x-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
+  #bootstrap-4-shortcodes-help .p-y-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
+  #bootstrap-4-shortcodes-help .p-a-1 {
+    padding: 1rem 1rem !important; }
+  #bootstrap-4-shortcodes-help .p-t-1 {
+    padding-top: 1rem !important; }
+  #bootstrap-4-shortcodes-help .p-r-1 {
+    padding-right: 1rem !important; }
+  #bootstrap-4-shortcodes-help .p-b-1 {
+    padding-bottom: 1rem !important; }
+  #bootstrap-4-shortcodes-help .p-l-1 {
+    padding-left: 1rem !important; }
+  #bootstrap-4-shortcodes-help .p-x-1 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important; }
+  #bootstrap-4-shortcodes-help .p-y-1 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important; }
+  #bootstrap-4-shortcodes-help .p-a-2 {
+    padding: 1.5rem 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .p-t-2 {
+    padding-top: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .p-r-2 {
+    padding-right: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .p-b-2 {
+    padding-bottom: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .p-l-2 {
+    padding-left: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .p-x-2 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .p-y-2 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important; }
+  #bootstrap-4-shortcodes-help .p-a-3 {
+    padding: 3rem 3rem !important; }
+  #bootstrap-4-shortcodes-help .p-t-3 {
+    padding-top: 3rem !important; }
+  #bootstrap-4-shortcodes-help .p-r-3 {
+    padding-right: 3rem !important; }
+  #bootstrap-4-shortcodes-help .p-b-3 {
+    padding-bottom: 3rem !important; }
+  #bootstrap-4-shortcodes-help .p-l-3 {
+    padding-left: 3rem !important; }
+  #bootstrap-4-shortcodes-help .p-x-3 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important; }
+  #bootstrap-4-shortcodes-help .p-y-3 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important; }
+  #bootstrap-4-shortcodes-help .pos-f-t {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030; }
+  #bootstrap-4-shortcodes-help .text-justify {
+    text-align: justify !important; }
+  #bootstrap-4-shortcodes-help .text-nowrap {
+    white-space: nowrap !important; }
+  #bootstrap-4-shortcodes-help .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  #bootstrap-4-shortcodes-help .text-xs-left {
+    text-align: left !important; }
+  #bootstrap-4-shortcodes-help .text-xs-right {
+    text-align: right !important; }
+  #bootstrap-4-shortcodes-help .text-xs-center {
+    text-align: center !important; }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .text-sm-left {
+      text-align: left !important; }
+    #bootstrap-4-shortcodes-help .text-sm-right {
+      text-align: right !important; }
+    #bootstrap-4-shortcodes-help .text-sm-center {
+      text-align: center !important; } }
+  @media (min-width: 768px) {
+    #bootstrap-4-shortcodes-help .text-md-left {
+      text-align: left !important; }
+    #bootstrap-4-shortcodes-help .text-md-right {
+      text-align: right !important; }
+    #bootstrap-4-shortcodes-help .text-md-center {
+      text-align: center !important; } }
+  @media (min-width: 992px) {
+    #bootstrap-4-shortcodes-help .text-lg-left {
+      text-align: left !important; }
+    #bootstrap-4-shortcodes-help .text-lg-right {
+      text-align: right !important; }
+    #bootstrap-4-shortcodes-help .text-lg-center {
+      text-align: center !important; } }
+  @media (min-width: 1200px) {
+    #bootstrap-4-shortcodes-help .text-xl-left {
+      text-align: left !important; }
+    #bootstrap-4-shortcodes-help .text-xl-right {
+      text-align: right !important; }
+    #bootstrap-4-shortcodes-help .text-xl-center {
+      text-align: center !important; } }
+  #bootstrap-4-shortcodes-help .text-lowercase {
+    text-transform: lowercase !important; }
+  #bootstrap-4-shortcodes-help .text-uppercase {
+    text-transform: uppercase !important; }
+  #bootstrap-4-shortcodes-help .text-capitalize {
+    text-transform: capitalize !important; }
+  #bootstrap-4-shortcodes-help .font-weight-normal {
+    font-weight: normal; }
+  #bootstrap-4-shortcodes-help .font-weight-bold {
+    font-weight: bold; }
+  #bootstrap-4-shortcodes-help .font-italic {
+    font-style: italic; }
+  #bootstrap-4-shortcodes-help .text-muted {
+    color: #818a91 !important; }
+  #bootstrap-4-shortcodes-help a.text-muted:focus, #bootstrap-4-shortcodes-help a.text-muted:hover {
+    color: #687077 !important; }
+  #bootstrap-4-shortcodes-help .text-primary {
+    color: #0275d8 !important; }
+  #bootstrap-4-shortcodes-help a.text-primary:focus, #bootstrap-4-shortcodes-help a.text-primary:hover {
+    color: #025aa5 !important; }
+  #bootstrap-4-shortcodes-help .text-success {
+    color: #5cb85c !important; }
+  #bootstrap-4-shortcodes-help a.text-success:focus, #bootstrap-4-shortcodes-help a.text-success:hover {
+    color: #449d44 !important; }
+  #bootstrap-4-shortcodes-help .text-info {
+    color: #5bc0de !important; }
+  #bootstrap-4-shortcodes-help a.text-info:focus, #bootstrap-4-shortcodes-help a.text-info:hover {
+    color: #31b0d5 !important; }
+  #bootstrap-4-shortcodes-help .text-warning {
+    color: #f0ad4e !important; }
+  #bootstrap-4-shortcodes-help a.text-warning:focus, #bootstrap-4-shortcodes-help a.text-warning:hover {
+    color: #ec971f !important; }
+  #bootstrap-4-shortcodes-help .text-danger {
+    color: #d9534f !important; }
+  #bootstrap-4-shortcodes-help a.text-danger:focus, #bootstrap-4-shortcodes-help a.text-danger:hover {
+    color: #c9302c !important; }
+  #bootstrap-4-shortcodes-help .text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0; }
+  #bootstrap-4-shortcodes-help .invisible {
+    visibility: hidden !important; }
+  #bootstrap-4-shortcodes-help .hidden-xs-up {
+    display: none !important; }
+  @media (max-width: 543px) {
+    #bootstrap-4-shortcodes-help .hidden-xs-down {
+      display: none !important; } }
+  @media (min-width: 544px) {
+    #bootstrap-4-shortcodes-help .hidden-sm-up {
+      display: none !important; } }
+  @media (max-width: 767px) {
+    #bootstrap-4-shortcodes-help .hidden-sm-down {
+      display: none !important; } }
+  @media (min-width: 768px) {
+    #bootstrap-4-shortcodes-help .hidden-md-up {
+      display: none !important; } }
+  @media (max-width: 991px) {
+    #bootstrap-4-shortcodes-help .hidden-md-down {
+      display: none !important; } }
+  @media (min-width: 992px) {
+    #bootstrap-4-shortcodes-help .hidden-lg-up {
+      display: none !important; } }
+  @media (max-width: 1199px) {
+    #bootstrap-4-shortcodes-help .hidden-lg-down {
+      display: none !important; } }
+  @media (min-width: 1200px) {
+    #bootstrap-4-shortcodes-help .hidden-xl-up {
+      display: none !important; } }
+  #bootstrap-4-shortcodes-help .hidden-xl-down {
+    display: none !important; }
+  #bootstrap-4-shortcodes-help .visible-print-block {
+    display: none !important; }
+    @media print {
+      #bootstrap-4-shortcodes-help .visible-print-block {
+        display: block !important; } }
+  #bootstrap-4-shortcodes-help .visible-print-inline {
+    display: none !important; }
+    @media print {
+      #bootstrap-4-shortcodes-help .visible-print-inline {
+        display: inline !important; } }
+  #bootstrap-4-shortcodes-help .visible-print-inline-block {
+    display: none !important; }
+    @media print {
+      #bootstrap-4-shortcodes-help .visible-print-inline-block {
+        display: inline-block !important; } }
+  @media print {
+    #bootstrap-4-shortcodes-help .hidden-print {
+      display: none !important; } }
+  #bootstrap-4-shortcodes-help .modal {
+    z-index: 9999; }
+  #bootstrap-4-shortcodes-help .modal-lg {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    bottom: 0px;
+    right: 30px; }
+  #bootstrap-4-shortcodes-help .modal-dialog {
+    max-width: none;
+    margin: 10px;
+    overflow: scroll; }
+  #bootstrap-4-shortcodes-help .modal-content {
+    border-radius: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: #000; }
+  .modal-backdrop.fade {
+    opacity: 0; }
+  .modal-backdrop.in {
+    opacity: 0.5; }
+
 @font-face {
   font-family: 'bss4wp';
   src: url("../fonts/Bootstrap-Shortcodes-for-WordPress.eot?-o1r0ap") format("embedded-opentype");

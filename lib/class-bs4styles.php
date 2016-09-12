@@ -3,7 +3,7 @@
 class BS4Styles {
 
 	function __construct() {
-		
+
 		//add the button to the content editor, next to the media button on any admin page in the array below
 		if(in_array(basename($_SERVER['PHP_SELF']), array('post.php', 'page.php', 'page-new.php', 'post-new.php', 'widgets.php', 'admin-ajax.php'))) {
 				add_action('media_buttons', array( $this, 'add_bootstrap_button' ), 11 );
@@ -22,12 +22,12 @@ class BS4Styles {
 	 */
 	function add_bootstrap_button() {
 			//the id of the container I want to show in the popup
-			$popup_id = 'bootstrap-4-shortcodes-help';
+			$popup_id = 'bootstrap-4-shortcodes-help-button';
 			//our popup's title
 			$title = 'Bootstrap 4 Shortcodes Help';
 			//append the icon
 			printf(
-			'<a data-toggle="modal" data-target="#%1$s" title="%2$s" href="%3$s" class="%4$s"><span class="%5$s"></span></a>',
+			'<a data-toggle="modal" data-target="#bootstrap-4-shortcodes-help-modal" id="%1$s" title="%2$s" href="%3$s" class="%4$s"><span class="%5$s"></span></a>',
 			$popup_id,
 			esc_attr( $title ),
 			esc_url( '#' ),

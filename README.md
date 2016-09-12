@@ -23,7 +23,7 @@ The plugin is tested to work with ```Bootstrap 4``` and ```WordPress 4.6``` and 
 
 # Usage and Examples
 
-## Layout
+### Layout
 
 ### Grid
     [row]

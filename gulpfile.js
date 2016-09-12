@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var markdown = require('gulp-markdown');
 var sass		= require('gulp-sass');
 var mainBowerFiles	= require('main-bower-files');
+var wiredep		= require('wiredep').stream;
 var concat		= require('gulp-concat');
 var runSequence		= require('run-sequence');
 
@@ -20,16 +21,22 @@ gulp.task('clean', require('del').bind(null, ['./dist']));
 // `gulp styles` - Compiles, combines, and optimizes Bower CSS and project CSS.
 gulp.task('styles', function() { 
 	return gulp.src(config.assets + '/styles/main.scss')
+		.pipe(wiredep())
 		.pipe(sass())
 		.pipe(gulp.dest(config.dist + '/css'));
 });
 
+// Scripts
+gulp.task("bower_scripts", function(){
+	return gulp.src(mainBowerFiles('**/*.js'))
+		.pipe(concat('package.js'))
+		.pipe(gulp.dest(config.dist + '/scripts'))
+});
 
 // Scripts
 gulp.task("scripts", function(){
 	return gulp.src(config.assets + '/scripts/*.js')
-		.pipe(concat('main.js'))
-		.pipe(gulp.dest(config.dist + '/js'))
+		.pipe(gulp.dest(config.dist + '/scripts'))
 });
 
 // ### Fonts
@@ -41,13 +48,14 @@ gulp.task('fonts', function() {
 gulp.task('docs', function () {
 		return gulp.src('README.md')
 				.pipe(markdown())
-				.pipe(gulp.dest('docs'));
+				.pipe(gulp.dest(config.dist + '/docs'));
 });
 
 //Build task
 gulp.task('build', function(callback) {
 	runSequence('clean',
 			'styles',
+			'bower_scripts',
 			'scripts',
 			'fonts',
 			'docs',

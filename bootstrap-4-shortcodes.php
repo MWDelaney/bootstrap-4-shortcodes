@@ -22,6 +22,8 @@ License: MIT
 
 require_once(BS4_SHORTCODES_DIR . 'lib/class-bs4shortcodes.php');
 require_once(BS4_SHORTCODES_DIR . 'lib/class-bs4styles.php');
+require_once(BS4_SHORTCODES_DIR . 'lib/class-bs4docs.php');
 
 new BS4Shortcodes();
 new BS4Styles();
+new BS4Docs();
