@@ -4008,20 +4008,77 @@
   @media print {
     #bootstrap-4-shortcodes-help .hidden-print {
       display: none !important; } }
+  #bootstrap-4-shortcodes-help * {
+    box-sizing: border-box; }
+  #bootstrap-4-shortcodes-help .container-fluid,
+  #bootstrap-4-shortcodes-help .row,
+  #bootstrap-4-shortcodes-help .right {
+    height: 100%; }
+  #bootstrap-4-shortcodes-help .left {
+    height: 100vh;
+    background: #f3f3f3;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #ccc; }
+  #bootstrap-4-shortcodes-help .right {
+    padding-left: 0;
+    padding-right: 0; }
+    #bootstrap-4-shortcodes-help .right article {
+      padding: 15px; }
+    @media (max-width: 576px) {
+      #bootstrap-4-shortcodes-help .right {
+        width: -moz-calc(100% - 110px);
+        /* WebKit */
+        width: -webkit-calc(100% - 110px);
+        /* Opera */
+        width: -o-calc(100% - 110px);
+        /* Standard */
+        width: calc(100% - 110px); } }
+  #bootstrap-4-shortcodes-help .modal-body {
+    padding: 0; }
   #bootstrap-4-shortcodes-help .modal {
     z-index: 9999; }
-  #bootstrap-4-shortcodes-help .modal-lg {
+  #bootstrap-4-shortcodes-help .modal-content {
+    border-radius: 0;
     position: absolute;
-    left: 30px;
     top: 30px;
-    bottom: 0px;
-    right: 30px; }
+    bottom: 30px;
+    overflow: hidden; }
+    #bootstrap-4-shortcodes-help .modal-content .container-fluid {
+      height: 100%; }
   #bootstrap-4-shortcodes-help .modal-dialog {
     max-width: none;
-    margin: 10px;
-    overflow: scroll; }
-  #bootstrap-4-shortcodes-help .modal-content {
-    border-radius: 0; }
+    overflow: hidden;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    margin: 0;
+    /* Firefox */
+    height: -moz-calc(100% - 30px);
+    /* WebKit */
+    height: -webkit-calc(100% - 30px);
+    /* Opera */
+    height: -o-calc(100% - 30px);
+    /* Standard */
+    height: calc(100% - 30px); }
+  #bootstrap-4-shortcodes-help .modal-body {
+    overflow: hidden;
+    /* Firefox */
+    height: -moz-calc(100% - 65px);
+    /* WebKit */
+    height: -webkit-calc(100% - 65px);
+    /* Opera */
+    height: -o-calc(100% - 65px);
+    /* Standard */
+    height: calc(100% - 65px); }
+    #bootstrap-4-shortcodes-help .modal-body .container-fluid,
+    #bootstrap-4-shortcodes-help .modal-body .row,
+    #bootstrap-4-shortcodes-help .modal-body section {
+      height: 100%; }
+    #bootstrap-4-shortcodes-help .modal-body section {
+      overflow: scroll; }
 
 .modal-backdrop {
   position: fixed;

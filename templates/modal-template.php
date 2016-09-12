@@ -19,20 +19,22 @@
 <div id="bootstrap-4-shortcodes-help-modal" class="modal fade">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
+					<div class="container-fluid">
+						<div class="row">
+							<nav class="col-sm-3 left hidden-sm-down">
+								<ul>
+									<li class="active"><a href="#bs-shortcode-reference">Shortcode Reference</a></li>
+									<li><a href="#bs-requirements">System Requirements</a></li>
+								</ul>
+							</nav>
+						<div class="col-sm-9 right">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4>Bootstrap 4 Shortcodes Help</h4>
             </div>
 
-            <div class="modal-body ativa-scroll">
-
-				<nav>
-					<ul>
-						<li class="active"><a href="#bs-shortcode-reference">Shortcode Reference</a></li>
-						<li><a href="#bs-requirements">System Requirements</a></li>
-					</ul>
-				</nav>
-				<section class="backbone_modal-main" role="main">
+            <div class="modal-body">
+				<section role="main">
 					<article>
 				<?php
 					$html = file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/README.html');
@@ -65,7 +67,9 @@
 				?>
 				</article>
 			</section>
-
+		</div>
+	</div>
+</div>
 		</div><!-- /.modal-body -->
 
 </div><!-- /.modal-content -->

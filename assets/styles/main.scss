@@ -3,24 +3,89 @@
 #bootstrap-4-shortcodes-help {
 // bower:scss
 // endbower
-
+	* {
+		box-sizing: border-box;
+	}
+	.container-fluid,
+	.row,
+	.right {
+		height: 100%;
+	}
+	.left {
+		height: 100vh;
+		background: #f3f3f3;
+		border-right-width: 1px;
+		border-right-style: solid;
+		border-right-color: #ccc;
+	}
+	.right {
+		padding-left: 0;
+		padding-right: 0;
+		article {
+			padding: 15px;
+		}
+		@media(max-width: 576px){
+			width: -moz-calc(100% - 110px);
+			/* WebKit */
+			width: -webkit-calc(100% - 110px);
+			/* Opera */
+			width: -o-calc(100% - 110px);
+			/* Standard */
+			width: calc(100% - 110px);
+		}
+	}
+	.modal-body {
+		padding: 0;
+	}
 	.modal {
 		z-index: 9999;
 	}
-	.modal-lg {
+	.modal-content {
+		border-radius: 0;
 		position: absolute;
-		left: 30px;
 		top: 30px;
-		bottom: 0px;
-		right: 30px;
+		bottom: 30px;
+		overflow: hidden;
+		.container-fluid {
+			height: 100%;
+		}
 	}
 	.modal-dialog {
 		max-width: none;
-		margin: 10px;
-		overflow: scroll;
+		overflow: hidden;
+		position: absolute;
+		left: 30px;
+		right: 30px;
+		top: 30px;
+		bottom: 30px;
+		margin: 0;
+		/* Firefox */
+		height: -moz-calc(100% - 30px);
+		/* WebKit */
+		height: -webkit-calc(100% - 30px);
+		/* Opera */
+		height: -o-calc(100% - 30px);
+		/* Standard */
+		height: calc(100% - 30px);
 	}
-	.modal-content {
-		border-radius: 0;
+	.modal-body {
+		overflow: hidden;
+		/* Firefox */
+		height: -moz-calc(100% - 65px);
+		/* WebKit */
+		height: -webkit-calc(100% - 65px);
+		/* Opera */
+		height: -o-calc(100% - 65px);
+		/* Standard */
+		height: calc(100% - 65px);
+		.container-fluid,
+		.row,
+		section {
+			height: 100%;
+		}
+		section {
+			overflow: scroll;
+		}
 	}
 }
 
