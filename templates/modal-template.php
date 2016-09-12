@@ -33,7 +33,6 @@
 					</ul>
 				</nav>
 				<section class="backbone_modal-main" role="main">
-				<header><h1><?php echo __( 'Bootstrap 4 Shortcodes for WordPress', 'bootstrap_4_shortcodes' ); ?></h1></header>
 					<article>
 				<?php
 					$html = file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/README.html');
