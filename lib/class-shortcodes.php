@@ -74,7 +74,9 @@ class Shortcodes {
 			'card-img',
 			'card-img-overlay',
 			'card-header',
-			'card-footer'
+			'card-footer',
+
+			'carousel'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -295,7 +297,7 @@ class Shortcodes {
 		$class	= array();
 		$class[]  = 'media';
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<%1$s class="%2$s"%3$s>%4$s</%1$s>',
 				(isset($GLOBALS['media_list'])) ? 'li' : 'div',
@@ -336,7 +338,7 @@ class Shortcodes {
 		$content = do_shortcode( $content );
 		$content = Utilities::addclass( $search_tags, $content, $object_class, $fallback_tag );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -365,7 +367,7 @@ class Shortcodes {
 		$class	= array();
 		$class[]  = 'media-body';
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -401,7 +403,7 @@ class Shortcodes {
 		$content = Utilities::addclass( $search_tags, $content, $class, $fallback_tag );
 		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
 				$content
@@ -434,7 +436,7 @@ class Shortcodes {
 		$content = Utilities::addclass( null, $content, $class );
 		$content = Utilities::adddata( null, $content, $atts['data'] );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
 				$content
@@ -479,7 +481,7 @@ class Shortcodes {
 		$content = Utilities::addclass( $search_headings, $content, $heading_class );
 		$content = ($atts['dismissible']) ? '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $content : $content;
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -513,7 +515,7 @@ class Shortcodes {
 
 		$search_tags	= array('a');
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<nav class="%s"%s>%s</nav>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -547,7 +549,7 @@ class Shortcodes {
 		$content = Utilities::addclass( $search_tags, $content, $class );
 		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
 				$content
@@ -590,7 +592,7 @@ class Shortcodes {
 		if (Utilities::is_flag('disabled', $atts))
 			$content = Utilities::addaria( $search_tags, $content, 'disabled', 'true' );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
 				$content
@@ -620,7 +622,7 @@ class Shortcodes {
 		$class[]  = ($atts['size']) ? 'btn-group-' . $atts['size'] : null;
 		$class[]	= (Utilities::is_flag('vertical', $save_atts)) ? 'btn-group-vertical' : null;
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" role="group" %s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -648,7 +650,7 @@ class Shortcodes {
 		$class	= array();
 		$class[]	= 'btn-toolbar';
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" role="toolbar" %s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -680,7 +682,7 @@ class Shortcodes {
 		$class[]  = ($atts['type']) ? 'card-' . $atts['type'] : null;
 		$class[]	= (Utilities::is_flag('inverse', $save_atts)) ? 'card-inverse' : null;
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" %s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -720,7 +722,7 @@ class Shortcodes {
 		$content = Utilities::addclass( $p_tags, $content, $p_class );
 		$content = Utilities::addclass( $blockquote_tags, $content, $blockquote_class );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" %s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -756,7 +758,7 @@ class Shortcodes {
 		$content = Utilities::addclass( $search_tags, $content, $class, $fallback_tag );
 		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
 				$content
@@ -790,7 +792,7 @@ class Shortcodes {
 		$content = Utilities::addclass( $search_tags, $content, $class, $fallback_tag );
 		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
-		Utilities::bs_output(
+		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
 				$content
@@ -826,7 +828,7 @@ class Shortcodes {
 			$content = Utilities::addclass( $search_tags, $content, $class );
 			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
-			Utilities::bs_output(
+			$return = Utilities::bs_output(
 				sprintf(
 					'%s',
 					$content
@@ -853,7 +855,7 @@ class Shortcodes {
 			$class	= array();
 			$class[]	= 'card-img-overlay';
 
-			Utilities::bs_output(
+			$return = Utilities::bs_output(
 				sprintf(
 					'<div class="%s" %s>%s</div>',
 					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
@@ -888,7 +890,7 @@ class Shortcodes {
 			$content = Utilities::addclass( $search_tags, $content, $class, $fallback_tag );
 			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
-			Utilities::bs_output(
+			$return = Utilities::bs_output(
 				sprintf(
 					'%s',
 					$content
@@ -921,11 +923,94 @@ class Shortcodes {
 			$content = Utilities::addclass( $search_tags, $content, $class, $fallback_tag );
 			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
-			Utilities::bs_output(
+			$return = Utilities::bs_output(
 				sprintf(
 					'%s',
 					$content
 				)
+			);
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Carousel shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_carousel( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"interval" => false,
+				"pause" => false,
+				"wrap" => true,
+				"class" => false,
+				"data"   => false
+			), $atts );
+
+			if( isset($GLOBALS['carousel_count']) )
+				$GLOBALS['carousel_count']++;
+			else
+				$GLOBALS['carousel_count'] = 0;
+
+			$atts_map = Utilities::attribute_map( $content );
+			$indicators = array();
+			// Extract the slide titles for use in the carousel widget.
+
+			$class	= array();
+			$class[]  = 'carousel';
+			$class[]  = 'slide';
+
+			$item_class	= array();
+			$item_class[]  = 'carousel-item';
+
+			$active_class	= array();
+			$active_class[]  = 'active';
+
+			$caption_class = array();
+			$caption_class[] = 'carousel-caption';
+
+			// Strip unwanted tags that WordPress likes inserting
+			$content = strip_tags($content, '<img><figure><figcaption><a>');
+
+			$item_tags = array('figure', 'img');
+			$fallback_tag = 'div';
+
+			$caption_tags = array('figcaption');
+
+			$content = do_shortcode( $content );
+
+			// Remove wrapped image alignment and caption classes
+			$content = preg_replace('/alignnone/', '', $content);
+			$content = preg_replace('/alignright/', '', $content);
+			$content = preg_replace('/alignleft/', '', $content);
+			$content = preg_replace('/aligncenter/', '', $content);
+			$content = preg_replace('/wp-caption/', '', $content);
+
+			$content = Utilities::addclass( $item_tags, $content, $item_class, $fallback_tag );
+			$content = Utilities::addclass( $item_tags, $content, $active_class, null, '1' );
+			$content = Utilities::addclass( $caption_tags, $content, $caption_class);
+
+			$id = 'bs4-carousel-'. $GLOBALS['carousel_count'];
+
+
+			$return = Utilities::bs_output(
+				sprintf(
+							'<div class="%s" id="%s" data-ride="carousel"%s%s%s%s>%s<div class="%s" role="listbox">%s</div>%s%s</div>',
+							Utilities::class_output(__FUNCTION__, $class, $atts['class']),
+							esc_attr( $id ),
+							( $atts['interval'] )   ? sprintf( ' data-interval="%d"', $atts['interval'] ) : '',
+							( $atts['pause'] )      ? sprintf( ' data-pause="%s"', esc_attr( $atts['pause'] ) ) : '',
+							( $atts['wrap'] == 'true' ) ? sprintf( ' data-wrap="%s"', esc_attr( $atts['wrap'] ) ) : '',
+							Utilities::parse_data_attributes( $atts['data'] ),
+							( $indicators ) ? '<ol class="carousel-indicators">' . implode( $indicators ) . '</ol>' : '',
+							'carousel-inner',
+							$content,
+							'<a class="left carousel-control"  href="' . esc_url( '#' . $id ) . '" role="button" data-slide="prev"><span class="icon-prev" aria-hidden="true"></span><span class="sr-only">Previous</span></a>',
+							'<a class="right carousel-control" href="' . esc_url( '#' . $id ) . '" role="button" data-slide="next"><span class="icon-next" aria-hidden="true"></span><span class="sr-only">Next</span></a>'
+						)
 			);
 
 			return $return;

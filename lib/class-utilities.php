@@ -84,7 +84,7 @@ class Utilities extends Shortcodes {
 	 * @param  [type] $data    [description]
 	 * @return [type]          [description]
 	 */
-	public static function addclass( $finds, $content, $class, $fallback_tag = null ) {
+	public static function addclass( $finds, $content, $class, $fallback_tag = null, $nth = null ) {
 		$u = new Utilities;
 		$doc = $u->processdom($content, $fallback_tag);
 
@@ -92,10 +92,11 @@ class Utilities extends Shortcodes {
 			$root = $doc->documentElement;
 			$finds = array($root->tagName);
 		}
-
-		foreach( $finds as $found ){
+		$count = 0;
+		foreach( $finds as $found ) {
 			$tags = $doc->getElementsByTagName($found);
 			foreach ($tags as $tag) {
+				if($nth && $count == $nth) { continue; }
 				// Append the classes in $class to the tag's existing classes
 				$tag->setAttribute(
 					'class',
@@ -105,6 +106,7 @@ class Utilities extends Shortcodes {
 						$tag->getAttribute('class')
 					)
 				);
+				$count++;
 			}
 		}
 		return $doc->saveHTML($doc->documentElement);
@@ -216,7 +218,7 @@ class Utilities extends Shortcodes {
 	 *   bs_carousel()
 	 *
 	 */
-	function bs_attribute_map($str, $att = null) {
+		public static function attribute_map($str, $att = null) {
 			$res = array();
 			$return = array();
 			$reg = get_shortcode_regex();
@@ -238,7 +240,7 @@ class Utilities extends Shortcodes {
 	function processdom( $content, $tag = null ) {
 	 // Hide warnings while we run this function
 	 $previous_value = libxml_use_internal_errors(TRUE);
-	 $doc = new DOMDocument();
+	 $doc = new \DOMDocument();
 	 $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
 	 $doc->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 	 libxml_clear_errors();
@@ -277,9 +279,9 @@ class Utilities extends Shortcodes {
 	 * @param  [type] $data    [description]
 	 * @return [type]          [description]
 	 */
-	function adddata( $finds, $content, $data ) {
-
-		$doc = $this->processdom($content);
+	public static function adddata( $finds, $content, $data ) {
+		$u = new Utilities;
+		$doc = $u->processdom($content);
 
 		if(!$finds) {
 			$root = $doc->documentElement;

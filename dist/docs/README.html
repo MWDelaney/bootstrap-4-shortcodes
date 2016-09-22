@@ -1048,3 +1048,61 @@
 </tr>
 </tbody>
 </table>
+<hr>
+<h3 id="carousel">Carousel</h3>
+<p>Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.</p>
+<h4 id="basic-example">Basic example</h4>
+<pre><code>[carousel]
+        --IMAGE--
+        --IMAGE--
+        --IMAGE--
+[/carousel]
+</code></pre><h4 id="-carousel-parameters">[carousel] parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>interval</td>
+<td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+<td>optional</td>
+<td>any number (in ms) or &quot;false&quot;</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>Whether the carousel pauses on hover. If set to null, hovering over the carousel won&#39;t pause it.</td>
+<td>optional</td>
+<td>hover, null</td>
+<td>hover</td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>Whether the carousel should cycle continuously or have hard stops.</td>
+<td>optional</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Any extra classes you want to add</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>

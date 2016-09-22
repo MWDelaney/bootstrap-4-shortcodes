@@ -441,3 +441,24 @@ Parameter | Description | Required | Values | Default
 --- | --- | --- | --- | ---
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+* * *
+
+### Carousel
+Remember that `[carousel]` must wrap a set of images inserted via the WordPress editor.
+
+#### Basic example
+    [carousel]
+		    --IMAGE--
+		    --IMAGE--
+		    --IMAGE--
+    [/carousel]
+
+#### [carousel] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+interval | The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle. | optional | any number (in ms) or "false" | 5000
+pause | Whether the carousel pauses on hover. If set to null, hovering over the carousel won't pause it.| optional | hover, null | hover
+wrap | Whether the carousel should cycle continuously or have hard stops. | optional | true, false | false
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
