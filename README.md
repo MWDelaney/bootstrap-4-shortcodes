@@ -1,3 +1,8 @@
+# ** WORK IN PROGRESS**
+This plugin is *not ready for use in production*. Not all Bootstrap 4 shortcodes are supported yet, and depending on development some featuers may break periodically. We will update this note when we're ready to release a production-ready version of this tool.
+
+*Thank you!*
+
 Bootstrap 4 Shortcodes for WordPress
 ===
 
