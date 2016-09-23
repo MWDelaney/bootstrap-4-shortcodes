@@ -78,6 +78,8 @@ class Shortcodes {
 
 			'carousel'
 
+			'jumbotron'
+
 		);
 		foreach ( $shortcodes as $shortcode ) {
 			$function = 'bs_' . str_replace( '-', '_', $shortcode );
@@ -1011,6 +1013,35 @@ class Shortcodes {
 							'<a class="left carousel-control"  href="' . esc_url( '#' . $id ) . '" role="button" data-slide="prev"><span class="icon-prev" aria-hidden="true"></span><span class="sr-only">Previous</span></a>',
 							'<a class="right carousel-control" href="' . esc_url( '#' . $id ) . '" role="button" data-slide="next"><span class="icon-next" aria-hidden="true"></span><span class="sr-only">Next</span></a>'
 						)
+			);
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Jumbotron shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_jumbotron( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false,
+			), $atts );
+
+			$class	= array();
+			$class[]	= (Utilities::is_flag('fluid', $save_atts)) ? 'fluid' : null;
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'<div class="%s"%s>%s</div>',
+					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
+					Utilities::parse_data_attributes( $atts['data'] ),
+					do_shortcode( $content )
+				)
 			);
 
 			return $return;
