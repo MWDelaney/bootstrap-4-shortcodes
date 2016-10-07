@@ -36,3 +36,15 @@ add_action( 'admin_init', function() {
 	$bs4_docs = new MWD\BS4Shortcodes\Docs;
 	$bs4_admin = new MWD\BS4Shortcodes\Admin;
 } );
+
+function bs_fix_shortcodes($content){
+		$array = array (
+				'<p>[' => '[',
+				']</p>' => ']',
+				']<br />' => ']',
+				']<br>' => ']'
+		);
+		$content = strtr($content, $array);
+		return $content;
+}
+add_filter('the_content', 'bs_fix_shortcodes');

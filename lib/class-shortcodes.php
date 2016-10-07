@@ -76,9 +76,12 @@ class Shortcodes {
 			'card-header',
 			'card-footer',
 
-			'carousel'
+			'carousel',
 
-			'jumbotron'
+			'jumbotron',
+
+			'list-group'
+
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -458,7 +461,7 @@ class Shortcodes {
 	 */
 	function bs_alert( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
-				"type"	=> "info",
+				"type"	=> "success",
 				"dismissible"	=> false,
 				"class" => false,
 				"data"	=> false
@@ -478,14 +481,14 @@ class Shortcodes {
 		$search_anchors = array('a');
 		$search_headings = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 
-		$content = do_shortcode( $content );
+		$content = do_shortcode( trim($content) );
 		$content = Utilities::addclass( $search_anchors, $content, $link_class );
 		$content = Utilities::addclass( $search_headings, $content, $heading_class );
 		$content = ($atts['dismissible']) ? '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $content : $content;
 
 		$return = Utilities::bs_output(
 			sprintf(
-				'<div class="%s"%s>%s</div>',
+				'<div class="%s"%s role="alert">%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
 				Utilities::parse_data_attributes( $atts['data'] ),
 				$content
@@ -577,7 +580,6 @@ class Shortcodes {
 			"title"			=> false,
 			"data"			=> false
 		), $save_atts );
-		print_r($save_atts);
 		$class	= array();
 		$class[]	= 'btn';
 		$class[]  = 'btn-' . $atts['type'];
@@ -1041,6 +1043,43 @@ class Shortcodes {
 					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
 					Utilities::parse_data_attributes( $atts['data'] ),
 					do_shortcode( $content )
+				)
+			);
+
+			return $return;
+		}
+
+
+		/**
+		 * List Group shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_list_group( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"class"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+			$class	= array();
+			$class[]	= 'list-group';
+			$search_tags	= array('ul', 'div');
+
+
+			$li_class	= array();
+			$li_class[]	= 'list-group-item';
+			$li_search_tags	= array('li', 'a');
+
+			$content = do_shortcode( $content );
+			$content = Utilities::addclass( $search_tags, $content, $class );
+			$content = Utilities::addclass( $li_search_tags, $content, $li_class );
+			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					$content
 				)
 			);
 

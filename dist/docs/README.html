@@ -1,3 +1,6 @@
+<h1 id="-work-in-progress-"><strong> WORK IN PROGRESS</strong></h1>
+<p>This plugin is <em>not ready for use in production</em>. Not all Bootstrap 4 shortcodes are supported yet, and depending on development some featuers may break periodically. We will update this note when we&#39;re ready to release a production-ready version of this tool.</p>
+<p><em>Thank you!</em></p>
 <h1 id="bootstrap-4-shortcodes-for-wordpress">Bootstrap 4 Shortcodes for WordPress</h1>
 <p><img src="https://img.shields.io/wordpress/plugin/r/bootstrap-4-shortcodes.svg" alt="WordPress Rating"> <img src="https://img.shields.io/wordpress/plugin/dt/bootstrap-4-shortcodes.svg" alt="WordPress Downloads"></p>
 <p>WordPress plugin that provides shortcodes for easier use of the Bootstrap 4 styles and components in your content.</p>
@@ -556,9 +559,55 @@
 <p><a href="http://getbootstrap.com/layout/responsive-utilities/">Bootstrap media objects documentation</a></p>
 <hr>
 <h2 id="components">Components</h2>
+<h3 id="alerts">Alerts</h3>
+<p>Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.</p>
+<pre><code>[alert type=&quot;success&quot;] ... [/alert]
+</code></pre><h4 id="-alert-parameters">[alert] parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>The type of the alert</td>
+<td>required</td>
+<td>success, info, warning, danger</td>
+<td>success</td>
+</tr>
+<tr>
+<td>dismissable</td>
+<td>If the alert should be dismissable</td>
+<td>optional</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Any extra classes you want to add</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://getbootstrap.com/components/#alerts">Bootstrap alert documentation</a></p>
 <h3 id="buttons">Buttons</h3>
 <p>Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</p>
-<pre><code>[button type=&quot;primary&quot;] --LINK-- [/button]
+<pre><code>[button type=&quot;primary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
 </code></pre><p>Set button sizes with the <code>size</code> parameter</p>
 <pre><code>[button type=&quot;primary&quot; size=&quot;lg&quot;] --LINK-- [/button]
 </code></pre><p>Set <code>block</code> flag  for block-style buttons</p>

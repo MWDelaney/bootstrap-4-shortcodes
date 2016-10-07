@@ -227,11 +227,27 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 ## Components
 
+### Alerts
+Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.
+
+	[alert type="success"] ... [/alert]
+
+#### [alert] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+type | The type of the alert | required | success, info, warning, danger | success
+dismissable | If the alert should be dismissable | optional | true, false | false
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+[Bootstrap alert documentation](http://getbootstrap.com/components/#alerts)
+
+
 
 ### Buttons
 Wrap any `a`, `button`, or `input` tag inserted via the WordPress editor in `[button]` to give it button properties and classes.
 
-	[button type="primary"] --LINK-- [/button]
+	[button type="primary"] <a href="#link">Text</a> [/button]
 
 Set button sizes with the `size` parameter
 

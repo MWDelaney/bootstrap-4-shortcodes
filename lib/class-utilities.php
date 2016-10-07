@@ -238,21 +238,28 @@ class Utilities extends Shortcodes {
 	 * Process DOM
 	 */
 	function processdom( $content, $tag = null ) {
+		$tag = ($tag) ? $tag : 'div';
+		$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+
 	 // Hide warnings while we run this function
 	 $previous_value = libxml_use_internal_errors(TRUE);
+
+	 //Test for a document root element. If there's no root or wrapper element DOMDocument will mess up the HTML when it parses it.
+	 $test = new \DOMDocument();
+	 $test->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+	 $before = '';
+	 $after = '';
+	 if($test->documentElement->tagName != $tag) {
+		 $before = '<' . $tag . '>';
+		 $after = '</' . $tag  .'>';
+	 }
 	 $doc = new \DOMDocument();
-	 $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-	 $doc->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+	 $doc->loadHTML($before . $content . $after, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 	 libxml_clear_errors();
 	 libxml_use_internal_errors($previous_value);
 
-	 $tag = ($tag) ? $tag : 'div';
-
 	 // If there's no root element, set it to $tag
-	 if(!$doc->documentElement) {
-			 $element = $doc->createElement($tag, utf8_encode($content));
-			 $doc->appendChild($element);
-		}
+
 		return $doc;
 	}
 
