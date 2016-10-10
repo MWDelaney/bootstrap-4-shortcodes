@@ -84,9 +84,9 @@ class Utilities extends Shortcodes {
 	 * @param  [type] $data    [description]
 	 * @return [type]          [description]
 	 */
-	public static function addclass( $finds, $content, $class, $fallback_tag = null, $nth = null ) {
+	public static function addclass( $finds, $content, $class, $nth = null ) {
 		$u = new Utilities;
-		$doc = $u->processdom($content, $fallback_tag);
+		$doc = $u->processdom($content);
 
 		if(!$finds) {
 			$root = $doc->documentElement;
@@ -233,32 +233,30 @@ class Utilities extends Shortcodes {
 	}
 
 
+	/**
+	 * Test DOM for root tags
+	 */
+	 public static function testdom( $content, $tag ) {
+		 $u = new Utilities;
+ 		 $test = $u->processdom($content);
+		 if(in_array($test->documentElement->tagName, $tag)) {
+			 return true;
+		 }
+	 }
 
 	/**
 	 * Process DOM
 	 */
-	function processdom( $content, $tag = null ) {
-		$tag = ($tag) ? $tag : 'div';
+	function processdom( $content ) {
 		$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
 
 	 // Hide warnings while we run this function
 	 $previous_value = libxml_use_internal_errors(TRUE);
 
-	 //Test for a document root element. If there's no root or wrapper element DOMDocument will mess up the HTML when it parses it.
-	 $test = new \DOMDocument();
-	 $test->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-	 $before = '';
-	 $after = '';
-	 if($test->documentElement->tagName != $tag) {
-		 $before = '<' . $tag . '>';
-		 $after = '</' . $tag  .'>';
-	 }
 	 $doc = new \DOMDocument();
-	 $doc->loadHTML($before . $content . $after, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+	 $doc->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 	 libxml_clear_errors();
 	 libxml_use_internal_errors($previous_value);
-
-	 // If there's no root element, set it to $tag
 
 		return $doc;
 	}
