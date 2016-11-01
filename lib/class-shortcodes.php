@@ -83,7 +83,8 @@ class Shortcodes {
 
 			'list-group',
 
-			'nav'
+			'nav',
+			'pagination'
 
 
 		);
@@ -346,7 +347,6 @@ class Shortcodes {
 		$object_class[]	= "media-object";
 
 		$content = do_shortcode( $wrap_before . $content . $wrap_after );
-		$content = Utilities::addclass( $search_tags, $content, $object_class );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -356,6 +356,8 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $object_class );
 
 		return $return;
 	}
@@ -411,10 +413,7 @@ class Shortcodes {
 		$class	= array();
 		$class[]  = 'media-heading';
 
-
 		$content = do_shortcode( $wrap_before . $content . $wrap_after );
-		$content = Utilities::addclass( $search_tags, $content, $class );
-		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -422,6 +421,10 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+
 
 		return $return;
 	}
@@ -446,8 +449,6 @@ class Shortcodes {
 		$class[]	= ( $atts['down'] )		? 'hidden-' . $atts['down'] . '-down': null;
 
 		$content = do_shortcode( $content );
-		$content = Utilities::addclass( null, $content, $class );
-		$content = Utilities::adddata( null, $content, $atts['data'] );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -455,6 +456,9 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( null, $return, $class );
+		$return = Utilities::adddata( null, $return, $atts['data'] );
 
 		return $return;
 	}
@@ -490,8 +494,6 @@ class Shortcodes {
 		$search_headings = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 
 		$content = do_shortcode( trim($content) );
-		$content = Utilities::addclass( $search_as, $content, $link_class );
-		$content = Utilities::addclass( $search_headings, $content, $heading_class );
 		$content = ($atts['dismissible']) ? '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $content : $content;
 
 		$return = Utilities::bs_output(
@@ -502,6 +504,9 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_as, $return, $link_class );
+		$return = Utilities::addclass( $search_headings, $return, $heading_class );
 
 		return $return;
 	}
@@ -559,8 +564,6 @@ class Shortcodes {
 		$search_tags	= array('a');
 
 		$content = do_shortcode( $content );
-		$content = Utilities::addclass( $search_tags, $content, $class );
-		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -568,6 +571,9 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 		return $return;
 	}
@@ -592,8 +598,6 @@ class Shortcodes {
 		$search_tags	= array('a');
 
 		$content = do_shortcode( $content );
-		$content = Utilities::addclass( $search_tags, $content, $class );
-		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -601,6 +605,9 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 		return $return;
 	}
@@ -633,17 +640,18 @@ class Shortcodes {
 		$search_tags	= array('a', 'button', 'input');
 
 		$content = do_shortcode( $content );
-		$content = Utilities::addclass( $search_tags, $content, $class );
-		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
-		if (Utilities::is_flag('disabled', $atts))
-			$content = Utilities::addaria( $search_tags, $content, 'disabled', 'true' );
-
 		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+		if (Utilities::is_flag('disabled', $atts)) {
+			$return = Utilities::addaria( $search_tags, $return, 'disabled', 'true' );
+		}
 
 		return $return;
 	}
@@ -765,8 +773,6 @@ class Shortcodes {
 		$blockquote_tags	= array('blockquote');
 
 		$content = do_shortcode( $content );
-		$content = Utilities::addclass( $p_tags, $content, $p_class );
-		$content = Utilities::addclass( $blockquote_tags, $content, $blockquote_class );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -776,6 +782,9 @@ class Shortcodes {
 				do_shortcode( $content )
 			)
 		);
+
+		$return = Utilities::addclass( $p_tags, $return, $p_class );
+		$return = Utilities::addclass( $blockquote_tags, $return, $blockquote_class );
 
 		return $return;
 	}
@@ -803,8 +812,6 @@ class Shortcodes {
 		$class[]  = 'card-title';
 
 		$content = do_shortcode( $wrap_before . $content . $wrap_after );
-		$content = Utilities::addclass( $search_tags, $content, $class );
-		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -812,6 +819,9 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 		return $return;
 	}
@@ -839,8 +849,6 @@ class Shortcodes {
 		$class[]  = 'card-subtitle';
 
 		$content = do_shortcode( $wrap_before . $content . $wrap_after );
-		$content = Utilities::addclass( $search_tags, $content, $class );
-		$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -848,6 +856,9 @@ class Shortcodes {
 				$content
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 		return $return;
 	}
@@ -875,8 +886,6 @@ class Shortcodes {
 
 			$content = do_shortcode( $content );
 			$content = strip_tags($content, '<img><a>');
-			$content = Utilities::addclass( $search_tags, $content, $class );
-			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 			$return = Utilities::bs_output(
 				sprintf(
@@ -884,6 +893,9 @@ class Shortcodes {
 					$content
 				)
 			);
+
+			$return = Utilities::addclass( $search_tags, $return, $class );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 			return $return;
 		}
@@ -939,8 +951,6 @@ class Shortcodes {
 			$class[]  = 'card-header';
 
 			$content = do_shortcode( $wrap_before . $content . $wrap_after );
-			$content = Utilities::addclass( $search_tags, $content, $class );
-			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 			$return = Utilities::bs_output(
 				sprintf(
@@ -948,6 +958,9 @@ class Shortcodes {
 					$content
 				)
 			);
+
+			$return = Utilities::addclass( $search_tags, $return, $class );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 			return $return;
 		}
@@ -974,8 +987,6 @@ class Shortcodes {
 			$class[]  = 'card-footer';
 
 			$content = do_shortcode( $wrap_before . $content . $wrap_after );
-			$content = Utilities::addclass( $search_tags, $content, $class );
-			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 			$return = Utilities::bs_output(
 				sprintf(
@@ -983,6 +994,9 @@ class Shortcodes {
 					$content
 				)
 			);
+
+			$return = Utilities::addclass( $search_tags, $return, $class );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 			return $return;
 		}
@@ -1043,10 +1057,6 @@ class Shortcodes {
 			$content = preg_replace('/aligncenter/', '', $content);
 			$content = preg_replace('/wp-caption/', '', $content);
 
-			$content = Utilities::addclass( $item_tags, $content, $item_class );
-			$content = Utilities::addclass( $item_tags, $content, $active_class, null, '1' );
-			$content = Utilities::addclass( $caption_tags, $content, $caption_class);
-
 			$id = 'bs4-carousel-'. $GLOBALS['carousel_count'];
 
 
@@ -1066,6 +1076,10 @@ class Shortcodes {
 							'<a class="right carousel-control" href="' . esc_url( '#' . $id ) . '" role="button" data-slide="next"><span class="icon-next" aria-hidden="true"></span><span class="sr-only">Next</span></a>'
 						)
 			);
+
+			$return = Utilities::addclass( $item_tags, $return, $item_class );
+			$return = Utilities::addclass( $item_tags, $return, $active_class, null, '1' );
+			$return = Utilities::addclass( $caption_tags, $return, $caption_class);
 
 			return $return;
 		}
@@ -1125,9 +1139,6 @@ class Shortcodes {
 			$li_search_tags	= array('li', 'a');
 
 			$content = do_shortcode( $wrap_before . $content . $wrap_after );
-			$content = Utilities::addclass( $search_tags, $content, $class );
-			$content = Utilities::addclass( $li_search_tags, $content, $li_class );
-			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 			$return = Utilities::bs_output(
 				sprintf(
@@ -1135,6 +1146,10 @@ class Shortcodes {
 					$content
 				)
 			);
+
+			$return = Utilities::addclass( $search_tags, $return, $class );
+			$return = Utilities::addclass( $li_search_tags, $return, $li_class );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 			return $return;
 		}
@@ -1174,10 +1189,6 @@ class Shortcodes {
 			$a_search_tags	= array('a');
 
 			$content = do_shortcode( $wrap_before . $content . $wrap_after );
-			$content = Utilities::addclass( $search_tags, $content, $class );
-			$content = Utilities::addclass( $li_search_tags, $content, $li_class );
-			$content = Utilities::addclass( $a_search_tags, $content, $a_class );
-			$content = Utilities::adddata( $search_tags, $content, $atts['data'] );
 
 			$return = Utilities::bs_output(
 				sprintf(
@@ -1185,6 +1196,63 @@ class Shortcodes {
 					$content
 				)
 			);
+
+			$return = Utilities::addclass( $search_tags, $return, $class );
+			$return = Utilities::addclass( $li_search_tags, $return, $li_class );
+			$return = Utilities::addclass( $a_search_tags, $return, $a_class );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Nav shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_pagination( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"size"			=> false,
+				"class"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+			$search_tags	= array('nav');
+
+			$wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<nav>';
+			$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</nav>';
+
+			$class	= array();
+			$class[]	= 'pagination';
+			$class[]  = ($atts['size']) ? 'pagination-' . $atts['size'] : null;
+			$ul_search_tags = array('ul');
+
+			$li_class	= array();
+			$li_class[]	= 'page-item';
+			$li_search_tags	= array('li');
+
+			$a_class	= array();
+			$a_class[]	= 'page-link';
+			$a_search_tags	= array('a');
+
+			$content = do_shortcode( $wrap_before . $content . $wrap_after );
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			$return = Utilities::addclass( $ul_search_tags, $return, $class );
+			$return = Utilities::addclass( $li_search_tags, $return, $li_class );
+			$return = Utilities::addclass( $a_search_tags, $return, $a_class );
+			$return = Utilities::addparentclass( $a_search_tags, $return, array('active') );
+			$return = Utilities::addparentclass( $a_search_tags, $return, array('disabled') );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 			return $return;
 		}

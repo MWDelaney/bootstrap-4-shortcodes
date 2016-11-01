@@ -113,6 +113,50 @@ class Utilities extends Shortcodes {
 	}
 
 
+	/**
+	 * Add a class to the parent of the targetted element
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	public static function addparentclass( $finds, $content, $class) {
+		$u = new Utilities;
+		$doc = $u->processdom($content);
+
+		if(!$finds) {
+			$root = $doc->documentElement;
+			$finds = array($root->tagName);
+		}
+		$count = 0;
+		foreach( $finds as $found ) {
+			$tags = $doc->getElementsByTagName($found);
+			foreach ($tags as $tag) {
+				foreach ($class as $c) {
+					if ($tag->hasAttribute('class') && !strstr($tag->getAttribute('class'), $c)) { continue; }
+						else {
+						$parent = $tag->parentNode;
+
+						// Append the classes in $class to the tag's existing classes
+						$parent->setAttribute(
+							'class',
+							$u->class_output(
+								$u->getCallingFunctionName() . '_addclass',
+								$class,
+								$parent->getAttribute('class')
+							)
+						);
+						$count++;
+					}
+				}
+			}
+		}
+		return $doc->saveHTML($doc->documentElement);
+	}
+
+
 
 	/**
 	 * Parse a shortcode's contents for a tag and add a specified title to each instance
