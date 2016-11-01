@@ -88,7 +88,9 @@ class Shortcodes {
 
 			'popover',
 
-			'progress'
+			'progress',
+
+			'tag'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -1321,13 +1323,46 @@ class Shortcodes {
 
 			$return = Utilities::bs_output(
 				sprintf(
-					'<progress class="%1$s" value="%2$s" max="100">
+					'<progress class="%1$s" value="%2$s" max="100" %3$s>
 							<div class="%1$s">
 								<span class="progress-bar" style="width: %2$s%;"></span>
 							</div>
 						</progress>',
 					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-					$atts['value']
+					$atts['value'],
+					Utilities::parse_data_attributes( $atts['data'] )
+				)
+			);
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Tag shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_tag( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"type"			=> 'default',
+				"class"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+			$class	= array();
+			$class[]	= 'tag';
+			$class[]  = 'tag-' . $atts['type'];
+			$class[]	= (Utilities::is_flag('pill', $save_atts)) ? 'tag-pill' : null;
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'<span class="%s" %s>%s</span>',
+					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
+					Utilities::parse_data_attributes( $atts['data'] ),
+					do_shortcode( $content )
 				)
 			);
 
