@@ -9,6 +9,15 @@ Author URI:
 License: MIT
 */
 
+namespace MWD\BS4Shortcodes;
+
+
+/**
+ * Set up autoloader
+ */
+require __DIR__ . '/vendor/autoload.php';
+
+
 
 /**
  * Define constants
@@ -20,31 +29,6 @@ License: MIT
 		 define('BS4_SHORTCODES_URL', plugin_dir_url( __FILE__ ));
  }
 
-add_action( 'init', function() {
-	require_once(BS4_SHORTCODES_DIR . 'lib/class-shortcodes.php');
-	require_once(BS4_SHORTCODES_DIR . 'lib/class-utilities.php');
 
-	$bs4_shortcodes = new MWD\BS4Shortcodes\Shortcodes;
-
-} );
-
-add_action( 'admin_init', function() {
-
-	require_once(BS4_SHORTCODES_DIR . 'lib/class-admin.php');
-	require_once(BS4_SHORTCODES_DIR . 'lib/class-docs.php');
-
-	$bs4_docs = new MWD\BS4Shortcodes\Docs;
-	$bs4_admin = new MWD\BS4Shortcodes\Admin;
-} );
-
-function bs_fix_shortcodes($content){
-		$array = array (
-				'<p>[' => '[',
-				']</p>' => ']',
-				']<br />' => ']',
-				']<br>' => ']'
-		);
-		$content = strtr($content, $array);
-		return $content;
-}
-add_filter('the_content', 'bs_fix_shortcodes');
+use Init;
+$init = new \MWD\BS4Shortcodes\Init();

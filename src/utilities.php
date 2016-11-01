@@ -2,7 +2,7 @@
 
 namespace MWD\BS4Shortcodes;
 
-class Utilities extends Shortcodes {
+class Utilities {
 	/**
 	 * Get the name of the function that called the current function
 	 * @param  boolean $completeTrace [description]
