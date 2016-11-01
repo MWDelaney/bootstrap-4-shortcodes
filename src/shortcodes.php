@@ -84,8 +84,9 @@ class Shortcodes {
 			'list-group',
 
 			'nav',
-			'pagination'
+			'pagination',
 
+			'popover'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -1253,6 +1254,45 @@ class Shortcodes {
 			$return = Utilities::addparentclass( $a_search_tags, $return, array('active') );
 			$return = Utilities::addparentclass( $a_search_tags, $return, array('disabled') );
 			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Popover shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_popover( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"container" => "body",
+					"placement" => "top",
+					"title" => false,
+					"content" => false,
+					"data"   => false,
+			), $atts );
+
+			$popover_data = array();
+			$popover_data[] = "toggle,popover";
+			$popover_data[] = "placement," . $atts['placement'];
+			$popover_data[] = "container," . $atts['container'];
+			$popover_data[] = "content," . $atts['content'];
+			$popover_data = implode( '|', $popover_data );
+
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			$return = Utilities::addtitle( false, $return, $atts['title'] );
+			$return = Utilities::adddata( false, $return, $atts['data'] );
+			$return = Utilities::adddata( false, $return, $popover_data );
 
 			return $return;
 		}

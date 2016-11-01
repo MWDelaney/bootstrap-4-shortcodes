@@ -173,7 +173,7 @@ class Utilities {
 
 		if(!$finds) {
 			$root = $doc->documentElement;
-			$tag = array($root->tagName);
+			$finds = array($root->tagName);
 		}
 
 		foreach( $finds as $found ){
@@ -334,7 +334,7 @@ class Utilities {
 
 		if(!$finds) {
 			$root = $doc->documentElement;
-			$tag = array($root->tagName);
+			$finds = array($root->tagName);
 		}
 
 		foreach( $finds as $found ){
