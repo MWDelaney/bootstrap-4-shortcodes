@@ -1282,7 +1282,6 @@ class Shortcodes {
 			$popover_data[] = "content," . $atts['content'];
 			$popover_data = implode( '|', $popover_data );
 
-
 			$return = Utilities::bs_output(
 				sprintf(
 					'%s',
