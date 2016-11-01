@@ -86,7 +86,9 @@ class Shortcodes {
 			'nav',
 			'pagination',
 
-			'popover'
+			'popover',
+
+			'progress'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -1292,6 +1294,42 @@ class Shortcodes {
 			$return = Utilities::addtitle( false, $return, $atts['title'] );
 			$return = Utilities::adddata( false, $return, $atts['data'] );
 			$return = Utilities::adddata( false, $return, $popover_data );
+
+			return $return;
+		}
+
+
+		/**
+		 * Progress shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_progress( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"type"			=> 'primary',
+				"value"			=> false,
+				"class"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+			$class	= array();
+			$class[]	= 'progress';
+			$class[]  = 'progress-' . $atts['type'];
+			$class[]	= (Utilities::is_flag('striped', $save_atts)) ? 'progress-striped' : null;
+			$class[]	= (Utilities::is_flag('animated', $save_atts)) ? 'animated' : null;
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'<progress class="%1$s" value="%2$s" max="100">
+							<div class="%1$s">
+								<span class="progress-bar" style="width: %2$s%;"></span>
+							</div>
+						</progress>',
+					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
+					$atts['value']
+				)
+			);
 
 			return $return;
 		}
