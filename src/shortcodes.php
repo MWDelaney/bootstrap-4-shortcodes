@@ -90,7 +90,9 @@ class Shortcodes {
 
 			'progress',
 
-			'tag'
+			'tag',
+
+			'tooltip'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -1365,6 +1367,43 @@ class Shortcodes {
 					do_shortcode( $content )
 				)
 			);
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Tooltip shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_tooltip( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"placement" => "top",
+					"title" => false,
+					"content" => false,
+					"data"   => false,
+			), $atts );
+
+			$tooltip_data = array();
+			$tooltip_data[] = "toggle,tooltip";
+			$tooltip_data[] = "placement," . $atts['placement'];
+			$tooltip_data[]	= (Utilities::is_flag('html', $save_atts)) ? 'html,true' : null;
+
+			$popover_data = implode( '|', $tooltip_data );
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			$return = Utilities::addtitle( false, $return, $atts['title'] );
+			$return = Utilities::adddata( false, $return, $atts['data'] );
+			$return = Utilities::adddata( false, $return, $tooltip_data );
 
 			return $return;
 		}
