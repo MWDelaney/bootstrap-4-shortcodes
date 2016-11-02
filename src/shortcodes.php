@@ -549,9 +549,12 @@ class Shortcodes {
 				'<nav class="%s"%s>%s</nav>',
 				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
 				Utilities::parse_data_attributes( $atts['data'] ),
-				Utilities::addclass( $search_tags, do_shortcode( $content ), $a_class )
+				do_shortcode( $content )
 			)
 		);
+
+		$return = Utilities::addclass( $search_tags, $return, $a_class );
+		$return = Utilities::striptagfromdom( 'br', $return );
 
 		return $return;
 	}
