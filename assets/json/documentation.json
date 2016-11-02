@@ -477,6 +477,122 @@
 							"parameters": ""
 						}
 					]
+				},
+				{
+					"title": "Carousel",
+					"note": "Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.",
+					"examples": [
+						{
+							"note": "",
+							"code": "\n[carousel]\n  <img src=\"placeholder-path/placeholder-lg.png\">\n  <img src=\"placeholder-path/placeholder-lg.png\">\n  <img src=\"placeholder-path/placeholder-lg.png\">\n[/carousel]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "carousel",
+							"parameters": [
+								{
+									"name": "interval",
+									"description": "The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.",
+									"required": "0",
+									"values": "any number (in ms) or \"false\"",
+									"default": "5000"
+								},
+								{
+									"name": "pause",
+									"description": "Whether the carousel pauses on hover. If set to null, hovering over the carousel won't pause it.",
+									"required": "0",
+									"values": "hover, null",
+									"default": "hover"
+								},
+								{
+									"name": "wrap",
+									"description": "Whether the carousel should cycle continuously or have hard stops.",
+									"required": "0",
+									"values": "true, false",
+									"default": "true"
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "Collapse",
+					"examples": [
+						{
+							"note": "Create an accordion by wrapping <code>[card]</code>s in <code>[accordion]</code>.",
+							"code": "\n[accordion]\n  [card]\n    [card-header] ... [/card-header]\n    [card-block]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-header] ... [/card-header]\n    [card-block]\n      ...\n    [/card-block]\n  [/card]\n[/accordion]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "accordion",
+							"parameters": ""
+						}
+					]
+				},
+				{
+					"title": "Jumbotron",
+					"examples": [
+						{
+							"note": "",
+							"code": "\n[jumbotron]\n  <h1> Hello, World! </h1>\n  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]\n[/jumbotron]"
+						},
+						{
+							"note": "Set the <code>fluid</code> flag to make a fluid jumbotron.",
+							"code": "\n[jumbotron fluid]\n  <h1> Hello, World! </h1>\n  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]\n[/jumbotron]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "jumbotron",
+							"parameters": [
+								{
+									"name": "fluid",
+									"description": "Flag whether jumbotron should be fluid.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "List Group",
+					"note": "Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.",
+					"examples": [
+						{
+							"note": "",
+							"code": "\n[list-group]\n  <ul>\n    <li>Cras justo odio</li>\n    <li>Dapibus ac facilisis in</li>\n    <li>Morbi leo risus</li>\n    <li>Porta ac consectetur ac</li>\n    <li>Vestibulum at eros</li>\n  </ul>\n[/list-group]"
+						},
+						{
+							"note": "Create a linked list by wrapping links",
+							"code": "\n[list-group]\n  <a href=\"#link1\">Cras justo odio</a>\n  [active]<a href=\"#link2\">Dapibus ac facilisis in</a>[/active]\n  <a href=\"#link3\">Morbi leo risus</a>\n  <a href=\"#link4\">Porta ac consectetur ac</a>\n  [disabled]<a href=\"#link5\">Vestibulum at eros</a>[/disabled]\n[/list-group]"
+						},
+						{
+							"note": "Wrap items in the <code>list-item</code> shortcode to give them contextual styles",
+							"code": "\n[list-group]\n  [list-item type=\"success\"]<a href=\"#link1\">Cras justo odio</a>[/list-item]\n  [list-item type=\"info\"]<a href=\"#link2\">Dapibus ac facilisis in</a>[/list-item]\n  [list-item type=\"warning\"]<a href=\"#link3\">Morbi leo risus</a>[/list-item]\n  [list-item type=\"danger\"]<a href=\"#link4\">Porta ac consectetur ac</a>[/list-item]\n[/list-group]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "list-group",
+							"parameters": ""
+						},
+						{
+							"name": "list-item",
+							"parameters": [
+								{
+									"name": "type",
+									"description": "The type of the list-item.",
+									"required": "0",
+									"values": "success, info, warning, danger",
+									"default": "success"
+								}
+							]
+						}
+					]
 				}
 			]
 		}

@@ -79,6 +79,7 @@ class Shortcodes {
 			'card-footer',
 
 			'carousel',
+			'accordion',
 
 			'jumbotron',
 
@@ -747,6 +748,14 @@ class Shortcodes {
 				"data"	=> false
 		), $save_atts );
 
+		if(isset($GLOBALS['accordion'])) {
+			if(!isset($GLOBALS['accordion_card'])) {
+				$GLOBALS['accordion_card'] = 0;
+			} else {
+				$GLOBALS['accordion_card']++;
+			}
+		}
+
 		$class	= array();
 		$class[]	= 'card';
 		$class[]  = ($atts['type']) ? 'card-' . $atts['type'] : null;
@@ -760,7 +769,6 @@ class Shortcodes {
 				$content = do_shortcode( $content )
 			)
 		);
-
 		return $return;
 	}
 
@@ -777,6 +785,10 @@ class Shortcodes {
 				"data"	=> false
 		), $save_atts );
 
+		$wrap_before = (isset($GLOBALS['accordion_card'])) ? sprintf('<div id="collapse%s" class="collapse" role="tabpanel">', $GLOBALS['accordion_card']) : null;
+		$wrap_after = (isset($GLOBALS['accordion_card'])) ? '</div>' : null;
+
+
 		$class	= array();
 		$class[]	= 'card-block';
 
@@ -788,7 +800,7 @@ class Shortcodes {
 		$blockquote_class[] = 'card-blockquote';
 		$blockquote_tags	= array('blockquote');
 
-		$content = do_shortcode( $content );
+		$content = do_shortcode($content);
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -799,6 +811,7 @@ class Shortcodes {
 			)
 		);
 
+		$return = $wrap_before . $return . $wrap_after;
 		$return = Utilities::addclass( $p_tags, $return, $p_class );
 		$return = Utilities::addclass( $blockquote_tags, $return, $blockquote_class );
 
@@ -958,10 +971,16 @@ class Shortcodes {
 					"data"   => false
 			), $atts );
 
-			$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+			$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div');
 
-			$wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<div>';
-			$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</div>';
+			$wrap_before = '';
+			$wrap_after = '';
+
+			$wrap_before .= (Utilities::testdom($content, $search_tags)) ? null : '<div>';
+			$wrap_after .= (Utilities::testdom($content, $search_tags)) ? null : '</div>';
+
+			$wrap_before .= (isset($GLOBALS['accordion_card'])) ? sprintf('<a class="collapsed" data-toggle="collapse" data-parent="#accordion%1$s" href="#collapse%2$s" aria-controls="collapse%2$s">', $GLOBALS['accordion_count'], $GLOBALS['accordion_card']) : null;
+			$wrap_after .= (isset($GLOBALS['accordion_card'])) ? '</a>' : null;
 
 			$class	= array();
 			$class[]  = 'card-header';
@@ -1028,7 +1047,7 @@ class Shortcodes {
 		function bs_carousel( $atts, $content = null ) {
 			$atts = shortcode_atts( array(
 				"interval" => false,
-				"pause" => false,
+				"pause" => 'hover',
 				"wrap" => 'true',
 				"class" => false,
 				"data"   => false
@@ -1144,6 +1163,7 @@ class Shortcodes {
 
 			return $return;
 		}
+
 
 
 		/**
@@ -1510,6 +1530,45 @@ class Shortcodes {
 			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 
+			return $return;
+		}
+
+
+
+		/**
+		 * Accordion shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_accordion( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false,
+			), $save_atts );
+
+			if( isset($GLOBALS['accordion_count']) )
+				$GLOBALS['accordion_count']++;
+			else
+				$GLOBALS['accordion_count'] = 0;
+
+			$GLOBALS['accordion'] = true;
+
+			$class	= array();
+
+			$id = 'accordion' . $GLOBALS['accordion_count'];
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'<div id="%s" class="%s" role="tablist" aria-multiselectable="true" %s>%s</div>',
+					$id,
+					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
+					Utilities::parse_data_attributes( $atts['data'] ),
+					do_shortcode( $content )
+				)
+			);
+
+			unset($GLOBALS['accordion']);
 			return $return;
 		}
 

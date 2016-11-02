@@ -1034,3 +1034,263 @@
 		</tr>
 	</tbody>
 </table>
+<h2>Carousel</h2>
+<p>Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.</p>
+	
+	<pre><code>
+[carousel]
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+[&#x2F;carousel]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[carousel] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>interval</td>
+			<td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+			<td>0</td>
+			<td>any number (in ms) or &quot;false&quot;</td>
+			<td>5000</td>
+		</tr>
+		<tr>
+			<td>pause</td>
+			<td>Whether the carousel pauses on hover. If set to null, hovering over the carousel won&#39;t pause it.</td>
+			<td>0</td>
+			<td>hover, null</td>
+			<td>hover</td>
+		</tr>
+		<tr>
+			<td>wrap</td>
+			<td>Whether the carousel should cycle continuously or have hard stops.</td>
+			<td>0</td>
+			<td>true, false</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Collapse</h2>
+
+	<p>Create an accordion by wrapping <code>[card]</code>s in <code>[accordion]</code>.</p>
+	<pre><code>
+[accordion]
+  [card]
+    [card-header] ... [&#x2F;card-header]
+    [card-block]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+  [card]
+    [card-header] ... [&#x2F;card-header]
+    [card-block]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+[&#x2F;accordion]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[accordion] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Jumbotron</h2>
+
+	
+	<pre><code>
+[jumbotron]
+  &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
+  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
+[&#x2F;jumbotron]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Set the <code>fluid</code> flag to make a fluid jumbotron.</p>
+	<pre><code>
+[jumbotron fluid]
+  &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
+  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
+[&#x2F;jumbotron]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[jumbotron] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>fluid</td>
+			<td>Flag whether jumbotron should be fluid.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>List Group</h2>
+<p>Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.</p>
+	
+	<pre><code>
+[list-group]
+  &lt;ul&gt;
+    &lt;li&gt;Cras justo odio&lt;&#x2F;li&gt;
+    &lt;li&gt;Dapibus ac facilisis in&lt;&#x2F;li&gt;
+    &lt;li&gt;Morbi leo risus&lt;&#x2F;li&gt;
+    &lt;li&gt;Porta ac consectetur ac&lt;&#x2F;li&gt;
+    &lt;li&gt;Vestibulum at eros&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;list-group]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Create a linked list by wrapping links</p>
+	<pre><code>
+[list-group]
+  &lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;
+  [active]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;active]
+  &lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;
+  &lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;
+  [disabled]&lt;a href&#x3D;&quot;#link5&quot;&gt;Vestibulum at eros&lt;&#x2F;a&gt;[&#x2F;disabled]
+[&#x2F;list-group]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Wrap items in the <code>list-item</code> shortcode to give them contextual styles</p>
+	<pre><code>
+[list-group]
+  [list-item type&#x3D;&quot;success&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;list-item]
+  [list-item type&#x3D;&quot;info&quot;]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;list-item]
+  [list-item type&#x3D;&quot;warning&quot;]&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;[&#x2F;list-item]
+  [list-item type&#x3D;&quot;danger&quot;]&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;[&#x2F;list-item]
+[&#x2F;list-group]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[list-group] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[list-item] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>type</td>
+			<td>The type of the list-item.</td>
+			<td>0</td>
+			<td>success, info, warning, danger</td>
+			<td>success</td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
