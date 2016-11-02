@@ -27,6 +27,7 @@ class Utilities {
 	}
 
 
+
 	/**
 	 * Output the shortcode after applying a shortcode-specific filter
 	 * Filters are named for the shortcode function, ex: bs_row, bs_column
@@ -73,6 +74,7 @@ class Utilities {
 		$class = $u->xclass($class, $xclass);
 		return esc_attr(trim(implode(' ', apply_filters( $name . '_shortcode_classes', $class ))));
 	}
+
 
 
 	/**
@@ -208,6 +210,7 @@ class Utilities {
 	}
 
 
+
 	/**
 	 * Parse a shortcode's contents for a tag and add a specified area attributes to each instance
 	 * @param  [type] $tag     [description]
@@ -299,29 +302,6 @@ class Utilities {
 
 
 	/**
-	 * Get a map of a shortcode's attributes
-	 *
-	 * Used by :
-	 *   bs_tabs()
-	 *   bs_carousel()
-	 *
-	 */
-		public static function attribute_map($str, $att = null) {
-			$res = array();
-			$return = array();
-			$reg = get_shortcode_regex();
-			preg_match_all('~'.$reg.'~',$str, $matches);
-			foreach($matches[2] as $key => $name) {
-					$parsed = shortcode_parse_atts($matches[3][$key]);
-					$parsed = is_array($parsed) ? $parsed : array();
-							$res[$name] = $parsed;
-							$return[] = $res;
-					}
-			return $return;
-	}
-
-
-	/**
 	 * Test DOM for root tags
 	 */
 	 public static function testdom( $content, $tag ) {
@@ -331,6 +311,7 @@ class Utilities {
 			 return true;
 		 }
 	 }
+
 
 
 	/**
@@ -368,6 +349,7 @@ class Utilities {
 	}
 
 
+
 	/**
 	 * Remove tags from DOM keeping their children
 	 */
@@ -379,6 +361,7 @@ class Utilities {
 	     } while ($sibling = $next);
 	     $from->parentNode->removeChild($from);
 	 }
+
 
 
 	/**
