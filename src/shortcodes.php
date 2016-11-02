@@ -53,6 +53,7 @@ class Shortcodes {
 
 			'media-list',
 			'media',
+			'media-body',
 			'media-object',
 			'media-heading',
 
@@ -82,6 +83,7 @@ class Shortcodes {
 			'jumbotron',
 
 			'list-group',
+			'list-item',
 
 			'nav',
 			'pagination',
@@ -92,7 +94,9 @@ class Shortcodes {
 
 			'tag',
 
-			'tooltip'
+			'tooltip',
+
+			'lead'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -538,7 +542,7 @@ class Shortcodes {
 		$a_class	= array();
 		$a_class[]	= "breadcrumb-item";
 
-		$search_tags	= array('a');
+		$search_tags	= array('a', 'span');
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -565,12 +569,15 @@ class Shortcodes {
 				"data"	=> false
 		), $atts );
 
+		$search_tags	= array('a', 'img', 'span');
+
 		$class	= array();
 		$class[]	= 'active';
 
-		$search_tags	= array('a');
+		$wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<span>';
+		$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</span>';
 
-		$content = do_shortcode( $content );
+		$content = do_shortcode( $wrap_before . $content . $wrap_after );
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -1020,7 +1027,7 @@ class Shortcodes {
 			$atts = shortcode_atts( array(
 				"interval" => false,
 				"pause" => false,
-				"wrap" => true,
+				"wrap" => 'true',
 				"class" => false,
 				"data"   => false
 			), $atts );
@@ -1030,9 +1037,7 @@ class Shortcodes {
 			else
 				$GLOBALS['carousel_count'] = 0;
 
-			$atts_map = Utilities::attribute_map( $content );
-			$indicators = array();
-			// Extract the slide titles for use in the carousel widget.
+			$id = 'custom-carousel-'. $GLOBALS['carousel_count'];
 
 			$class	= array();
 			$class[]  = 'carousel';
@@ -1040,6 +1045,7 @@ class Shortcodes {
 
 			$item_class	= array();
 			$item_class[]  = 'carousel-item';
+			$item_class[]  = 'img-fluid';
 
 			$active_class	= array();
 			$active_class[]  = 'active';
@@ -1053,9 +1059,24 @@ class Shortcodes {
 			$item_tags = array('figure', 'img');
 			$fallback_tag = 'div';
 
+			$indicator_tags = array('li');
+
 			$caption_tags = array('figcaption');
 
 			$content = do_shortcode( $content );
+
+			$indicators = array();
+			$count_tags = array('img');
+			$i = 0;
+			while( $i < Utilities::counttags($count_tags, $content) ) {
+				$indicators[] = sprintf(
+					'<li data-target="%s" data-slide-to="%s"></li>',
+					'',
+					esc_attr( '#' . $id ),
+					esc_attr( $i )
+				);
+				$i++;
+			}
 
 			// Remove wrapped image alignment and caption classes
 			$content = preg_replace('/alignnone/', '', $content);
@@ -1085,7 +1106,8 @@ class Shortcodes {
 			);
 
 			$return = Utilities::addclass( $item_tags, $return, $item_class );
-			$return = Utilities::addclass( $item_tags, $return, $active_class, null, '1' );
+			$return = Utilities::addclass( $item_tags, $return, $active_class, '1' );
+			$return = Utilities::addclass( $indicator_tags, $return, $active_class, '1' );
 			$return = Utilities::addclass( $caption_tags, $return, $caption_class);
 
 			return $return;
@@ -1099,13 +1121,14 @@ class Shortcodes {
 		 * @param  string $content shortcode contents
 		 * @return string
 		 */
-		function bs_jumbotron( $atts, $content = null ) {
+		function bs_jumbotron( $save_atts, $content = null ) {
 			$atts = shortcode_atts( array(
 					"class" => false,
 					"data"   => false,
-			), $atts );
+			), $save_atts );
 
 			$class	= array();
+			$class[] = 'jumbotron';
 			$class[]	= (Utilities::is_flag('fluid', $save_atts)) ? 'fluid' : null;
 
 			$return = Utilities::bs_output(
@@ -1143,7 +1166,12 @@ class Shortcodes {
 
 			$li_class	= array();
 			$li_class[]	= 'list-group-item';
-			$li_search_tags	= array('li', 'a');
+			$li_search_tags	= array('li');
+
+			$a_class	= array();
+			$a_class[]	= 'list-group-item';
+			$a_class[]	= 'list-group-item-action';
+			$a_search_tags	= array('a');
 
 			$content = do_shortcode( $wrap_before . $content . $wrap_after );
 
@@ -1156,7 +1184,44 @@ class Shortcodes {
 
 			$return = Utilities::addclass( $search_tags, $return, $class );
 			$return = Utilities::addclass( $li_search_tags, $return, $li_class );
+			$return = Utilities::addclass( $a_search_tags, $return, $a_class );
 			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+			$return = Utilities::striptagfromdom( 'br', $return );
+
+			return $return;
+		}
+
+
+		/**
+		 * List Group type shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_list_item( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"type"			=> 'success',
+				"class"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+			$search_tags	= array('a');
+
+			$class	= array();
+			$class[]	= 'list-group-item-' . $atts['type'];
+
+			$content = do_shortcode( $content );
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			$return = Utilities::addclass( $search_tags, $return, $class );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+			$return = Utilities::striptagfromdom( 'br', $return );
 
 			return $return;
 		}
@@ -1404,6 +1469,44 @@ class Shortcodes {
 			$return = Utilities::addtitle( false, $return, $atts['title'] );
 			$return = Utilities::adddata( false, $return, $atts['data'] );
 			$return = Utilities::adddata( false, $return, $tooltip_data );
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Lead text shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_lead( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false
+			), $save_atts );
+
+			$search_tags = array('p');
+
+			$wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<p>';
+			$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</p>';
+
+			$class	= array();
+			$class[]  = 'lead';
+
+			$content = do_shortcode( $wrap_before . $content . $wrap_after );
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			$return = Utilities::addclass( $search_tags, $return, $class );
+			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+
 
 			return $return;
 		}

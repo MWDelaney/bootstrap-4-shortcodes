@@ -128,10 +128,10 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 ### Media Object
     [media]
       [media-object]
-        ...
+        <img src="placeholder-path/placeholder.png">
       [/media-object]
       [media-body]
-        [media-heading] ... [/media-heading]
+        [media-heading] <h4>Media Heading</h4> [/media-heading]
         ...
       [/media-body]
     [/media]
@@ -142,29 +142,19 @@ Wrap several `[media-object]`s in `[media-list]`, useful for comment threads or 
     [media-list]
       [media]
         [media-object]
-
-          --IMAGE--
-
+				  <img src="placeholder-path/placeholder.png">
         [/media-object]
         [media-body]
-          [media-heading]
-
-            --HEADING--
-
-          [/media-heading]
+          [media-heading] <h4>Media Heading</h4> [/media-heading]
           ...
         [/media-body]
       [/media]
 			[media]
         [media-object]
-          ...
+			  	<img src="placeholder-path/placeholder.png">
         [/media-object]
         [media-body]
-          [media-heading]
-
-            --HEADING--
-
-          [/media-heading]
+				[media-heading] <h4>Media Heading</h4> [/media-heading]
           ...
         [/media-body]
       [/media]
@@ -242,6 +232,22 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 [Bootstrap alert documentation](http://getbootstrap.com/components/#alerts)
 
+* * *
+
+### Breadcrumb
+Remember that `[breadcrumb]` must wrap a set of links inserted via the WordPress editor.
+
+    [breadcrumb]
+      <a href="#link1"> Link 1 </a> <a href="#link2"> Link 2 </a> [active] Link 3 [/active]
+    [/breadcrumb]
+
+#### [breadcrumb] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+[Bootstrap breadcrumb documentation](http://getbootstrap.com/components/#breadcrumb)
 
 
 ### Buttons
@@ -251,11 +257,11 @@ Wrap any `a`, `button`, or `input` tag inserted via the WordPress editor in `[bu
 
 Set button sizes with the `size` parameter
 
-	[button type="primary" size="lg"] --LINK-- [/button]
+	[button type="primary" size="lg"] <a href="#link">Text</a> [/button]
 
 Set `block` flag  for block-style buttons
 
-	[button type="primary" block] --LINK-- [/button]
+	[button type="primary" block] <a href="#link">Text</a> [/button]
 
 
 #### [button] parameters
@@ -277,33 +283,33 @@ Remember that `[button]` must wrap an `a`, `button`, or `input` tag inserted via
 
 #### Basic example
     [button-group]
-      [button type="secondary"] --LINK-- [/button]
-      [button type="secondary"] --LINK-- [/button]
-      [button type="secondary"] --LINK-- [/button]
+	  	[button type="secondary"] [active]<a href="#link">Text</a>[/active] [/button]
+      [button type="secondary"] <a href="#link">Text</a> [/button]
+      [button type="secondary"] <a href="#link">Text</a> [/button]
     [/button-group]
 
 Set the `vertical` flag to make the buttons appear vertically stacked rather than horizontally.
 
     [button-group]
-      [button type="secondary"] --LINK-- [/button]
-      [button type="secondary"] --LINK-- [/button]
-      [button type="secondary"] --LINK-- [/button]
+		  [button type="secondary"] [active]<a href="#link">Text</a>[/active] [/button]
+      [button type="secondary"] <a href="#link">Text</a> [/button]
+      [button type="secondary"] <a href="#link">Text</a> [/button]
     [/button-group]
 
 #### Button toolbar
     [button-toolbar]
       [button-group]
-        [button type="secondary"] --LINK-- [/button]
-        [button type="secondary"] --LINK-- [/button]
-        [button type="secondary"] --LINK-- [/button]
+        [button type="secondary"] [active]<a href="#link">Text</a>[/active] [/button]
+        [button type="secondary"] <a href="#link">Text</a> [/button]
+        [button type="secondary"] <a href="#link">Text</a> [/button]
       [/button-group]
         [button-group]
-        [button type="secondary"] --LINK-- [/button]
-        [button type="secondary"] --LINK-- [/button]
-        [button type="secondary"] --LINK-- [/button]
+        [button type="secondary"] <a href="#link">Text</a> [/button]
+        [button type="secondary"] <a href="#link">Text</a> [/button]
+        [button type="secondary"] <a href="#link">Text</a> [/button]
       [/button-group]
       [button-group]
-        [button type="secondary"] --LINK-- [/button]
+        [button type="secondary"] [disabled]<a href="#link">Text</a>[/disabled] [/button]
       [/button-group]
     [/button-toolbar]
 
@@ -328,18 +334,9 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 ### Cards
 
 	[card]
-	  ...
 	  [card-block]
-	    [card-title]
-
-	      --HEADING--
-
-	    [/card-title]
-	    [card-subtitle]
-
-	      --HEADING--
-
-	    [/card-subtitle]
+	    [card-title] <h4>Card Title</h4> [/card-title]
+	    [card-subtitle] <h6>Card Subtitle</h6> [/card-subtitle]
 	    ...
 	  [/card-block]
 	[/card]
@@ -348,16 +345,11 @@ Image caps are supported with the `[card-img]` shortcode and the `top` or `botto
 
 	[card]
 	  [card-img top]
-
-	    --IMAGE--
-
+		  <img src="placeholder-path/placeholder-lg.png" class="img-fluid">
 	  [/card-img]
 	  [card-block]
-	    [card-title]
+		[card-title] <h4>Card Title</h4> [/card-title]
 
-	      --HEADING--
-
-	    [/card-title]
 	    ...
 	  [/card-block]
 	[/card]
@@ -366,16 +358,11 @@ Image overlay cards are supported with the `[card-img-overlay]` shortcode.
 
 		[card]
 		  [card-img]
-
-		    --IMAGE--
-
+			  <img src="placeholder-path/placeholder-lg.png" class="img-fluid">
 		  [/card-img]
 		  [card-img-overlay]
-		    [card-title]
+			[card-title] <h4>Card Title</h4> [/card-title]
 
-		      --HEADING--
-
-		    [/card-title]
 		    ...
 		  [/card-img-overlay]
 		[/card]
@@ -385,15 +372,12 @@ Card header and card footers are supported with the `[card-header]` and `[card-f
 		[card]
 		  [card-header]
 
-		    --HEADING--
+		    ...
 
 		  [/card-header]
 			[card-block]
-		    [card-title]
+			[card-title] <h4>Card Title</h4> [/card-title]
 
-		      --HEADING--
-
-		    [/card-title]
 		    ...
 		  [/card-block]
 			[card-footer]
@@ -470,9 +454,9 @@ Remember that `[carousel]` must wrap a set of images inserted via the WordPress 
 
 #### Basic example
     [carousel]
-		    --IMAGE--
-		    --IMAGE--
-		    --IMAGE--
+		  <img src="placeholder-path/placeholder-lg.png">
+		  <img src="placeholder-path/placeholder-lg.png">
+		  <img src="placeholder-path/placeholder-lg.png">
     [/carousel]
 
 #### [carousel] parameters
@@ -481,5 +465,79 @@ Parameter | Description | Required | Values | Default
 interval | The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle. | optional | any number (in ms) or "false" | 5000
 pause | Whether the carousel pauses on hover. If set to null, hovering over the carousel won't pause it.| optional | hover, null | hover
 wrap | Whether the carousel should cycle continuously or have hard stops. | optional | true, false | false
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+* * *
+
+### Jumbotron
+
+#### Basic example
+    [jumbotron]
+      <h1> Hello, World! </h1>
+      [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]
+    [/jumbotron]
+
+Set the `fluid` flag to make a fluid jumbotron
+
+    [jumbotron fluid]
+      <h1> Fluid jumbotron </h1>
+      [lead] This is a modified jumbotron that occupies the entire horizontal space of its parent. [/lead]
+    [/jumbotron]
+
+#### [jumbotron] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+fluid | Flag whether jumbotron should be fluid | optional | :triangular_flag_on_post: (flag) | false
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+* * *
+
+### List Group
+
+#### Basic example
+Remember that `[list-group]` must wrap a set of links or list items inserted via the WordPress editor.
+
+    [list-group]
+      <ul>
+			  <li>Cras justo odio</li>
+				<li>Dapibus ac facilisis in</li>
+				<li>Morbi leo risus</li>
+				<li>Porta ac consectetur ac</li>
+				<li>Vestibulum at eros</li>
+			</ul>
+    [/list-group]
+
+Create a linked list by wrapping links
+
+		[list-group]
+      <a href="#link1">Cras justo odio</a>
+      [active]<a href="#link2">Dapibus ac facilisis in</a>[/active]
+      <a href="#link3">Morbi leo risus</a>
+      <a href="#link4">Porta ac consectetur ac</a>
+      [disabled]<a href="#link5">Vestibulum at eros</a>[/disabled]
+    [/list-group]
+
+Wrap items in the `list-item` shortcode to give them contextual styles
+
+		[list-group]
+      [list-item type="success"]<a href="#link1">Cras justo odio</a>[/list-item]
+      [list-item type="info"]<a href="#link2">Dapibus ac facilisis in</a>[/list-item]
+      [list-item type="warning"]<a href="#link3">Morbi leo risus</a>[/list-item]
+      [list-item type="danger"]<a href="#link4">Porta ac consectetur ac</a>[/list-item]
+    [/list-group]
+
+
+#### [list-group] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+class | Any extra classes you want to add | optional | any text | none
+data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none
+
+#### [list-item] parameters
+Parameter | Description | Required | Values | Default
+--- | --- | --- | --- | ---
+type | The type of the alert | required | success, info, warning, danger | success
 class | Any extra classes you want to add | optional | any text | none
 data | Data attribute and value pairs separated by a comma. Pairs separated by pipe. | optional | any text | none

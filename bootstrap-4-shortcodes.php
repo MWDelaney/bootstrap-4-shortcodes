@@ -17,8 +17,6 @@ namespace MWD\BS4Shortcodes;
  */
 require __DIR__ . '/vendor/autoload.php';
 
-
-
 /**
  * Define constants
  */
@@ -28,6 +26,14 @@ require __DIR__ . '/vendor/autoload.php';
  if(!defined('BS4_SHORTCODES_URL')) {
 		 define('BS4_SHORTCODES_URL', plugin_dir_url( __FILE__ ));
  }
+ if(!defined('BS4_SHORTCODES_RELATIVE_URL')) {
+		 define('BS4_SHORTCODES_RELATIVE_URL',  parse_url(BS4_SHORTCODES_URL, PHP_URL_PATH));
+ }
+
+ function custom_rewrite_rule() {
+ 	add_rewrite_rule('^placeholder/([^/]*)/?',BS4_SHORTCODES_URL . '/dist/images/$matches[1]','top');
+ }
+ add_action('init', '\MWD\BS4Shortcodes\custom_rewrite_rule', 10, 0);
 
 
 use Init;

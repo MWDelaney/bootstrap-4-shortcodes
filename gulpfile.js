@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var markdown = require('gulp-markdown');
 var sass		= require('gulp-sass');
+var imagemin     = require('gulp-imagemin');
 var mainBowerFiles	= require('main-bower-files');
 var wiredep		= require('wiredep').stream;
 var concat		= require('gulp-concat');
@@ -39,10 +40,21 @@ gulp.task("scripts", function(){
 		.pipe(gulp.dest(config.dist + '/scripts'))
 });
 
-// ### Fonts
+// Fonts
 gulp.task('fonts', function() {
 	return gulp.src(config.assets + '/fonts/**.*')
 		.pipe(gulp.dest(config.dist + '/fonts'));
+});
+
+// Images
+gulp.task('images', function() {
+  return gulp.src(config.assets + '/images/**.*')
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
+    }))
+    .pipe(gulp.dest(config.dist + '/images'))
 });
 
 gulp.task('docs', function () {
@@ -58,6 +70,7 @@ gulp.task('build', function(callback) {
 			'bower_scripts',
 			'scripts',
 			'fonts',
+			'images',
 			'docs',
 			callback);
 });

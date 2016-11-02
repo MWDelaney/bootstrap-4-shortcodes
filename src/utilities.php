@@ -113,6 +113,24 @@ class Utilities {
 	}
 
 
+
+	/**
+	 * Check whether a specified tag has a specified class
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	public static function hasclass ($tag, $class) {
+		if ($tag->hasAttribute('class') && !strstr($tag->getAttribute('class'), $class)) {
+			return true;
+		 }
+	}
+
+
+
 	/**
 	 * Add a class to the parent of the targetted element
 	 * @param  [type] $tag     [description]
@@ -135,7 +153,7 @@ class Utilities {
 			$tags = $doc->getElementsByTagName($found);
 			foreach ($tags as $tag) {
 				foreach ($class as $c) {
-					if ($tag->hasAttribute('class') && !strstr($tag->getAttribute('class'), $c)) { continue; }
+					if (!Utilities::hasclass($tag, $c)) { continue; }
 						else {
 						$parent = $tag->parentNode;
 
@@ -224,6 +242,32 @@ class Utilities {
 
 
 	/**
+	 * Count instances of specified tag(s) in content
+	 * @param  [type] $tag     [description]
+	 * @param  [type] $content [description]
+	 * @param  [type] $class   [description]
+	 * @param  string $title   [description]
+	 * @param  [type] $data    [description]
+	 * @return [type]          [description]
+	 */
+	public static function counttags( $finds, $content ) {
+		$u = new Utilities;
+		$doc = $u->processdom($content);
+
+		$count = 0;
+
+		foreach( $finds as $found ){
+			$tags = $doc->getElementsByTagName($found);
+			foreach ($tags as $tag) {
+				$count++;
+			}
+		}
+		return $count;
+	}
+
+
+
+	/**
 	 * Add extra classes onto shortcode's existing class array
 	 * @param  array $class
 	 * @param  array $xclass
@@ -287,6 +331,24 @@ class Utilities {
 			 return true;
 		 }
 	 }
+
+
+	/**
+	 * Strip tags by name from DOM
+	 */
+	 public static function striptagfromdom( $tag, $content ) {
+		 $u = new Utilities;
+ 		 $doc = $u->processdom($content);
+		 $list = $doc->getElementsByTagName($tag);
+
+		 while ($list->length > 0) {
+		     $p = $list->item(0);
+		     $p->parentNode->removeChild($p);
+		 }
+		 return $doc->saveHTML($doc->documentElement);
+   }
+
+
 
 	/**
 	 * Process DOM

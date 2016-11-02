@@ -51,6 +51,7 @@
 							// ======================================================================== //
 
 							$html = preg_replace('/(<a href="http:[^"]+")>/is','\\1 target="_blank">',$html);
+							$html = str_replace('placeholder-path/', BS4_SHORTCODES_RELATIVE_URL . 'dist/images/', $html);
 							$html = str_replace('<table>', '<table class="table table-striped">', $html);
 							$html = str_replace('<ul>', '<div class="list-group">', $html);
 							$html = str_replace('</ul>', '</div>', $html);

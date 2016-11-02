@@ -315,10 +315,10 @@
 <h3 id="media-object">Media Object</h3>
 <pre><code>[media]
   [media-object]
-    ...
+    &lt;img src=&quot;placeholder-path/placeholder.png&quot;&gt;
   [/media-object]
   [media-body]
-    [media-heading] ... [/media-heading]
+    [media-heading] &lt;h4&gt;Media Heading&lt;/h4&gt; [/media-heading]
     ...
   [/media-body]
 [/media]
@@ -327,29 +327,19 @@
 <pre><code>[media-list]
   [media]
     [media-object]
-
-      --IMAGE--
-
+              &lt;img src=&quot;placeholder-path/placeholder.png&quot;&gt;
     [/media-object]
     [media-body]
-      [media-heading]
-
-        --HEADING--
-
-      [/media-heading]
+      [media-heading] &lt;h4&gt;Media Heading&lt;/h4&gt; [/media-heading]
       ...
     [/media-body]
   [/media]
         [media]
     [media-object]
-      ...
+              &lt;img src=&quot;placeholder-path/placeholder.png&quot;&gt;
     [/media-object]
     [media-body]
-      [media-heading]
-
-        --HEADING--
-
-      [/media-heading]
+            [media-heading] &lt;h4&gt;Media Heading&lt;/h4&gt; [/media-heading]
       ...
     [/media-body]
   [/media]
@@ -605,13 +595,48 @@
 </tbody>
 </table>
 <p><a href="http://getbootstrap.com/components/#alerts">Bootstrap alert documentation</a></p>
+<hr>
+<h3 id="breadcrumb">Breadcrumb</h3>
+<p>Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.</p>
+<pre><code>[breadcrumb]
+  &lt;a href=&quot;#link1&quot;&gt; Link 1 &lt;/a&gt; &lt;a href=&quot;#link2&quot;&gt; Link 2 &lt;/a&gt; [active] Link 3 [/active]
+[/breadcrumb]
+</code></pre><h4 id="-breadcrumb-parameters">[breadcrumb] parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>Any extra classes you want to add</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://getbootstrap.com/components/#breadcrumb">Bootstrap breadcrumb documentation</a></p>
 <h3 id="buttons">Buttons</h3>
 <p>Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</p>
 <pre><code>[button type=&quot;primary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
 </code></pre><p>Set button sizes with the <code>size</code> parameter</p>
-<pre><code>[button type=&quot;primary&quot; size=&quot;lg&quot;] --LINK-- [/button]
+<pre><code>[button type=&quot;primary&quot; size=&quot;lg&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
 </code></pre><p>Set <code>block</code> flag  for block-style buttons</p>
-<pre><code>[button type=&quot;primary&quot; block] --LINK-- [/button]
+<pre><code>[button type=&quot;primary&quot; block] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
 </code></pre><h4 id="-button-parameters">[button] parameters</h4>
 <table>
 <thead>
@@ -674,30 +699,30 @@
 <p>Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</p>
 <h4 id="basic-example">Basic example</h4>
 <pre><code>[button-group]
-  [button type=&quot;secondary&quot;] --LINK-- [/button]
-  [button type=&quot;secondary&quot;] --LINK-- [/button]
-  [button type=&quot;secondary&quot;] --LINK-- [/button]
+      [button type=&quot;secondary&quot;] [active]&lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt;[/active] [/button]
+  [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
+  [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
 [/button-group]
 </code></pre><p>Set the <code>vertical</code> flag to make the buttons appear vertically stacked rather than horizontally.</p>
 <pre><code>[button-group]
-  [button type=&quot;secondary&quot;] --LINK-- [/button]
-  [button type=&quot;secondary&quot;] --LINK-- [/button]
-  [button type=&quot;secondary&quot;] --LINK-- [/button]
+      [button type=&quot;secondary&quot;] [active]&lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt;[/active] [/button]
+  [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
+  [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
 [/button-group]
 </code></pre><h4 id="button-toolbar">Button toolbar</h4>
 <pre><code>[button-toolbar]
   [button-group]
-    [button type=&quot;secondary&quot;] --LINK-- [/button]
-    [button type=&quot;secondary&quot;] --LINK-- [/button]
-    [button type=&quot;secondary&quot;] --LINK-- [/button]
+    [button type=&quot;secondary&quot;] [active]&lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt;[/active] [/button]
+    [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
+    [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
   [/button-group]
     [button-group]
-    [button type=&quot;secondary&quot;] --LINK-- [/button]
-    [button type=&quot;secondary&quot;] --LINK-- [/button]
-    [button type=&quot;secondary&quot;] --LINK-- [/button]
+    [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
+    [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
+    [button type=&quot;secondary&quot;] &lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt; [/button]
   [/button-group]
   [button-group]
-    [button type=&quot;secondary&quot;] --LINK-- [/button]
+    [button type=&quot;secondary&quot;] [disabled]&lt;a href=&quot;#link&quot;&gt;Text&lt;/a&gt;[/disabled] [/button]
   [/button-group]
 [/button-toolbar]
 </code></pre><h4 id="-button-group-parameters">[button-group] parameters</h4>
@@ -774,50 +799,31 @@
 <hr>
 <h3 id="cards">Cards</h3>
 <pre><code>[card]
-  ...
   [card-block]
-    [card-title]
-
-      --HEADING--
-
-    [/card-title]
-    [card-subtitle]
-
-      --HEADING--
-
-    [/card-subtitle]
+    [card-title] &lt;h4&gt;Card Title&lt;/h4&gt; [/card-title]
+    [card-subtitle] &lt;h6&gt;Card Subtitle&lt;/h6&gt; [/card-subtitle]
     ...
   [/card-block]
 [/card]
 </code></pre><p>Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag</p>
 <pre><code>[card]
   [card-img top]
-
-    --IMAGE--
-
+      &lt;img src=&quot;placeholder-path/placeholder-lg.png&quot; class=&quot;img-fluid&quot;&gt;
   [/card-img]
   [card-block]
-    [card-title]
+    [card-title] &lt;h4&gt;Card Title&lt;/h4&gt; [/card-title]
 
-      --HEADING--
-
-    [/card-title]
     ...
   [/card-block]
 [/card]
 </code></pre><p>Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.</p>
 <pre><code>    [card]
       [card-img]
-
-        --IMAGE--
-
+          &lt;img src=&quot;placeholder-path/placeholder-lg.png&quot; class=&quot;img-fluid&quot;&gt;
       [/card-img]
       [card-img-overlay]
-        [card-title]
+        [card-title] &lt;h4&gt;Card Title&lt;/h4&gt; [/card-title]
 
-          --HEADING--
-
-        [/card-title]
         ...
       [/card-img-overlay]
     [/card]
@@ -825,15 +831,12 @@
 <pre><code>    [card]
       [card-header]
 
-        --HEADING--
+        ...
 
       [/card-header]
         [card-block]
-        [card-title]
+        [card-title] &lt;h4&gt;Card Title&lt;/h4&gt; [/card-title]
 
-          --HEADING--
-
-        [/card-title]
         ...
       [/card-block]
         [card-footer]
@@ -1102,9 +1105,9 @@
 <p>Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.</p>
 <h4 id="basic-example">Basic example</h4>
 <pre><code>[carousel]
-        --IMAGE--
-        --IMAGE--
-        --IMAGE--
+      &lt;img src=&quot;placeholder-path/placeholder-lg.png&quot;&gt;
+      &lt;img src=&quot;placeholder-path/placeholder-lg.png&quot;&gt;
+      &lt;img src=&quot;placeholder-path/placeholder-lg.png&quot;&gt;
 [/carousel]
 </code></pre><h4 id="-carousel-parameters">[carousel] parameters</h4>
 <table>
@@ -1138,6 +1141,144 @@
 <td>optional</td>
 <td>true, false</td>
 <td>false</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Any extra classes you want to add</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="jumbotron">Jumbotron</h3>
+<h4 id="basic-example">Basic example</h4>
+<pre><code>[jumbotron]
+  &lt;h1&gt; Hello, World! &lt;/h1&gt;
+  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]
+[/jumbotron]
+</code></pre><p>Set the <code>fluid</code> flag to make a fluid jumbotron</p>
+<pre><code>[jumbotron fluid]
+  &lt;h1&gt; Fluid jumbotron &lt;/h1&gt;
+  [lead] This is a modified jumbotron that occupies the entire horizontal space of its parent. [/lead]
+[/jumbotron]
+</code></pre><h4 id="-jumbotron-parameters">[jumbotron] parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fluid</td>
+<td>Flag whether jumbotron should be fluid</td>
+<td>optional</td>
+<td>:triangular_flag_on_post: (flag)</td>
+<td>false</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Any extra classes you want to add</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="list-group">List Group</h3>
+<h4 id="basic-example">Basic example</h4>
+<p>Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.</p>
+<pre><code>[list-group]
+  &lt;ul&gt;
+          &lt;li&gt;Cras justo odio&lt;/li&gt;
+            &lt;li&gt;Dapibus ac facilisis in&lt;/li&gt;
+            &lt;li&gt;Morbi leo risus&lt;/li&gt;
+            &lt;li&gt;Porta ac consectetur ac&lt;/li&gt;
+            &lt;li&gt;Vestibulum at eros&lt;/li&gt;
+        &lt;/ul&gt;
+[/list-group]
+</code></pre><p>Create a linked list by wrapping links</p>
+<pre><code>    [list-group]
+  &lt;a href=&quot;#link1&quot;&gt;Cras justo odio&lt;/a&gt;
+  [active]&lt;a href=&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;[/active]
+  &lt;a href=&quot;#link3&quot;&gt;Morbi leo risus&lt;/a&gt;
+  &lt;a href=&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;/a&gt;
+  [disabled]&lt;a href=&quot;#link5&quot;&gt;Vestibulum at eros&lt;/a&gt;[/disabled]
+[/list-group]
+</code></pre><p>Wrap items in the <code>list-item</code> shortcode to give them contextual styles</p>
+<pre><code>    [list-group]
+  [list-item type=&quot;success&quot;]&lt;a href=&quot;#link1&quot;&gt;Cras justo odio&lt;/a&gt;[/list-item]
+  [list-item type=&quot;info&quot;]&lt;a href=&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;[/list-item]
+  [list-item type=&quot;warning&quot;]&lt;a href=&quot;#link3&quot;&gt;Morbi leo risus&lt;/a&gt;[/list-item]
+  [list-item type=&quot;danger&quot;]&lt;a href=&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;/a&gt;[/list-item]
+[/list-group]
+</code></pre><h4 id="-list-group-parameters">[list-group] parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>Any extra classes you want to add</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+<td>optional</td>
+<td>any text</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-list-item-parameters">[list-item] parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+<th>Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>The type of the alert</td>
+<td>required</td>
+<td>success, info, warning, danger</td>
+<td>success</td>
 </tr>
 <tr>
 <td>class</td>
