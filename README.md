@@ -12,14 +12,14 @@ WordPress plugin that provides shortcodes for easier use of the Bootstrap 4 styl
 
 **Bootstrap 4 Shortcodes for WordPress** creates a simple, out of the way button just above the WordPress TinyMCE editor (next to the "Add Media" button) which pops up the plugin's documentation and shortcode examples for reference and handy "Insert Example" links to send the example shortcodes straight to the editor. There are no additional TinyMCE buttons to clutter up your screen, just great, easy to use shortcodes!
 
-## Requirements
+# Requirements
 ![Tested in WordPress](https://img.shields.io/wordpress/v/bootstrap-4-shortcodes.svg) ![PHP 5.3+](https://img.shields.io/badge/PHP-5.3%2B-blue.svg) ![Bootstrap](https://img.shields.io/badge/Bootstrap-4-6f5499.svg)
 
 This plugin won't do anything if you don't have WordPress theme built with the [Bootstrap 4](http://getbootstrap.com/) framework. **This plugin does not include the Bootstrap framework**.
 
 The plugin is tested to work with ```Bootstrap 4``` and ```WordPress 4.6``` and **requires PHP 5.3 or later**.
 
-## Shortcode Reference
+# Shortcode Reference
 
 ### Layout
 * [Grid](#grid)
@@ -28,9 +28,11 @@ The plugin is tested to work with ```Bootstrap 4``` and ```WordPress 4.6``` and 
 
 # Usage and Examples
 
-### Layout
+# Layout
 
-### Grid
+## Grid
+
+### Basic Example
     [row]
       [column sm="6"]
         ...
@@ -125,7 +127,9 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Media Object
+## Media Object
+
+### Basic Example
     [media]
       [media-object]
         <img src="placeholder-path/placeholder.png">
@@ -200,7 +204,10 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Responsive Utilities
+## Responsive Utilities
+
+### Basic Example
+
 	[hidden down="sm"] ... [/hidden]
 
 #### [hidden] parameters
@@ -215,10 +222,12 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-## Components
+# Components
 
-### Alerts
+## Alerts
 Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.
+
+### Basic Example
 
 	[alert type="success"] ... [/alert]
 
@@ -234,8 +243,10 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Breadcrumb
+## Breadcrumb
 Remember that `[breadcrumb]` must wrap a set of links inserted via the WordPress editor.
+
+### Basic Example
 
     [breadcrumb]
       <a href="#link1"> Link 1 </a>
@@ -253,8 +264,10 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Buttons
+## Buttons
 Wrap any `a`, `button`, or `input` tag inserted via the WordPress editor in `[button]` to give it button properties and classes.
+
+### Basic Example
 
 	[button type="primary"] <a href="#link">Text</a> [/button]
 
@@ -281,10 +294,10 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Button Groups
+## Button Groups
 Remember that `[button]` must wrap an `a`, `button`, or `input` tag inserted via the WordPress editor.
 
-#### Basic example
+### Basic example
     [button-group]
 	  	[button type="secondary"] [active]<a href="#link">Text</a>[/active] [/button]
       [button type="secondary"] <a href="#link">Text</a> [/button]
@@ -299,7 +312,7 @@ Set the `vertical` flag to make the buttons appear vertically stacked rather tha
       [button type="secondary"] <a href="#link">Text</a> [/button]
     [/button-group]
 
-#### Button toolbar
+### Button toolbar
     [button-toolbar]
       [button-group]
         [button type="secondary"] [active]<a href="#link">Text</a>[/active] [/button]
@@ -334,7 +347,9 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Cards
+## Cards
+
+### Basic Example
 
 	[card]
 	  [card-block]
@@ -452,10 +467,10 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Carousel
+## Carousel
 Remember that `[carousel]` must wrap a set of images inserted via the WordPress editor.
 
-#### Basic example
+### Basic example
     [carousel]
 		  <img src="placeholder-path/placeholder-lg.png">
 		  <img src="placeholder-path/placeholder-lg.png">
@@ -473,9 +488,9 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### Jumbotron
+## Jumbotron
 
-#### Basic example
+### Basic example
     [jumbotron]
       <h1> Hello, World! </h1>
       [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]
@@ -497,10 +512,10 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 * * *
 
-### List Group
-
-#### Basic example
+## List Group
 Remember that `[list-group]` must wrap a set of links or list items inserted via the WordPress editor.
+
+### Basic example
 
     [list-group]
       <ul>

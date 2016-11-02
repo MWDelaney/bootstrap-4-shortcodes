@@ -21,9 +21,9 @@
         <div class="modal-content">
 					<div class="container-fluid">
 						<div class="row">
-							<nav class="col-sm-3 left hidden-sm-down">
+							<nav id="bs4-table-of-contents" class="col-sm-3 left hidden-sm-down">
 								<ul>
-									<li class="active"><a href="#bs-shortcode-reference">Shortcode Reference</a></li>
+									<li><a href="#bs-shortcode-reference">Shortcode Reference</a></li>
 									<li><a href="#bs-requirements">System Requirements</a></li>
 								</ul>
 							</nav>
@@ -37,7 +37,7 @@
 				<section role="main">
 					<article>
 				<?php
-					$html = file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/README.html');
+					$html = file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/docs.html');
 							// ======================================================================== //
 							// Put HTML content in the page so we can pop it up in a modal
 							// But first edit the HTML to make it more useful as popup documentation
@@ -49,18 +49,6 @@
 							//      * Add IDs to h3 tags for the above on-page jumps
 							//      * Add "Insert Example" buttons after code examples
 							// ======================================================================== //
-
-							$html = preg_replace('/(<a href="http:[^"]+")>/is','\\1 target="_blank">',$html);
-							$html = str_replace('placeholder-path/', BS4_SHORTCODES_RELATIVE_URL . 'dist/images/', $html);
-							$html = str_replace('<table>', '<table class="table table-striped">', $html);
-							$html = str_replace('<ul>', '<div class="list-group">', $html);
-							$html = str_replace('</ul>', '</div>', $html);
-							$html = str_replace('<li><a ', '<a class="list-group-item" ', $html);
-							$html = str_replace('</li>', '', $html);
-							$html = str_replace('href="#', 'href="#bs-', $html);
-							$html = str_replace('<hr>', '<hr><a class="btn btn-link btn-default pull-right" href="#bs-top"><i class="text-muted glyphicon glyphicon-arrow-up"></i></a>', $html);
-							$html = str_replace('<h3 id="', '<h3 id="bs-', $html);
-							$html = str_replace('</pre>', '</pre><p><button data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example <i class="glyphicon glyphicon-share-alt"></i></button></p>', $html);
 
 							//Insert the HTML now that we're done editing it
 							echo $html;

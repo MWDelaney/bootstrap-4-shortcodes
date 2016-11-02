@@ -1,0 +1,46 @@
+
+<h2>{{name}}</h2>
+{{#examples}}
+	<p>{{{note}}}</p>
+	<pre><code>{{code}}</code></pre>
+{{/examples}}
+
+{{#shortcodes}}
+<h3>[{{name}}] parameters</h3>
+<table>
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#parameters}}
+		<tr>
+			<td>{{name}}</td>
+			<td>{{description}}</td>
+			<td>{{required}}</td>
+			<td>{{values}}</td>
+			<td>{{default}}</td>
+		</tr>
+		{{/parameters}}
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+{{/shortcodes}}

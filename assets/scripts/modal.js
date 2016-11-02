@@ -12,4 +12,8 @@ jQuery(document).ready(function() {
 			var win = window.dialogArguments || opener || parent || top;
 			win.send_to_editor(paras);
 	});
+
+	jQuery(".bs4-table-of-contents-title + .bs4-table-of-contents-section").detach();
+
+
 });

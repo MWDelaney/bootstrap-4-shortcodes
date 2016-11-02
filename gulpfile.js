@@ -6,6 +6,7 @@ var mainBowerFiles	= require('main-bower-files');
 var wiredep		= require('wiredep').stream;
 var concat		= require('gulp-concat');
 var runSequence		= require('run-sequence');
+var mustache = require("gulp-mustache");
 
 var config = {
  	dist: './dist',
@@ -58,10 +59,12 @@ gulp.task('images', function() {
 });
 
 gulp.task('docs', function () {
-		return gulp.src('README.md')
-				.pipe(markdown())
-				.pipe(gulp.dest(config.dist + '/docs'));
+	return gulp.src(config.assets + '/templates/*.mustache')
+			.pipe(mustache(config.assets + '/json/docs.json',{extension: '.html'},{}))
+			.pipe(gulp.dest(config.dist + '/docs'));
 });
+
+
 
 //Build task
 gulp.task('build', function(callback) {
