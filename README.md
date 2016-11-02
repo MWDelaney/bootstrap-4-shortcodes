@@ -238,7 +238,9 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 Remember that `[breadcrumb]` must wrap a set of links inserted via the WordPress editor.
 
     [breadcrumb]
-      <a href="#link1"> Link 1 </a> <a href="#link2"> Link 2 </a> [active] Link 3 [/active]
+      <a href="#link1"> Link 1 </a>
+			<a href="#link2"> Link 2 </a>
+			[active] Link 3 [/active]
     [/breadcrumb]
 
 #### [breadcrumb] parameters
