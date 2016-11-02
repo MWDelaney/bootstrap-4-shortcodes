@@ -485,7 +485,6 @@ class Shortcodes {
 	function bs_alert( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
 				"type"	=> "success",
-				"dismissible"	=> false,
 				"class" => false,
 				"data"	=> false
 		), $atts );
@@ -493,7 +492,7 @@ class Shortcodes {
 		$class	= array();
 		$class[]  = 'alert';
 		$class[]  = 'alert-' . $atts['type'];
-		$class[]	= 'alert-dismissible fade in';
+		$class[]	= (Utilities::is_flag('dismissible', $save_atts)) ? 'alert-dismissible fade in' : null;
 
 		$link_class	= array();
 		$link_class[]	= 'alert-link';
@@ -505,7 +504,7 @@ class Shortcodes {
 		$search_headings = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 
 		$content = do_shortcode( trim($content) );
-		$content = ($atts['dismissible']) ? '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $content : $content;
+		$content = (Utilities::is_flag('dismissible', $save_atts)) ? '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $content : $content;
 
 		$return = Utilities::bs_output(
 			sprintf(

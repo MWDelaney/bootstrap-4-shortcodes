@@ -1,0 +1,1036 @@
+<h1>Layout</h1>
+<h2>Grid</h2>
+
+	
+	<pre><code>
+[row]
+  [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
+  [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
+[&#x2F;row]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Flexbox columns are supported by using <code>"flex"</code> rather than a column width.</p>
+	<pre><code>
+[row]
+  [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+  [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+[&#x2F;row]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>The container component is also supported in case your theme doesn't include a container.</p>
+	<pre><code>
+[container]
+  [row]
+    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+  [&#x2F;row]
+[&#x2F;container]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>The container-fluid component is supported as a discrete shortcode.</p>
+	<pre><code>
+[container-fluid]  
+[row]
+    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+  [&#x2F;row]
+[&#x2F;container-fluid]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[container] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[row] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[column] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>xs</td>
+			<td>Size of column on extra small screens.</td>
+			<td>0</td>
+			<td>1-12, flex</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>sm</td>
+			<td>Size of column on small screens.</td>
+			<td>0</td>
+			<td>1-12, flex</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>md</td>
+			<td>Size of column on medium screens.</td>
+			<td>0</td>
+			<td>1-12, flex</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>lg</td>
+			<td>Size of column on large screens.</td>
+			<td>0</td>
+			<td>1-12, flex</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>xl</td>
+			<td>Size of column on extra large screens.</td>
+			<td>0</td>
+			<td>1-12, flex</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>offset_xs</td>
+			<td>Offset on extra small screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>offset_sm</td>
+			<td>Offset on small screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>offset_md</td>
+			<td>Offset on medium screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>offset_lg</td>
+			<td>Offset on large screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>offset_xl</td>
+			<td>Offset on extra large screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>pull_xs</td>
+			<td>Pull on extra small screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>pull_sm</td>
+			<td>Pull on small screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>pull_md</td>
+			<td>Pull on medium screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>pull_lg</td>
+			<td>Pull on large screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>pull_xl</td>
+			<td>Pull on extra large screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>push_xs</td>
+			<td>Push on extra small screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>push_sm</td>
+			<td>Push on small screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>push_md</td>
+			<td>Push on medium screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>push_lg</td>
+			<td>Push on large screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>push_xl</td>
+			<td>Push on extra large screens.</td>
+			<td>0</td>
+			<td>0-12</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Media Object</h2>
+
+	
+	<pre><code>
+[media]
+  [media-object]
+    &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;
+  [&#x2F;media-object]
+  [media-body]
+    [media-heading] &lt;h4&gt;Media Heading&lt;&#x2F;h4&gt; [&#x2F;media-heading]
+    ...
+  [&#x2F;media-body]
+[&#x2F;media]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Wrap several <code>[media-object]</code>s in <code>[media-list]</code>, useful for comment threads or articles lists.</p>
+	<pre><code>
+[media-list]
+  [media]
+    [media-object]
+      &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;
+    [&#x2F;media-object]
+    [media-body]
+      [media-heading] &lt;h4&gt;Media Heading&lt;&#x2F;h4&gt; [&#x2F;media-heading]
+      ...
+    [&#x2F;media-body]
+  [&#x2F;media]
+  [media]
+    [media-object]
+      &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;
+    [&#x2F;media-object]
+    [media-body]
+      [media-heading] &lt;h4&gt;Media Heading&lt;&#x2F;h4&gt; [&#x2F;media-heading]
+      ...
+    [&#x2F;media-body]
+  [&#x2F;media]
+[&#x2F;media-list]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[media] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[media-object] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>media</td>
+			<td>Whether the image pulls to the left or right.</td>
+			<td>0</td>
+			<td>left, right</td>
+			<td>left</td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[media-body] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[media-heading] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> <code>[media-heading]</code> should contain heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a header tag is not added <code>h4</code> will be inserted automatically.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Responsive Utilities</h2>
+
+	
+	<pre><code>
+[hidden down&#x3D;&quot;sm&quot;] ... [&#x2F;hidden]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[hidden] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>up</td>
+			<td>Hide the contents on this screen size and above.</td>
+			<td>0</td>
+			<td>xs, sm, md, lg, xl</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>down</td>
+			<td>Hide the contents on this screen size and below.</td>
+			<td>0</td>
+			<td>xs, sm, md, lg, xl</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h1>Components</h1>
+<h2>Alerts</h2>
+<p>Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.</p>
+	
+	<pre><code>
+[alert type&#x3D;&quot;success&quot;] ... [&#x2F;alert]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[alert] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>type</td>
+			<td>The type of the alert.</td>
+			<td>0</td>
+			<td>success, info, warning, danger</td>
+			<td>success</td>
+		</tr>
+		<tr>
+			<td>dismissible</td>
+			<td>If the alert should be dismissable.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Breadcrumb</h2>
+
+	<p>Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.</p>
+	<pre><code>
+[breadcrumb]
+  &lt;a href&#x3D;&quot;#link1&quot;&gt; Link 1 &lt;&#x2F;a&gt;
+  &lt;a href&#x3D;&quot;#link2&quot;&gt; Link 2 &lt;&#x2F;a&gt;
+  [active] Link 3 [&#x2F;active]
+[&#x2F;breadcrumb]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[breadcrumb] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Buttons</h2>
+<p>Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</p>
+	<p>Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</p>
+	<pre><code>
+[button type&#x3D;&quot;primary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Set button sizes with the <code>size</code> parameter.</p>
+	<pre><code>
+[button type&#x3D;&quot;primary&quot; size&#x3D;&quot;lg&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Set <code>block</code> flag for block-style buttons.</p>
+	<pre><code>
+[button type&#x3D;&quot;primary&quot; block] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[button] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>type</td>
+			<td>The type of the button.</td>
+			<td>0</td>
+			<td>primary, secondary, success, info, warning, danger, link, outline-primary, outline-secondary, outline-success, outline-info, outline-warning, outline-danger</td>
+			<td>primary</td>
+		</tr>
+		<tr>
+			<td>size</td>
+			<td>The size of the button.</td>
+			<td>0</td>
+			<td>sm, lg</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>block</td>
+			<td>Flag whether the button should be a block-level button.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Button Groups</h2>
+<p>Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</p>
+	<p>Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</p>
+	<pre><code>
+[button-group]
+  [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
+  [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+  [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+[&#x2F;button-group]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Set the <code>vertical</code> flag to make the buttons appear vertically stacked rather than horiztonally.</p>
+	<pre><code>
+[button-group vertical]
+  [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
+  [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+  [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+[&#x2F;button-group]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Wrap <code>[button group]s</code> in <code>[button-toolbar]</code> to make a button toolbar.</p>
+	<pre><code>
+[button-toolbar]
+  [button-group]
+    [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
+    [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+    [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+  [&#x2F;button-group]
+  [button-group]
+    [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+    [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+    [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
+  [&#x2F;button-group]
+  [button-group]
+    [button type&#x3D;&quot;secondary&quot;] [disabled]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;disabled] [&#x2F;button]
+  [&#x2F;button-group]
+[&#x2F;button-toolbar]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[button-group] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>size</td>
+			<td>The size of the button.</td>
+			<td>0</td>
+			<td>sm, lg</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>vertical</td>
+			<td>Flag whether the button is vertical.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[button-toolbar] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h2>Cards</h2>
+
+	
+	<pre><code>
+[card]
+  [card-block]
+    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-subtitle] &lt;h6&gt;Card Subtitle&lt;&#x2F;h6&gt; [&#x2F;card-subtitle]
+    ...
+  [&#x2F;card-block]
+[&#x2F;card]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag.</p>
+	<pre><code>
+[card]
+  [card-img top]
+    &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
+  [&#x2F;card-img]
+  [card-block]
+    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    ...
+  [&#x2F;card-block]
+[&#x2F;card]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.</p>
+	<pre><code>
+[card]
+  [card-img]
+    &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
+  [&#x2F;card-img]
+  [card-img-overlay]
+    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    ...
+  [&#x2F;card-img-overlay]
+[&#x2F;card]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<p>Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.</p>
+	<pre><code>
+[card]
+  [card-header] ... [&#x2F;card-header]
+  [card-block]
+    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    ...
+  [&#x2F;card-block]
+  [card-footer] ... [&#x2F;card-footer]
+[&#x2F;card]</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+
+<h3>[card] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>type</td>
+			<td>Contextual background color for the card.</td>
+			<td>0</td>
+			<td>primary, secondary, success, info, warning, danger, link, outline-primary, outline-secondary, outline-success, outline-info, outline-warning, outline-danger</td>
+			<td>primary</td>
+		</tr>
+		<tr>
+			<td>inverse</td>
+			<td>Flag whether to invert the text color for contextual backgrounds.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-block] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Any <code>p</code> or <code>blockquote</code> tags within <code>[card-block]</code> will automatically receive <code>card-text</code> or <code>card-blockquote</code> classes respectively</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-title] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> <code>[card-title]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>h4</code> will be inserted automatically</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-subtitle] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> <code>[card-subtitle]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>h6</code> will be inserted automatically</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-img] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> <code>[card-img]</code> should contain an image inserted using the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>top</td>
+			<td>Flag whether this image cap is at the top of the card.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>bottom</td>
+			<td>Flag whether this image cap is at the bottom of the card.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-img-overlay] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-header] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> <code>[card-header]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>div</code> (no heading) will be inserted automatically</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-footer] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>

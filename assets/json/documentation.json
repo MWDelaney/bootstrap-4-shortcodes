@@ -1,0 +1,484 @@
+{
+	"sections": [
+		{
+			"title": "Layout",
+			"items": [
+				{
+				  "title": "Grid",
+				  "examples": [
+							{
+								"note": "",
+								"code": "\n[row]\n  [column sm=\"6\"] ... [/column]\n  [column sm=\"6\"] ... [/column]\n[/row]"
+							},
+							{
+								"note": "Flexbox columns are supported by using <code>\"flex\"</code> rather than a column width.",
+								"code": "\n[row]\n  [column xs=\"flex\"] ... [/column]\n  [column xs=\"flex\"] ... [/column]\n[/row]"
+							},
+							{
+								"note": "The container component is also supported in case your theme doesn't include a container.",
+								"code": "\n[container]\n  [row]\n    [column xs=\"flex\"] ... [/column]\n    [column xs=\"flex\"] ... [/column]\n  [/row]\n[/container]"
+							},
+							{
+								"note": "The container-fluid component is supported as a discrete shortcode.",
+								"code": "\n[container-fluid]  \n[row]\n    [column xs=\"flex\"] ... [/column]\n    [column xs=\"flex\"] ... [/column]\n  [/row]\n[/container-fluid]"
+							}
+					],
+					"shortcodes": [
+						{
+							"name": "container",
+							"parameters": ""
+						},
+						{
+							"name": "row",
+							"parameters": ""
+						},
+						{
+							"name": "column",
+							"parameters": [
+								{
+									"name": "xs",
+									"description": "Size of column on extra small screens.",
+									"required": "0",
+									"values": "1-12, flex",
+									"default": ""
+								},
+								{
+									"name": "sm",
+									"description": "Size of column on small screens.",
+									"required": "0",
+									"values": "1-12, flex",
+									"default": ""
+								},
+								{
+									"name": "md",
+									"description": "Size of column on medium screens.",
+									"required": "0",
+									"values": "1-12, flex",
+									"default": ""
+								},
+								{
+									"name": "lg",
+									"description": "Size of column on large screens.",
+									"required": "0",
+									"values": "1-12, flex",
+									"default": ""
+								},
+								{
+									"name": "xl",
+									"description": "Size of column on extra large screens.",
+									"required": "0",
+									"values": "1-12, flex",
+									"default": ""
+								},
+								{
+									"name": "offset_xs",
+									"description": "Offset on extra small screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "offset_sm",
+									"description": "Offset on small screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "offset_md",
+									"description": "Offset on medium screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "offset_lg",
+									"description": "Offset on large screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "offset_xl",
+									"description": "Offset on extra large screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "pull_xs",
+									"description": "Pull on extra small screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "pull_sm",
+									"description": "Pull on small screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "pull_md",
+									"description": "Pull on medium screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "pull_lg",
+									"description": "Pull on large screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "pull_xl",
+									"description": "Pull on extra large screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "push_xs",
+									"description": "Push on extra small screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "push_sm",
+									"description": "Push on small screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "push_md",
+									"description": "Push on medium screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "push_lg",
+									"description": "Push on large screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								},
+								{
+									"name": "push_xl",
+									"description": "Push on extra large screens.",
+									"required": "0",
+									"values": "0-12",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "Media Object",
+					"examples": [
+						{
+							"note": "",
+							"code": "\n[media]\n  [media-object]\n    <img src=\"placeholder-path/placeholder.png\">\n  [/media-object]\n  [media-body]\n    [media-heading] <h4>Media Heading</h4> [/media-heading]\n    ...\n  [/media-body]\n[/media]"
+						},
+						{
+							"note": "Wrap several <code>[media-object]</code>s in <code>[media-list]</code>, useful for comment threads or articles lists.",
+							"code": "\n[media-list]\n  [media]\n    [media-object]\n      <img src=\"placeholder-path/placeholder.png\">\n    [/media-object]\n    [media-body]\n      [media-heading] <h4>Media Heading</h4> [/media-heading]\n      ...\n    [/media-body]\n  [/media]\n  [media]\n    [media-object]\n      <img src=\"placeholder-path/placeholder.png\">\n    [/media-object]\n    [media-body]\n      [media-heading] <h4>Media Heading</h4> [/media-heading]\n      ...\n    [/media-body]\n  [/media]\n[/media-list]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "media",
+							"parameters": ""
+						},
+						{
+							"name": "media-object",
+							"parameters": [
+								{
+									"name": "media",
+									"description": "Whether the image pulls to the left or right.",
+									"required": "0",
+									"values": "left, right",
+									"default": "left"
+								}
+							]
+						},
+						{
+							"name": "media-body",
+							"parameters": ""
+						},
+						{
+							"name": "media-heading",
+							"note": "<code>[media-heading]</code> should contain heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a header tag is not added <code>h4</code> will be inserted automatically.",
+							"parameters": ""
+						}
+					]
+				},
+				{
+					"title": "Responsive Utilities",
+					"examples": [
+						{
+							"note": "",
+							"code": "\n[hidden down=\"sm\"] ... [/hidden]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "hidden",
+							"parameters": [
+								{
+									"name": "up",
+									"description": "Hide the contents on this screen size and above.",
+									"required": "0",
+									"values": "xs, sm, md, lg, xl",
+									"default": ""
+								},
+								{
+									"name": "down",
+									"description": "Hide the contents on this screen size and below.",
+									"required": "0",
+									"values": "xs, sm, md, lg, xl",
+									"default": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Components",
+			"items": [
+				{
+					"title": "Alerts",
+					"note": "Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.",
+					"examples": [
+						{
+							"note": "",
+							"code": "\n[alert type=\"success\"] ... [/alert]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "alert",
+							"parameters": [
+								{
+									"name": "type",
+									"description": "The type of the alert.",
+									"required": "0",
+									"values": "success, info, warning, danger",
+									"default": "success"
+								},
+								{
+									"name": "dismissible",
+									"description": "If the alert should be dismissable.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "Breadcrumb",
+					"note": "",
+					"examples": [
+						{
+							"note": "Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.",
+							"code": "\n[breadcrumb]\n  <a href=\"#link1\"> Link 1 </a>\n  <a href=\"#link2\"> Link 2 </a>\n  [active] Link 3 [/active]\n[/breadcrumb]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "breadcrumb",
+							"parameters": ""
+						}
+					]
+				},
+				{
+					"title": "Buttons",
+					"note": "Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.",
+					"examples": [
+						{
+							"code": "\n[button type=\"primary\"] <a href=\"#link\">Button Text</a> [/button]"
+						},
+						{
+							"note": "Set button sizes with the <code>size</code> parameter.",
+							"code": "\n[button type=\"primary\" size=\"lg\"] <a href=\"#link\">Button Text</a> [/button]"
+						},
+						{
+							"note": "Set <code>block</code> flag for block-style buttons.",
+							"code": "\n[button type=\"primary\" block] <a href=\"#link\">Button Text</a> [/button]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "button",
+							"parameters": [
+								{
+									"name": "type",
+									"description": "The type of the button.",
+									"required": "0",
+									"values": "primary, secondary, success, info, warning, danger, link, outline-primary, outline-secondary, outline-success, outline-info, outline-warning, outline-danger",
+									"default": "primary"
+								},
+								{
+									"name": "size",
+									"description": "The size of the button.",
+									"required": "0",
+									"values": "sm, lg",
+									"default": ""
+								},
+								{
+									"name": "block",
+									"description": "Flag whether the button should be a block-level button.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "Button Groups",
+					"note": "Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.",
+					"examples": [
+						{
+							"code": "\n[button-group]\n  [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n[/button-group]"
+						},
+						{
+							"note": "Set the <code>vertical</code> flag to make the buttons appear vertically stacked rather than horiztonally.",
+							"code": "\n[button-group vertical]\n  [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n[/button-group]"
+						},
+						{
+							"note": "Wrap <code>[button group]s</code> in <code>[button-toolbar]</code> to make a button toolbar.",
+							"code": "\n[button-toolbar]\n  [button-group]\n    [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [/button-group]\n  [button-group]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [/button-group]\n  [button-group]\n    [button type=\"secondary\"] [disabled]<a href=\"#link\">Text</a>[/disabled] [/button]\n  [/button-group]\n[/button-toolbar]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "button-group",
+							"parameters": [
+								{
+									"name": "size",
+									"description": "The size of the button.",
+									"required": "0",
+									"values": "sm, lg",
+									"default": ""
+								},
+								{
+									"name": "vertical",
+									"description": "Flag whether the button is vertical.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						},
+						{
+							"name": "button-toolbar",
+							"parameters": ""
+						}
+					]
+				},
+				{
+					"title": "Cards",
+					"note": "",
+					"examples": [
+						{
+							"code": "\n[card]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    [card-subtitle] <h6>Card Subtitle</h6> [/card-subtitle]\n    ...\n  [/card-block]\n[/card]"
+						},
+						{
+							"note": "Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag.",
+							"code": "\n[card]\n  [card-img top]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-block]\n[/card]"
+						},
+						{
+							"note": "Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.",
+							"code": "\n[card]\n  [card-img]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-img-overlay]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-img-overlay]\n[/card]"
+						},
+						{
+							"note": "Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.",
+							"code": "\n[card]\n  [card-header] ... [/card-header]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-block]\n  [card-footer] ... [/card-footer]\n[/card]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "card",
+							"parameters": [
+								{
+									"name": "type",
+									"description": "Contextual background color for the card.",
+									"required": "0",
+									"values": "primary, secondary, success, info, warning, danger, link, outline-primary, outline-secondary, outline-success, outline-info, outline-warning, outline-danger",
+									"default": "primary"
+								},
+								{
+									"name": "inverse",
+									"description": "Flag whether to invert the text color for contextual backgrounds.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						},
+						{
+							"name": "card-block",
+							"note": "Any <code>p</code> or <code>blockquote</code> tags within <code>[card-block]</code> will automatically receive <code>card-text</code> or <code>card-blockquote</code> classes respectively",
+							"parameters": ""
+						},
+						{
+							"name": "card-title",
+							"note": "<code>[card-title]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>h4</code> will be inserted automatically",
+							"parameters": ""
+						},
+						{
+							"name": "card-subtitle",
+							"note": "<code>[card-subtitle]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>h6</code> will be inserted automatically",
+							"parameters": ""
+						},
+						{
+							"name": "card-img",
+							"note": "<code>[card-img]</code> should contain an image inserted using the WordPress editor.",
+							"parameters": [
+								{
+									"name": "top",
+									"description": "Flag whether this image cap is at the top of the card.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "bottom",
+									"description": "Flag whether this image cap is at the bottom of the card.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						},
+						{
+							"name": "card-img-overlay",
+							"parameters": ""
+						},
+						{
+							"name": "card-header",
+							"note": "<code>[card-header]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>div</code> (no heading) will be inserted automatically",
+							"parameters": ""
+						},
+						{
+							"name": "card-footer",
+							"parameters": ""
+						}
+					]
+				}
+			]
+		}
+	]
+}

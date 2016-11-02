@@ -60,7 +60,7 @@ gulp.task('images', function() {
 
 gulp.task('docs', function () {
 	return gulp.src(config.assets + '/templates/*.mustache')
-			.pipe(mustache(config.assets + '/json/docs.json',{extension: '.html'},{}))
+			.pipe(mustache(config.assets + '/json/documentation.json',{extension: '.html'},{}))
 			.pipe(gulp.dest(config.dist + '/docs'));
 });
 

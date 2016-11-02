@@ -1,13 +1,20 @@
-
-<h2>{{name}}</h2>
+{{#sections}}
+<h1>{{title}}</h1>
+{{#items}}
+<h2>{{title}}</h2>
+{{#note}}<p>{{{note}}}</p>{{/note}}
 {{#examples}}
-	<p>{{{note}}}</p>
+	{{#note}}<p>{{{note}}}</p>{{/note}}
 	<pre><code>{{code}}</code></pre>
+	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
 {{/examples}}
 
 {{#shortcodes}}
 <h3>[{{name}}] parameters</h3>
-<table>
+{{#note}}
+<div class="alert alert-warning"><strong>Note:</strong> {{{note}}}</div>
+{{/note}}
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>Parameter</th>
@@ -44,3 +51,5 @@
 	</tbody>
 </table>
 {{/shortcodes}}
+{{/items}}
+{{/sections}}

@@ -37,7 +37,7 @@
 				<section role="main">
 					<article>
 				<?php
-					$html = file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/docs.html');
+					$html = file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/documentation.html');
 							// ======================================================================== //
 							// Put HTML content in the page so we can pop it up in a modal
 							// But first edit the HTML to make it more useful as popup documentation
@@ -51,6 +51,7 @@
 							// ======================================================================== //
 
 							//Insert the HTML now that we're done editing it
+							$html = str_replace('data-path="placeholder"', 'data-path="' . BS4_SHORTCODES_RELATIVE_URL . 'dist/images/"', $html);
 							echo $html;
 
 				?>
