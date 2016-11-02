@@ -240,7 +240,7 @@ Remember that `[breadcrumb]` must wrap a set of links inserted via the WordPress
     [breadcrumb]
       <a href="#link1"> Link 1 </a>
       <a href="#link2"> Link 2 </a>
-      [active] Link 3 [/active]
+      g[active] Link 3 [/active]
     [/breadcrumb]
 
 #### [breadcrumb] parameters
@@ -251,6 +251,7 @@ data | Data attribute and value pairs separated by a comma. Pairs separated by p
 
 [Bootstrap breadcrumb documentation](http://getbootstrap.com/components/#breadcrumb)
 
+* * *
 
 ### Buttons
 Wrap any `a`, `button`, or `input` tag inserted via the WordPress editor in `[button]` to give it button properties and classes.
@@ -503,17 +504,17 @@ Remember that `[list-group]` must wrap a set of links or list items inserted via
 
     [list-group]
       <ul>
-			  <li>Cras justo odio</li>
-				<li>Dapibus ac facilisis in</li>
-				<li>Morbi leo risus</li>
-				<li>Porta ac consectetur ac</li>
-				<li>Vestibulum at eros</li>
-			</ul>
+        <li>Cras justo odio</li>
+        <li>Dapibus ac facilisis in</li>
+        <li>Morbi leo risus</li>
+        <li>Porta ac consectetur ac</li>
+        <li>Vestibulum at eros</li>
+      </ul>
     [/list-group]
 
 Create a linked list by wrapping links
 
-		[list-group]
+    [list-group]
       <a href="#link1">Cras justo odio</a>
       [active]<a href="#link2">Dapibus ac facilisis in</a>[/active]
       <a href="#link3">Morbi leo risus</a>
@@ -523,7 +524,7 @@ Create a linked list by wrapping links
 
 Wrap items in the `list-item` shortcode to give them contextual styles
 
-		[list-group]
+    [list-group]
       [list-item type="success"]<a href="#link1">Cras justo odio</a>[/list-item]
       [list-item type="info"]<a href="#link2">Dapibus ac facilisis in</a>[/list-item]
       [list-item type="warning"]<a href="#link3">Morbi leo risus</a>[/list-item]
