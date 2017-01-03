@@ -1007,7 +1007,7 @@
 							"parameters": [
 								{
 									"name": "type",
-									"description": "The type of the alert.",
+									"description": "The type of the color to be applied.",
 									"required": "0",
 									"values": "muted, primary, success, info, warning, danger, white",
 									"default": ""

@@ -2259,7 +2259,7 @@
 	<tbody>
 		<tr>
 			<td>type</td>
-			<td><?php _e('The type of the alert.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('The type of the color to be applied.', 'bootstrap-4-shortcodes'); ?></td>
 			<td>0</td>
 			<td>muted, primary, success, info, warning, danger, white</td>
 			<td></td>
