@@ -22,3 +22,7 @@
 <a href="#progress" class="list-group-item"><?php _e('Progress', 'bootstrap-4-shortcodes'); ?></a>
 <a href="#tooltips" class="list-group-item"><?php _e('Tooltips', 'bootstrap-4-shortcodes'); ?></a>
 </div>
+<h2><?php _e('Utilities', 'bootstrap-4-shortcodes'); ?></h2>
+<div class="list-group">
+<a href="#borders" class="list-group-item"><?php _e('Borders', 'bootstrap-4-shortcodes'); ?></a>
+</div>

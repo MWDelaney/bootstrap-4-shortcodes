@@ -2134,3 +2134,90 @@
 	</tbody>
 </table>
 </section>
+<h1><?php _e('Utilities', 'bootstrap-4-shortcodes'); ?></h1>
+<section id="borders">
+<h2><?php _e('Borders', 'bootstrap-4-shortcodes'); ?></h2>
+<p><?php _e('Use border utilities to quickly style the <code>border</code> and <code>border-radius</code> of an element. Great for images, buttons, or any other element.', 'bootstrap-4-shortcodes'); ?></p>
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>[border rounded]&lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;[&#x2F;border]</code></pre>
+		</div>
+		<div class="card-footer">
+			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+
+<h3>[border] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Use border utilities to quickly style the <code>border</code> and <code>border-radius</code> of an element. Great for images, buttons, or any other element.', 'bootstrap-4-shortcodes'); ?></div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>rounded</td>
+			<td><?php _e('Flag whether border style should be rounded.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>top</td>
+			<td><?php _e('Flag whether border style should be rounded-top.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>right</td>
+			<td><?php _e('Flag whether border style should be rounded-right.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>bottom</td>
+			<td><?php _e('Flag whether border style should be rounded-bottom.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>left</td>
+			<td><?php _e('Flag whether border style should be rounded-left.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>circle</td>
+			<td><?php _e('Flag whether border style should be a circle.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</section>

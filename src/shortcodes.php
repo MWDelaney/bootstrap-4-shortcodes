@@ -101,7 +101,9 @@ class Shortcodes {
 
 			'tooltip',
 
-			'lead'
+			'lead',
+
+			'border'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -1687,6 +1689,39 @@ class Shortcodes {
 			);
 
 			unset($GLOBALS['accordion']);
+			return $return;
+		}
+
+
+		/**
+		 * Tag border
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_border( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"class"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+			$class	= array();
+			$class[]	= (Utilities::is_flag('rounded', $save_atts)) ? 'rounded' : null;
+			$class[]	= (Utilities::is_flag('top', $save_atts)) ? 'rounded-top' : null;
+			$class[]	= (Utilities::is_flag('right', $save_atts)) ? 'rounded-right' : null;
+			$class[]	= (Utilities::is_flag('bottom', $save_atts)) ? 'rounded-bottom' : null;
+			$class[]	= (Utilities::is_flag('left', $save_atts)) ? 'rounded-left' : null;
+			$class[]	= (Utilities::is_flag('circle', $save_atts)) ? 'rounded-circle' : null;
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					$content
+				)
+			);
+
+			$return = Utilities::addclass( null, $return, $class );
+
 			return $return;
 		}
 

@@ -925,6 +925,72 @@
 					]
 				}
 			]
+		},
+		{
+			"title": "Utilities",
+			"items": [
+				{
+					"title": "Borders",
+					"id": "borders",
+					"note": "Use border utilities to quickly style the <code>border</code> and <code>border-radius</code> of an element. Great for images, buttons, or any other element.",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "[border rounded]<img src=\"placeholder-path/placeholder.png\">[/border]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "border",
+							"parameters": [
+								{
+									"name": "rounded",
+									"description": "Flag whether border style should be rounded.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "top",
+									"description": "Flag whether border style should be rounded-top.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "right",
+									"description": "Flag whether border style should be rounded-right.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "bottom",
+									"description": "Flag whether border style should be rounded-bottom.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "left",
+									"description": "Flag whether border style should be rounded-left.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "circle",
+									"description": "Flag whether border style should be a circle.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
+				}
+			]
 		}
 	]
 }
