@@ -1,38 +1,53 @@
 <h1>Layout</h1>
+<section id="grid">
 <h2>Grid</h2>
 
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [row]
   [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
   [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
 [&#x2F;row]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
-	<p>Flexbox columns are supported by using <code>"flex"</code> rather than a column width.</p>
-	<pre><code>
-[row]
-  [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
-  [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
-[&#x2F;row]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>The container component is also supported in case your theme doesn't include a container.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [container]
   [row]
-    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
-    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+    [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
+    [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
   [&#x2F;row]
 [&#x2F;container]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example with container
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>The container-fluid component is supported as a discrete shortcode.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [container-fluid]  
 [row]
-    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
-    [column xs&#x3D;&quot;flex&quot;] ... [&#x2F;column]
+    [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
+    [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
   [&#x2F;row]
 [&#x2F;container-fluid]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example with fluid container
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[container] parameters</h3>
 <table class="table table-striped">
@@ -258,10 +273,14 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="media-object">
 <h2>Media Object</h2>
 
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [media]
   [media-object]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;
@@ -271,9 +290,16 @@
     ...
   [&#x2F;media-body]
 [&#x2F;media]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Wrap several <code>[media-object]</code>s in <code>[media-list]</code>, useful for comment threads or articles lists.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [media-list]
   [media]
     [media-object]
@@ -294,7 +320,12 @@
     [&#x2F;media-body]
   [&#x2F;media]
 [&#x2F;media-list]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Media List
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[media] parameters</h3>
 <table class="table table-striped">
@@ -416,12 +447,21 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="responsive-utilities">
 <h2>Responsive Utilities</h2>
 
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [hidden down&#x3D;&quot;sm&quot;] ... [&#x2F;hidden]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[hidden] parameters</h3>
 <table class="table table-striped">
@@ -465,13 +505,22 @@
 		</tr>
 	</tbody>
 </table>
+</section>
 <h1>Components</h1>
+<section id="alerts">
 <h2>Alerts</h2>
 <p>Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.</p>
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [alert type&#x3D;&quot;success&quot;] ... [&#x2F;alert]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[alert] parameters</h3>
 <div class="alert alert-warning"><strong>Note:</strong> Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.</div>
@@ -516,16 +565,25 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="breadcrumb">
 <h2>Breadcrumb</h2>
 
 	<p>Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [breadcrumb]
   &lt;a href&#x3D;&quot;#link1&quot;&gt; Link 1 &lt;&#x2F;a&gt;
   &lt;a href&#x3D;&quot;#link2&quot;&gt; Link 2 &lt;&#x2F;a&gt;
   [active] Link 3 [&#x2F;active]
 [&#x2F;breadcrumb]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[breadcrumb] parameters</h3>
 <table class="table table-striped">
@@ -555,20 +613,43 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="buttons">
 <h2>Buttons</h2>
 <p>Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</p>
 	<p>Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [button type&#x3D;&quot;primary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Set button sizes with the <code>size</code> parameter.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [button type&#x3D;&quot;primary&quot; size&#x3D;&quot;lg&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Large button
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Set <code>block</code> flag for block-style buttons.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [button type&#x3D;&quot;primary&quot; block] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Button-block example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[button] parameters</h3>
 <div class="alert alert-warning"><strong>Note:</strong> Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</div>
@@ -620,26 +701,44 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="button-groups">
 <h2>Button Groups</h2>
 <p>Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</p>
 	<p>Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [button-group]
   [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
 [&#x2F;button-group]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Set the <code>vertical</code> flag to make the buttons appear vertically stacked rather than horiztonally.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [button-group vertical]
   [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
 [&#x2F;button-group]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Vertical example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Wrap <code>[button group]s</code> in <code>[button-toolbar]</code> to make a button toolbar.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [button-toolbar]
   [button-group]
     [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
@@ -655,7 +754,12 @@
     [button type&#x3D;&quot;secondary&quot;] [disabled]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;disabled] [&#x2F;button]
   [&#x2F;button-group]
 [&#x2F;button-toolbar]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Button Toolbar
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[button-group] parameters</h3>
 <div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</div>
@@ -729,10 +833,14 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="cards">
 <h2>Cards</h2>
 
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [card]
   [card-block]
     [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
@@ -740,9 +848,16 @@
     ...
   [&#x2F;card-block]
 [&#x2F;card]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [card]
   [card-img top]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
@@ -752,9 +867,16 @@
     ...
   [&#x2F;card-block]
 [&#x2F;card]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Card with image cap
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [card]
   [card-img]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
@@ -764,9 +886,16 @@
     ...
   [&#x2F;card-img-overlay]
 [&#x2F;card]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Card with image overlay
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [card]
   [card-header] ... [&#x2F;card-header]
   [card-block]
@@ -775,7 +904,12 @@
   [&#x2F;card-block]
   [card-footer] ... [&#x2F;card-footer]
 [&#x2F;card]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Card with Header and Footer
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[card] parameters</h3>
 <table class="table table-striped">
@@ -1034,16 +1168,25 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="carousel">
 <h2>Carousel</h2>
 <p>Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.</p>
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [carousel]
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
 [&#x2F;carousel]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[carousel] parameters</h3>
 <div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.</div>
@@ -1095,10 +1238,14 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="collapse">
 <h2>Collapse</h2>
 
 	<p>Create an accordion by wrapping <code>[card]</code>s in <code>[accordion]</code>.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [accordion]
   [card]
     [card-header] ... [&#x2F;card-header]
@@ -1113,7 +1260,12 @@
     [&#x2F;card-block]
   [&#x2F;card]
 [&#x2F;accordion]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Accordion example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[accordion] parameters</h3>
 <table class="table table-striped">
@@ -1143,22 +1295,38 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="jumbotron">
 <h2>Jumbotron</h2>
 
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [jumbotron]
   &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
   [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
 [&#x2F;jumbotron]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Set the <code>fluid</code> flag to make a fluid jumbotron.</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [jumbotron fluid]
   &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
   [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
 [&#x2F;jumbotron]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[jumbotron] parameters</h3>
 <table class="table table-striped">
@@ -1195,10 +1363,14 @@
 		</tr>
 	</tbody>
 </table>
+</section>
+<section id="list-group">
 <h2>List Group</h2>
 <p>Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.</p>
 	
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [list-group]
   &lt;ul&gt;
     &lt;li&gt;Cras justo odio&lt;&#x2F;li&gt;
@@ -1208,9 +1380,16 @@
     &lt;li&gt;Vestibulum at eros&lt;&#x2F;li&gt;
   &lt;&#x2F;ul&gt;
 [&#x2F;list-group]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Create a linked list by wrapping links</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [list-group]
   &lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;
   [active]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;active]
@@ -1218,16 +1397,28 @@
   &lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;
   [disabled]&lt;a href&#x3D;&quot;#link5&quot;&gt;Vestibulum at eros&lt;&#x2F;a&gt;[&#x2F;disabled]
 [&#x2F;list-group]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Linked list
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 	<p>Wrap items in the <code>list-item</code> shortcode to give them contextual styles</p>
-	<pre><code>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
 [list-group]
   [list-item type&#x3D;&quot;success&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;list-item]
   [list-item type&#x3D;&quot;info&quot;]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;list-item]
   [list-item type&#x3D;&quot;warning&quot;]&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;[&#x2F;list-item]
   [list-item type&#x3D;&quot;danger&quot;]&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;[&#x2F;list-item]
 [&#x2F;list-group]</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+		</div>
+		<div class="card-footer">
+			Contextual styles
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[list-group] parameters</h3>
 <div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.</div>
@@ -1294,3 +1485,4 @@
 		</tr>
 	</tbody>
 </table>
+</section>

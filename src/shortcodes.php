@@ -69,6 +69,9 @@ class Shortcodes {
 			'button-group',
 			'button-toolbar',
 
+			'dropdown',
+			'dropdown-menu',
+
 			'card',
 			'card-block',
 			'card-title',
@@ -126,8 +129,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -155,8 +158,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -184,8 +187,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -260,8 +263,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -291,8 +294,8 @@ class Shortcodes {
 		Utilities::bs_output(
 			sprintf(
 				'<ul class="%s"%s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -322,8 +325,8 @@ class Shortcodes {
 			sprintf(
 				'<%1$s class="%2$s"%3$s>%4$s</%1$s>',
 				(isset($GLOBALS['media_list'])) ? 'li' : 'div',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -363,8 +366,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				$content
 			)
 		);
@@ -394,8 +397,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -483,12 +486,12 @@ class Shortcodes {
 	 * @param  string $content shortcode contents
 	 * @return string
 	 */
-	function bs_alert( $atts, $content = null ) {
+	function bs_alert( $save_atts, $content = null ) {
 		$atts = shortcode_atts( array(
 				"type"	=> "success",
 				"class" => false,
 				"data"	=> false
-		), $atts );
+		), $save_atts );
 
 		$class	= array();
 		$class[]  = 'alert';
@@ -510,8 +513,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s"%s role="alert">%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				$content
 			)
 		);
@@ -547,8 +550,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<nav class="%s"%s>%s</nav>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -654,9 +657,16 @@ class Shortcodes {
 		$class[]	= (Utilities::is_flag('active', $save_atts)) ? 'active' : null;
 		$class[]	= (Utilities::is_flag('disabled', $save_atts)) ? 'disabled' : null;
 
+		$button_data = array();
+		$button_data[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'toggle,dropdown' : null;
+		$button_data = implode( '|', $button_data );
+
+		$wrap_before = (!empty($button_data)) ? '<button>' : null;
+		$wrap_after = (!empty($button_data)) ? '</button>' : null;
+
 		$search_tags	= array('a', 'button', 'input');
 
-		$content = do_shortcode( $content );
+		$content = do_shortcode( $wrap_before . $content . $wrap_after );
 		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
@@ -666,6 +676,7 @@ class Shortcodes {
 
 		$return = Utilities::addclass( $search_tags, $return, $class );
 		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+		$return = Utilities::adddata( $search_tags, $return, $button_data );
 		if (Utilities::is_flag('disabled', $atts)) {
 			$return = Utilities::addaria( $search_tags, $return, 'disabled', 'true' );
 		}
@@ -696,8 +707,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" role="group" %s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -724,8 +735,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" role="toolbar" %s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -764,13 +775,88 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" %s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				$content = do_shortcode( $content )
 			)
 		);
 		return $return;
 	}
+
+
+	/**
+	 * Dropdown shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_dropdown( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class"	=> false,
+				"data"	=> false
+		), $save_atts );
+
+		$class = array();
+		$class[] = "dropdown";
+
+		$return = Utilities::bs_output(
+			sprintf(
+				'<div class="%s" %s>%s</div>',
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+				do_shortcode($content)
+			)
+		);
+
+		return $return;
+	}
+
+
+
+	/**
+	 * Dropdown Menu shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_dropdown_menu( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+			"align"			=> false,
+			"class"			=> false,
+			"data"			=> false,
+		), $save_atts );
+
+		$search_tags	= array('div');
+
+		$wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<div>';
+		$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</div>';
+
+		$class	= array();
+		$class[]	= 'dropdown-menu';
+		$class[]	= ($atts['align']) ? 'dropdown-menu-' . $atts['align'] : null;
+
+		$a_class	= array();
+		$a_class[]	= 'dropdown-item';
+		$a_search_tags	= array('a');
+
+		$content = strip_tags($content, '<a><button><h1><h2><h3><h4><h5><h6>');
+
+		$content = do_shortcode( $wrap_before . $content . $wrap_after );
+
+		$return = Utilities::bs_output(
+			sprintf(
+				'%s',
+				$content
+			)
+		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::addclass( $a_search_tags, $return, $a_class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+
+		return $return;
+	}
+
 
 
 	/**
@@ -788,7 +874,6 @@ class Shortcodes {
 		$wrap_before = (isset($GLOBALS['accordion_card'])) ? sprintf('<div id="collapse%s" class="collapse" role="tabpanel">', $GLOBALS['accordion_card']) : null;
 		$wrap_after = (isset($GLOBALS['accordion_card'])) ? '</div>' : null;
 
-
 		$class	= array();
 		$class[]	= 'card-block';
 
@@ -805,8 +890,8 @@ class Shortcodes {
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" %s>%s</div>',
-				Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-				Utilities::parse_data_attributes( $atts['data'] ),
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				do_shortcode( $content )
 			)
 		);
@@ -949,8 +1034,8 @@ class Shortcodes {
 			$return = Utilities::bs_output(
 				sprintf(
 					'<div class="%s" %s>%s</div>',
-					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-					Utilities::parse_data_attributes( $atts['data'] ),
+					Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+					(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 					$content = do_shortcode( $content )
 				)
 			);
@@ -1108,16 +1193,15 @@ class Shortcodes {
 
 			$id = 'bs4-carousel-'. $GLOBALS['carousel_count'];
 
-
 			$return = Utilities::bs_output(
 				sprintf(
 							'<div class="%s" id="%s" data-ride="carousel"%s%s%s%s>%s<div class="%s" role="listbox">%s</div>%s%s</div>',
-							Utilities::class_output(__FUNCTION__, $class, $atts['class']),
+							Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
 							esc_attr( $id ),
 							( $atts['interval'] )   ? sprintf( ' data-interval="%d"', $atts['interval'] ) : '',
 							( $atts['pause'] )      ? sprintf( ' data-pause="%s"', esc_attr( $atts['pause'] ) ) : '',
 							( $atts['wrap'] == 'true' ) ? sprintf( ' data-wrap="%s"', esc_attr( $atts['wrap'] ) ) : '',
-							Utilities::parse_data_attributes( $atts['data'] ),
+							(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 							( $indicators ) ? '<ol class="carousel-indicators">' . implode( $indicators ) . '</ol>' : '',
 							'carousel-inner',
 							$content,
@@ -1155,8 +1239,8 @@ class Shortcodes {
 			$return = Utilities::bs_output(
 				sprintf(
 					'<div class="%s"%s>%s</div>',
-					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-					Utilities::parse_data_attributes( $atts['data'] ),
+					Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+					(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 					do_shortcode( $content )
 				)
 			);
@@ -1417,9 +1501,9 @@ class Shortcodes {
 								<span class="progress-bar" style="width: %2$s%;"></span>
 							</div>
 						</progress>',
-					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-					$atts['value'],
-					Utilities::parse_data_attributes( $atts['data'] )
+						Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+						$atts['value'],
+						(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null
 				)
 			);
 
@@ -1449,8 +1533,8 @@ class Shortcodes {
 			$return = Utilities::bs_output(
 				sprintf(
 					'<span class="%s" %s>%s</span>',
-					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-					Utilities::parse_data_attributes( $atts['data'] ),
+					Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+					(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 					do_shortcode( $content )
 				)
 			);
@@ -1562,8 +1646,8 @@ class Shortcodes {
 				sprintf(
 					'<div id="%s" class="%s" role="tablist" aria-multiselectable="true" %s>%s</div>',
 					$id,
-					Utilities::class_output(__FUNCTION__, $class, $atts['class']),
-					Utilities::parse_data_attributes( $atts['data'] ),
+					Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+					(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 					do_shortcode( $content )
 				)
 			);

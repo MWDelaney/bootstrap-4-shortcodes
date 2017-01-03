@@ -35,6 +35,4 @@ require __DIR__ . '/vendor/autoload.php';
  }
  add_action('init', '\MWD\BS4Shortcodes\custom_rewrite_rule', 10, 0);
 
-
-use Init;
-$init = new \MWD\BS4Shortcodes\Init();
+$bootstrap_4_shortcodes = new \MWD\BS4Shortcodes\Init();

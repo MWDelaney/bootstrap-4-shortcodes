@@ -1,12 +1,20 @@
 {{#sections}}
 <h1>{{title}}</h1>
 {{#items}}
+<section id="{{id}}">
 <h2>{{title}}</h2>
 {{#note}}<p>{{{note}}}</p>{{/note}}
 {{#examples}}
 	{{#note}}<p>{{{note}}}</p>{{/note}}
-	<pre><code>{{code}}</code></pre>
-	<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm insert-code">Insert Example</button>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>{{code}}</code></pre>
+		</div>
+		<div class="card-footer">
+			{{description}}
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
 {{/examples}}
 
 {{#shortcodes}}
@@ -51,5 +59,6 @@
 	</tbody>
 </table>
 {{/shortcodes}}
+</section>
 {{/items}}
 {{/sections}}

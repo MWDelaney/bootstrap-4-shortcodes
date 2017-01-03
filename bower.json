@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.4"
+    "bootstrap": "v4.0.0-alpha.5"
   },
 	"overrides": {
     "bootstrap": {

@@ -1,13 +1,14 @@
 #bootstrap-4-shortcodes-help {
   /*!
- * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
+ * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-  /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */ }
+  /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */ }
   #bootstrap-4-shortcodes-help html {
     font-family: sans-serif;
+    line-height: 1.15;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%; }
   #bootstrap-4-shortcodes-help body {
@@ -39,7 +40,8 @@
   #bootstrap-4-shortcodes-help [hidden] {
     display: none; }
   #bootstrap-4-shortcodes-help a {
-    background-color: transparent; }
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects; }
   #bootstrap-4-shortcodes-help a:active,
   #bootstrap-4-shortcodes-help a:hover {
     outline-width: 0; }
@@ -91,41 +93,34 @@
     overflow: visible; }
   #bootstrap-4-shortcodes-help button,
   #bootstrap-4-shortcodes-help input,
+  #bootstrap-4-shortcodes-help optgroup,
   #bootstrap-4-shortcodes-help select,
   #bootstrap-4-shortcodes-help textarea {
-    font: inherit; }
+    font: inherit;
+    margin: 0; }
   #bootstrap-4-shortcodes-help optgroup {
     font-weight: bold; }
   #bootstrap-4-shortcodes-help button,
-  #bootstrap-4-shortcodes-help input,
-  #bootstrap-4-shortcodes-help select {
+  #bootstrap-4-shortcodes-help input {
     overflow: visible; }
-  #bootstrap-4-shortcodes-help button,
-  #bootstrap-4-shortcodes-help input,
-  #bootstrap-4-shortcodes-help select,
-  #bootstrap-4-shortcodes-help textarea {
-    margin: 0; }
   #bootstrap-4-shortcodes-help button,
   #bootstrap-4-shortcodes-help select {
     text-transform: none; }
-  #bootstrap-4-shortcodes-help button,
-  #bootstrap-4-shortcodes-help [type="button"],
-  #bootstrap-4-shortcodes-help [type="reset"],
-  #bootstrap-4-shortcodes-help [type="submit"] {
-    cursor: pointer; }
-  #bootstrap-4-shortcodes-help [disabled] {
-    cursor: default; }
   #bootstrap-4-shortcodes-help button,
   #bootstrap-4-shortcodes-help html [type="button"],
   #bootstrap-4-shortcodes-help [type="reset"],
   #bootstrap-4-shortcodes-help [type="submit"] {
     -webkit-appearance: button; }
   #bootstrap-4-shortcodes-help button::-moz-focus-inner,
-  #bootstrap-4-shortcodes-help input::-moz-focus-inner {
-    border: 0;
+  #bootstrap-4-shortcodes-help [type="button"]::-moz-focus-inner,
+  #bootstrap-4-shortcodes-help [type="reset"]::-moz-focus-inner,
+  #bootstrap-4-shortcodes-help [type="submit"]::-moz-focus-inner {
+    border-style: none;
     padding: 0; }
   #bootstrap-4-shortcodes-help button:-moz-focusring,
-  #bootstrap-4-shortcodes-help input:-moz-focusring {
+  #bootstrap-4-shortcodes-help [type="button"]:-moz-focusring,
+  #bootstrap-4-shortcodes-help [type="reset"]:-moz-focusring,
+  #bootstrap-4-shortcodes-help [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText; }
   #bootstrap-4-shortcodes-help fieldset {
     border: 1px solid #c0c0c0;
@@ -148,16 +143,26 @@
   #bootstrap-4-shortcodes-help [type="number"]::-webkit-outer-spin-button {
     height: auto; }
   #bootstrap-4-shortcodes-help [type="search"] {
-    -webkit-appearance: textfield; }
+    -webkit-appearance: textfield;
+    outline-offset: -2px; }
   #bootstrap-4-shortcodes-help [type="search"]::-webkit-search-cancel-button,
   #bootstrap-4-shortcodes-help [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none; }
+  #bootstrap-4-shortcodes-help ::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54; }
+  #bootstrap-4-shortcodes-help ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit; }
   @media print {
     #bootstrap-4-shortcodes-help *,
     #bootstrap-4-shortcodes-help *::before,
     #bootstrap-4-shortcodes-help *::after,
     #bootstrap-4-shortcodes-help *::first-letter,
-    #bootstrap-4-shortcodes-help *::first-line {
+    #bootstrap-4-shortcodes-help p::first-line,
+    #bootstrap-4-shortcodes-help div::first-line,
+    #bootstrap-4-shortcodes-help blockquote::first-line,
+    #bootstrap-4-shortcodes-help li::first-line {
       text-shadow: none !important;
       box-shadow: none !important; }
     #bootstrap-4-shortcodes-help a,
@@ -165,6 +170,8 @@
       text-decoration: underline; }
     #bootstrap-4-shortcodes-help abbr[title]::after {
       content: " (" attr(title) ")"; }
+    #bootstrap-4-shortcodes-help pre {
+      white-space: pre-wrap !important; }
     #bootstrap-4-shortcodes-help pre,
     #bootstrap-4-shortcodes-help blockquote {
       border: 1px solid #999;
@@ -307,9 +314,7 @@
   #bootstrap-4-shortcodes-help button,
   #bootstrap-4-shortcodes-help select,
   #bootstrap-4-shortcodes-help textarea {
-    margin: 0;
-    line-height: inherit;
-    border-radius: 0; }
+    line-height: inherit; }
   #bootstrap-4-shortcodes-help input[type="radio"]:disabled,
   #bootstrap-4-shortcodes-help input[type="checkbox"]:disabled {
     cursor: not-allowed; }
@@ -422,22 +427,16 @@
   #bootstrap-4-shortcodes-help dl.row > dd + dt {
     clear: left; }
   #bootstrap-4-shortcodes-help .img-fluid, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item > img, #bootstrap-4-shortcodes-help .carousel-inner > .carousel-item > a > img {
-    display: block;
     max-width: 100%;
     height: auto; }
-  #bootstrap-4-shortcodes-help .img-rounded {
-    border-radius: 0.3rem; }
   #bootstrap-4-shortcodes-help .img-thumbnail {
     padding: 0.25rem;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 0.25rem;
     transition: all .2s ease-in-out;
-    display: inline-block;
     max-width: 100%;
     height: auto; }
-  #bootstrap-4-shortcodes-help .img-circle {
-    border-radius: 50%; }
   #bootstrap-4-shortcodes-help .figure {
     display: inline-block; }
   #bootstrap-4-shortcodes-help .figure-img {
@@ -491,18 +490,22 @@
       content: "";
       display: table;
       clear: both; }
-    @media (min-width: 544px) {
+    @media (min-width: 576px) {
       #bootstrap-4-shortcodes-help .container {
-        max-width: 576px; } }
+        width: 540px;
+        max-width: 100%; } }
     @media (min-width: 768px) {
       #bootstrap-4-shortcodes-help .container {
-        max-width: 720px; } }
+        width: 720px;
+        max-width: 100%; } }
     @media (min-width: 992px) {
       #bootstrap-4-shortcodes-help .container {
-        max-width: 940px; } }
+        width: 960px;
+        max-width: 100%; } }
     @media (min-width: 1200px) {
       #bootstrap-4-shortcodes-help .container {
-        max-width: 1140px; } }
+        width: 1140px;
+        max-width: 100%; } }
   #bootstrap-4-shortcodes-help .container-fluid {
     margin-left: auto;
     margin-right: auto;
@@ -513,17 +516,49 @@
       display: table;
       clear: both; }
   #bootstrap-4-shortcodes-help .row {
-    margin-left: -15px;
-    margin-right: -15px; }
+    margin-right: -15px;
+    margin-left: -15px; }
     #bootstrap-4-shortcodes-help .row::after {
       content: "";
       display: table;
       clear: both; }
-  #bootstrap-4-shortcodes-help .col-xs-1, #bootstrap-4-shortcodes-help .col-xs-2, #bootstrap-4-shortcodes-help .col-xs-3, #bootstrap-4-shortcodes-help .col-xs-4, #bootstrap-4-shortcodes-help .col-xs-5, #bootstrap-4-shortcodes-help .col-xs-6, #bootstrap-4-shortcodes-help .col-xs-7, #bootstrap-4-shortcodes-help .col-xs-8, #bootstrap-4-shortcodes-help .col-xs-9, #bootstrap-4-shortcodes-help .col-xs-10, #bootstrap-4-shortcodes-help .col-xs-11, #bootstrap-4-shortcodes-help .col-xs-12, #bootstrap-4-shortcodes-help .col-sm-1, #bootstrap-4-shortcodes-help .col-sm-2, #bootstrap-4-shortcodes-help .col-sm-3, #bootstrap-4-shortcodes-help .col-sm-4, #bootstrap-4-shortcodes-help .col-sm-5, #bootstrap-4-shortcodes-help .col-sm-6, #bootstrap-4-shortcodes-help .col-sm-7, #bootstrap-4-shortcodes-help .col-sm-8, #bootstrap-4-shortcodes-help .col-sm-9, #bootstrap-4-shortcodes-help .col-sm-10, #bootstrap-4-shortcodes-help .col-sm-11, #bootstrap-4-shortcodes-help .col-sm-12, #bootstrap-4-shortcodes-help .col-md-1, #bootstrap-4-shortcodes-help .col-md-2, #bootstrap-4-shortcodes-help .col-md-3, #bootstrap-4-shortcodes-help .col-md-4, #bootstrap-4-shortcodes-help .col-md-5, #bootstrap-4-shortcodes-help .col-md-6, #bootstrap-4-shortcodes-help .col-md-7, #bootstrap-4-shortcodes-help .col-md-8, #bootstrap-4-shortcodes-help .col-md-9, #bootstrap-4-shortcodes-help .col-md-10, #bootstrap-4-shortcodes-help .col-md-11, #bootstrap-4-shortcodes-help .col-md-12, #bootstrap-4-shortcodes-help .col-lg-1, #bootstrap-4-shortcodes-help .col-lg-2, #bootstrap-4-shortcodes-help .col-lg-3, #bootstrap-4-shortcodes-help .col-lg-4, #bootstrap-4-shortcodes-help .col-lg-5, #bootstrap-4-shortcodes-help .col-lg-6, #bootstrap-4-shortcodes-help .col-lg-7, #bootstrap-4-shortcodes-help .col-lg-8, #bootstrap-4-shortcodes-help .col-lg-9, #bootstrap-4-shortcodes-help .col-lg-10, #bootstrap-4-shortcodes-help .col-lg-11, #bootstrap-4-shortcodes-help .col-lg-12, #bootstrap-4-shortcodes-help .col-xl-1, #bootstrap-4-shortcodes-help .col-xl-2, #bootstrap-4-shortcodes-help .col-xl-3, #bootstrap-4-shortcodes-help .col-xl-4, #bootstrap-4-shortcodes-help .col-xl-5, #bootstrap-4-shortcodes-help .col-xl-6, #bootstrap-4-shortcodes-help .col-xl-7, #bootstrap-4-shortcodes-help .col-xl-8, #bootstrap-4-shortcodes-help .col-xl-9, #bootstrap-4-shortcodes-help .col-xl-10, #bootstrap-4-shortcodes-help .col-xl-11, #bootstrap-4-shortcodes-help .col-xl-12 {
+    @media (min-width: 576px) {
+      #bootstrap-4-shortcodes-help .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 768px) {
+      #bootstrap-4-shortcodes-help .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 992px) {
+      #bootstrap-4-shortcodes-help .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 1200px) {
+      #bootstrap-4-shortcodes-help .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+  #bootstrap-4-shortcodes-help .col-xs, #bootstrap-4-shortcodes-help .col-xs-1, #bootstrap-4-shortcodes-help .col-xs-2, #bootstrap-4-shortcodes-help .col-xs-3, #bootstrap-4-shortcodes-help .col-xs-4, #bootstrap-4-shortcodes-help .col-xs-5, #bootstrap-4-shortcodes-help .col-xs-6, #bootstrap-4-shortcodes-help .col-xs-7, #bootstrap-4-shortcodes-help .col-xs-8, #bootstrap-4-shortcodes-help .col-xs-9, #bootstrap-4-shortcodes-help .col-xs-10, #bootstrap-4-shortcodes-help .col-xs-11, #bootstrap-4-shortcodes-help .col-xs-12, #bootstrap-4-shortcodes-help .col-sm, #bootstrap-4-shortcodes-help .col-sm-1, #bootstrap-4-shortcodes-help .col-sm-2, #bootstrap-4-shortcodes-help .col-sm-3, #bootstrap-4-shortcodes-help .col-sm-4, #bootstrap-4-shortcodes-help .col-sm-5, #bootstrap-4-shortcodes-help .col-sm-6, #bootstrap-4-shortcodes-help .col-sm-7, #bootstrap-4-shortcodes-help .col-sm-8, #bootstrap-4-shortcodes-help .col-sm-9, #bootstrap-4-shortcodes-help .col-sm-10, #bootstrap-4-shortcodes-help .col-sm-11, #bootstrap-4-shortcodes-help .col-sm-12, #bootstrap-4-shortcodes-help .col-md, #bootstrap-4-shortcodes-help .col-md-1, #bootstrap-4-shortcodes-help .col-md-2, #bootstrap-4-shortcodes-help .col-md-3, #bootstrap-4-shortcodes-help .col-md-4, #bootstrap-4-shortcodes-help .col-md-5, #bootstrap-4-shortcodes-help .col-md-6, #bootstrap-4-shortcodes-help .col-md-7, #bootstrap-4-shortcodes-help .col-md-8, #bootstrap-4-shortcodes-help .col-md-9, #bootstrap-4-shortcodes-help .col-md-10, #bootstrap-4-shortcodes-help .col-md-11, #bootstrap-4-shortcodes-help .col-md-12, #bootstrap-4-shortcodes-help .col-lg, #bootstrap-4-shortcodes-help .col-lg-1, #bootstrap-4-shortcodes-help .col-lg-2, #bootstrap-4-shortcodes-help .col-lg-3, #bootstrap-4-shortcodes-help .col-lg-4, #bootstrap-4-shortcodes-help .col-lg-5, #bootstrap-4-shortcodes-help .col-lg-6, #bootstrap-4-shortcodes-help .col-lg-7, #bootstrap-4-shortcodes-help .col-lg-8, #bootstrap-4-shortcodes-help .col-lg-9, #bootstrap-4-shortcodes-help .col-lg-10, #bootstrap-4-shortcodes-help .col-lg-11, #bootstrap-4-shortcodes-help .col-lg-12, #bootstrap-4-shortcodes-help .col-xl, #bootstrap-4-shortcodes-help .col-xl-1, #bootstrap-4-shortcodes-help .col-xl-2, #bootstrap-4-shortcodes-help .col-xl-3, #bootstrap-4-shortcodes-help .col-xl-4, #bootstrap-4-shortcodes-help .col-xl-5, #bootstrap-4-shortcodes-help .col-xl-6, #bootstrap-4-shortcodes-help .col-xl-7, #bootstrap-4-shortcodes-help .col-xl-8, #bootstrap-4-shortcodes-help .col-xl-9, #bootstrap-4-shortcodes-help .col-xl-10, #bootstrap-4-shortcodes-help .col-xl-11, #bootstrap-4-shortcodes-help .col-xl-12 {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px; }
+    @media (min-width: 576px) {
+      #bootstrap-4-shortcodes-help .col-xs, #bootstrap-4-shortcodes-help .col-xs-1, #bootstrap-4-shortcodes-help .col-xs-2, #bootstrap-4-shortcodes-help .col-xs-3, #bootstrap-4-shortcodes-help .col-xs-4, #bootstrap-4-shortcodes-help .col-xs-5, #bootstrap-4-shortcodes-help .col-xs-6, #bootstrap-4-shortcodes-help .col-xs-7, #bootstrap-4-shortcodes-help .col-xs-8, #bootstrap-4-shortcodes-help .col-xs-9, #bootstrap-4-shortcodes-help .col-xs-10, #bootstrap-4-shortcodes-help .col-xs-11, #bootstrap-4-shortcodes-help .col-xs-12, #bootstrap-4-shortcodes-help .col-sm, #bootstrap-4-shortcodes-help .col-sm-1, #bootstrap-4-shortcodes-help .col-sm-2, #bootstrap-4-shortcodes-help .col-sm-3, #bootstrap-4-shortcodes-help .col-sm-4, #bootstrap-4-shortcodes-help .col-sm-5, #bootstrap-4-shortcodes-help .col-sm-6, #bootstrap-4-shortcodes-help .col-sm-7, #bootstrap-4-shortcodes-help .col-sm-8, #bootstrap-4-shortcodes-help .col-sm-9, #bootstrap-4-shortcodes-help .col-sm-10, #bootstrap-4-shortcodes-help .col-sm-11, #bootstrap-4-shortcodes-help .col-sm-12, #bootstrap-4-shortcodes-help .col-md, #bootstrap-4-shortcodes-help .col-md-1, #bootstrap-4-shortcodes-help .col-md-2, #bootstrap-4-shortcodes-help .col-md-3, #bootstrap-4-shortcodes-help .col-md-4, #bootstrap-4-shortcodes-help .col-md-5, #bootstrap-4-shortcodes-help .col-md-6, #bootstrap-4-shortcodes-help .col-md-7, #bootstrap-4-shortcodes-help .col-md-8, #bootstrap-4-shortcodes-help .col-md-9, #bootstrap-4-shortcodes-help .col-md-10, #bootstrap-4-shortcodes-help .col-md-11, #bootstrap-4-shortcodes-help .col-md-12, #bootstrap-4-shortcodes-help .col-lg, #bootstrap-4-shortcodes-help .col-lg-1, #bootstrap-4-shortcodes-help .col-lg-2, #bootstrap-4-shortcodes-help .col-lg-3, #bootstrap-4-shortcodes-help .col-lg-4, #bootstrap-4-shortcodes-help .col-lg-5, #bootstrap-4-shortcodes-help .col-lg-6, #bootstrap-4-shortcodes-help .col-lg-7, #bootstrap-4-shortcodes-help .col-lg-8, #bootstrap-4-shortcodes-help .col-lg-9, #bootstrap-4-shortcodes-help .col-lg-10, #bootstrap-4-shortcodes-help .col-lg-11, #bootstrap-4-shortcodes-help .col-lg-12, #bootstrap-4-shortcodes-help .col-xl, #bootstrap-4-shortcodes-help .col-xl-1, #bootstrap-4-shortcodes-help .col-xl-2, #bootstrap-4-shortcodes-help .col-xl-3, #bootstrap-4-shortcodes-help .col-xl-4, #bootstrap-4-shortcodes-help .col-xl-5, #bootstrap-4-shortcodes-help .col-xl-6, #bootstrap-4-shortcodes-help .col-xl-7, #bootstrap-4-shortcodes-help .col-xl-8, #bootstrap-4-shortcodes-help .col-xl-9, #bootstrap-4-shortcodes-help .col-xl-10, #bootstrap-4-shortcodes-help .col-xl-11, #bootstrap-4-shortcodes-help .col-xl-12 {
+        padding-right: 15px;
+        padding-left: 15px; } }
+    @media (min-width: 768px) {
+      #bootstrap-4-shortcodes-help .col-xs, #bootstrap-4-shortcodes-help .col-xs-1, #bootstrap-4-shortcodes-help .col-xs-2, #bootstrap-4-shortcodes-help .col-xs-3, #bootstrap-4-shortcodes-help .col-xs-4, #bootstrap-4-shortcodes-help .col-xs-5, #bootstrap-4-shortcodes-help .col-xs-6, #bootstrap-4-shortcodes-help .col-xs-7, #bootstrap-4-shortcodes-help .col-xs-8, #bootstrap-4-shortcodes-help .col-xs-9, #bootstrap-4-shortcodes-help .col-xs-10, #bootstrap-4-shortcodes-help .col-xs-11, #bootstrap-4-shortcodes-help .col-xs-12, #bootstrap-4-shortcodes-help .col-sm, #bootstrap-4-shortcodes-help .col-sm-1, #bootstrap-4-shortcodes-help .col-sm-2, #bootstrap-4-shortcodes-help .col-sm-3, #bootstrap-4-shortcodes-help .col-sm-4, #bootstrap-4-shortcodes-help .col-sm-5, #bootstrap-4-shortcodes-help .col-sm-6, #bootstrap-4-shortcodes-help .col-sm-7, #bootstrap-4-shortcodes-help .col-sm-8, #bootstrap-4-shortcodes-help .col-sm-9, #bootstrap-4-shortcodes-help .col-sm-10, #bootstrap-4-shortcodes-help .col-sm-11, #bootstrap-4-shortcodes-help .col-sm-12, #bootstrap-4-shortcodes-help .col-md, #bootstrap-4-shortcodes-help .col-md-1, #bootstrap-4-shortcodes-help .col-md-2, #bootstrap-4-shortcodes-help .col-md-3, #bootstrap-4-shortcodes-help .col-md-4, #bootstrap-4-shortcodes-help .col-md-5, #bootstrap-4-shortcodes-help .col-md-6, #bootstrap-4-shortcodes-help .col-md-7, #bootstrap-4-shortcodes-help .col-md-8, #bootstrap-4-shortcodes-help .col-md-9, #bootstrap-4-shortcodes-help .col-md-10, #bootstrap-4-shortcodes-help .col-md-11, #bootstrap-4-shortcodes-help .col-md-12, #bootstrap-4-shortcodes-help .col-lg, #bootstrap-4-shortcodes-help .col-lg-1, #bootstrap-4-shortcodes-help .col-lg-2, #bootstrap-4-shortcodes-help .col-lg-3, #bootstrap-4-shortcodes-help .col-lg-4, #bootstrap-4-shortcodes-help .col-lg-5, #bootstrap-4-shortcodes-help .col-lg-6, #bootstrap-4-shortcodes-help .col-lg-7, #bootstrap-4-shortcodes-help .col-lg-8, #bootstrap-4-shortcodes-help .col-lg-9, #bootstrap-4-shortcodes-help .col-lg-10, #bootstrap-4-shortcodes-help .col-lg-11, #bootstrap-4-shortcodes-help .col-lg-12, #bootstrap-4-shortcodes-help .col-xl, #bootstrap-4-shortcodes-help .col-xl-1, #bootstrap-4-shortcodes-help .col-xl-2, #bootstrap-4-shortcodes-help .col-xl-3, #bootstrap-4-shortcodes-help .col-xl-4, #bootstrap-4-shortcodes-help .col-xl-5, #bootstrap-4-shortcodes-help .col-xl-6, #bootstrap-4-shortcodes-help .col-xl-7, #bootstrap-4-shortcodes-help .col-xl-8, #bootstrap-4-shortcodes-help .col-xl-9, #bootstrap-4-shortcodes-help .col-xl-10, #bootstrap-4-shortcodes-help .col-xl-11, #bootstrap-4-shortcodes-help .col-xl-12 {
+        padding-right: 15px;
+        padding-left: 15px; } }
+    @media (min-width: 992px) {
+      #bootstrap-4-shortcodes-help .col-xs, #bootstrap-4-shortcodes-help .col-xs-1, #bootstrap-4-shortcodes-help .col-xs-2, #bootstrap-4-shortcodes-help .col-xs-3, #bootstrap-4-shortcodes-help .col-xs-4, #bootstrap-4-shortcodes-help .col-xs-5, #bootstrap-4-shortcodes-help .col-xs-6, #bootstrap-4-shortcodes-help .col-xs-7, #bootstrap-4-shortcodes-help .col-xs-8, #bootstrap-4-shortcodes-help .col-xs-9, #bootstrap-4-shortcodes-help .col-xs-10, #bootstrap-4-shortcodes-help .col-xs-11, #bootstrap-4-shortcodes-help .col-xs-12, #bootstrap-4-shortcodes-help .col-sm, #bootstrap-4-shortcodes-help .col-sm-1, #bootstrap-4-shortcodes-help .col-sm-2, #bootstrap-4-shortcodes-help .col-sm-3, #bootstrap-4-shortcodes-help .col-sm-4, #bootstrap-4-shortcodes-help .col-sm-5, #bootstrap-4-shortcodes-help .col-sm-6, #bootstrap-4-shortcodes-help .col-sm-7, #bootstrap-4-shortcodes-help .col-sm-8, #bootstrap-4-shortcodes-help .col-sm-9, #bootstrap-4-shortcodes-help .col-sm-10, #bootstrap-4-shortcodes-help .col-sm-11, #bootstrap-4-shortcodes-help .col-sm-12, #bootstrap-4-shortcodes-help .col-md, #bootstrap-4-shortcodes-help .col-md-1, #bootstrap-4-shortcodes-help .col-md-2, #bootstrap-4-shortcodes-help .col-md-3, #bootstrap-4-shortcodes-help .col-md-4, #bootstrap-4-shortcodes-help .col-md-5, #bootstrap-4-shortcodes-help .col-md-6, #bootstrap-4-shortcodes-help .col-md-7, #bootstrap-4-shortcodes-help .col-md-8, #bootstrap-4-shortcodes-help .col-md-9, #bootstrap-4-shortcodes-help .col-md-10, #bootstrap-4-shortcodes-help .col-md-11, #bootstrap-4-shortcodes-help .col-md-12, #bootstrap-4-shortcodes-help .col-lg, #bootstrap-4-shortcodes-help .col-lg-1, #bootstrap-4-shortcodes-help .col-lg-2, #bootstrap-4-shortcodes-help .col-lg-3, #bootstrap-4-shortcodes-help .col-lg-4, #bootstrap-4-shortcodes-help .col-lg-5, #bootstrap-4-shortcodes-help .col-lg-6, #bootstrap-4-shortcodes-help .col-lg-7, #bootstrap-4-shortcodes-help .col-lg-8, #bootstrap-4-shortcodes-help .col-lg-9, #bootstrap-4-shortcodes-help .col-lg-10, #bootstrap-4-shortcodes-help .col-lg-11, #bootstrap-4-shortcodes-help .col-lg-12, #bootstrap-4-shortcodes-help .col-xl, #bootstrap-4-shortcodes-help .col-xl-1, #bootstrap-4-shortcodes-help .col-xl-2, #bootstrap-4-shortcodes-help .col-xl-3, #bootstrap-4-shortcodes-help .col-xl-4, #bootstrap-4-shortcodes-help .col-xl-5, #bootstrap-4-shortcodes-help .col-xl-6, #bootstrap-4-shortcodes-help .col-xl-7, #bootstrap-4-shortcodes-help .col-xl-8, #bootstrap-4-shortcodes-help .col-xl-9, #bootstrap-4-shortcodes-help .col-xl-10, #bootstrap-4-shortcodes-help .col-xl-11, #bootstrap-4-shortcodes-help .col-xl-12 {
+        padding-right: 15px;
+        padding-left: 15px; } }
+    @media (min-width: 1200px) {
+      #bootstrap-4-shortcodes-help .col-xs, #bootstrap-4-shortcodes-help .col-xs-1, #bootstrap-4-shortcodes-help .col-xs-2, #bootstrap-4-shortcodes-help .col-xs-3, #bootstrap-4-shortcodes-help .col-xs-4, #bootstrap-4-shortcodes-help .col-xs-5, #bootstrap-4-shortcodes-help .col-xs-6, #bootstrap-4-shortcodes-help .col-xs-7, #bootstrap-4-shortcodes-help .col-xs-8, #bootstrap-4-shortcodes-help .col-xs-9, #bootstrap-4-shortcodes-help .col-xs-10, #bootstrap-4-shortcodes-help .col-xs-11, #bootstrap-4-shortcodes-help .col-xs-12, #bootstrap-4-shortcodes-help .col-sm, #bootstrap-4-shortcodes-help .col-sm-1, #bootstrap-4-shortcodes-help .col-sm-2, #bootstrap-4-shortcodes-help .col-sm-3, #bootstrap-4-shortcodes-help .col-sm-4, #bootstrap-4-shortcodes-help .col-sm-5, #bootstrap-4-shortcodes-help .col-sm-6, #bootstrap-4-shortcodes-help .col-sm-7, #bootstrap-4-shortcodes-help .col-sm-8, #bootstrap-4-shortcodes-help .col-sm-9, #bootstrap-4-shortcodes-help .col-sm-10, #bootstrap-4-shortcodes-help .col-sm-11, #bootstrap-4-shortcodes-help .col-sm-12, #bootstrap-4-shortcodes-help .col-md, #bootstrap-4-shortcodes-help .col-md-1, #bootstrap-4-shortcodes-help .col-md-2, #bootstrap-4-shortcodes-help .col-md-3, #bootstrap-4-shortcodes-help .col-md-4, #bootstrap-4-shortcodes-help .col-md-5, #bootstrap-4-shortcodes-help .col-md-6, #bootstrap-4-shortcodes-help .col-md-7, #bootstrap-4-shortcodes-help .col-md-8, #bootstrap-4-shortcodes-help .col-md-9, #bootstrap-4-shortcodes-help .col-md-10, #bootstrap-4-shortcodes-help .col-md-11, #bootstrap-4-shortcodes-help .col-md-12, #bootstrap-4-shortcodes-help .col-lg, #bootstrap-4-shortcodes-help .col-lg-1, #bootstrap-4-shortcodes-help .col-lg-2, #bootstrap-4-shortcodes-help .col-lg-3, #bootstrap-4-shortcodes-help .col-lg-4, #bootstrap-4-shortcodes-help .col-lg-5, #bootstrap-4-shortcodes-help .col-lg-6, #bootstrap-4-shortcodes-help .col-lg-7, #bootstrap-4-shortcodes-help .col-lg-8, #bootstrap-4-shortcodes-help .col-lg-9, #bootstrap-4-shortcodes-help .col-lg-10, #bootstrap-4-shortcodes-help .col-lg-11, #bootstrap-4-shortcodes-help .col-lg-12, #bootstrap-4-shortcodes-help .col-xl, #bootstrap-4-shortcodes-help .col-xl-1, #bootstrap-4-shortcodes-help .col-xl-2, #bootstrap-4-shortcodes-help .col-xl-3, #bootstrap-4-shortcodes-help .col-xl-4, #bootstrap-4-shortcodes-help .col-xl-5, #bootstrap-4-shortcodes-help .col-xl-6, #bootstrap-4-shortcodes-help .col-xl-7, #bootstrap-4-shortcodes-help .col-xl-8, #bootstrap-4-shortcodes-help .col-xl-9, #bootstrap-4-shortcodes-help .col-xl-10, #bootstrap-4-shortcodes-help .col-xl-11, #bootstrap-4-shortcodes-help .col-xl-12 {
+        padding-right: 15px;
+        padding-left: 15px; } }
   #bootstrap-4-shortcodes-help .col-xs-1 {
     float: left;
     width: 8.33333%; }
@@ -634,7 +669,7 @@
     margin-left: 83.33333%; }
   #bootstrap-4-shortcodes-help .offset-xs-11 {
     margin-left: 91.66667%; }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .col-sm-1 {
       float: left;
       width: 8.33333%; }
@@ -1180,7 +1215,7 @@
   #bootstrap-4-shortcodes-help .table-responsive {
     display: block;
     width: 100%;
-    min-height: .01%;
+    min-height: 0%;
     overflow-x: auto; }
   #bootstrap-4-shortcodes-help .table-reflow thead {
     float: left; }
@@ -1236,7 +1271,7 @@
     #bootstrap-4-shortcodes-help .form-control:disabled {
       cursor: not-allowed; }
   #bootstrap-4-shortcodes-help select.form-control:not([size]):not([multiple]) {
-    height: 2.5rem; }
+    height: calc(2.5rem - 2px); }
   #bootstrap-4-shortcodes-help select.form-control:focus::-ms-value {
     color: #55595c;
     background-color: #fff; }
@@ -1261,10 +1296,11 @@
     margin-bottom: 0;
     font-size: 1rem; }
   #bootstrap-4-shortcodes-help .form-control-static {
-    min-height: 2.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    margin-bottom: 0; }
+    line-height: 1.25;
+    border: solid transparent;
+    border-width: 1px 0; }
     #bootstrap-4-shortcodes-help .form-control-static.form-control-sm, #bootstrap-4-shortcodes-help .input-group-sm > .form-control-static.form-control, #bootstrap-4-shortcodes-help .input-group-sm > .form-control-static.input-group-addon, #bootstrap-4-shortcodes-help .input-group-sm > .input-group-btn > .form-control-static.btn, #bootstrap-4-shortcodes-help .form-control-static.form-control-lg, #bootstrap-4-shortcodes-help .input-group-lg > .form-control-static.form-control, #bootstrap-4-shortcodes-help .input-group-lg > .form-control-static.input-group-addon, #bootstrap-4-shortcodes-help .input-group-lg > .input-group-btn > .form-control-static.btn {
       padding-right: 0;
       padding-left: 0; }
@@ -1314,6 +1350,7 @@
     #bootstrap-4-shortcodes-help .form-check-inline + .form-check-inline {
       margin-left: .75rem; }
     #bootstrap-4-shortcodes-help .form-check-inline.disabled {
+      color: #818a91;
       cursor: not-allowed; }
   #bootstrap-4-shortcodes-help .form-control-feedback {
     margin-top: 0.25rem; }
@@ -1332,14 +1369,14 @@
     color: #5cb85c; }
   #bootstrap-4-shortcodes-help .has-success .form-control {
     border-color: #5cb85c; }
+    #bootstrap-4-shortcodes-help .has-success .form-control:focus {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #a3d7a3; }
   #bootstrap-4-shortcodes-help .has-success .input-group-addon {
     color: #5cb85c;
     border-color: #5cb85c;
     background-color: #eaf6ea; }
-  #bootstrap-4-shortcodes-help .has-success .form-control-feedback {
-    color: #5cb85c; }
   #bootstrap-4-shortcodes-help .has-success .form-control-success {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#5cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"); }
   #bootstrap-4-shortcodes-help .has-warning .form-control-feedback,
   #bootstrap-4-shortcodes-help .has-warning .form-control-label,
   #bootstrap-4-shortcodes-help .has-warning .form-check-label,
@@ -1348,14 +1385,14 @@
     color: #f0ad4e; }
   #bootstrap-4-shortcodes-help .has-warning .form-control {
     border-color: #f0ad4e; }
+    #bootstrap-4-shortcodes-help .has-warning .form-control:focus {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f8d9ac; }
   #bootstrap-4-shortcodes-help .has-warning .input-group-addon {
     color: #f0ad4e;
     border-color: #f0ad4e;
     background-color: white; }
-  #bootstrap-4-shortcodes-help .has-warning .form-control-feedback {
-    color: #f0ad4e; }
   #bootstrap-4-shortcodes-help .has-warning .form-control-warning {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23f0ad4e' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#f0ad4e' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"); }
   #bootstrap-4-shortcodes-help .has-danger .form-control-feedback,
   #bootstrap-4-shortcodes-help .has-danger .form-control-label,
   #bootstrap-4-shortcodes-help .has-danger .form-check-label,
@@ -1364,15 +1401,15 @@
     color: #d9534f; }
   #bootstrap-4-shortcodes-help .has-danger .form-control {
     border-color: #d9534f; }
+    #bootstrap-4-shortcodes-help .has-danger .form-control:focus {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #eba5a3; }
   #bootstrap-4-shortcodes-help .has-danger .input-group-addon {
     color: #d9534f;
     border-color: #d9534f;
     background-color: #fdf7f7; }
-  #bootstrap-4-shortcodes-help .has-danger .form-control-feedback {
-    color: #d9534f; }
   #bootstrap-4-shortcodes-help .has-danger .form-control-danger {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"); }
-  @media (min-width: 544px) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"); }
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .form-inline .form-group {
       display: inline-block;
       margin-bottom: 0;
@@ -1385,6 +1422,7 @@
       display: inline-block; }
     #bootstrap-4-shortcodes-help .form-inline .input-group {
       display: inline-table;
+      width: auto;
       vertical-align: middle; }
       #bootstrap-4-shortcodes-help .form-inline .input-group .input-group-addon,
       #bootstrap-4-shortcodes-help .form-inline .input-group .input-group-btn,
@@ -1839,6 +1877,10 @@
     display: none; }
     #bootstrap-4-shortcodes-help .collapse.in {
       display: block; }
+  #bootstrap-4-shortcodes-help tr.collapse.in {
+    display: table-row; }
+  #bootstrap-4-shortcodes-help tbody.collapse.in {
+    display: table-row-group; }
   #bootstrap-4-shortcodes-help .collapsing {
     position: relative;
     height: 0;
@@ -1871,9 +1913,9 @@
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
     font-size: 1rem;
     color: #373a3c;
     text-align: left;
@@ -1890,7 +1932,7 @@
   #bootstrap-4-shortcodes-help .dropdown-item {
     display: block;
     width: 100%;
-    padding: 3px 20px;
+    padding: 3px 1.5rem;
     clear: both;
     font-weight: normal;
     color: #373a3c;
@@ -1927,7 +1969,8 @@
     left: 0; }
   #bootstrap-4-shortcodes-help .dropdown-header {
     display: block;
-    padding: 5px 20px;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 0;
     font-size: 0.875rem;
     color: #818a91;
     white-space: nowrap; }
@@ -1947,7 +1990,7 @@
   #bootstrap-4-shortcodes-help .navbar-fixed-bottom .dropdown .dropdown-menu {
     top: auto;
     bottom: 100%;
-    margin-bottom: 2px; }
+    margin-bottom: 0.125rem; }
   #bootstrap-4-shortcodes-help .btn-group,
   #bootstrap-4-shortcodes-help .btn-group-vertical {
     position: relative;
@@ -1956,7 +1999,8 @@
     #bootstrap-4-shortcodes-help .btn-group > .btn,
     #bootstrap-4-shortcodes-help .btn-group-vertical > .btn {
       position: relative;
-      float: left; }
+      float: left;
+      margin-bottom: 0; }
       #bootstrap-4-shortcodes-help .btn-group > .btn:focus, #bootstrap-4-shortcodes-help .btn-group > .btn:active, #bootstrap-4-shortcodes-help .btn-group > .btn.active,
       #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:focus,
       #bootstrap-4-shortcodes-help .btn-group-vertical > .btn:active,
@@ -2163,7 +2207,7 @@
         z-index: 3; }
   #bootstrap-4-shortcodes-help .custom-control {
     position: relative;
-    display: inline;
+    display: inline-block;
     padding-left: 1.5rem;
     cursor: pointer; }
     #bootstrap-4-shortcodes-help .custom-control + .custom-control {
@@ -2188,7 +2232,7 @@
       cursor: not-allowed; }
   #bootstrap-4-shortcodes-help .custom-control-indicator {
     position: absolute;
-    top: .0625rem;
+    top: .25rem;
     left: 0;
     display: block;
     width: 1rem;
@@ -2202,30 +2246,28 @@
   #bootstrap-4-shortcodes-help .custom-checkbox .custom-control-indicator {
     border-radius: 0.25rem; }
   #bootstrap-4-shortcodes-help .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
   #bootstrap-4-shortcodes-help .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
     background-color: #0074d9;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#fff' d='M0 2h4'/%3E%3C/svg%3E"); }
   #bootstrap-4-shortcodes-help .custom-radio .custom-control-indicator {
     border-radius: 50%; }
   #bootstrap-4-shortcodes-help .custom-radio .custom-control-input:checked ~ .custom-control-indicator {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#fff'/%3E%3C/svg%3E"); }
   #bootstrap-4-shortcodes-help .custom-controls-stacked .custom-control {
-    display: inline; }
-    #bootstrap-4-shortcodes-help .custom-controls-stacked .custom-control::after {
-      display: block;
-      margin-bottom: 0.25rem;
-      content: ""; }
+    float: left;
+    clear: left; }
     #bootstrap-4-shortcodes-help .custom-controls-stacked .custom-control + .custom-control {
       margin-left: 0; }
   #bootstrap-4-shortcodes-help .custom-select {
     display: inline-block;
     max-width: 100%;
+    height: calc(2.5rem - 2px);
     padding: 0.375rem 1.75rem 0.375rem 0.75rem;
     padding-right: 0.75rem \9;
     color: #55595c;
     vertical-align: middle;
-    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
     background-image: none \9;
     background-size: 8px 10px;
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -2381,12 +2423,12 @@
       content: "";
       display: table;
       clear: both; }
-    @media (min-width: 544px) {
+    @media (min-width: 576px) {
       #bootstrap-4-shortcodes-help .navbar {
         border-radius: 0.25rem; } }
   #bootstrap-4-shortcodes-help .navbar-full {
     z-index: 1000; }
-    @media (min-width: 544px) {
+    @media (min-width: 576px) {
       #bootstrap-4-shortcodes-help .navbar-full {
         border-radius: 0; } }
   #bootstrap-4-shortcodes-help .navbar-fixed-top,
@@ -2395,7 +2437,7 @@
     right: 0;
     left: 0;
     z-index: 1030; }
-    @media (min-width: 544px) {
+    @media (min-width: 576px) {
       #bootstrap-4-shortcodes-help .navbar-fixed-top,
       #bootstrap-4-shortcodes-help .navbar-fixed-bottom {
         border-radius: 0; } }
@@ -2408,7 +2450,7 @@
     top: 0;
     z-index: 1030;
     width: 100%; }
-    @media (min-width: 544px) {
+    @media (min-width: 576px) {
       #bootstrap-4-shortcodes-help .navbar-sticky-top {
         border-radius: 0; } }
   #bootstrap-4-shortcodes-help .navbar-brand {
@@ -2416,30 +2458,129 @@
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     margin-right: 1rem;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    line-height: inherit; }
     #bootstrap-4-shortcodes-help .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-brand:hover {
       text-decoration: none; }
-    #bootstrap-4-shortcodes-help .navbar-brand > img {
-      display: block; }
   #bootstrap-4-shortcodes-help .navbar-divider {
     float: left;
     width: 1px;
-    padding-top: .425rem;
-    padding-bottom: .425rem;
+    padding-top: 0.425rem;
+    padding-bottom: 0.425rem;
     margin-right: 1rem;
     margin-left: 1rem;
     overflow: hidden; }
     #bootstrap-4-shortcodes-help .navbar-divider::before {
       content: "\00a0"; }
+  #bootstrap-4-shortcodes-help .navbar-text {
+    display: inline-block;
+    padding-top: .425rem;
+    padding-bottom: .425rem; }
   #bootstrap-4-shortcodes-help .navbar-toggler {
-    padding: .5rem .75rem;
+    width: 2.5em;
+    height: 2em;
+    padding: 0.5rem 0.75rem;
     font-size: 1.25rem;
     line-height: 1;
-    background: none;
+    background: transparent no-repeat center center;
+    background-size: 24px 24px;
     border: 1px solid transparent;
     border-radius: 0.25rem; }
     #bootstrap-4-shortcodes-help .navbar-toggler:focus, #bootstrap-4-shortcodes-help .navbar-toggler:hover {
       text-decoration: none; }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-xs::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 575px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xs .navbar-brand {
+      display: block;
+      float: none;
+      margin-top: .5rem;
+      margin-right: 0; }
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xs .navbar-nav {
+      margin-top: .5rem;
+      margin-bottom: .5rem; }
+      #bootstrap-4-shortcodes-help .navbar-toggleable-xs .navbar-nav .dropdown-menu {
+        position: static;
+        float: none; } }
+  @media (min-width: 576px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xs {
+      display: block; } }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-sm::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 767px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-sm .navbar-brand {
+      display: block;
+      float: none;
+      margin-top: .5rem;
+      margin-right: 0; }
+    #bootstrap-4-shortcodes-help .navbar-toggleable-sm .navbar-nav {
+      margin-top: .5rem;
+      margin-bottom: .5rem; }
+      #bootstrap-4-shortcodes-help .navbar-toggleable-sm .navbar-nav .dropdown-menu {
+        position: static;
+        float: none; } }
+  @media (min-width: 768px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-sm {
+      display: block; } }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-md::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 991px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-md .navbar-brand {
+      display: block;
+      float: none;
+      margin-top: .5rem;
+      margin-right: 0; }
+    #bootstrap-4-shortcodes-help .navbar-toggleable-md .navbar-nav {
+      margin-top: .5rem;
+      margin-bottom: .5rem; }
+      #bootstrap-4-shortcodes-help .navbar-toggleable-md .navbar-nav .dropdown-menu {
+        position: static;
+        float: none; } }
+  @media (min-width: 992px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-md {
+      display: block; } }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-lg::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 1199px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-lg .navbar-brand {
+      display: block;
+      float: none;
+      margin-top: .5rem;
+      margin-right: 0; }
+    #bootstrap-4-shortcodes-help .navbar-toggleable-lg .navbar-nav {
+      margin-top: .5rem;
+      margin-bottom: .5rem; }
+      #bootstrap-4-shortcodes-help .navbar-toggleable-lg .navbar-nav .dropdown-menu {
+        position: static;
+        float: none; } }
+  @media (min-width: 1200px) {
+    #bootstrap-4-shortcodes-help .navbar-toggleable-lg {
+      display: block; } }
+  #bootstrap-4-shortcodes-help .navbar-toggleable-xl {
+    display: block; }
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xl::after {
+      content: "";
+      display: table;
+      clear: both; }
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xl .navbar-brand {
+      display: block;
+      float: none;
+      margin-top: .5rem;
+      margin-right: 0; }
+    #bootstrap-4-shortcodes-help .navbar-toggleable-xl .navbar-nav {
+      margin-top: .5rem;
+      margin-bottom: .5rem; }
+      #bootstrap-4-shortcodes-help .navbar-toggleable-xl .navbar-nav .dropdown-menu {
+        position: static;
+        float: none; }
   #bootstrap-4-shortcodes-help .navbar-nav .nav-item {
     float: left; }
   #bootstrap-4-shortcodes-help .navbar-nav .nav-link {
@@ -2450,14 +2591,17 @@
       margin-left: 1rem; }
   #bootstrap-4-shortcodes-help .navbar-nav .nav-item + .nav-item {
     margin-left: 1rem; }
-  #bootstrap-4-shortcodes-help .navbar-light .navbar-brand {
-    color: rgba(0, 0, 0, 0.8); }
-    #bootstrap-4-shortcodes-help .navbar-light .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-light .navbar-brand:hover {
-      color: rgba(0, 0, 0, 0.8); }
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-brand,
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0.9); }
+    #bootstrap-4-shortcodes-help .navbar-light .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-light .navbar-brand:hover,
+    #bootstrap-4-shortcodes-help .navbar-light .navbar-toggler:focus,
+    #bootstrap-4-shortcodes-help .navbar-light .navbar-toggler:hover {
+      color: rgba(0, 0, 0, 0.9); }
   #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.3); }
+    color: rgba(0, 0, 0, 0.5); }
     #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link:focus, #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link:hover {
-      color: rgba(0, 0, 0, 0.6); }
+      color: rgba(0, 0, 0, 0.7); }
   #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .open > .nav-link, #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .open > .nav-link:focus, #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .open > .nav-link:hover,
   #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .active > .nav-link,
   #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .active > .nav-link:focus,
@@ -2468,12 +2612,18 @@
   #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.active,
   #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.active:focus,
   #bootstrap-4-shortcodes-help .navbar-light .navbar-nav .nav-link.active:hover {
-    color: rgba(0, 0, 0, 0.8); }
+    color: rgba(0, 0, 0, 0.9); }
+  #bootstrap-4-shortcodes-help .navbar-light .navbar-toggler {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    border-color: rgba(0, 0, 0, 0.1); }
   #bootstrap-4-shortcodes-help .navbar-light .navbar-divider {
     background-color: rgba(0, 0, 0, 0.075); }
-  #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand {
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand,
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-toggler {
     color: white; }
-    #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand:hover {
+    #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand:focus, #bootstrap-4-shortcodes-help .navbar-dark .navbar-brand:hover,
+    #bootstrap-4-shortcodes-help .navbar-dark .navbar-toggler:focus,
+    #bootstrap-4-shortcodes-help .navbar-dark .navbar-toggler:hover {
       color: white; }
   #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.5); }
@@ -2490,17 +2640,20 @@
   #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.active:focus,
   #bootstrap-4-shortcodes-help .navbar-dark .navbar-nav .nav-link.active:hover {
     color: white; }
+  #bootstrap-4-shortcodes-help .navbar-dark .navbar-toggler {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    border-color: rgba(255, 255, 255, 0.1); }
   #bootstrap-4-shortcodes-help .navbar-dark .navbar-divider {
     background-color: rgba(255, 255, 255, 0.075); }
   #bootstrap-4-shortcodes-help .navbar-toggleable-xs::after {
     content: "";
     display: table;
     clear: both; }
-  @media (max-width: 543px) {
+  @media (max-width: 575px) {
     #bootstrap-4-shortcodes-help .navbar-toggleable-xs .navbar-nav .nav-item {
       float: none;
       margin-left: 0; } }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .navbar-toggleable-xs {
       display: block !important; } }
   #bootstrap-4-shortcodes-help .navbar-toggleable-sm::after {
@@ -2557,6 +2710,7 @@
     border-bottom-left-radius: 0.25rem; }
   #bootstrap-4-shortcodes-help .card-header {
     padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
     background-color: #f5f5f5;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
     #bootstrap-4-shortcodes-help .card-header::after {
@@ -2564,7 +2718,7 @@
       display: table;
       clear: both; }
     #bootstrap-4-shortcodes-help .card-header:first-child {
-      border-radius: 0.25rem 0.25rem 0 0; }
+      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
   #bootstrap-4-shortcodes-help .card-footer {
     padding: 0.75rem 1.25rem;
     background-color: #f5f5f5;
@@ -2574,7 +2728,7 @@
       display: table;
       clear: both; }
     #bootstrap-4-shortcodes-help .card-footer:last-child {
-      border-radius: 0 0 0.25rem 0.25rem; }
+      border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
   #bootstrap-4-shortcodes-help .card-header-tabs {
     margin-right: -0.625rem;
     margin-bottom: -0.75rem;
@@ -2651,7 +2805,7 @@
     margin-bottom: 0;
     border-left: 0; }
   #bootstrap-4-shortcodes-help .card-img {
-    border-radius: 0.25rem; }
+    border-radius: calc(0.25rem - 1px); }
   #bootstrap-4-shortcodes-help .card-img-overlay {
     position: absolute;
     top: 0;
@@ -2660,12 +2814,12 @@
     left: 0;
     padding: 1.25rem; }
   #bootstrap-4-shortcodes-help .card-img-top {
-    border-top-right-radius: 0.25rem;
-    border-top-left-radius: 0.25rem; }
+    border-top-right-radius: calc(0.25rem - 1px);
+    border-top-left-radius: calc(0.25rem - 1px); }
   #bootstrap-4-shortcodes-help .card-img-bottom {
-    border-bottom-right-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem; }
-  @media (min-width: 544px) {
+    border-bottom-right-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .card-deck {
       display: table;
       width: 100%;
@@ -2679,7 +2833,7 @@
     #bootstrap-4-shortcodes-help .card-deck-wrapper {
       margin-right: -1.25rem;
       margin-left: -1.25rem; } }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .card-group {
       display: table;
       width: 100%;
@@ -2709,11 +2863,12 @@
           #bootstrap-4-shortcodes-help .card-group .card:not(:first-child):not(:last-child) .card-img-top,
           #bootstrap-4-shortcodes-help .card-group .card:not(:first-child):not(:last-child) .card-img-bottom {
             border-radius: 0; } }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .card-columns {
       column-count: 3;
       column-gap: 1.25rem; }
       #bootstrap-4-shortcodes-help .card-columns .card {
+        display: inline-block;
         width: 100%; } }
   #bootstrap-4-shortcodes-help .breadcrumb {
     padding: 0.75rem 1rem;
@@ -2850,7 +3005,7 @@
     margin-bottom: 2rem;
     background-color: #eceeef;
     border-radius: 0.3rem; }
-    @media (min-width: 544px) {
+    @media (min-width: 576px) {
       #bootstrap-4-shortcodes-help .jumbotron {
         padding: 4rem 2rem; } }
   #bootstrap-4-shortcodes-help .jumbotron-hr {
@@ -2860,7 +3015,7 @@
     padding-left: 0;
     border-radius: 0; }
   #bootstrap-4-shortcodes-help .alert {
-    padding: 1rem;
+    padding: 0.75rem 1.25rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 0.25rem; }
@@ -2869,11 +3024,11 @@
   #bootstrap-4-shortcodes-help .alert-link {
     font-weight: bold; }
   #bootstrap-4-shortcodes-help .alert-dismissible {
-    padding-right: 2rem; }
+    padding-right: 2.5rem; }
     #bootstrap-4-shortcodes-help .alert-dismissible .close {
       position: relative;
       top: -.125rem;
-      right: -1rem;
+      right: -1.25rem;
       color: inherit; }
   #bootstrap-4-shortcodes-help .alert-success {
     background-color: #dff0d8;
@@ -3087,6 +3242,8 @@
       #bootstrap-4-shortcodes-help .list-group-item.active .list-group-item-text, #bootstrap-4-shortcodes-help .list-group-item.active:focus .list-group-item-text, #bootstrap-4-shortcodes-help .list-group-item.active:hover .list-group-item-text {
         color: #a8d6fe; }
   #bootstrap-4-shortcodes-help .list-group-flush .list-group-item {
+    border-right: 0;
+    border-left: 0;
     border-radius: 0; }
   #bootstrap-4-shortcodes-help .list-group-item-action {
     width: 100%;
@@ -3244,8 +3401,7 @@
     z-index: 1050;
     display: none;
     overflow: hidden;
-    outline: 0;
-    -webkit-overflow-scrolling: touch; }
+    outline: 0; }
     #bootstrap-4-shortcodes-help .modal.fade .modal-dialog {
       transition: transform .3s ease-out;
       transform: translate(0, -25%); }
@@ -3306,7 +3462,7 @@
     width: 50px;
     height: 50px;
     overflow: scroll; }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .modal-dialog {
       max-width: 600px;
       margin: 30px auto; }
@@ -3341,37 +3497,41 @@
     #bootstrap-4-shortcodes-help .tooltip.tooltip-top, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-bottom {
       padding: 5px 0;
       margin-top: -3px; }
-      #bootstrap-4-shortcodes-help .tooltip.tooltip-top .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-bottom .tooltip-arrow {
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-top .tooltip-inner::before, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-bottom .tooltip-inner::before {
         bottom: 0;
         left: 50%;
         margin-left: -5px;
+        content: "";
         border-width: 5px 5px 0;
         border-top-color: #000; }
     #bootstrap-4-shortcodes-help .tooltip.tooltip-right, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-left {
       padding: 0 5px;
       margin-left: 3px; }
-      #bootstrap-4-shortcodes-help .tooltip.tooltip-right .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-left .tooltip-arrow {
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-right .tooltip-inner::before, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-left .tooltip-inner::before {
         top: 50%;
         left: 0;
         margin-top: -5px;
+        content: "";
         border-width: 5px 5px 5px 0;
         border-right-color: #000; }
     #bootstrap-4-shortcodes-help .tooltip.tooltip-bottom, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-top {
       padding: 5px 0;
       margin-top: 3px; }
-      #bootstrap-4-shortcodes-help .tooltip.tooltip-bottom .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-top .tooltip-arrow {
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-bottom .tooltip-inner::before, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-top .tooltip-inner::before {
         top: 0;
         left: 50%;
         margin-left: -5px;
+        content: "";
         border-width: 0 5px 5px;
         border-bottom-color: #000; }
     #bootstrap-4-shortcodes-help .tooltip.tooltip-left, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-right {
       padding: 0 5px;
       margin-left: -3px; }
-      #bootstrap-4-shortcodes-help .tooltip.tooltip-left .tooltip-arrow, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-right .tooltip-arrow {
+      #bootstrap-4-shortcodes-help .tooltip.tooltip-left .tooltip-inner::before, #bootstrap-4-shortcodes-help .tooltip.bs-tether-element-attached-right .tooltip-inner::before {
         top: 50%;
         right: 0;
         margin-top: -5px;
+        content: "";
         border-width: 5px 0 5px 5px;
         border-left-color: #000; }
   #bootstrap-4-shortcodes-help .tooltip-inner {
@@ -3381,12 +3541,12 @@
     text-align: center;
     background-color: #000;
     border-radius: 0.25rem; }
-  #bootstrap-4-shortcodes-help .tooltip-arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid; }
+    #bootstrap-4-shortcodes-help .tooltip-inner::before {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid; }
   #bootstrap-4-shortcodes-help .popover {
     position: absolute;
     top: 0;
@@ -3417,60 +3577,65 @@
     border-radius: 0.3rem; }
     #bootstrap-4-shortcodes-help .popover.popover-top, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom {
       margin-top: -10px; }
-      #bootstrap-4-shortcodes-help .popover.popover-top .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom .popover-arrow {
-        bottom: -11px;
+      #bootstrap-4-shortcodes-help .popover.popover-top::before, #bootstrap-4-shortcodes-help .popover.popover-top::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom::after {
         left: 50%;
-        margin-left: -11px;
-        border-top-color: rgba(0, 0, 0, 0.25);
         border-bottom-width: 0; }
-        #bootstrap-4-shortcodes-help .popover.popover-top .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom .popover-arrow::after {
-          bottom: 1px;
-          margin-left: -10px;
-          content: "";
-          border-top-color: #fff;
-          border-bottom-width: 0; }
+      #bootstrap-4-shortcodes-help .popover.popover-top::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom::before {
+        bottom: -11px;
+        margin-left: -11px;
+        border-top-color: rgba(0, 0, 0, 0.25); }
+      #bootstrap-4-shortcodes-help .popover.popover-top::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-bottom::after {
+        bottom: -10px;
+        margin-left: -10px;
+        border-top-color: #fff; }
     #bootstrap-4-shortcodes-help .popover.popover-right, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left {
       margin-left: 10px; }
-      #bootstrap-4-shortcodes-help .popover.popover-right .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left .popover-arrow {
+      #bootstrap-4-shortcodes-help .popover.popover-right::before, #bootstrap-4-shortcodes-help .popover.popover-right::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left::after {
         top: 50%;
+        border-left-width: 0; }
+      #bootstrap-4-shortcodes-help .popover.popover-right::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left::before {
         left: -11px;
         margin-top: -11px;
-        border-right-color: rgba(0, 0, 0, 0.25);
-        border-left-width: 0; }
-        #bootstrap-4-shortcodes-help .popover.popover-right .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left .popover-arrow::after {
-          bottom: -10px;
-          left: 1px;
-          content: "";
-          border-right-color: #fff;
-          border-left-width: 0; }
+        border-right-color: rgba(0, 0, 0, 0.25); }
+      #bootstrap-4-shortcodes-help .popover.popover-right::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-left::after {
+        left: -10px;
+        margin-top: -10px;
+        border-right-color: #fff; }
     #bootstrap-4-shortcodes-help .popover.popover-bottom, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top {
       margin-top: 10px; }
-      #bootstrap-4-shortcodes-help .popover.popover-bottom .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top .popover-arrow {
-        top: -11px;
+      #bootstrap-4-shortcodes-help .popover.popover-bottom::before, #bootstrap-4-shortcodes-help .popover.popover-bottom::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top::after {
         left: 50%;
+        border-top-width: 0; }
+      #bootstrap-4-shortcodes-help .popover.popover-bottom::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top::before {
+        top: -11px;
         margin-left: -11px;
-        border-top-width: 0;
         border-bottom-color: rgba(0, 0, 0, 0.25); }
-        #bootstrap-4-shortcodes-help .popover.popover-bottom .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top .popover-arrow::after {
-          top: 1px;
-          margin-left: -10px;
-          content: "";
-          border-top-width: 0;
-          border-bottom-color: #fff; }
+      #bootstrap-4-shortcodes-help .popover.popover-bottom::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top::after {
+        top: -10px;
+        margin-left: -10px;
+        border-bottom-color: #f7f7f7; }
+      #bootstrap-4-shortcodes-help .popover.popover-bottom .popover-title::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-top .popover-title::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: 20px;
+        margin-left: -10px;
+        content: "";
+        border-bottom: 1px solid #f7f7f7; }
     #bootstrap-4-shortcodes-help .popover.popover-left, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right {
       margin-left: -10px; }
-      #bootstrap-4-shortcodes-help .popover.popover-left .popover-arrow, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right .popover-arrow {
+      #bootstrap-4-shortcodes-help .popover.popover-left::before, #bootstrap-4-shortcodes-help .popover.popover-left::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right::after {
         top: 50%;
+        border-right-width: 0; }
+      #bootstrap-4-shortcodes-help .popover.popover-left::before, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right::before {
         right: -11px;
         margin-top: -11px;
-        border-right-width: 0;
         border-left-color: rgba(0, 0, 0, 0.25); }
-        #bootstrap-4-shortcodes-help .popover.popover-left .popover-arrow::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right .popover-arrow::after {
-          right: 1px;
-          bottom: -10px;
-          content: "";
-          border-right-width: 0;
-          border-left-color: #fff; }
+      #bootstrap-4-shortcodes-help .popover.popover-left::after, #bootstrap-4-shortcodes-help .popover.bs-tether-element-attached-right::after {
+        right: -10px;
+        margin-top: -10px;
+        border-left-color: #fff; }
   #bootstrap-4-shortcodes-help .popover-title {
     padding: 8px 14px;
     margin: 0;
@@ -3482,16 +3647,18 @@
       display: none; }
   #bootstrap-4-shortcodes-help .popover-content {
     padding: 9px 14px; }
-  #bootstrap-4-shortcodes-help .popover-arrow, #bootstrap-4-shortcodes-help .popover-arrow::after {
+  #bootstrap-4-shortcodes-help .popover::before,
+  #bootstrap-4-shortcodes-help .popover::after {
     position: absolute;
     display: block;
     width: 0;
     height: 0;
     border-color: transparent;
     border-style: solid; }
-  #bootstrap-4-shortcodes-help .popover-arrow {
+  #bootstrap-4-shortcodes-help .popover::before {
+    content: "";
     border-width: 11px; }
-  #bootstrap-4-shortcodes-help .popover-arrow::after {
+  #bootstrap-4-shortcodes-help .popover::after {
     content: "";
     border-width: 10px; }
   #bootstrap-4-shortcodes-help .carousel {
@@ -3628,7 +3795,7 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
     #bootstrap-4-shortcodes-help .carousel-caption .btn {
       text-shadow: none; }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .carousel-control .icon-prev,
     #bootstrap-4-shortcodes-help .carousel-control .icon-next {
       width: 30px;
@@ -3645,38 +3812,60 @@
       padding-bottom: 30px; }
     #bootstrap-4-shortcodes-help .carousel-indicators {
       bottom: 20px; } }
+  #bootstrap-4-shortcodes-help .align-baseline {
+    vertical-align: baseline !important; }
+  #bootstrap-4-shortcodes-help .align-top {
+    vertical-align: top !important; }
+  #bootstrap-4-shortcodes-help .align-middle {
+    vertical-align: middle !important; }
+  #bootstrap-4-shortcodes-help .align-bottom {
+    vertical-align: bottom !important; }
+  #bootstrap-4-shortcodes-help .align-text-bottom {
+    vertical-align: text-bottom !important; }
+  #bootstrap-4-shortcodes-help .align-text-top {
+    vertical-align: text-top !important; }
   #bootstrap-4-shortcodes-help .bg-faded {
     background-color: #f7f7f9; }
   #bootstrap-4-shortcodes-help .bg-primary {
-    color: #fff !important;
     background-color: #0275d8 !important; }
   #bootstrap-4-shortcodes-help a.bg-primary:focus, #bootstrap-4-shortcodes-help a.bg-primary:hover {
     background-color: #025aa5 !important; }
   #bootstrap-4-shortcodes-help .bg-success {
-    color: #fff !important;
     background-color: #5cb85c !important; }
   #bootstrap-4-shortcodes-help a.bg-success:focus, #bootstrap-4-shortcodes-help a.bg-success:hover {
     background-color: #449d44 !important; }
   #bootstrap-4-shortcodes-help .bg-info {
-    color: #fff !important;
     background-color: #5bc0de !important; }
   #bootstrap-4-shortcodes-help a.bg-info:focus, #bootstrap-4-shortcodes-help a.bg-info:hover {
     background-color: #31b0d5 !important; }
   #bootstrap-4-shortcodes-help .bg-warning {
-    color: #fff !important;
     background-color: #f0ad4e !important; }
   #bootstrap-4-shortcodes-help a.bg-warning:focus, #bootstrap-4-shortcodes-help a.bg-warning:hover {
     background-color: #ec971f !important; }
   #bootstrap-4-shortcodes-help .bg-danger {
-    color: #fff !important;
     background-color: #d9534f !important; }
   #bootstrap-4-shortcodes-help a.bg-danger:focus, #bootstrap-4-shortcodes-help a.bg-danger:hover {
     background-color: #c9302c !important; }
   #bootstrap-4-shortcodes-help .bg-inverse {
-    color: #fff !important;
     background-color: #373a3c !important; }
   #bootstrap-4-shortcodes-help a.bg-inverse:focus, #bootstrap-4-shortcodes-help a.bg-inverse:hover {
     background-color: #1f2021 !important; }
+  #bootstrap-4-shortcodes-help .rounded {
+    border-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .rounded-top {
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .rounded-right {
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .rounded-bottom {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .rounded-left {
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem; }
+  #bootstrap-4-shortcodes-help .rounded-circle {
+    border-radius: 50%; }
   #bootstrap-4-shortcodes-help .clearfix::after {
     content: "";
     display: table;
@@ -3687,39 +3876,39 @@
     display: inline-block !important; }
   #bootstrap-4-shortcodes-help .d-inline {
     display: inline !important; }
-  #bootstrap-4-shortcodes-help .pull-xs-left {
+  #bootstrap-4-shortcodes-help .float-xs-left {
     float: left !important; }
-  #bootstrap-4-shortcodes-help .pull-xs-right {
+  #bootstrap-4-shortcodes-help .float-xs-right {
     float: right !important; }
-  #bootstrap-4-shortcodes-help .pull-xs-none {
+  #bootstrap-4-shortcodes-help .float-xs-none {
     float: none !important; }
-  @media (min-width: 544px) {
-    #bootstrap-4-shortcodes-help .pull-sm-left {
+  @media (min-width: 576px) {
+    #bootstrap-4-shortcodes-help .float-sm-left {
       float: left !important; }
-    #bootstrap-4-shortcodes-help .pull-sm-right {
+    #bootstrap-4-shortcodes-help .float-sm-right {
       float: right !important; }
-    #bootstrap-4-shortcodes-help .pull-sm-none {
+    #bootstrap-4-shortcodes-help .float-sm-none {
       float: none !important; } }
   @media (min-width: 768px) {
-    #bootstrap-4-shortcodes-help .pull-md-left {
+    #bootstrap-4-shortcodes-help .float-md-left {
       float: left !important; }
-    #bootstrap-4-shortcodes-help .pull-md-right {
+    #bootstrap-4-shortcodes-help .float-md-right {
       float: right !important; }
-    #bootstrap-4-shortcodes-help .pull-md-none {
+    #bootstrap-4-shortcodes-help .float-md-none {
       float: none !important; } }
   @media (min-width: 992px) {
-    #bootstrap-4-shortcodes-help .pull-lg-left {
+    #bootstrap-4-shortcodes-help .float-lg-left {
       float: left !important; }
-    #bootstrap-4-shortcodes-help .pull-lg-right {
+    #bootstrap-4-shortcodes-help .float-lg-right {
       float: right !important; }
-    #bootstrap-4-shortcodes-help .pull-lg-none {
+    #bootstrap-4-shortcodes-help .float-lg-none {
       float: none !important; } }
   @media (min-width: 1200px) {
-    #bootstrap-4-shortcodes-help .pull-xl-left {
+    #bootstrap-4-shortcodes-help .float-xl-left {
       float: left !important; }
-    #bootstrap-4-shortcodes-help .pull-xl-right {
+    #bootstrap-4-shortcodes-help .float-xl-right {
       float: right !important; }
-    #bootstrap-4-shortcodes-help .pull-xl-none {
+    #bootstrap-4-shortcodes-help .float-xl-none {
       float: none !important; } }
   #bootstrap-4-shortcodes-help .sr-only {
     position: absolute;
@@ -3739,135 +3928,137 @@
     clip: auto; }
   #bootstrap-4-shortcodes-help .w-100 {
     width: 100% !important; }
-  #bootstrap-4-shortcodes-help .m-x-auto {
+  #bootstrap-4-shortcodes-help .h-100 {
+    height: 100% !important; }
+  #bootstrap-4-shortcodes-help .mx-auto {
     margin-right: auto !important;
     margin-left: auto !important; }
-  #bootstrap-4-shortcodes-help .m-a-0 {
+  #bootstrap-4-shortcodes-help .m-0 {
     margin: 0 0 !important; }
-  #bootstrap-4-shortcodes-help .m-t-0 {
+  #bootstrap-4-shortcodes-help .mt-0 {
     margin-top: 0 !important; }
-  #bootstrap-4-shortcodes-help .m-r-0 {
+  #bootstrap-4-shortcodes-help .mr-0 {
     margin-right: 0 !important; }
-  #bootstrap-4-shortcodes-help .m-b-0 {
+  #bootstrap-4-shortcodes-help .mb-0 {
     margin-bottom: 0 !important; }
-  #bootstrap-4-shortcodes-help .m-l-0 {
+  #bootstrap-4-shortcodes-help .ml-0 {
     margin-left: 0 !important; }
-  #bootstrap-4-shortcodes-help .m-x-0 {
+  #bootstrap-4-shortcodes-help .mx-0 {
     margin-right: 0 !important;
     margin-left: 0 !important; }
-  #bootstrap-4-shortcodes-help .m-y-0 {
+  #bootstrap-4-shortcodes-help .my-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important; }
-  #bootstrap-4-shortcodes-help .m-a-1 {
+  #bootstrap-4-shortcodes-help .m-1 {
     margin: 1rem 1rem !important; }
-  #bootstrap-4-shortcodes-help .m-t-1 {
+  #bootstrap-4-shortcodes-help .mt-1 {
     margin-top: 1rem !important; }
-  #bootstrap-4-shortcodes-help .m-r-1 {
+  #bootstrap-4-shortcodes-help .mr-1 {
     margin-right: 1rem !important; }
-  #bootstrap-4-shortcodes-help .m-b-1 {
+  #bootstrap-4-shortcodes-help .mb-1 {
     margin-bottom: 1rem !important; }
-  #bootstrap-4-shortcodes-help .m-l-1 {
+  #bootstrap-4-shortcodes-help .ml-1 {
     margin-left: 1rem !important; }
-  #bootstrap-4-shortcodes-help .m-x-1 {
+  #bootstrap-4-shortcodes-help .mx-1 {
     margin-right: 1rem !important;
     margin-left: 1rem !important; }
-  #bootstrap-4-shortcodes-help .m-y-1 {
+  #bootstrap-4-shortcodes-help .my-1 {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important; }
-  #bootstrap-4-shortcodes-help .m-a-2 {
+  #bootstrap-4-shortcodes-help .m-2 {
     margin: 1.5rem 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .m-t-2 {
+  #bootstrap-4-shortcodes-help .mt-2 {
     margin-top: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .m-r-2 {
+  #bootstrap-4-shortcodes-help .mr-2 {
     margin-right: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .m-b-2 {
+  #bootstrap-4-shortcodes-help .mb-2 {
     margin-bottom: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .m-l-2 {
+  #bootstrap-4-shortcodes-help .ml-2 {
     margin-left: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .m-x-2 {
+  #bootstrap-4-shortcodes-help .mx-2 {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .m-y-2 {
+  #bootstrap-4-shortcodes-help .my-2 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .m-a-3 {
+  #bootstrap-4-shortcodes-help .m-3 {
     margin: 3rem 3rem !important; }
-  #bootstrap-4-shortcodes-help .m-t-3 {
+  #bootstrap-4-shortcodes-help .mt-3 {
     margin-top: 3rem !important; }
-  #bootstrap-4-shortcodes-help .m-r-3 {
+  #bootstrap-4-shortcodes-help .mr-3 {
     margin-right: 3rem !important; }
-  #bootstrap-4-shortcodes-help .m-b-3 {
+  #bootstrap-4-shortcodes-help .mb-3 {
     margin-bottom: 3rem !important; }
-  #bootstrap-4-shortcodes-help .m-l-3 {
+  #bootstrap-4-shortcodes-help .ml-3 {
     margin-left: 3rem !important; }
-  #bootstrap-4-shortcodes-help .m-x-3 {
+  #bootstrap-4-shortcodes-help .mx-3 {
     margin-right: 3rem !important;
     margin-left: 3rem !important; }
-  #bootstrap-4-shortcodes-help .m-y-3 {
+  #bootstrap-4-shortcodes-help .my-3 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important; }
-  #bootstrap-4-shortcodes-help .p-a-0 {
+  #bootstrap-4-shortcodes-help .p-0 {
     padding: 0 0 !important; }
-  #bootstrap-4-shortcodes-help .p-t-0 {
+  #bootstrap-4-shortcodes-help .pt-0 {
     padding-top: 0 !important; }
-  #bootstrap-4-shortcodes-help .p-r-0 {
+  #bootstrap-4-shortcodes-help .pr-0 {
     padding-right: 0 !important; }
-  #bootstrap-4-shortcodes-help .p-b-0 {
+  #bootstrap-4-shortcodes-help .pb-0 {
     padding-bottom: 0 !important; }
-  #bootstrap-4-shortcodes-help .p-l-0 {
+  #bootstrap-4-shortcodes-help .pl-0 {
     padding-left: 0 !important; }
-  #bootstrap-4-shortcodes-help .p-x-0 {
+  #bootstrap-4-shortcodes-help .px-0 {
     padding-right: 0 !important;
     padding-left: 0 !important; }
-  #bootstrap-4-shortcodes-help .p-y-0 {
+  #bootstrap-4-shortcodes-help .py-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important; }
-  #bootstrap-4-shortcodes-help .p-a-1 {
+  #bootstrap-4-shortcodes-help .p-1 {
     padding: 1rem 1rem !important; }
-  #bootstrap-4-shortcodes-help .p-t-1 {
+  #bootstrap-4-shortcodes-help .pt-1 {
     padding-top: 1rem !important; }
-  #bootstrap-4-shortcodes-help .p-r-1 {
+  #bootstrap-4-shortcodes-help .pr-1 {
     padding-right: 1rem !important; }
-  #bootstrap-4-shortcodes-help .p-b-1 {
+  #bootstrap-4-shortcodes-help .pb-1 {
     padding-bottom: 1rem !important; }
-  #bootstrap-4-shortcodes-help .p-l-1 {
+  #bootstrap-4-shortcodes-help .pl-1 {
     padding-left: 1rem !important; }
-  #bootstrap-4-shortcodes-help .p-x-1 {
+  #bootstrap-4-shortcodes-help .px-1 {
     padding-right: 1rem !important;
     padding-left: 1rem !important; }
-  #bootstrap-4-shortcodes-help .p-y-1 {
+  #bootstrap-4-shortcodes-help .py-1 {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important; }
-  #bootstrap-4-shortcodes-help .p-a-2 {
+  #bootstrap-4-shortcodes-help .p-2 {
     padding: 1.5rem 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .p-t-2 {
+  #bootstrap-4-shortcodes-help .pt-2 {
     padding-top: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .p-r-2 {
+  #bootstrap-4-shortcodes-help .pr-2 {
     padding-right: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .p-b-2 {
+  #bootstrap-4-shortcodes-help .pb-2 {
     padding-bottom: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .p-l-2 {
+  #bootstrap-4-shortcodes-help .pl-2 {
     padding-left: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .p-x-2 {
+  #bootstrap-4-shortcodes-help .px-2 {
     padding-right: 1.5rem !important;
     padding-left: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .p-y-2 {
+  #bootstrap-4-shortcodes-help .py-2 {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important; }
-  #bootstrap-4-shortcodes-help .p-a-3 {
+  #bootstrap-4-shortcodes-help .p-3 {
     padding: 3rem 3rem !important; }
-  #bootstrap-4-shortcodes-help .p-t-3 {
+  #bootstrap-4-shortcodes-help .pt-3 {
     padding-top: 3rem !important; }
-  #bootstrap-4-shortcodes-help .p-r-3 {
+  #bootstrap-4-shortcodes-help .pr-3 {
     padding-right: 3rem !important; }
-  #bootstrap-4-shortcodes-help .p-b-3 {
+  #bootstrap-4-shortcodes-help .pb-3 {
     padding-bottom: 3rem !important; }
-  #bootstrap-4-shortcodes-help .p-l-3 {
+  #bootstrap-4-shortcodes-help .pl-3 {
     padding-left: 3rem !important; }
-  #bootstrap-4-shortcodes-help .p-x-3 {
+  #bootstrap-4-shortcodes-help .px-3 {
     padding-right: 3rem !important;
     padding-left: 3rem !important; }
-  #bootstrap-4-shortcodes-help .p-y-3 {
+  #bootstrap-4-shortcodes-help .py-3 {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important; }
   #bootstrap-4-shortcodes-help .pos-f-t {
@@ -3890,7 +4081,7 @@
     text-align: right !important; }
   #bootstrap-4-shortcodes-help .text-xs-center {
     text-align: center !important; }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .text-sm-left {
       text-align: left !important; }
     #bootstrap-4-shortcodes-help .text-sm-right {
@@ -3930,6 +4121,8 @@
     font-weight: bold; }
   #bootstrap-4-shortcodes-help .font-italic {
     font-style: italic; }
+  #bootstrap-4-shortcodes-help .text-white {
+    color: #fff !important; }
   #bootstrap-4-shortcodes-help .text-muted {
     color: #818a91 !important; }
   #bootstrap-4-shortcodes-help a.text-muted:focus, #bootstrap-4-shortcodes-help a.text-muted:hover {
@@ -3954,6 +4147,10 @@
     color: #d9534f !important; }
   #bootstrap-4-shortcodes-help a.text-danger:focus, #bootstrap-4-shortcodes-help a.text-danger:hover {
     color: #c9302c !important; }
+  #bootstrap-4-shortcodes-help .text-gray-dark {
+    color: #373a3c !important; }
+  #bootstrap-4-shortcodes-help a.text-gray-dark:focus, #bootstrap-4-shortcodes-help a.text-gray-dark:hover {
+    color: #1f2021 !important; }
   #bootstrap-4-shortcodes-help .text-hide {
     font: 0/0 a;
     color: transparent;
@@ -3964,10 +4161,10 @@
     visibility: hidden !important; }
   #bootstrap-4-shortcodes-help .hidden-xs-up {
     display: none !important; }
-  @media (max-width: 543px) {
+  @media (max-width: 575px) {
     #bootstrap-4-shortcodes-help .hidden-xs-down {
       display: none !important; } }
-  @media (min-width: 544px) {
+  @media (min-width: 576px) {
     #bootstrap-4-shortcodes-help .hidden-sm-up {
       display: none !important; } }
   @media (max-width: 767px) {
@@ -4008,6 +4205,8 @@
   @media print {
     #bootstrap-4-shortcodes-help .hidden-print {
       display: none !important; } }
+  #bootstrap-4-shortcodes-help .card {
+    padding: 0 !important; }
   #bootstrap-4-shortcodes-help * {
     box-sizing: border-box; }
   #bootstrap-4-shortcodes-help .container-fluid,
