@@ -26,6 +26,7 @@
 									<li><a href="#bs-shortcode-reference">Shortcode Reference</a></li>
 									<li><a href="#bs-requirements">System Requirements</a></li>
 								</ul>
+								<?php echo file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/toc.html'); ?>
 							</nav>
 						<div class="col-sm-9 right">
             <div class="modal-header">

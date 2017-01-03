@@ -4214,7 +4214,8 @@
   #bootstrap-4-shortcodes-help .right {
     height: 100%; }
   #bootstrap-4-shortcodes-help .left {
-    height: 100vh;
+    height: 100%;
+    overflow-y: scroll;
     background: #f3f3f3;
     border-right-width: 1px;
     border-right-style: solid;
