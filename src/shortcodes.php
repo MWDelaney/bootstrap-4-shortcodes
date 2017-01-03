@@ -1589,7 +1589,6 @@ class Shortcodes {
 			$atts = shortcode_atts( array(
 					"placement" => "top",
 					"title" => false,
-					"content" => false,
 					"data"   => false,
 			), $atts );
 

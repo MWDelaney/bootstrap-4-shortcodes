@@ -19,4 +19,6 @@
 <a href="#navs" class="list-group-item"><?php _e('Navs', 'bootstrap-4-shortcodes'); ?></a>
 <a href="#pagination" class="list-group-item"><?php _e('Pagination', 'bootstrap-4-shortcodes'); ?></a>
 <a href="#popovers" class="list-group-item"><?php _e('Popovers', 'bootstrap-4-shortcodes'); ?></a>
+<a href="#progress" class="list-group-item"><?php _e('Progress', 'bootstrap-4-shortcodes'); ?></a>
+<a href="#tooltips" class="list-group-item"><?php _e('Tooltips', 'bootstrap-4-shortcodes'); ?></a>
 </div>

@@ -833,6 +833,96 @@
 							]
 						}
 					]
+				},
+				{
+					"title": "Progress",
+					"id": "progress",
+					"note": "",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "[progress type=\"primary\" value=\"50\"]"
+						},
+						{
+							"note": "Use the <code>striped</code> flag to produce a striped progress bar.",
+							"description": "Striped example",
+							"code": "[progress type=\"primary\" value=\"50\" striped]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "progress",
+							"parameters": [
+								{
+									"name": "type",
+									"description": "The type of the progress bar.",
+									"required": "0",
+									"values": "primary, success, info, warning, danger",
+									"default": "primary"
+								},
+								{
+									"name": "striped",
+									"description": "Flag whether progress bar should be striped.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "animated",
+									"description": "Flag whether progress bar should be animated.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "Tooltips",
+					"id": "tooltips",
+					"note": "Wrap any element in a the <code>[tooltip]</code> shortcode to give it a tooltip. This may not work well on all elements depending on styling and other factors.",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "[tooltip title=\"Tooltip text\"]<a href=\"#link1\">Cras justo odio</a>[/tooltip]"
+						},
+						{
+							"note": "Use the <code>html</code> flag to allow HTML in the tooltip",
+							"description": "HTML tooltip",
+							"code": "[tooltip title=\"<em>Tooltip</em> <u>with</u> <b>HTML</b>\" tooltip]<a href=\"#link1\">Cras justo odio</a>[/tooltip]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "tooltip",
+							"parameters": [
+								{
+									"name": "title",
+									"description": "The content of the tooltip.",
+									"required": "0",
+									"values": "any text",
+									"default": ""
+								},
+								{
+									"name": "placement",
+									"description": "Placement of the tooltip.",
+									"required": "0",
+									"values": "top, bottom, left, right",
+									"default": "top"
+								},
+								{
+									"name": "html",
+									"description": "Flag whether content should be parsed for HTML.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
 				}
 			]
 		}
