@@ -2230,4 +2230,55 @@
 	</tbody>
 </table>
 </div>
+<div class="tab-pane" id="colors" role="tabpanel">
+<h2><?php _e('Colors', 'bootstrap-4-shortcodes'); ?></h2>
+<p><?php _e('Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.', 'bootstrap-4-shortcodes'); ?></p>
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>[color type&#x3D;&quot;primary&quot;]Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.[&#x2F;color]</code></pre>
+		</div>
+		<div class="card-footer">
+			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+
+<h3>[color] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.', 'bootstrap-4-shortcodes'); ?></div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>type</td>
+			<td><?php _e('The type of the alert.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>muted, primary, success, info, warning, danger, white</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</div>
 </div>

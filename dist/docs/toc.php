@@ -64,4 +64,7 @@
 <li class="nav-item">
 	<a href="#borders" class="nav-link" data-toggle="pill" role="tab"><?php _e('Borders', 'bootstrap-4-shortcodes'); ?></a>
 </li>
+<li class="nav-item">
+	<a href="#colors" class="nav-link" data-toggle="pill" role="tab"><?php _e('Colors', 'bootstrap-4-shortcodes'); ?></a>
+</li>
 </ul>

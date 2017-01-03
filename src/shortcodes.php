@@ -103,7 +103,8 @@ class Shortcodes {
 
 			'lead',
 
-			'border'
+			'border',
+			'color'
 
 		);
 		foreach ( $shortcodes as $shortcode ) {
@@ -1717,6 +1718,35 @@ class Shortcodes {
 				sprintf(
 					'%s',
 					$content
+				)
+			);
+
+			$return = Utilities::addclass( null, $return, $class );
+
+			return $return;
+		}
+
+
+		/**
+		 * Color shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_color( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"type"			=> false,
+				"class"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+			$class	= array();
+			$class[]  = 'text-' . $atts['type'];
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'%s',
+					do_shortcode($content)
 				)
 			);
 

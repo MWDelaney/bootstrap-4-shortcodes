@@ -989,6 +989,32 @@
 							]
 						}
 					]
+				},
+				{
+					"title": "Colors",
+					"id": "colors",
+					"note": "Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "[color type=\"primary\"]Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.[/color]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "color",
+							"parameters": [
+								{
+									"name": "type",
+									"description": "The type of the alert.",
+									"required": "0",
+									"values": "muted, primary, success, info, warning, danger, white",
+									"default": ""
+								}
+							]
+						}
+					]
 				}
 			]
 		}
