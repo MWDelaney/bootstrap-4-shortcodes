@@ -2,7 +2,7 @@
 <ul class="nav nav-pills nav-stacked" role="tablist">
 <li><h6><?php _e('Introduction', 'bootstrap-4-shortcodes'); ?></h6></li>
 <li class="nav-item">
-	<a href="about" class="nav-link active" data-toggle="pill" role="tab"><?php _e('About', 'bootstrap-4-shortcodes'); ?></a>
+	<a href="#about" class="nav-link active" data-toggle="pill" role="tab"><?php _e('About', 'bootstrap-4-shortcodes'); ?></a>
 </li>
 <li><h6><?php _e('Layout', 'bootstrap-4-shortcodes'); ?></h6></li>
 <li class="nav-item">
