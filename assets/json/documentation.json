@@ -360,53 +360,6 @@
 					]
 				},
 				{
-					"title": "Dropdowns",
-					"id": "dropdown",
-					"note": "Remember that <code>[dropdown-menu]</code> must wrap an <code>a</code>, or <code>button</code> tags inserted via the WordPress editor.",
-					"examples": [
-						{
-							"note": "The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.",
-							"description": "Basic example",
-							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
-						},
-						{
-							"note": "Add a header to label sections of actions in any dropdown menu.",
-							"description": "Dropdown with header tags as labels",
-							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <h6>Dropdown header</h6>\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
-						},
-						{
-							"note": "Separate groups of related menu items with a <code>[dropdown-divider]</code>.",
-							"description": "Divider example",
-							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    [dropdown-divider]\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
-						}
-					],
-					"shortcodes": [
-						{
-							"name": "dropdown",
-							"note": "",
-							"parameters": ""
-						},
-						{
-							"name": "dropdown-menu",
-							"note": "",
-							"parameters": [
-								{
-									"name": "align",
-									"description": "Alignment of the dropdown menu.",
-									"required": "0",
-									"values": "right",
-									"default": ""
-								}
-							]
-						},
-						{
-							"name": "dropdown-divider",
-							"note": "",
-							"parameters": ""
-						}
-					]
-				},
-				{
 					"title": "Button Groups",
 					"id": "button-groups",
 					"note": "Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.",
@@ -605,6 +558,53 @@
 					]
 				},
 				{
+					"title": "Dropdowns",
+					"id": "dropdown",
+					"note": "Remember that <code>[dropdown-menu]</code> must wrap an <code>a</code>, or <code>button</code> tags inserted via the WordPress editor.",
+					"examples": [
+						{
+							"note": "The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.",
+							"description": "Basic example",
+							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+						},
+						{
+							"note": "Add a header to label sections of actions in any dropdown menu.",
+							"description": "Dropdown with header tags as labels",
+							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <h6>Dropdown header</h6>\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+						},
+						{
+							"note": "Separate groups of related menu items with a <code>[dropdown-divider]</code>.",
+							"description": "Divider example",
+							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    [dropdown-divider]\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "dropdown",
+							"note": "",
+							"parameters": ""
+						},
+						{
+							"name": "dropdown-menu",
+							"note": "",
+							"parameters": [
+								{
+									"name": "align",
+									"description": "Alignment of the dropdown menu.",
+									"required": "0",
+									"values": "right",
+									"default": ""
+								}
+							]
+						},
+						{
+							"name": "dropdown-divider",
+							"note": "",
+							"parameters": ""
+						}
+					]
+				},
+				{
 					"title": "Jumbotron",
 					"id": "jumbotron",
 					"examples": [
@@ -615,6 +615,7 @@
 						},
 						{
 							"note": "Set the <code>fluid</code> flag to make a fluid jumbotron.",
+							"description": "Fluid example",
 							"code": "\n[jumbotron fluid]\n  <h1> Hello, World! </h1>\n  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]\n[/jumbotron]"
 						}
 					],
@@ -672,7 +673,167 @@
 							]
 						}
 					]
-				}
+				},
+				{
+					"title": "Navs",
+					"id": "navs",
+					"note": "Remember that <code>[nav]</code> must wrap a set of links and list items inserted via the WordPress editor.",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "\n[nav]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+						},
+						{
+							"note": "Set the <code>inline</code> flag to make an inline nav.",
+							"description": "Inline example",
+							"code": "\n[nav inline]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+						},
+						{
+							"note": "Set the <code>tabs</code> flag to make an tab-styled nav.",
+							"description": "Tabs example",
+							"code": "\n[nav tabs]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+						},
+						{
+							"note": "Set the <code>pills</code> flag to make an pills-styled nav.",
+							"description": "Pills example",
+							"code": "\n[nav pills]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+						},
+						{
+							"note": "Pills-styled navs can also be stacked with the <code>stacked</code> flag.",
+							"description": "Stacked pills example",
+							"code": "\n[nav pills stacked]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "nav",
+							"parameters": [
+								{
+									"name": "inline",
+									"description": "Flag whether nav should be inline.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "tabs",
+									"description": "Flag whether nav should be styled as tabs.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "pills",
+									"description": "Flag whether nav should be styled as pills.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								},
+								{
+									"name": "stacked",
+									"description": "Flag whether nav should be stacked.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "Pagination",
+					"id": "pagination",
+					"note": "Remember that <code>[pagination]</code> must wrap a set of list items and links inserted via the WordPress editor.",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "\n[pagination]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+						},
+						{
+							"note": "",
+							"description": "Large example",
+							"code": "\n[pagination size=\"lg\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+						},
+						{
+							"note": "",
+							"description": "Small example",
+							"code": "\n[pagination size=\"sm\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+						},
+						{
+							"note": "",
+							"description": "Active and disabled states",
+							"code": "\n[pagination]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li>[disabled]<a href=\"#link3\">Morbi leo risus</a>[/disabled]</li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "pagination",
+							"parameters": [
+								{
+									"name": "size",
+									"description": "Optional size of the pagination.",
+									"required": "0",
+									"values": "none, sm, lg",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"title": "Popovers",
+					"id": "popovers",
+					"note": "Wrap any element in a the <code>[popover]</code> shortcode to give it a popover. This may not work well on all elements depending on styling and other factors.",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "[popover title=\"Popover title\" content=\"Vivamus sagittis lacus vel augue laoreet rutrum faucibus.\" ]<a href=\"#link1\">Cras justo odio</a>[/popover]"
+						},
+						{
+							"note": "Use the focus trigger to dismiss popovers on the next click that the user makes.",
+							"description": "Dismiss on next click",
+							"code": "[popover trigger=\"focus\" title=\"Popover title\" content=\"Vivamus sagittis lacus vel augue laoreet rutrum faucibus.\" ]<a href=\"#link1\">Cras justo odio</a>[/popover]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "popover",
+							"parameters": [
+								{
+									"name": "title",
+									"description": "The title of the popover.",
+									"required": "0",
+									"values": "any text",
+									"default": ""
+								},
+								{
+									"name": "content",
+									"description": "The content of the popover.",
+									"required": "0",
+									"values": "any text",
+									"default": ""
+								},
+								{
+									"name": "placement",
+									"description": "Placement of the popover.",
+									"required": "0",
+									"values": "top, bottom, left, right",
+									"default": "top"
+								},
+								{
+									"name": "trigger",
+									"description": "The popover trigger (use <code>focus</code> to dismiss popover on next click).",
+									"required": "0",
+									"values": "any text",
+									"default": ""
+								}
+							]
+						}
+					]
+				},
 			]
 		}
 	]

@@ -702,158 +702,6 @@
 	</tbody>
 </table>
 </section>
-<section id="dropdown">
-<h2>Dropdowns</h2>
-<p>Remember that <code>[dropdown-menu]</code> must wrap an <code>a</code>, or <code>button</code> tags inserted via the WordPress editor.</p>
-	<p>The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.</p>
-	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[dropdown]
-  [button dropdown]Dropdown Button[&#x2F;button]
-  [dropdown-menu]
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
-  [&#x2F;dropdown-menu]
-[&#x2F;dropdown]</code></pre>
-		</div>
-		<div class="card-footer">
-			Basic example
-			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
-		</div>
-	</div> <!--/card -->
-	<p>Add a header to label sections of actions in any dropdown menu.</p>
-	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[dropdown]
-  [button dropdown]Dropdown Button[&#x2F;button]
-  [dropdown-menu]
-    &lt;h6&gt;Dropdown header&lt;&#x2F;h6&gt;
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
-  [&#x2F;dropdown-menu]
-[&#x2F;dropdown]</code></pre>
-		</div>
-		<div class="card-footer">
-			Dropdown with header tags as labels
-			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
-		</div>
-	</div> <!--/card -->
-	<p>Separate groups of related menu items with a <code>[dropdown-divider]</code>.</p>
-	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[dropdown]
-  [button dropdown]Dropdown Button[&#x2F;button]
-  [dropdown-menu]
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
-    [dropdown-divider]
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
-    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
-  [&#x2F;dropdown-menu]
-[&#x2F;dropdown]</code></pre>
-		</div>
-		<div class="card-footer">
-			Divider example
-			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
-		</div>
-	</div> <!--/card -->
-
-<h3>[dropdown] parameters</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-			<th>Required</th>
-			<th>Values</th>
-			<th>Default</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>class</td>
-			<td>Any extra classes you want to add.</td>
-			<td>optional</td>
-			<td>any text</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>data</td>
-			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
-			<td>optional</td>
-			<td>any text</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
-<h3>[dropdown-menu] parameters</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-			<th>Required</th>
-			<th>Values</th>
-			<th>Default</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>align</td>
-			<td>Alignment of the dropdown menu.</td>
-			<td>0</td>
-			<td>right</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>class</td>
-			<td>Any extra classes you want to add.</td>
-			<td>optional</td>
-			<td>any text</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>data</td>
-			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
-			<td>optional</td>
-			<td>any text</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
-<h3>[dropdown-divider] parameters</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-			<th>Required</th>
-			<th>Values</th>
-			<th>Default</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>class</td>
-			<td>Any extra classes you want to add.</td>
-			<td>optional</td>
-			<td>any text</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>data</td>
-			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
-			<td>optional</td>
-			<td>any text</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
-</section>
 <section id="button-groups">
 <h2>Button Groups</h2>
 <p>Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</p>
@@ -1448,6 +1296,158 @@
 	</tbody>
 </table>
 </section>
+<section id="dropdown">
+<h2>Dropdowns</h2>
+<p>Remember that <code>[dropdown-menu]</code> must wrap an <code>a</code>, or <code>button</code> tags inserted via the WordPress editor.</p>
+	<p>The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[dropdown]
+  [button dropdown]Dropdown Button[&#x2F;button]
+  [dropdown-menu]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
+  [&#x2F;dropdown-menu]
+[&#x2F;dropdown]</code></pre>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	<p>Add a header to label sections of actions in any dropdown menu.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[dropdown]
+  [button dropdown]Dropdown Button[&#x2F;button]
+  [dropdown-menu]
+    &lt;h6&gt;Dropdown header&lt;&#x2F;h6&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
+  [&#x2F;dropdown-menu]
+[&#x2F;dropdown]</code></pre>
+		</div>
+		<div class="card-footer">
+			Dropdown with header tags as labels
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	<p>Separate groups of related menu items with a <code>[dropdown-divider]</code>.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[dropdown]
+  [button dropdown]Dropdown Button[&#x2F;button]
+  [dropdown-menu]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
+    [dropdown-divider]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
+  [&#x2F;dropdown-menu]
+[&#x2F;dropdown]</code></pre>
+		</div>
+		<div class="card-footer">
+			Divider example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+
+<h3>[dropdown] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[dropdown-menu] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>align</td>
+			<td>Alignment of the dropdown menu.</td>
+			<td>0</td>
+			<td>right</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[dropdown-divider] parameters</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</section>
 <section id="jumbotron">
 <h2>Jumbotron</h2>
 
@@ -1475,7 +1475,7 @@
 [&#x2F;jumbotron]</code></pre>
 		</div>
 		<div class="card-footer">
-			
+			Fluid example
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
 		</div>
 	</div> <!--/card -->
@@ -1621,6 +1621,264 @@
 			<td>success, info, warning, danger</td>
 			<td>success</td>
 		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<section id="navs">
+<h2>Navs</h2>
+<p>Remember that <code>[nav]</code> must wrap a set of links and list items inserted via the WordPress editor.</p>
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[nav]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;nav]</code></pre>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	<p>Set the <code>inline</code> flag to make an inline nav.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[nav inline]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;nav]</code></pre>
+		</div>
+		<div class="card-footer">
+			Inline example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	<p>Set the <code>tabs</code> flag to make an tab-styled nav.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[nav tabs]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;nav]</code></pre>
+		</div>
+		<div class="card-footer">
+			Tabs example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	<p>Set the <code>pills</code> flag to make an pills-styled nav.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[nav pills]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;nav]</code></pre>
+		</div>
+		<div class="card-footer">
+			Pills example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	<p>Pills-styled navs can also be stacked with the <code>stacked</code> flag.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[nav pills stacked]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;nav]</code></pre>
+		</div>
+		<div class="card-footer">
+			Stacked pills example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+
+<h3>[nav] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[nav]</code> must wrap a set of links and list items inserted via the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>inline</td>
+			<td>Flag whether nav should be inline.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>tabs</td>
+			<td>Flag whether nav should be styled as tabs.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>pills</td>
+			<td>Flag whether nav should be styled as pills.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>stacked</td>
+			<td>Flag whether nav should be stacked.</td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<section id="pagination">
+<h2>Pagination</h2>
+<p>Remember that <code>[pagination]</code> must wrap a set of list items and links inserted via the WordPress editor.</p>
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[pagination]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;pagination]</code></pre>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[pagination size&#x3D;&quot;lg&quot;]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;pagination]</code></pre>
+		</div>
+		<div class="card-footer">
+			Large example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[pagination size&#x3D;&quot;sm&quot;]
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;pagination]</code></pre>
+		</div>
+		<div class="card-footer">
+			Small example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[pagination]
+  &lt;ul&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[disabled]&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;[&#x2F;disabled]&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;pagination]</code></pre>
+		</div>
+		<div class="card-footer">
+			Active and disabled states
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+
+<h3>[pagination] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Remember that <code>[pagination]</code> must wrap a set of list items and links inserted via the WordPress editor.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td>class</td>
 			<td>Any extra classes you want to add.</td>

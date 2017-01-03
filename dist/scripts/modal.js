@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
 			var paras = '';
 			jQuery.each(lines, function(i, line) {
 					if (line) {
-							paras += line + '<br>';
+							paras += line;
 					}
 			});
 			// Replace placeholder paths

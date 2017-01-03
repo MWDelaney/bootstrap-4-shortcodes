@@ -126,7 +126,7 @@ class Utilities {
 	 * @return [type]          [description]
 	 */
 	public static function hasclass ($tag, $class) {
-		if ($tag->hasAttribute('class') && !strstr($tag->getAttribute('class'), $class)) {
+		if ($tag->hasAttribute('class') && strstr($tag->getAttribute('class'), $class)) {
 			return true;
 		 }
 	}
@@ -155,6 +155,7 @@ class Utilities {
 			$tags = $doc->getElementsByTagName($found);
 			foreach ($tags as $tag) {
 				foreach ($class as $c) {
+					echo $c;
 					if (!Utilities::hasclass($tag, $c)) { continue; }
 						else {
 						$parent = $tag->parentNode;

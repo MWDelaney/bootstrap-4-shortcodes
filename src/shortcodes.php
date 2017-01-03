@@ -1431,7 +1431,7 @@ class Shortcodes {
 				"data"			=> false
 			), $save_atts );
 
-			$search_tags	= array('nav');
+			$search_tags	= array('nav', 'ul');
 
 			$wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<nav>';
 			$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</nav>';
@@ -1480,6 +1480,7 @@ class Shortcodes {
 			$atts = shortcode_atts( array(
 					"container" => "body",
 					"placement" => "top",
+					"trigger" => false,
 					"title" => false,
 					"content" => false,
 					"data"   => false,
@@ -1490,6 +1491,7 @@ class Shortcodes {
 			$popover_data[] = "placement," . $atts['placement'];
 			$popover_data[] = "container," . $atts['container'];
 			$popover_data[] = "content," . $atts['content'];
+			$popover_data[] = "trigger," . $atts['trigger'];
 			$popover_data = implode( '|', $popover_data );
 
 			$return = Utilities::bs_output(
