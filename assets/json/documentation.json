@@ -360,6 +360,53 @@
 					]
 				},
 				{
+					"title": "Dropdowns",
+					"id": "dropdown",
+					"note": "Remember that <code>[dropdown-menu]</code> must wrap an <code>a</code>, or <code>button</code> tags inserted via the WordPress editor.",
+					"examples": [
+						{
+							"note": "The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.",
+							"description": "Basic example",
+							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+						},
+						{
+							"note": "Add a header to label sections of actions in any dropdown menu.",
+							"description": "Dropdown with header tags as labels",
+							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <h6>Dropdown header</h6>\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+						},
+						{
+							"note": "Separate groups of related menu items with a <code>[dropdown-divider]</code>.",
+							"description": "Divider example",
+							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    [dropdown-divider]\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "dropdown",
+							"note": "",
+							"parameters": ""
+						},
+						{
+							"name": "dropdown-menu",
+							"note": "",
+							"parameters": [
+								{
+									"name": "align",
+									"description": "Alignment of the dropdown menu.",
+									"required": "0",
+									"values": "right",
+									"default": ""
+								}
+							]
+						},
+						{
+							"name": "dropdown-divider",
+							"note": "",
+							"parameters": ""
+						}
+					]
+				},
+				{
 					"title": "Button Groups",
 					"id": "button-groups",
 					"note": "Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.",

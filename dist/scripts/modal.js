@@ -1,9 +1,10 @@
 jQuery(document).ready(function() {
 
 	jQuery("#bootstrap-4-shortcodes-help .insert-code").click(function() {
+		console.log('firing');
 			var path = jQuery( this ).data('path');
 			var example = jQuery( this )
-				.prev()
+				.closest('.card')
 				.find("code")
 				.text().replace('placeholder-path', path);
 			var lines = example.split('\n');

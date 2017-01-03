@@ -71,6 +71,7 @@ class Shortcodes {
 
 			'dropdown',
 			'dropdown-menu',
+			'dropdown-divider',
 
 			'card',
 			'card-block',
@@ -839,20 +840,52 @@ class Shortcodes {
 		$a_class[]	= 'dropdown-item';
 		$a_search_tags	= array('a');
 
-		$content = strip_tags($content, '<a><button><h1><h2><h3><h4><h5><h6>');
+		$h_class	= array();
+		$h_class[]	= 'dropdown-header';
+		$h_search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 
-		$content = do_shortcode( $wrap_before . $content . $wrap_after );
+		$content = strip_tags($content, '<a><button><h1><h2><h3><h4><h5><h6>');
+		$content = $wrap_before . $content . $wrap_after;
+		$content = Utilities::addclass( $search_tags, $content, $class );
 
 		$return = Utilities::bs_output(
 			sprintf(
 				'%s',
-				$content
+				do_shortcode($content)
 			)
 		);
 
-		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::addclass( $h_search_tags, $return, $h_class );
 		$return = Utilities::addclass( $a_search_tags, $return, $a_class );
 		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+
+		return $return;
+	}
+
+
+
+	/**
+	 * Dropdown Divider shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_dropdown_divider( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+			"class"			=> false,
+			"data"			=> false,
+		), $save_atts );
+
+		$class	= array();
+		$class[]	= 'dropdown-divider';
+
+		$return = Utilities::bs_output(
+			sprintf(
+				'<div class="%s" %s></div>',
+				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null
+			)
+		);
 
 		return $return;
 	}
