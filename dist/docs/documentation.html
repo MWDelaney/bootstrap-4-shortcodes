@@ -1880,6 +1880,95 @@
 	</thead>
 	<tbody>
 		<tr>
+			<td>size</td>
+			<td>Optional size of the pagination.</td>
+			<td>0</td>
+			<td>none, sm, lg</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>Any extra classes you want to add.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>Data attribute and value pairs separated by a comma. Pairs separated by pipe.</td>
+			<td>optional</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<section id="popovers">
+<h2>Popovers</h2>
+<p>Wrap any element in a the <code>[popover]</code> shortcode to give it a popover. This may not work well on all elements depending on styling and other factors.</p>
+	
+	<div class="card">
+		<div class="card-block">
+			<pre><code>[popover title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
+		</div>
+		<div class="card-footer">
+			Basic example
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+	<p>Use the focus trigger to dismiss popovers on the next click that the user makes.</p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>[popover trigger&#x3D;&quot;focus&quot; title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
+		</div>
+		<div class="card-footer">
+			Dismiss on next click
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code">Insert Example</button>
+		</div>
+	</div> <!--/card -->
+
+<h3>[popover] parameters</h3>
+<div class="alert alert-warning"><strong>Note:</strong> Wrap any element in a the <code>[popover]</code> shortcode to give it a popover. This may not work well on all elements depending on styling and other factors.</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Parameter</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Values</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>title</td>
+			<td>The title of the popover.</td>
+			<td>0</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>content</td>
+			<td>The content of the popover.</td>
+			<td>0</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>placement</td>
+			<td>Placement of the popover.</td>
+			<td>0</td>
+			<td>top, bottom, left, right</td>
+			<td>top</td>
+		</tr>
+		<tr>
+			<td>trigger</td>
+			<td>The popover trigger (use &lt;code&gt;focus&lt;&#x2F;code&gt; to dismiss popover on next click).</td>
+			<td>0</td>
+			<td>any text</td>
+			<td></td>
+		</tr>
+		<tr>
 			<td>class</td>
 			<td>Any extra classes you want to add.</td>
 			<td>optional</td>
