@@ -13,7 +13,7 @@
 								"code": "\n[row]\n  [column sm=\"6\"] ... [/column]\n  [column sm=\"6\"] ... [/column]\n[/row]"
 							},
 							{
-								"note": "The container component is also supported in case your theme doesn't include a container.",
+								"note": "The container component is also supported in case your theme doesn&apos;t include a container.",
 								"description": "Basic example with container",
 								"code": "\n[container]\n  [row]\n    [column xs=\"6\"] ... [/column]\n    [column xs=\"6\"] ... [/column]\n  [/row]\n[/container]"
 							},

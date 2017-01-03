@@ -4,6 +4,8 @@ Plugin Name: Bootstrap 4 Shortcodes
 Plugin URI: https://github.com/MWDelaney/bootstrap-4-shortcodes
 Description: The plugin adds a shortcodes for all Bootstrap 4 elements.
 Version: 1
+Text Domain: bootstrap-4-shortcodes
+Domain Path: /languages
 Author: Michael W. Delaney
 Author URI:
 License: MIT

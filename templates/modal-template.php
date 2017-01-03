@@ -26,8 +26,11 @@
 									<li><a href="#bs-shortcode-reference">Shortcode Reference</a></li>
 									<li><a href="#bs-requirements">System Requirements</a></li>
 								</ul>
-								<?php echo file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/toc.html'); ?>
-							</nav>
+								<?php
+									ob_start();
+									include(BS4_SHORTCODES_DIR . '/dist/docs/toc.php');
+									echo str_replace('data-path="placeholder"', 'data-path="' . BS4_SHORTCODES_RELATIVE_URL . 'dist/images/"', ob_get_clean());
+								?>							</nav>
 						<div class="col-sm-9 right">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -38,30 +41,19 @@
 				<section role="main">
 					<article>
 				<?php
-					$html = file_get_contents(BS4_SHORTCODES_DIR . '/dist/docs/documentation.html');
-							// ======================================================================== //
-							// Put HTML content in the page so we can pop it up in a modal
-							// But first edit the HTML to make it more useful as popup documentation
-							//      * Alter links to open in new tabs
-							//      * Add Bootstrap styling to tables
-							//      * Add Bootstrap styling to lists (and replace ULs with DIVs, and LIs with As)
-							//      * Edit anchors to be on-page jumps
-							//      * Add back-to-top buttons after sections
-							//      * Add IDs to h3 tags for the above on-page jumps
-							//      * Add "Insert Example" buttons after code examples
-							// ======================================================================== //
-
-							//Insert the HTML now that we're done editing it
-							$html = str_replace('data-path="placeholder"', 'data-path="' . BS4_SHORTCODES_RELATIVE_URL . 'dist/images/"', $html);
-							echo $html;
-
+					ob_start();
+					include(BS4_SHORTCODES_DIR . '/dist/docs/documentation.php');
+					// ======================================================================== //
+					// Put HTML content in the page so we can pop it up in a modal
+					// ======================================================================== //
+					echo str_replace('data-path="placeholder"', 'data-path="' . BS4_SHORTCODES_RELATIVE_URL . 'dist/images/"', ob_get_clean());
 				?>
 				</article>
 			</section>
 		</div>
 	</div>
 </div>
-		</div><!-- /.modal-body -->
+</div><!-- /.modal-body -->
 
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
