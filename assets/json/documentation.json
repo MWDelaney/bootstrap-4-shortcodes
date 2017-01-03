@@ -428,6 +428,21 @@
 							"note": "Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.",
 							"description": "Card with Header and Footer",
 							"code": "\n[card]\n  [card-header] ... [/card-header]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-block]\n  [card-footer] ... [/card-footer]\n[/card]"
+						},
+						{
+							"note": "Use card groups to render cards as a single, attached element with equal width and height columns.",
+							"description": "Card group",
+							"code": "\n[card-group]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-group]"
+						},
+						{
+							"note": "Need a set of equal width and height cards that aren’t attached to one another? Use card decks.",
+							"description": "Card deck",
+							"code": "\n[card-deck]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-deck]"
+						},
+						{
+							"note": "Cards can be organized into Masonry-like columns with just CSS by wrapping them in <code>[card-columns]</code>",
+							"description": "Card deck",
+							"code": "\n[card-columns]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-columns]"
 						}
 					],
 					"shortcodes": [
@@ -496,6 +511,18 @@
 						},
 						{
 							"name": "card-footer",
+							"parameters": ""
+						},
+						{
+							"name": "card-group",
+							"parameters": ""
+						},
+						{
+							"name": "card-deck",
+							"parameters": ""
+						},
+						{
+							"name": "card-columns",
 							"parameters": ""
 						}
 					]

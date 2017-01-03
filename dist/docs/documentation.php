@@ -919,6 +919,96 @@
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
+	<p><?php _e('Use card groups to render cards as a single, attached element with equal width and height columns.', 'bootstrap-4-shortcodes'); ?></p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[card-group]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+[&#x2F;card-group]</code></pre>
+		</div>
+		<div class="card-footer">
+			<?php _e('Card group', 'bootstrap-4-shortcodes'); ?>
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<p><?php _e('Need a set of equal width and height cards that aren’t attached to one another? Use card decks.', 'bootstrap-4-shortcodes'); ?></p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[card-deck]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+[&#x2F;card-deck]</code></pre>
+		</div>
+		<div class="card-footer">
+			<?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<p><?php _e('Cards can be organized into Masonry-like columns with just CSS by wrapping them in <code>[card-columns]</code>', 'bootstrap-4-shortcodes'); ?></p>
+	<div class="card">
+		<div class="card-block">
+			<pre><code>
+[card-columns]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+  [card]
+    [card-block]
+      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+      ...
+    [&#x2F;card-block]
+  [&#x2F;card]
+[&#x2F;card-columns]</code></pre>
+		</div>
+		<div class="card-footer">
+			<?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
 
 <h3>[card] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
@@ -1150,6 +1240,90 @@
 	</tbody>
 </table>
 <h3>[card-footer] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-group] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-deck] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3>[card-columns] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>

@@ -81,6 +81,9 @@ class Shortcodes {
 			'card-img-overlay',
 			'card-header',
 			'card-footer',
+			'card-group',
+			'card-deck',
+			'card-columns',
 
 			'carousel',
 			'accordion',
@@ -1123,7 +1126,7 @@ class Shortcodes {
 
 
 		/**
-		 * Card header shortcode
+		 * Card footer shortcode
 		 * @param  [type] $atts    shortcode attributes
 		 * @param  string $content shortcode contents
 		 * @return string
@@ -1153,6 +1156,93 @@ class Shortcodes {
 
 			$return = Utilities::addclass( $search_tags, $return, $class );
 			$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Card group shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_card_group( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false
+			), $atts );
+
+			$class	= array();
+			$class[]  = 'card-group';
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'<div class="%s" %s>%s</div>',
+					Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+					(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+					do_shortcode($content)
+				)
+			);
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Card deck shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_card_deck( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false
+			), $atts );
+
+			$class	= array();
+			$class[]  = 'card-deck';
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'<div class="%s" %s>%s</div>',
+					Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+					(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+					do_shortcode($content)
+				)
+			);
+
+			return $return;
+		}
+
+
+
+		/**
+		 * Card columns shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_card_columns( $atts, $content = null ) {
+			$atts = shortcode_atts( array(
+					"class" => false,
+					"data"   => false
+			), $atts );
+
+			$class	= array();
+			$class[]  = 'card-columns';
+
+			$return = Utilities::bs_output(
+				sprintf(
+					'<div class="%s" %s>%s</div>',
+					Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+					(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+					do_shortcode($content)
+				)
+			);
 
 			return $return;
 		}
