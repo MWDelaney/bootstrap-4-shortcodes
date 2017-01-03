@@ -1,8 +1,11 @@
+<ul class="nav nav-pills nav-stacked" role="tablist">
+
 {{#sections}}
-<h2><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h2>
-<div class="list-group">
+<li><h2><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h2></li>
 {{#items}}
-<a href="#{{id}}" class="list-group-item"><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></a>
+<li class="nav-item">
+	<a href="#{{id}}" class="nav-link" data-toggle="pill" role="tab"><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></a>
+</li>
 {{/items}}
-</div>
 {{/sections}}
+</ul>

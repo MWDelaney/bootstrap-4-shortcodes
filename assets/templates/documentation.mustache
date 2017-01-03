@@ -1,7 +1,9 @@
+<div class="tab-content">
+
 {{#sections}}
-<h1><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h1>
+<h1 class="sr-only"><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h1>
 {{#items}}
-<section id="{{id}}">
+<div class="tab-pane" id="{{id}}" role="tabpanel">
 <h2><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h2>
 {{#note}}<p><?php _e('{{{note}}}', 'bootstrap-4-shortcodes'); ?></p>{{/note}}
 {{#examples}}
@@ -59,6 +61,7 @@
 	</tbody>
 </table>
 {{/shortcodes}}
-</section>
+</div>
 {{/items}}
 {{/sections}}
+</div>

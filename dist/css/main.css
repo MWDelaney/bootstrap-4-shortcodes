@@ -4239,6 +4239,7 @@
   #bootstrap-4-shortcodes-help .modal {
     z-index: 9999; }
   #bootstrap-4-shortcodes-help .modal-content {
+    width: 100%;
     border-radius: 0;
     position: absolute;
     top: 30px;

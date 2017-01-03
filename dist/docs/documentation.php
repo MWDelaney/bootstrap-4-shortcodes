@@ -1,5 +1,7 @@
-<h1><?php _e('Layout', 'bootstrap-4-shortcodes'); ?></h1>
-<section id="grid">
+<div class="tab-content">
+
+<h1 class="sr-only"><?php _e('Layout', 'bootstrap-4-shortcodes'); ?></h1>
+<div class="tab-pane" id="grid" role="tabpanel">
 <h2><?php _e('Grid', 'bootstrap-4-shortcodes'); ?></h2>
 
 	
@@ -273,8 +275,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="media-object">
+</div>
+<div class="tab-pane" id="media-object" role="tabpanel">
 <h2><?php _e('Media Object', 'bootstrap-4-shortcodes'); ?></h2>
 
 	
@@ -447,8 +449,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="responsive-utilities">
+</div>
+<div class="tab-pane" id="responsive-utilities" role="tabpanel">
 <h2><?php _e('Responsive Utilities', 'bootstrap-4-shortcodes'); ?></h2>
 
 	
@@ -505,9 +507,9 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<h1><?php _e('Components', 'bootstrap-4-shortcodes'); ?></h1>
-<section id="alerts">
+</div>
+<h1 class="sr-only"><?php _e('Components', 'bootstrap-4-shortcodes'); ?></h1>
+<div class="tab-pane" id="alerts" role="tabpanel">
 <h2><?php _e('Alerts', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -565,8 +567,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="breadcrumb">
+</div>
+<div class="tab-pane" id="breadcrumb" role="tabpanel">
 <h2><?php _e('Breadcrumb', 'bootstrap-4-shortcodes'); ?></h2>
 
 	<p><?php _e('Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
@@ -613,8 +615,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="buttons">
+</div>
+<div class="tab-pane" id="buttons" role="tabpanel">
 <h2><?php _e('Buttons', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.', 'bootstrap-4-shortcodes'); ?></p>
 	<p><?php _e('Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.', 'bootstrap-4-shortcodes'); ?></p>
@@ -701,8 +703,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="button-groups">
+</div>
+<div class="tab-pane" id="button-groups" role="tabpanel">
 <h2><?php _e('Button Groups', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	<p><?php _e('Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
@@ -833,8 +835,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="cards">
+</div>
+<div class="tab-pane" id="cards" role="tabpanel">
 <h2><?php _e('Cards', 'bootstrap-4-shortcodes'); ?></h2>
 
 	
@@ -1168,8 +1170,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="carousel">
+</div>
+<div class="tab-pane" id="carousel" role="tabpanel">
 <h2><?php _e('Carousel', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -1238,8 +1240,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="collapse">
+</div>
+<div class="tab-pane" id="collapse" role="tabpanel">
 <h2><?php _e('Collapse', 'bootstrap-4-shortcodes'); ?></h2>
 
 	<p><?php _e('Create an accordion by wrapping <code>[card]</code>s in <code>[accordion]</code>.', 'bootstrap-4-shortcodes'); ?></p>
@@ -1295,8 +1297,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="dropdown">
+</div>
+<div class="tab-pane" id="dropdown" role="tabpanel">
 <h2><?php _e('Dropdowns', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[dropdown-menu]</code> must wrap an <code>a</code>, or <code>button</code> tags inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	<p><?php _e('The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.', 'bootstrap-4-shortcodes'); ?></p>
@@ -1447,8 +1449,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="jumbotron">
+</div>
+<div class="tab-pane" id="jumbotron" role="tabpanel">
 <h2><?php _e('Jumbotron', 'bootstrap-4-shortcodes'); ?></h2>
 
 	
@@ -1515,8 +1517,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="list-group">
+</div>
+<div class="tab-pane" id="list-group" role="tabpanel">
 <h2><?php _e('List Group', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -1637,8 +1639,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="navs">
+</div>
+<div class="tab-pane" id="navs" role="tabpanel">
 <h2><?php _e('Navs', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[nav]</code> must wrap a set of links and list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -1789,8 +1791,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="pagination">
+</div>
+<div class="tab-pane" id="pagination" role="tabpanel">
 <h2><?php _e('Pagination', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[pagination]</code> must wrap a set of list items and links inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -1902,8 +1904,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="popovers">
+</div>
+<div class="tab-pane" id="popovers" role="tabpanel">
 <h2><?php _e('Popovers', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Wrap any element in a the <code>[popover]</code> shortcode to give it a popover. This may not work well on all elements depending on styling and other factors.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -1984,8 +1986,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="progress">
+</div>
+<div class="tab-pane" id="progress" role="tabpanel">
 <h2><?php _e('Progress', 'bootstrap-4-shortcodes'); ?></h2>
 
 	
@@ -2058,8 +2060,8 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<section id="tooltips">
+</div>
+<div class="tab-pane" id="tooltips" role="tabpanel">
 <h2><?php _e('Tooltips', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Wrap any element in a the <code>[tooltip]</code> shortcode to give it a tooltip. This may not work well on all elements depending on styling and other factors.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -2133,9 +2135,9 @@
 		</tr>
 	</tbody>
 </table>
-</section>
-<h1><?php _e('Utilities', 'bootstrap-4-shortcodes'); ?></h1>
-<section id="borders">
+</div>
+<h1 class="sr-only"><?php _e('Utilities', 'bootstrap-4-shortcodes'); ?></h1>
+<div class="tab-pane" id="borders" role="tabpanel">
 <h2><?php _e('Borders', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Use border utilities to quickly style the <code>border</code> and <code>border-radius</code> of an element. Great for images, buttons, or any other element.', 'bootstrap-4-shortcodes'); ?></p>
 	
@@ -2220,4 +2222,5 @@
 		</tr>
 	</tbody>
 </table>
-</section>
+</div>
+</div>
