@@ -4207,6 +4207,10 @@
       display: none !important; } }
   #bootstrap-4-shortcodes-help .card {
     padding: 0 !important; }
+  #bootstrap-4-shortcodes-help h5 {
+    margin-top: 1rem; }
+  #bootstrap-4-shortcodes-help h6 {
+    margin-top: 2rem; }
   #bootstrap-4-shortcodes-help * {
     box-sizing: border-box; }
   #bootstrap-4-shortcodes-help .container-fluid,

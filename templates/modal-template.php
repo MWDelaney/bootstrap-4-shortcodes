@@ -22,10 +22,6 @@
 					<div class="container-fluid">
 						<div class="row">
 							<nav id="bs4-table-of-contents" class="col-sm-3 left hidden-sm-down">
-								<ul>
-									<li><a href="#bs-shortcode-reference">Shortcode Reference</a></li>
-									<li><a href="#bs-requirements">System Requirements</a></li>
-								</ul>
 								<?php
 									ob_start();
 									include(BS4_SHORTCODES_DIR . '/dist/docs/toc.php');

@@ -1,7 +1,11 @@
+<h5>Table of Contents</h5>
 <ul class="nav nav-pills nav-stacked" role="tablist">
-
+<li><h6><?php _e('Introduction', 'bootstrap-4-shortcodes'); ?></h6></li>
+<li class="nav-item">
+	<a href="about" class="nav-link active" data-toggle="pill" role="tab"><?php _e('About', 'bootstrap-4-shortcodes'); ?></a>
+</li>
 {{#sections}}
-<li><h2><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h2></li>
+<li><h6><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h6></li>
 {{#items}}
 <li class="nav-item">
 	<a href="#{{id}}" class="nav-link" data-toggle="pill" role="tab"><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></a>

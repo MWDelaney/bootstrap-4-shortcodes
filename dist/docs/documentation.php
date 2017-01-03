@@ -1,4 +1,11 @@
 <div class="tab-content">
+<h1 class="sr-only">Introduction</h1>
+<div class="tab-pane active" id="about" role="tabpanel">
+	<h2><?php _e('About', 'bootstrap-4-shortcodes'); ?></h2>
+	<p>
+	<?php _e('WordPress plugin that provides shortcodes for easier use of the Bootstrap 4 styles and components in your content.', 'bootstrap-4-shortcodes'); ?>
+	</p>
+</div>
 
 <h1 class="sr-only"><?php _e('Layout', 'bootstrap-4-shortcodes'); ?></h1>
 <div class="tab-pane" id="grid" role="tabpanel">
