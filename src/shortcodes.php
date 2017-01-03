@@ -1480,7 +1480,7 @@ class Shortcodes {
 			$atts = shortcode_atts( array(
 					"container" => "body",
 					"placement" => "top",
-					"trigger" => false,
+					"trigger" => "",
 					"title" => false,
 					"content" => false,
 					"data"   => false,
