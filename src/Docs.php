@@ -22,10 +22,10 @@ class Docs {
 	}
 
 	function enqueue_styles() {
-		wp_enqueue_script( 'bootstrap-4-shortcodes-package', BS4_SHORTCODES_URL . 'dist/scripts/package.js', array(
+		wp_enqueue_script( 'bootstrap-4-shortcodes/bootstrap.js', BS4_SHORTCODES_URL . 'dist/scripts/bootstrap.js', array(
 			'jquery'
-		) );
-		wp_enqueue_script( 'bootstrap-4-shortcodes-modal', BS4_SHORTCODES_URL . 'dist/scripts/modal.js', array(
+    ) );  
+    wp_enqueue_script( 'bootstrap-4-shortcodes/main.js', BS4_SHORTCODES_URL . 'dist/scripts/main.js', array(
 			'jquery'
 		) );
 	}

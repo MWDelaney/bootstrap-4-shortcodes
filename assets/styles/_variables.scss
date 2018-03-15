@@ -1,6 +1,10 @@
 
-$bs4-primary:		#4e396f;
-$bs4-text:			#cdbfe3;;
+$theme-colors: (
+  primary: #563d7c
+);
+
+$bs4-primary:		#563d7c;
+$bs4-text:			#cdbfe3;
 
 
 $zindex-modal-bg:          9998 !default;

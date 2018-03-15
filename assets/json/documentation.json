@@ -10,17 +10,17 @@
 							{
 								"note": "",
 								"description": "Basic example",
-								"code": "\n[row]\n  [column sm=\"6\"] ... [/column]\n  [column sm=\"6\"] ... [/column]\n[/row]"
+								"code": "[row]\n  [column sm=\"6\"] ... [/column]\n  [column sm=\"6\"] ... [/column]\n[/row]"
 							},
 							{
 								"note": "The container component is also supported in case your theme doesn&apos;t include a container.",
 								"description": "Basic example with container",
-								"code": "\n[container]\n  [row]\n    [column xs=\"6\"] ... [/column]\n    [column xs=\"6\"] ... [/column]\n  [/row]\n[/container]"
+								"code": "[container]\n  [row]\n    [column xs=\"6\"] ... [/column]\n    [column xs=\"6\"] ... [/column]\n  [/row]\n[/container]"
 							},
 							{
 								"note": "The container-fluid component is supported as a discrete shortcode.",
 								"description": "Basic example with fluid container",
-								"code": "\n[container-fluid]  \n[row]\n    [column xs=\"6\"] ... [/column]\n    [column xs=\"6\"] ... [/column]\n  [/row]\n[/container-fluid]"
+								"code": "[container-fluid]  \n[row]\n    [column xs=\"6\"] ... [/column]\n    [column xs=\"6\"] ... [/column]\n  [/row]\n[/container-fluid]"
 							}
 					],
 					"shortcodes": [
@@ -186,12 +186,12 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[media]\n  [media-object]\n    <img src=\"placeholder-path/placeholder.png\">\n  [/media-object]\n  [media-body]\n    [media-heading] <h4>Media Heading</h4> [/media-heading]\n    ...\n  [/media-body]\n[/media]"
+							"code": "[media]\n  [media-object]\n    <img src=\"placeholder-path/placeholder.png\">\n  [/media-object]\n  [media-body]\n    [media-heading] <h4>Media Heading</h4> [/media-heading]\n    ...\n  [/media-body]\n[/media]"
 						},
 						{
 							"note": "Wrap several <code>[media-object]</code>s in <code>[media-list]</code>, useful for comment threads or articles lists.",
 							"description": "Media List",
-							"code": "\n[media-list]\n  [media]\n    [media-object]\n      <img src=\"placeholder-path/placeholder.png\">\n    [/media-object]\n    [media-body]\n      [media-heading] <h4>Media Heading</h4> [/media-heading]\n      ...\n    [/media-body]\n  [/media]\n  [media]\n    [media-object]\n      <img src=\"placeholder-path/placeholder.png\">\n    [/media-object]\n    [media-body]\n      [media-heading] <h4>Media Heading</h4> [/media-heading]\n      ...\n    [/media-body]\n  [/media]\n[/media-list]"
+							"code": "[media-list]\n  [media]\n    [media-object]\n      <img src=\"placeholder-path/placeholder.png\">\n    [/media-object]\n    [media-body]\n      [media-heading] <h4>Media Heading</h4> [/media-heading]\n      ...\n    [/media-body]\n  [/media]\n  [media]\n    [media-object]\n      <img src=\"placeholder-path/placeholder.png\">\n    [/media-object]\n    [media-body]\n      [media-heading] <h4>Media Heading</h4> [/media-heading]\n      ...\n    [/media-body]\n  [/media]\n[/media-list]"
 						}
 					],
 					"shortcodes": [
@@ -229,7 +229,7 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[hidden down=\"sm\"] ... [/hidden]"
+							"code": "[hidden down=\"sm\"] ... [/hidden]"
 						}
 					],
 					"shortcodes": [
@@ -267,7 +267,7 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[alert type=\"success\"] ... [/alert]"
+							"code": "[alert type=\"success\"] ... [/alert]"
 						}
 					],
 					"shortcodes": [
@@ -300,7 +300,7 @@
 						{
 							"note": "Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.",
 							"description": "Basic example",
-							"code": "\n[breadcrumb]\n  <a href=\"#link1\"> Link 1 </a>\n  <a href=\"#link2\"> Link 2 </a>\n  [active] Link 3 [/active]\n[/breadcrumb]"
+							"code": "[breadcrumb]\n  <a href=\"#link1\"> Link 1 </a>\n  <a href=\"#link2\"> Link 2 </a>\n  [active] Link 3 [/active]\n[/breadcrumb]"
 						}
 					],
 					"shortcodes": [
@@ -317,17 +317,17 @@
 					"examples": [
 						{
 							"description": "Basic example",
-							"code": "\n[button type=\"primary\"] <a href=\"#link\">Button Text</a> [/button]"
+							"code": "[button type=\"primary\"] <a href=\"#link\">Button Text</a> [/button]"
 						},
 						{
 							"note": "Set button sizes with the <code>size</code> parameter.",
 							"description": "Large button",
-							"code": "\n[button type=\"primary\" size=\"lg\"] <a href=\"#link\">Button Text</a> [/button]"
+							"code": "[button type=\"primary\" size=\"lg\"] <a href=\"#link\">Button Text</a> [/button]"
 						},
 						{
 							"note": "Set <code>block</code> flag for block-style buttons.",
 							"description": "Button-block example",
-							"code": "\n[button type=\"primary\" block] <a href=\"#link\">Button Text</a> [/button]"
+							"code": "[button type=\"primary\" block] <a href=\"#link\">Button Text</a> [/button]"
 						}
 					],
 					"shortcodes": [
@@ -366,17 +366,17 @@
 					"examples": [
 						{
 							"description": "Basic example",
-							"code": "\n[button-group]\n  [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n[/button-group]"
+							"code": "[button-group]\n  [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n[/button-group]"
 						},
 						{
 							"note": "Set the <code>vertical</code> flag to make the buttons appear vertically stacked rather than horiztonally.",
 							"description": "Vertical example",
-							"code": "\n[button-group vertical]\n  [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n[/button-group]"
+							"code": "[button-group vertical]\n  [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n[/button-group]"
 						},
 						{
 							"note": "Wrap <code>[button group]s</code> in <code>[button-toolbar]</code> to make a button toolbar.",
 							"description": "Button Toolbar",
-							"code": "\n[button-toolbar]\n  [button-group]\n    [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [/button-group]\n  [button-group]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [/button-group]\n  [button-group]\n    [button type=\"secondary\"] [disabled]<a href=\"#link\">Text</a>[/disabled] [/button]\n  [/button-group]\n[/button-toolbar]"
+							"code": "[button-toolbar]\n  [button-group]\n    [button type=\"secondary\"] [active]<a href=\"#link\">Text</a>[/active] [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [/button-group]\n  [button-group]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n    [button type=\"secondary\"] <a href=\"#link\">Text</a> [/button]\n  [/button-group]\n  [button-group]\n    [button type=\"secondary\"] [disabled]<a href=\"#link\">Text</a>[/disabled] [/button]\n  [/button-group]\n[/button-toolbar]"
 						}
 					],
 					"shortcodes": [
@@ -412,37 +412,37 @@
 					"examples": [
 						{
 							"description": "Basic example",
-							"code": "\n[card]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    [card-subtitle] <h6>Card Subtitle</h6> [/card-subtitle]\n    ...\n  [/card-block]\n[/card]"
+							"code": "[card]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    [card-subtitle] <h6>Card Subtitle</h6> [/card-subtitle]\n    ...\n  [/card-block]\n[/card]"
 						},
 						{
 							"note": "Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag.",
 							"description": "Card with image cap",
-							"code": "\n[card]\n  [card-img top]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-block]\n[/card]"
+							"code": "[card]\n  [card-img top]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-block]\n[/card]"
 						},
 						{
 							"note": "Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.",
 							"description": "Card with image overlay",
-							"code": "\n[card]\n  [card-img]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-img-overlay]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-img-overlay]\n[/card]"
+							"code": "[card]\n  [card-img]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-img-overlay]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-img-overlay]\n[/card]"
 						},
 						{
 							"note": "Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.",
 							"description": "Card with Header and Footer",
-							"code": "\n[card]\n  [card-header] ... [/card-header]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-block]\n  [card-footer] ... [/card-footer]\n[/card]"
+							"code": "[card]\n  [card-header] ... [/card-header]\n  [card-block]\n    [card-title] <h4>Card Title</h4> [/card-title]\n    ...\n  [/card-block]\n  [card-footer] ... [/card-footer]\n[/card]"
 						},
 						{
 							"note": "Use card groups to render cards as a single, attached element with equal width and height columns.",
 							"description": "Card group",
-							"code": "\n[card-group]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-group]"
+							"code": "[card-group]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-group]"
 						},
 						{
 							"note": "Need a set of equal width and height cards that aren’t attached to one another? Use card decks.",
 							"description": "Card deck",
-							"code": "\n[card-deck]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-deck]"
+							"code": "[card-deck]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-deck]"
 						},
 						{
 							"note": "Cards can be organized into Masonry-like columns with just CSS by wrapping them in <code>[card-columns]</code>",
 							"description": "Card deck",
-							"code": "\n[card-columns]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-columns]"
+							"code": "[card-columns]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-block]\n      [card-title] <h4>Card Title</h4> [/card-title]\n      ...\n    [/card-block]\n  [/card]\n[/card-columns]"
 						}
 					],
 					"shortcodes": [
@@ -535,7 +535,7 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[carousel]\n  <img src=\"placeholder-path/placeholder-lg.png\">\n  <img src=\"placeholder-path/placeholder-lg.png\">\n  <img src=\"placeholder-path/placeholder-lg.png\">\n[/carousel]"
+							"code": "[carousel]\n  <img src=\"placeholder-path/placeholder-lg.png\">\n  <img src=\"placeholder-path/placeholder-lg.png\">\n  <img src=\"placeholder-path/placeholder-lg.png\">\n[/carousel]"
 						}
 					],
 					"shortcodes": [
@@ -574,7 +574,7 @@
 						{
 							"note": "Create an accordion by wrapping <code>[card]</code>s in <code>[accordion]</code>.",
 							"description": "Accordion example",
-							"code": "\n[accordion]\n  [card]\n    [card-header] ... [/card-header]\n    [card-block]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-header] ... [/card-header]\n    [card-block]\n      ...\n    [/card-block]\n  [/card]\n[/accordion]"
+							"code": "[accordion]\n  [card]\n    [card-header] ... [/card-header]\n    [card-block]\n      ...\n    [/card-block]\n  [/card]\n  [card]\n    [card-header] ... [/card-header]\n    [card-block]\n      ...\n    [/card-block]\n  [/card]\n[/accordion]"
 						}
 					],
 					"shortcodes": [
@@ -592,17 +592,17 @@
 						{
 							"note": "The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.",
 							"description": "Basic example",
-							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+							"code": "[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
 						},
 						{
 							"note": "Add a header to label sections of actions in any dropdown menu.",
 							"description": "Dropdown with header tags as labels",
-							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <h6>Dropdown header</h6>\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+							"code": "[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <h6>Dropdown header</h6>\n    <a href=\"#link\">Link 1</a>\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
 						},
 						{
 							"note": "Separate groups of related menu items with a <code>[dropdown-divider]</code>.",
 							"description": "Divider example",
-							"code": "\n[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    [dropdown-divider]\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
+							"code": "[dropdown]\n  [button dropdown]Dropdown Button[/button]\n  [dropdown-menu]\n    <a href=\"#link\">Link 1</a>\n    [dropdown-divider]\n    <a href=\"#link\">Link 2</a>\n    <a href=\"#link\">Link 3</a>\n  [/dropdown-menu]\n[/dropdown]"
 						}
 					],
 					"shortcodes": [
@@ -638,12 +638,12 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[jumbotron]\n  <h1> Hello, World! </h1>\n  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]\n[/jumbotron]"
+							"code": "[jumbotron]\n  <h1> Hello, World! </h1>\n  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]\n[/jumbotron]"
 						},
 						{
 							"note": "Set the <code>fluid</code> flag to make a fluid jumbotron.",
 							"description": "Fluid example",
-							"code": "\n[jumbotron fluid]\n  <h1> Hello, World! </h1>\n  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]\n[/jumbotron]"
+							"code": "[jumbotron fluid]\n  <h1> Hello, World! </h1>\n  [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [/lead]\n[/jumbotron]"
 						}
 					],
 					"shortcodes": [
@@ -669,17 +669,17 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[list-group]\n  <ul>\n    <li>Cras justo odio</li>\n    <li>Dapibus ac facilisis in</li>\n    <li>Morbi leo risus</li>\n    <li>Porta ac consectetur ac</li>\n    <li>Vestibulum at eros</li>\n  </ul>\n[/list-group]"
+							"code": "[list-group]\n  <ul>\n    <li>Cras justo odio</li>\n    <li>Dapibus ac facilisis in</li>\n    <li>Morbi leo risus</li>\n    <li>Porta ac consectetur ac</li>\n    <li>Vestibulum at eros</li>\n  </ul>\n[/list-group]"
 						},
 						{
 							"note": "Create a linked list by wrapping links",
 							"description": "Linked list",
-							"code": "\n[list-group]\n  <a href=\"#link1\">Cras justo odio</a>\n  [active]<a href=\"#link2\">Dapibus ac facilisis in</a>[/active]\n  <a href=\"#link3\">Morbi leo risus</a>\n  <a href=\"#link4\">Porta ac consectetur ac</a>\n  [disabled]<a href=\"#link5\">Vestibulum at eros</a>[/disabled]\n[/list-group]"
+							"code": "[list-group]\n  <a href=\"#link1\">Cras justo odio</a>\n  [active]<a href=\"#link2\">Dapibus ac facilisis in</a>[/active]\n  <a href=\"#link3\">Morbi leo risus</a>\n  <a href=\"#link4\">Porta ac consectetur ac</a>\n  [disabled]<a href=\"#link5\">Vestibulum at eros</a>[/disabled]\n[/list-group]"
 						},
 						{
 							"note": "Wrap items in the <code>list-item</code> shortcode to give them contextual styles",
 							"description": "Contextual styles",
-							"code": "\n[list-group]\n  [list-item type=\"success\"]<a href=\"#link1\">Cras justo odio</a>[/list-item]\n  [list-item type=\"info\"]<a href=\"#link2\">Dapibus ac facilisis in</a>[/list-item]\n  [list-item type=\"warning\"]<a href=\"#link3\">Morbi leo risus</a>[/list-item]\n  [list-item type=\"danger\"]<a href=\"#link4\">Porta ac consectetur ac</a>[/list-item]\n[/list-group]"
+							"code": "[list-group]\n  [list-item type=\"success\"]<a href=\"#link1\">Cras justo odio</a>[/list-item]\n  [list-item type=\"info\"]<a href=\"#link2\">Dapibus ac facilisis in</a>[/list-item]\n  [list-item type=\"warning\"]<a href=\"#link3\">Morbi leo risus</a>[/list-item]\n  [list-item type=\"danger\"]<a href=\"#link4\">Porta ac consectetur ac</a>[/list-item]\n[/list-group]"
 						}
 					],
 					"shortcodes": [
@@ -709,27 +709,27 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[nav]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
 							"note": "Set the <code>inline</code> flag to make an inline nav.",
 							"description": "Inline example",
-							"code": "\n[nav inline]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav inline]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
 							"note": "Set the <code>tabs</code> flag to make an tab-styled nav.",
 							"description": "Tabs example",
-							"code": "\n[nav tabs]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav tabs]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
 							"note": "Set the <code>pills</code> flag to make an pills-styled nav.",
 							"description": "Pills example",
-							"code": "\n[nav pills]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav pills]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
 							"note": "Pills-styled navs can also be stacked with the <code>stacked</code> flag.",
 							"description": "Stacked pills example",
-							"code": "\n[nav pills stacked]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav pills stacked]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						}
 					],
 					"shortcodes": [
@@ -776,22 +776,22 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "\n[pagination]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
 						},
 						{
 							"note": "",
 							"description": "Large example",
-							"code": "\n[pagination size=\"lg\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination size=\"lg\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
 						},
 						{
 							"note": "",
 							"description": "Small example",
-							"code": "\n[pagination size=\"sm\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination size=\"sm\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
 						},
 						{
 							"note": "",
 							"description": "Active and disabled states",
-							"code": "\n[pagination]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li>[disabled]<a href=\"#link3\">Morbi leo risus</a>[/disabled]</li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li>[disabled]<a href=\"#link3\">Morbi leo risus</a>[/disabled]</li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
 						}
 					],
 					"shortcodes": [

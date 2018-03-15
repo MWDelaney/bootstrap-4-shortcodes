@@ -11,54 +11,54 @@
 <div class="tab-pane" id="grid" role="tabpanel">
 <h2><?php _e('Grid', 'bootstrap-4-shortcodes'); ?></h2>
 
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[row]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[row]
   [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
   [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
 [&#x2F;row]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('The container component is also supported in case your theme doesn&apos;t include a container.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[container]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example with container', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[container]
   [row]
     [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
     [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
   [&#x2F;row]
 [&#x2F;container]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example with container', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('The container-fluid component is supported as a discrete shortcode.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[container-fluid]  
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example with fluid container', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[container-fluid]  
 [row]
     [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
     [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
   [&#x2F;row]
 [&#x2F;container-fluid]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example with fluid container', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[container] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[container] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -86,7 +86,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[row] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[row] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -114,7 +114,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[column] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[column] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -286,11 +286,12 @@
 <div class="tab-pane" id="media-object" role="tabpanel">
 <h2><?php _e('Media Object', 'bootstrap-4-shortcodes'); ?></h2>
 
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[media]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[media]
   [media-object]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;
   [&#x2F;media-object]
@@ -300,16 +301,16 @@
   [&#x2F;media-body]
 [&#x2F;media]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Wrap several <code>[media-object]</code>s in <code>[media-list]</code>, useful for comment threads or articles lists.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[media-list]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Media List', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[media-list]
   [media]
     [media-object]
       &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;
@@ -330,13 +331,12 @@
   [&#x2F;media]
 [&#x2F;media-list]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Media List', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[media] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[media] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -364,7 +364,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[media-object] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[media-object] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -399,7 +399,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[media-body] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[media-body] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -427,7 +427,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[media-heading] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[media-heading] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('<code>[media-heading]</code> should contain heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a header tag is not added <code>h4</code> will be inserted automatically.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -460,19 +460,19 @@
 <div class="tab-pane" id="responsive-utilities" role="tabpanel">
 <h2><?php _e('Responsive Utilities', 'bootstrap-4-shortcodes'); ?></h2>
 
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[hidden down&#x3D;&quot;sm&quot;] ... [&#x2F;hidden]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[hidden down&#x3D;&quot;sm&quot;] ... [&#x2F;hidden]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[hidden] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[hidden] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -519,19 +519,19 @@
 <div class="tab-pane" id="alerts" role="tabpanel">
 <h2><?php _e('Alerts', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[alert type&#x3D;&quot;success&quot;] ... [&#x2F;alert]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[alert type&#x3D;&quot;success&quot;] ... [&#x2F;alert]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[alert] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[alert] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Any links, headings, or strong or bold text within an alert will automatically be styled to match the alert type.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -578,23 +578,23 @@
 <div class="tab-pane" id="breadcrumb" role="tabpanel">
 <h2><?php _e('Breadcrumb', 'bootstrap-4-shortcodes'); ?></h2>
 
-	<p><?php _e('Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[breadcrumb]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[breadcrumb]
   &lt;a href&#x3D;&quot;#link1&quot;&gt; Link 1 &lt;&#x2F;a&gt;
   &lt;a href&#x3D;&quot;#link2&quot;&gt; Link 2 &lt;&#x2F;a&gt;
   [active] Link 3 [&#x2F;active]
 [&#x2F;breadcrumb]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[breadcrumb] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[breadcrumb] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -626,41 +626,41 @@
 <div class="tab-pane" id="buttons" role="tabpanel">
 <h2><?php _e('Buttons', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.', 'bootstrap-4-shortcodes'); ?></p>
-	<p><?php _e('Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[button type&#x3D;&quot;primary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[button type&#x3D;&quot;primary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Set button sizes with the <code>size</code> parameter.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[button type&#x3D;&quot;primary&quot; size&#x3D;&quot;lg&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Large button', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[button type&#x3D;&quot;primary&quot; size&#x3D;&quot;lg&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Large button', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Set <code>block</code> flag for block-style buttons.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[button type&#x3D;&quot;primary&quot; block] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Button-block example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[button type&#x3D;&quot;primary&quot; block] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Button-block example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[button] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[button] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -714,41 +714,42 @@
 <div class="tab-pane" id="button-groups" role="tabpanel">
 <h2><?php _e('Button Groups', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
-	<p><?php _e('Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[button-group]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[button-group]
   [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
 [&#x2F;button-group]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Set the <code>vertical</code> flag to make the buttons appear vertically stacked rather than horiztonally.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[button-group vertical]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Vertical example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[button-group vertical]
   [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
 [&#x2F;button-group]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Vertical example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Wrap <code>[button group]s</code> in <code>[button-toolbar]</code> to make a button toolbar.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[button-toolbar]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Button Toolbar', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[button-toolbar]
   [button-group]
     [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
     [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
@@ -764,13 +765,12 @@
   [&#x2F;button-group]
 [&#x2F;button-toolbar]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Button Toolbar', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[button-group] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[button-group] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -813,7 +813,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[button-toolbar] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[button-toolbar] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -846,11 +846,12 @@
 <div class="tab-pane" id="cards" role="tabpanel">
 <h2><?php _e('Cards', 'bootstrap-4-shortcodes'); ?></h2>
 
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[card]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[card]
   [card-block]
     [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
     [card-subtitle] &lt;h6&gt;Card Subtitle&lt;&#x2F;h6&gt; [&#x2F;card-subtitle]
@@ -858,16 +859,16 @@
   [&#x2F;card-block]
 [&#x2F;card]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[card]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Card with image cap', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[card]
   [card-img top]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
   [&#x2F;card-img]
@@ -877,16 +878,16 @@
   [&#x2F;card-block]
 [&#x2F;card]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Card with image cap', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[card]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Card with image overlay', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[card]
   [card-img]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
   [&#x2F;card-img]
@@ -896,16 +897,16 @@
   [&#x2F;card-img-overlay]
 [&#x2F;card]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Card with image overlay', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[card]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Card with Header and Footer', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[card]
   [card-header] ... [&#x2F;card-header]
   [card-block]
     [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
@@ -914,16 +915,16 @@
   [card-footer] ... [&#x2F;card-footer]
 [&#x2F;card]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Card with Header and Footer', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Use card groups to render cards as a single, attached element with equal width and height columns.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[card-group]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Card group', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[card-group]
   [card]
     [card-block]
       [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
@@ -944,16 +945,16 @@
   [&#x2F;card]
 [&#x2F;card-group]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Card group', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Need a set of equal width and height cards that aren’t attached to one another? Use card decks.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[card-deck]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[card-deck]
   [card]
     [card-block]
       [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
@@ -974,16 +975,16 @@
   [&#x2F;card]
 [&#x2F;card-deck]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Cards can be organized into Masonry-like columns with just CSS by wrapping them in <code>[card-columns]</code>', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[card-columns]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[card-columns]
   [card]
     [card-block]
       [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
@@ -1004,13 +1005,12 @@
   [&#x2F;card]
 [&#x2F;card-columns]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[card] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1052,7 +1052,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-block] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-block] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Any <code>p</code> or <code>blockquote</code> tags within <code>[card-block]</code> will automatically receive <code>card-text</code> or <code>card-blockquote</code> classes respectively', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1081,7 +1081,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-title] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-title] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('<code>[card-title]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>h4</code> will be inserted automatically', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1110,7 +1110,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-subtitle] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-subtitle] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('<code>[card-subtitle]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>h6</code> will be inserted automatically', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1139,7 +1139,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-img] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-img] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('<code>[card-img]</code> should contain an image inserted using the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1182,7 +1182,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-img-overlay] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-img-overlay] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1210,7 +1210,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-header] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-header] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('<code>[card-header]</code> should contain a heading tag (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>), inserted using the WordPress editor. If a heading tag is not added <code>div</code> (no heading) will be inserted automatically', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1239,7 +1239,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-footer] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-footer] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1267,7 +1267,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-group] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-group] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1295,7 +1295,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-deck] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-deck] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1323,7 +1323,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[card-columns] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[card-columns] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1355,23 +1355,23 @@
 <div class="tab-pane" id="carousel" role="tabpanel">
 <h2><?php _e('Carousel', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[carousel]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[carousel]
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
 [&#x2F;carousel]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[carousel] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[carousel] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[carousel]</code> must wrap a set of images inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1425,11 +1425,12 @@
 <div class="tab-pane" id="collapse" role="tabpanel">
 <h2><?php _e('Collapse', 'bootstrap-4-shortcodes'); ?></h2>
 
-	<p><?php _e('Create an accordion by wrapping <code>[card]</code>s in <code>[accordion]</code>.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[accordion]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Accordion example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[accordion]
   [card]
     [card-header] ... [&#x2F;card-header]
     [card-block]
@@ -1444,13 +1445,12 @@
   [&#x2F;card]
 [&#x2F;accordion]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Accordion example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[accordion] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[accordion] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1482,11 +1482,12 @@
 <div class="tab-pane" id="dropdown" role="tabpanel">
 <h2><?php _e('Dropdowns', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[dropdown-menu]</code> must wrap an <code>a</code>, or <code>button</code> tags inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
-	<p><?php _e('The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[dropdown]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[dropdown]
   [button dropdown]Dropdown Button[&#x2F;button]
   [dropdown-menu]
     &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
@@ -1495,16 +1496,16 @@
   [&#x2F;dropdown-menu]
 [&#x2F;dropdown]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Add a header to label sections of actions in any dropdown menu.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[dropdown]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Dropdown with header tags as labels', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[dropdown]
   [button dropdown]Dropdown Button[&#x2F;button]
   [dropdown-menu]
     &lt;h6&gt;Dropdown header&lt;&#x2F;h6&gt;
@@ -1514,16 +1515,16 @@
   [&#x2F;dropdown-menu]
 [&#x2F;dropdown]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Dropdown with header tags as labels', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Separate groups of related menu items with a <code>[dropdown-divider]</code>.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[dropdown]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Divider example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[dropdown]
   [button dropdown]Dropdown Button[&#x2F;button]
   [dropdown-menu]
     &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
@@ -1533,13 +1534,12 @@
   [&#x2F;dropdown-menu]
 [&#x2F;dropdown]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Divider example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[dropdown] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[dropdown] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1567,7 +1567,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[dropdown-menu] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[dropdown-menu] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1602,7 +1602,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[dropdown-divider] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[dropdown-divider] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1634,36 +1634,36 @@
 <div class="tab-pane" id="jumbotron" role="tabpanel">
 <h2><?php _e('Jumbotron', 'bootstrap-4-shortcodes'); ?></h2>
 
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[jumbotron]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[jumbotron]
   &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
   [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
 [&#x2F;jumbotron]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Set the <code>fluid</code> flag to make a fluid jumbotron.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[jumbotron fluid]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Fluid example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[jumbotron fluid]
   &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
   [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
 [&#x2F;jumbotron]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Fluid example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[jumbotron] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[jumbotron] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1702,11 +1702,12 @@
 <div class="tab-pane" id="list-group" role="tabpanel">
 <h2><?php _e('List Group', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[list-group]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[list-group]
   &lt;ul&gt;
     &lt;li&gt;Cras justo odio&lt;&#x2F;li&gt;
     &lt;li&gt;Dapibus ac facilisis in&lt;&#x2F;li&gt;
@@ -1716,16 +1717,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;list-group]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Create a linked list by wrapping links', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[list-group]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Linked list', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[list-group]
   &lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;
   [active]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;active]
   &lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;
@@ -1733,29 +1734,28 @@
   [disabled]&lt;a href&#x3D;&quot;#link5&quot;&gt;Vestibulum at eros&lt;&#x2F;a&gt;[&#x2F;disabled]
 [&#x2F;list-group]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Linked list', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Wrap items in the <code>list-item</code> shortcode to give them contextual styles', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[list-group]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Contextual styles', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[list-group]
   [list-item type&#x3D;&quot;success&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;list-item]
   [list-item type&#x3D;&quot;info&quot;]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;list-item]
   [list-item type&#x3D;&quot;warning&quot;]&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;[&#x2F;list-item]
   [list-item type&#x3D;&quot;danger&quot;]&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;[&#x2F;list-item]
 [&#x2F;list-group]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Contextual styles', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[list-group] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[list-group] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1784,7 +1784,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3>[list-item] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[list-item] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1824,11 +1824,12 @@
 <div class="tab-pane" id="navs" role="tabpanel">
 <h2><?php _e('Navs', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[nav]</code> must wrap a set of links and list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[nav]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[nav]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1837,16 +1838,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;nav]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Set the <code>inline</code> flag to make an inline nav.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[nav inline]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Inline example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[nav inline]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1855,16 +1856,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;nav]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Inline example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Set the <code>tabs</code> flag to make an tab-styled nav.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[nav tabs]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Tabs example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[nav tabs]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1873,16 +1874,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;nav]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Tabs example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Set the <code>pills</code> flag to make an pills-styled nav.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[nav pills]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Pills example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[nav pills]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1891,16 +1892,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;nav]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Pills example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Pills-styled navs can also be stacked with the <code>stacked</code> flag.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[nav pills stacked]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Stacked pills example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[nav pills stacked]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1909,13 +1910,12 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;nav]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Stacked pills example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[nav] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[nav] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[nav]</code> must wrap a set of links and list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -1976,11 +1976,12 @@
 <div class="tab-pane" id="pagination" role="tabpanel">
 <h2><?php _e('Pagination', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[pagination]</code> must wrap a set of list items and links inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[pagination]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[pagination]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1989,16 +1990,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[pagination size&#x3D;&quot;lg&quot;]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Large example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[pagination size&#x3D;&quot;lg&quot;]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2007,16 +2008,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Large example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[pagination size&#x3D;&quot;sm&quot;]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Small example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[pagination size&#x3D;&quot;sm&quot;]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2025,16 +2026,16 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Small example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>
-[pagination]
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Active and disabled states', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[pagination]
   &lt;ul&gt;
     &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2043,13 +2044,12 @@
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Active and disabled states', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[pagination] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[pagination] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[pagination]</code> must wrap a set of list items and links inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -2089,28 +2089,30 @@
 <div class="tab-pane" id="popovers" role="tabpanel">
 <h2><?php _e('Popovers', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Wrap any element in a the <code>[popover]</code> shortcode to give it a popover. This may not work well on all elements depending on styling and other factors.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[popover title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[popover title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Use the focus trigger to dismiss popovers on the next click that the user makes.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[popover trigger&#x3D;&quot;focus&quot; title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Dismiss on next click', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[popover trigger&#x3D;&quot;focus&quot; title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Dismiss on next click', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[popover] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[popover] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Wrap any element in a the <code>[popover]</code> shortcode to give it a popover. This may not work well on all elements depending on styling and other factors.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -2171,28 +2173,30 @@
 <div class="tab-pane" id="progress" role="tabpanel">
 <h2><?php _e('Progress', 'bootstrap-4-shortcodes'); ?></h2>
 
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[progress type&#x3D;&quot;primary&quot; value&#x3D;&quot;50&quot;]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[progress type&#x3D;&quot;primary&quot; value&#x3D;&quot;50&quot;]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Use the <code>striped</code> flag to produce a striped progress bar.', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[progress type&#x3D;&quot;primary&quot; value&#x3D;&quot;50&quot; striped]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Striped example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[progress type&#x3D;&quot;primary&quot; value&#x3D;&quot;50&quot; striped]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Striped example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[progress] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[progress] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -2245,28 +2249,30 @@
 <div class="tab-pane" id="tooltips" role="tabpanel">
 <h2><?php _e('Tooltips', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Wrap any element in a the <code>[tooltip]</code> shortcode to give it a tooltip. This may not work well on all elements depending on styling and other factors.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[tooltip title&#x3D;&quot;Tooltip text&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;tooltip]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[tooltip title&#x3D;&quot;Tooltip text&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;tooltip]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
-	<p><?php _e('Use the <code>html</code> flag to allow HTML in the tooltip', 'bootstrap-4-shortcodes'); ?></p>
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[tooltip title&#x3D;&quot;&lt;em&gt;Tooltip&lt;&#x2F;em&gt; &lt;u&gt;with&lt;&#x2F;u&gt; &lt;b&gt;HTML&lt;&#x2F;b&gt;&quot; tooltip]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;tooltip]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('HTML tooltip', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[tooltip title&#x3D;&quot;&lt;em&gt;Tooltip&lt;&#x2F;em&gt; &lt;u&gt;with&lt;&#x2F;u&gt; &lt;b&gt;HTML&lt;&#x2F;b&gt;&quot; tooltip]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;tooltip]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('HTML tooltip', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[tooltip] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[tooltip] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Wrap any element in a the <code>[tooltip]</code> shortcode to give it a tooltip. This may not work well on all elements depending on styling and other factors.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -2321,18 +2327,19 @@
 <div class="tab-pane" id="borders" role="tabpanel">
 <h2><?php _e('Borders', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Use border utilities to quickly style the <code>border</code> and <code>border-radius</code> of an element. Great for images, buttons, or any other element.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[border rounded]&lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;[&#x2F;border]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[border rounded]&lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;[&#x2F;border]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[border] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[border] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Use border utilities to quickly style the <code>border</code> and <code>border-radius</code> of an element. Great for images, buttons, or any other element.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -2407,18 +2414,19 @@
 <div class="tab-pane" id="colors" role="tabpanel">
 <h2><?php _e('Colors', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.', 'bootstrap-4-shortcodes'); ?></p>
-	
 	<div class="card">
-		<div class="card-block">
-			<pre><code>[color type&#x3D;&quot;primary&quot;]Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.[&#x2F;color]</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[color type&#x3D;&quot;primary&quot;]Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.[&#x2F;color]</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 
-<h3>[color] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[color] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>

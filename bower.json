@@ -13,11 +13,11 @@
     "bootstrap": {
       "main": [
         "./dist/js/bootstrap.min.js",
-				"./scss/bootstrap.scss"
+	"./scss/bootstrap.scss"
       ],
-			"dependencies": {
-				"tether": "^1.1.1"
-		  }
+	"dependencies": {
+		"tether": "^1.1.1"
+	}
     }
   },
   "description": "",

@@ -8,7 +8,6 @@ jQuery(document).ready(function() {
 				.text().replace('placeholder-path', path)
 				.replace(/]\n/g, ']<br>\n')
 				.replace(/\.\.\.\n/g, '...<br>\n');
-			console.log(example);
 			var lines = example.split('\n');
 			var paras = '';
 			jQuery.each(lines, function(i, line) {

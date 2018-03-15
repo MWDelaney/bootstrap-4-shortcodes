@@ -155,7 +155,6 @@ class Utilities {
 			$tags = $doc->getElementsByTagName($found);
 			foreach ($tags as $tag) {
 				foreach ($class as $c) {
-					echo $c;
 					if (!Utilities::hasclass($tag, $c)) { continue; }
 						else {
 						$parent = $tag->parentNode;

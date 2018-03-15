@@ -1,10 +1,10 @@
 <h5>Table of Contents</h5>
-<ul class="nav nav-pills nav-stacked" role="tablist">
-<li><h6><?php _e('Introduction', 'bootstrap-4-shortcodes'); ?></h6></li>
+<ul class="nav nav-pills flex-column" role="tablist">
+<li class="mb-0"><h6 class="mb-0"><?php _e('Introduction', 'bootstrap-4-shortcodes'); ?></h6></li>
 <li class="nav-item">
 	<a href="#about" class="nav-link active" data-toggle="pill" role="tab"><?php _e('About', 'bootstrap-4-shortcodes'); ?></a>
 </li>
-<li><h6><?php _e('Layout', 'bootstrap-4-shortcodes'); ?></h6></li>
+<li class="mb-0"><h6 class="mb-0 mt-3"><?php _e('Layout', 'bootstrap-4-shortcodes'); ?></h6></li>
 <li class="nav-item">
 	<a href="#grid" class="nav-link" data-toggle="pill" role="tab"><?php _e('Grid', 'bootstrap-4-shortcodes'); ?></a>
 </li>
@@ -14,7 +14,7 @@
 <li class="nav-item">
 	<a href="#responsive-utilities" class="nav-link" data-toggle="pill" role="tab"><?php _e('Responsive Utilities', 'bootstrap-4-shortcodes'); ?></a>
 </li>
-<li><h6><?php _e('Components', 'bootstrap-4-shortcodes'); ?></h6></li>
+<li class="mb-0"><h6 class="mb-0 mt-3"><?php _e('Components', 'bootstrap-4-shortcodes'); ?></h6></li>
 <li class="nav-item">
 	<a href="#alerts" class="nav-link" data-toggle="pill" role="tab"><?php _e('Alerts', 'bootstrap-4-shortcodes'); ?></a>
 </li>
@@ -60,7 +60,7 @@
 <li class="nav-item">
 	<a href="#tooltips" class="nav-link" data-toggle="pill" role="tab"><?php _e('Tooltips', 'bootstrap-4-shortcodes'); ?></a>
 </li>
-<li><h6><?php _e('Utilities', 'bootstrap-4-shortcodes'); ?></h6></li>
+<li class="mb-0"><h6 class="mb-0 mt-3"><?php _e('Utilities', 'bootstrap-4-shortcodes'); ?></h6></li>
 <li class="nav-item">
 	<a href="#borders" class="nav-link" data-toggle="pill" role="tab"><?php _e('Borders', 'bootstrap-4-shortcodes'); ?></a>
 </li>

@@ -1,14 +1,19 @@
 @import "variables";
 
 #bootstrap-4-shortcodes-help {
-// bower:scss
-// endbower
+
+  // Import Bootstrap 4 as from node_modules
+  @import "../../node_modules/bootstrap/scss/bootstrap";
+
 .card {
-	padding: 0 !important;
+  padding: 0 !important;
+  max-width: none;
 }
+
 h5 {
 	margin-top: $spacer;
 }
+
 h6 {
 	margin-top: $spacer*2;
 }
@@ -26,7 +31,12 @@ h6 {
 		background: #f3f3f3;
 		border-right-width: 1px;
 		border-right-style: solid;
-		border-right-color: #ccc;
+    border-right-color: #ccc;
+
+    .nav-item {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
 	}
 	.right {
 		padding-left: 0;
@@ -43,7 +53,24 @@ h6 {
 			/* Standard */
 			width: calc(100% - 110px);
 		}
-	}
+  }
+
+  .modal {
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-header {
+    background-color: theme-color('primary');
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: #fff;
+  }
+
+  .close {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+  }
+
 	.modal-body {
 		padding: 0;
 	}
@@ -51,8 +78,10 @@ h6 {
 		z-index: 9999;
 	}
 	.modal-content {
+    @extend .rounded-top;
+
+    border: 0;
 		width: 100%;
-		border-radius: 0;
 		position: absolute;
 		top: 30px;
 		bottom: 30px;
@@ -65,8 +94,8 @@ h6 {
 		max-width: none;
 		overflow: hidden;
 		position: absolute;
-		left: 30px;
-		right: 30px;
+		left: 100px;
+		right: 100px;
 		top: 30px;
 		bottom: 30px;
 		margin: 0;

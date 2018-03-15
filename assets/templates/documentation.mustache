@@ -14,20 +14,21 @@
 <h2><?php _e('{{title}}', 'bootstrap-4-shortcodes'); ?></h2>
 {{#note}}<p><?php _e('{{{note}}}', 'bootstrap-4-shortcodes'); ?></p>{{/note}}
 {{#examples}}
-	{{#note}}<p><?php _e('{{{note}}}', 'bootstrap-4-shortcodes'); ?></p>{{/note}}
 	<div class="card">
-		<div class="card-block">
-			<pre><code>{{code}}</code></pre>
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('{{description}}', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">{{code}}</code></pre>
 		</div>
-		<div class="card-footer">
-			<?php _e('{{description}}', 'bootstrap-4-shortcodes'); ?>
+		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
 		</div>
 	</div> <!--/card -->
 {{/examples}}
 
 {{#shortcodes}}
-<h3>[{{name}}] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[{{name}}] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 {{#note}}
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('{{{note}}}', 'bootstrap-4-shortcodes'); ?></div>
 {{/note}}
