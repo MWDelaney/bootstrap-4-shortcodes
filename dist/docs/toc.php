@@ -19,6 +19,9 @@
 	<a href="#alerts" class="nav-link" data-toggle="pill" role="tab"><?php _e('Alerts', 'bootstrap-4-shortcodes'); ?></a>
 </li>
 <li class="nav-item">
+	<a href="#badge" class="nav-link" data-toggle="pill" role="tab"><?php _e('Badge', 'bootstrap-4-shortcodes'); ?></a>
+</li>
+<li class="nav-item">
 	<a href="#breadcrumb" class="nav-link" data-toggle="pill" role="tab"><?php _e('Breadcrumb', 'bootstrap-4-shortcodes'); ?></a>
 </li>
 <li class="nav-item">

@@ -524,7 +524,18 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
-			<pre><code class="d-block p-4">[alert type&#x3D;&quot;success&quot;] ... [&#x2F;alert]</code></pre>
+			<pre><code class="d-block p-4">[alert type&#x3D;&quot;primary&quot;] ... [&#x2F;alert]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Dismissible', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[alert type&#x3D;&quot;primary&quot; dismissible] ... [&#x2F;alert]</code></pre>
 		</div>
 		<div class="card-footer text-left">
 			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
@@ -548,12 +559,92 @@
 			<td>type</td>
 			<td><?php _e('The type of the alert.', 'bootstrap-4-shortcodes'); ?></td>
 			<td>0</td>
-			<td>success, info, warning, danger</td>
-			<td>success</td>
+			<td>primary, secondary, success, info, warning, danger, light, dark</td>
+			<td>primary</td>
 		</tr>
 		<tr>
 			<td>dismissible</td>
 			<td><?php _e('If the alert should be dismissable.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="tab-pane" id="badge" role="tabpanel">
+<h2><?php _e('Badge', 'bootstrap-4-shortcodes'); ?></h2>
+
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[badge type&#x3D;&quot;primary&quot;] Lorem [&#x2F;badge]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Pill badges', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[badge type&#x3D;&quot;primary&quot; pill] Ipsum [&#x2F;badge]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Links', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+			<pre><code class="d-block p-4">[badge type&#x3D;&quot;primary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Dolor Sit&lt;&#x2F;a&gt; [&#x2F;badge]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+
+<h3 class="mt-5">[badge] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>type</td>
+			<td><?php _e('The type of the badge.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>primary, secondary, success, info, warning, danger, light, dark</td>
+			<td>primary</td>
+		</tr>
+		<tr>
+			<td>pill</td>
+			<td><?php _e('If the badge should be styled as a pill.', 'bootstrap-4-shortcodes'); ?></td>
 			<td>0</td>
 			<td>🚩 (flag)</td>
 			<td></td>

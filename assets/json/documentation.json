@@ -267,7 +267,12 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "[alert type=\"success\"] ... [/alert]"
+							"code": "[alert type=\"primary\"] ... [/alert]"
+            },
+						{
+							"note": "",
+							"description": "Dismissible",
+							"code": "[alert type=\"primary\" dismissible] ... [/alert]"
 						}
 					],
 					"shortcodes": [
@@ -278,12 +283,55 @@
 									"name": "type",
 									"description": "The type of the alert.",
 									"required": "0",
-									"values": "success, info, warning, danger",
-									"default": "success"
+									"values": "primary, secondary, success, info, warning, danger, light, dark",
+									"default": "primary"
 								},
 								{
 									"name": "dismissible",
 									"description": "If the alert should be dismissable.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						}
+					]
+        },
+				{
+					"title": "Badge",
+					"id": "badge",
+					"note": "",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "[badge type=\"primary\"] Lorem [/badge]"
+            },
+						{
+							"note": "",
+							"description": "Pill badges",
+							"code": "[badge type=\"primary\" pill] Ipsum [/badge]"
+            },
+						{
+							"note": "",
+							"description": "Links",
+							"code": "[badge type=\"primary\"] <a href=\"#link\">Dolor Sit</a> [/badge]"
+						}
+					],
+					"shortcodes": [
+						{
+							"name": "badge",
+							"parameters": [
+								{
+									"name": "type",
+									"description": "The type of the badge.",
+									"required": "0",
+									"values": "primary, secondary, success, info, warning, danger, light, dark",
+									"default": "primary"
+								},
+								{
+									"name": "pill",
+									"description": "If the badge should be styled as a pill.",
 									"required": "0",
 									"values": "🚩 (flag)",
 									"default": ""

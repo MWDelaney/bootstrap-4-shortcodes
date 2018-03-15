@@ -59,7 +59,9 @@ class Shortcodes {
 
 			'hidden',
 
-			'alert',
+      'alert',
+      
+      'badge',
 
 			'breadcrumb',
 			'active',
@@ -495,7 +497,7 @@ class Shortcodes {
 	 */
 	function bs_alert( $save_atts, $content = null ) {
 		$atts = shortcode_atts( array(
-				"type"	=> "success",
+				"type"	=> "primary",
 				"class" => false,
 				"data"	=> false
 		), $save_atts );
@@ -503,7 +505,7 @@ class Shortcodes {
 		$class	= array();
 		$class[]  = 'alert';
 		$class[]  = 'alert-' . $atts['type'];
-		$class[]	= (Utilities::is_flag('dismissible', $save_atts)) ? 'alert-dismissible fade in' : null;
+		$class[]	= (Utilities::is_flag('dismissible', $save_atts)) ? 'alert-dismissible fade show' : null;
 
 		$link_class	= array();
 		$link_class[]	= 'alert-link';
@@ -528,6 +530,45 @@ class Shortcodes {
 
 		$return = Utilities::addclass( $search_as, $return, $link_class );
 		$return = Utilities::addclass( $search_headings, $return, $heading_class );
+
+		return $return;
+  }
+  
+
+
+	/**
+	 * Badge shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_badge( $save_atts, $content = null ) {
+		$atts = shortcode_atts( array(
+			"type"			=> 'primary',
+			"pill"			=> false,
+			"class"			=> false,
+			"data"			=> false
+		), $save_atts );
+
+		$class	= array();
+		$class[]	= 'badge';
+		$class[]  = 'badge-' . $atts['type'];
+		$class[]	= (Utilities::is_flag('pill', $save_atts)) ? 'badge-pill' : null;
+
+		$search_tags	= array('a', 'span');
+    $wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<span>';
+		$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</span>';
+
+		$content = do_shortcode( $wrap_before . $content . $wrap_after );
+		$return = Utilities::bs_output(
+			sprintf(
+				'%s',
+				$content
+			)
+		);
+
+		$return = Utilities::addclass( $search_tags, $return, $class );
+		$return = Utilities::adddata( $search_tags, $return, $atts['data'] );
 
 		return $return;
 	}
