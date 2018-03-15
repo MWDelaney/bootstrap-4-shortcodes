@@ -76,7 +76,7 @@ class Shortcodes {
 			'dropdown-divider',
 
 			'card',
-			'card-block',
+			'card-body',
 			'card-title',
 			'card-subtitle',
 			'card-img',
@@ -545,7 +545,6 @@ class Shortcodes {
 	function bs_badge( $save_atts, $content = null ) {
 		$atts = shortcode_atts( array(
 			"type"			=> 'primary',
-			"pill"			=> false,
 			"class"			=> false,
 			"data"			=> false
 		), $save_atts );
@@ -704,6 +703,8 @@ class Shortcodes {
 		$class[]	= (Utilities::is_flag('block', $save_atts)) ? 'btn-block' : null;
 		$class[]	= (Utilities::is_flag('active', $save_atts)) ? 'active' : null;
 		$class[]	= (Utilities::is_flag('disabled', $save_atts)) ? 'disabled' : null;
+		$class[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'dropdown-toggle' : null;
+		$class[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'dropdown-toggle-split' : null;
 
 		$button_data = array();
 		$button_data[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'toggle,dropdown' : null;
@@ -748,9 +749,11 @@ class Shortcodes {
 		), $save_atts );
 
 		$class	= array();
-		$class[]	= 'btn-group';
+		$class[]	= (Utilities::is_flag('vertical', $save_atts)) ? 'btn-group-vertical' : 'btn-group';
 		$class[]  = ($atts['size']) ? 'btn-group-' . $atts['size'] : null;
-		$class[]	= (Utilities::is_flag('vertical', $save_atts)) ? 'btn-group-vertical' : null;
+
+    $class[] = (Utilities::is_flag('dropup', $save_atts)) ? 'dropup' : '';
+    $class[] = (Utilities::is_flag('dropright', $save_atts)) ? 'dropright' : '';
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -802,7 +805,6 @@ class Shortcodes {
 	 */
 	function bs_card( $save_atts, $content = null ) {
 		$atts = shortcode_atts( array(
-				"type"	=> false,
 				"class"	=> false,
 				"data"	=> false
 		), $save_atts );
@@ -813,21 +815,20 @@ class Shortcodes {
 			} else {
 				$GLOBALS['accordion_card']++;
 			}
-		}
-
+    }
+    
 		$class	= array();
 		$class[]	= 'card';
-		$class[]  = ($atts['type']) ? 'card-' . $atts['type'] : null;
-		$class[]	= (Utilities::is_flag('inverse', $save_atts)) ? 'card-inverse' : null;
 
 		$return = Utilities::bs_output(
 			sprintf(
 				'<div class="%s" %s>%s</div>',
 				Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
-				(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+        (isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
 				$content = do_shortcode( $content )
 			)
-		);
+    );
+  
 		return $return;
 	}
 
@@ -845,7 +846,10 @@ class Shortcodes {
 		), $save_atts );
 
 		$class = array();
-		$class[] = "dropdown";
+    $class[] = "dropdown";
+    
+    $class[] = (Utilities::is_flag('dropup', $save_atts)) ? 'dropup' : '';
+    $class[] = (Utilities::is_flag('dropright', $save_atts)) ? 'dropright' : '';
 
 		$return = Utilities::bs_output(
 			sprintf(
@@ -945,21 +949,25 @@ class Shortcodes {
 	 * @param  string $content shortcode contents
 	 * @return string
 	 */
-	function bs_card_block( $save_atts, $content = null ) {
+	function bs_card_body( $save_atts, $content = null ) {
 		$atts = shortcode_atts( array(
 				"class"	=> false,
 				"data"	=> false
 		), $save_atts );
 
-		$wrap_before = (isset($GLOBALS['accordion_card'])) ? sprintf('<div id="collapse%s" class="collapse" role="tabpanel">', $GLOBALS['accordion_card']) : null;
-		$wrap_after = (isset($GLOBALS['accordion_card'])) ? '</div>' : null;
+		$wrap_before = (isset($GLOBALS['accordion'])) ? sprintf('<div id="collapse%s" class="collapse" role="tabpanel" data-parent="#accordion%s">', $GLOBALS['accordion_card'], $GLOBALS['accordion_count']) : null;
+		$wrap_after = (isset($GLOBALS['accordion'])) ? '</div>' : null;
 
 		$class	= array();
-		$class[]	= 'card-block';
+		$class[]	= 'card-body';
 
 		$p_class = array();
 		$p_class[] = 'card-text';
-		$p_tags	= array('p');
+    $p_tags	= array('p');
+    
+    $a_class	= array();
+		$a_class[]	= 'card-link';
+		$a_tags	= array('a');
 
 		$blockquote_class = array();
 		$blockquote_class[] = 'card-blockquote';
@@ -976,7 +984,8 @@ class Shortcodes {
 			)
 		);
 
-		$return = $wrap_before . $return . $wrap_after;
+    $return = $wrap_before . $return . $wrap_after;
+		$return = Utilities::addclass( $a_tags, $return, $a_class );
 		$return = Utilities::addclass( $p_tags, $return, $p_class );
 		$return = Utilities::addclass( $blockquote_tags, $return, $blockquote_class );
 
@@ -1073,10 +1082,10 @@ class Shortcodes {
 
 			$class	= array();
 			$class[]  = 'card-img';
-			$class[0]	= (Utilities::is_flag('top', $save_atts)) ? 'card-img-top' : null;
-			$class[0]	= (Utilities::is_flag('bottom', $save_atts)) ? 'card-img-bottom' : null;
+			if (Utilities::is_flag('top', $save_atts)) $class[0] = 'card-img-top';
+			if (Utilities::is_flag('bottom', $save_atts)) $class[0] = 'card-img-bottom';
 
-			$search_tags = array('img');
+      $search_tags = array('img');
 
 			$content = do_shortcode( $content );
 			$content = strip_tags($content, '<img><a>');
@@ -1144,8 +1153,8 @@ class Shortcodes {
 			$wrap_before .= (Utilities::testdom($content, $search_tags)) ? null : '<div>';
 			$wrap_after .= (Utilities::testdom($content, $search_tags)) ? null : '</div>';
 
-			$wrap_before .= (isset($GLOBALS['accordion_card'])) ? sprintf('<a class="collapsed" data-toggle="collapse" data-parent="#accordion%1$s" href="#collapse%2$s" aria-controls="collapse%2$s">', $GLOBALS['accordion_count'], $GLOBALS['accordion_card']) : null;
-			$wrap_after .= (isset($GLOBALS['accordion_card'])) ? '</a>' : null;
+			$wrap_before .= (isset($GLOBALS['accordion'])) ? sprintf('<a class="collapsed" data-toggle="collapse" data-parent="#accordion%1$s" href="#collapse%2$s" aria-controls="collapse%2$s">', $GLOBALS['accordion_count'], $GLOBALS['accordion_card']) : null;
+			$wrap_after .= (isset($GLOBALS['accordion'])) ? '</a>' : null;
 
 			$class	= array();
 			$class[]  = 'card-header';
@@ -1296,14 +1305,14 @@ class Shortcodes {
 		 * @param  string $content shortcode contents
 		 * @return string
 		 */
-		function bs_carousel( $atts, $content = null ) {
+		function bs_carousel( $save_atts, $content = null ) {
 			$atts = shortcode_atts( array(
 				"interval" => false,
 				"pause" => 'hover',
 				"wrap" => 'true',
 				"class" => false,
 				"data"   => false
-			), $atts );
+			), $save_atts );
 
 			if( isset($GLOBALS['carousel_count']) )
 				$GLOBALS['carousel_count']++;
@@ -1338,6 +1347,10 @@ class Shortcodes {
 
 			$content = do_shortcode( $content );
 
+      $controls = '';
+      $controls .= '<a class="carousel-control-prev" href="' . esc_url( '#' . $id ) . '" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>';
+      $controls .= '<a class="carousel-control-next" href="' . esc_url( '#' . $id ) . '" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>';
+    
 			$indicators = array();
 			$count_tags = array('img');
 			$i = 0;
@@ -1362,18 +1375,17 @@ class Shortcodes {
 
 			$return = Utilities::bs_output(
 				sprintf(
-							'<div class="%s" id="%s" data-ride="carousel"%s%s%s%s>%s<div class="%s" role="listbox">%s</div>%s%s</div>',
+							'<div class="%s" id="%s" data-ride="carousel"%s%s%s%s>%s<div class="%s" role="listbox">%s</div>%s</div>',
 							Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
 							esc_attr( $id ),
 							( $atts['interval'] )   ? sprintf( ' data-interval="%d"', $atts['interval'] ) : '',
 							( $atts['pause'] )      ? sprintf( ' data-pause="%s"', esc_attr( $atts['pause'] ) ) : '',
 							( $atts['wrap'] == 'true' ) ? sprintf( ' data-wrap="%s"', esc_attr( $atts['wrap'] ) ) : '',
 							(isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
-							( $indicators ) ? '<ol class="carousel-indicators">' . implode( $indicators ) . '</ol>' : '',
+							( Utilities::is_flag( 'indicators', $save_atts ) ) ? '<ol class="carousel-indicators">' . implode( $indicators ) . '</ol>' : '',
 							'carousel-inner',
-							$content,
-							'<a class="left carousel-control"  href="' . esc_url( '#' . $id ) . '" role="button" data-slide="prev"><span class="icon-prev" aria-hidden="true"></span><span class="sr-only">Previous</span></a>',
-							'<a class="right carousel-control" href="' . esc_url( '#' . $id ) . '" role="button" data-slide="next"><span class="icon-next" aria-hidden="true"></span><span class="sr-only">Next</span></a>'
+              $content,
+              ( Utilities::is_flag( 'controls', $save_atts ) ) ? $controls : ''
 						)
 			);
 
@@ -1436,6 +1448,7 @@ class Shortcodes {
 
 			$class	= array();
 			$class[]	= 'list-group';
+			$class[]	= (Utilities::is_flag('flush', $save_atts)) ? 'list-group-flush' : null;
 
 			$li_class	= array();
 			$li_class[]	= 'list-group-item';
@@ -1473,7 +1486,7 @@ class Shortcodes {
 		 */
 		function bs_list_item( $save_atts, $content = null ) {
 			$atts = shortcode_atts( array(
-				"type"			=> 'success',
+				"type"			=> 'primary',
 				"class"			=> false,
 				"data"			=> false
 			), $save_atts );
@@ -1799,10 +1812,7 @@ class Shortcodes {
 					"data"   => false,
 			), $save_atts );
 
-			if( isset($GLOBALS['accordion_count']) )
-				$GLOBALS['accordion_count']++;
-			else
-				$GLOBALS['accordion_count'] = 0;
+			( isset($GLOBALS['accordion_count']) ) ? $GLOBALS['accordion_count']++ : $GLOBALS['accordion_count'] = 0;
 
 			$GLOBALS['accordion'] = true;
 

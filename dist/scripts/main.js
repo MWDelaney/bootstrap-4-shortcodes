@@ -4,10 +4,14 @@ jQuery(document).ready(function() {
 			var path = jQuery( this ).data('path');
 			var example = jQuery( this )
 				.closest('.card')
-				.find("code")
-				.text().replace('placeholder-path', path)
-				.replace(/]\n/g, ']<br>\n')
-				.replace(/\.\.\.\n/g, '...<br>\n');
+				.find("pre code")
+				.text().replace(/placeholder-path/g, path)
+        .replace(/]\n/g, ']<br>')
+        .replace(/<ul>\n/g, '<ul>')
+				.replace(/<\/ul>\n/g, '</ul>')
+				.replace(/<\/li>\n/g, '</li>')
+				.replace(/>\n/g, '><br>')
+				.replace(/\.\.\.\n/g, '...<br>');
 			var lines = example.split('\n');
 			var paras = '';
 			jQuery.each(lines, function(i, line) {

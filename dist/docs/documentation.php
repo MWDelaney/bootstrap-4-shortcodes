@@ -16,6 +16,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[row]
   [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
   [column sm&#x3D;&quot;6&quot;] ... [&#x2F;column]
@@ -30,6 +31,7 @@
       <h5 class="card-title">
         <?php _e('Basic example with container', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">The container component is also supported in case your theme doesn&apos;t include a container.</p>
 			<pre><code class="d-block p-4">[container]
   [row]
     [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
@@ -46,6 +48,7 @@
       <h5 class="card-title">
         <?php _e('Basic example with fluid container', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">The container-fluid component is supported as a discrete shortcode.</p>
 			<pre><code class="d-block p-4">[container-fluid]  
 [row]
     [column xs&#x3D;&quot;6&quot;] ... [&#x2F;column]
@@ -291,6 +294,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[media]
   [media-object]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;
@@ -310,6 +314,7 @@
       <h5 class="card-title">
         <?php _e('Media List', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Wrap several <code>[media-object]</code>s in <code>[media-list]</code>, useful for comment threads or articles lists.</p>
 			<pre><code class="d-block p-4">[media-list]
   [media]
     [media-object]
@@ -465,6 +470,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[hidden down&#x3D;&quot;sm&quot;] ... [&#x2F;hidden]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -524,6 +530,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[alert type&#x3D;&quot;primary&quot;] ... [&#x2F;alert]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -535,6 +542,7 @@
       <h5 class="card-title">
         <?php _e('Dismissible', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[alert type&#x3D;&quot;primary&quot; dismissible] ... [&#x2F;alert]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -594,6 +602,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[badge type&#x3D;&quot;primary&quot;] Lorem [&#x2F;badge]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -605,6 +614,7 @@
       <h5 class="card-title">
         <?php _e('Pill badges', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[badge type&#x3D;&quot;primary&quot; pill] Ipsum [&#x2F;badge]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -616,6 +626,7 @@
       <h5 class="card-title">
         <?php _e('Links', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[badge type&#x3D;&quot;primary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Dolor Sit&lt;&#x2F;a&gt; [&#x2F;badge]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -674,6 +685,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Remember that <code>[breadcrumb]</code> must wrap a set of links inserted via the WordPress editor.</p>
 			<pre><code class="d-block p-4">[breadcrumb]
   &lt;a href&#x3D;&quot;#link1&quot;&gt; Link 1 &lt;&#x2F;a&gt;
   &lt;a href&#x3D;&quot;#link2&quot;&gt; Link 2 &lt;&#x2F;a&gt;
@@ -722,6 +734,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Wrap any <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor in <code>[button]</code> to give it button properties and classes.</p>
 			<pre><code class="d-block p-4">[button type&#x3D;&quot;primary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -733,6 +746,7 @@
       <h5 class="card-title">
         <?php _e('Large button', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Set button sizes with the <code>size</code> parameter.</p>
 			<pre><code class="d-block p-4">[button type&#x3D;&quot;primary&quot; size&#x3D;&quot;lg&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -744,6 +758,7 @@
       <h5 class="card-title">
         <?php _e('Button-block example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Set <code>block</code> flag for block-style buttons.</p>
 			<pre><code class="d-block p-4">[button type&#x3D;&quot;primary&quot; block] &lt;a href&#x3D;&quot;#link&quot;&gt;Button Text&lt;&#x2F;a&gt; [&#x2F;button]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -768,7 +783,7 @@
 			<td>type</td>
 			<td><?php _e('The type of the button.', 'bootstrap-4-shortcodes'); ?></td>
 			<td>0</td>
-			<td>primary, secondary, success, info, warning, danger, link, outline-primary, outline-secondary, outline-success, outline-info, outline-warning, outline-danger</td>
+			<td>primary, secondary, success, info, warning, danger, light, dark, link, outline-primary, outline-secondary, outline-success, outline-info, outline-warning, outline-danger, outline-light, outline-dark</td>
 			<td>primary</td>
 		</tr>
 		<tr>
@@ -781,6 +796,20 @@
 		<tr>
 			<td>block</td>
 			<td><?php _e('Flag whether the button should be a block-level button.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>active</td>
+			<td><?php _e('Flag whether the button should styled as active.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>disabled</td>
+			<td><?php _e('Flag whether the button should styled as disabled.', 'bootstrap-4-shortcodes'); ?></td>
 			<td>0</td>
 			<td>🚩 (flag)</td>
 			<td></td>
@@ -810,6 +839,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Remember that <code>[button]</code> must wrap an <code>a</code>, <code>button</code>, or <code>input</code> tag inserted via the WordPress editor.</p>
 			<pre><code class="d-block p-4">[button-group]
   [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
@@ -825,6 +855,7 @@
       <h5 class="card-title">
         <?php _e('Vertical example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Set the <code>vertical</code> flag to make the buttons appear vertically stacked rather than horiztonally.</p>
 			<pre><code class="d-block p-4">[button-group vertical]
   [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
   [button type&#x3D;&quot;secondary&quot;] &lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt; [&#x2F;button]
@@ -840,6 +871,7 @@
       <h5 class="card-title">
         <?php _e('Button Toolbar', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Wrap <code>[button group]s</code> in <code>[button-toolbar]</code> to make a button toolbar.</p>
 			<pre><code class="d-block p-4">[button-toolbar]
   [button-group]
     [button type&#x3D;&quot;secondary&quot;] [active]&lt;a href&#x3D;&quot;#link&quot;&gt;Text&lt;&#x2F;a&gt;[&#x2F;active] [&#x2F;button]
@@ -942,12 +974,64 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[card]
-  [card-block]
-    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
-    [card-subtitle] &lt;h6&gt;Card Subtitle&lt;&#x2F;h6&gt; [&#x2F;card-subtitle]
+  [card-body]
     ...
-  [&#x2F;card-block]
+  [&#x2F;card-body]
+[&#x2F;card]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('List groups', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">List groups are suppored by adding the <code>flush</code> flag to the <code>[list-group]</code> shortcode.</p>
+			<pre><code class="d-block p-4">[card]
+  [list-group flush]
+    &lt;ul&gt;
+      &lt;li&gt;Cras justo odio&lt;&#x2F;li&gt;
+      &lt;li&gt;Dapibus ac facilisis in&lt;&#x2F;li&gt;
+      &lt;li&gt;Vestibulum at eros&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+  [&#x2F;list-group]
+[&#x2F;card]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Kitchen sink', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text"></p>
+			<pre><code class="d-block p-4">[card]
+  [card-img top]
+    &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
+  [&#x2F;card-img]
+  [card-body]
+    [card-title]
+      &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+   [&#x2F;card-title]
+    &lt;p&gt;Lorm ipsum dolor sit amet.&lt;&#x2F;p&gt;
+  [&#x2F;card-body]
+  [list-group flush]
+    &lt;ul&gt;
+      &lt;li&gt;Cras justo odio&lt;&#x2F;li&gt;
+      &lt;li&gt;Dapibus ac facilisis in&lt;&#x2F;li&gt;
+      &lt;li&gt;Vestibulum at eros&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+  [&#x2F;list-group]
+  [card-body]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Lorem Ipsup&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Dolor Sit&lt;&#x2F;a&gt;
+  [&#x2F;card-body]
 [&#x2F;card]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -959,14 +1043,16 @@
       <h5 class="card-title">
         <?php _e('Card with image cap', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag.</p>
 			<pre><code class="d-block p-4">[card]
   [card-img top]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
   [&#x2F;card-img]
-  [card-block]
-    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+  [card-body]
+    [card-title]
+      &lt;h5&gt;Card Title&lt;&#x2F;h5&gt; [&#x2F;card-title]
     ...
-  [&#x2F;card-block]
+  [&#x2F;card-body]
 [&#x2F;card]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -978,12 +1064,15 @@
       <h5 class="card-title">
         <?php _e('Card with image overlay', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.</p>
 			<pre><code class="d-block p-4">[card]
   [card-img]
     &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot; class&#x3D;&quot;img-fluid&quot;&gt;
   [&#x2F;card-img]
   [card-img-overlay]
-    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-title]
+      &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+    [&#x2F;card-title]
     ...
   [&#x2F;card-img-overlay]
 [&#x2F;card]</code></pre>
@@ -997,13 +1086,20 @@
       <h5 class="card-title">
         <?php _e('Card with Header and Footer', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.</p>
 			<pre><code class="d-block p-4">[card]
-  [card-header] ... [&#x2F;card-header]
-  [card-block]
-    [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+  [card-header]
     ...
-  [&#x2F;card-block]
-  [card-footer] ... [&#x2F;card-footer]
+  [&#x2F;card-header]
+  [card-body]
+    [card-title]
+      &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+    [&#x2F;card-title]
+    ...
+  [&#x2F;card-body]
+  [card-footer]
+    ...
+  [&#x2F;card-footer]
 [&#x2F;card]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -1015,24 +1111,31 @@
       <h5 class="card-title">
         <?php _e('Card group', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Use card groups to render cards as a single, attached element with equal width and height columns.</p>
 			<pre><code class="d-block p-4">[card-group]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
 [&#x2F;card-group]</code></pre>
 		</div>
@@ -1045,24 +1148,31 @@
       <h5 class="card-title">
         <?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Need a set of equal width and height cards that aren’t attached to one another? Use card decks.</p>
 			<pre><code class="d-block p-4">[card-deck]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
 [&#x2F;card-deck]</code></pre>
 		</div>
@@ -1073,26 +1183,33 @@
 	<div class="card">
 		<div class="card-body">
       <h5 class="card-title">
-        <?php _e('Card deck', 'bootstrap-4-shortcodes'); ?>
+        <?php _e('Card columns', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Cards can be organized into Masonry-like columns with just CSS by wrapping them in <code>[card-columns]</code></p>
 			<pre><code class="d-block p-4">[card-columns]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
   [card]
-    [card-block]
-      [card-title] &lt;h4&gt;Card Title&lt;&#x2F;h4&gt; [&#x2F;card-title]
+    [card-body]
+      [card-title]
+        &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
+      [&#x2F;card-title]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
 [&#x2F;card-columns]</code></pre>
 		</div>
@@ -1114,20 +1231,6 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>type</td>
-			<td><?php _e('Contextual background color for the card.', 'bootstrap-4-shortcodes'); ?></td>
-			<td>0</td>
-			<td>primary, secondary, success, info, warning, danger, link, outline-primary, outline-secondary, outline-success, outline-info, outline-warning, outline-danger</td>
-			<td>primary</td>
-		</tr>
-		<tr>
-			<td>inverse</td>
-			<td><?php _e('Flag whether to invert the text color for contextual backgrounds.', 'bootstrap-4-shortcodes'); ?></td>
-			<td>0</td>
-			<td>🚩 (flag)</td>
-			<td></td>
-		</tr>
-		<tr>
 			<td>class</td>
 			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
 			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
@@ -1143,8 +1246,8 @@
 		</tr>
 	</tbody>
 </table>
-<h3 class="mt-5">[card-block] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
-<div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Any <code>p</code> or <code>blockquote</code> tags within <code>[card-block]</code> will automatically receive <code>card-text</code> or <code>card-blockquote</code> classes respectively', 'bootstrap-4-shortcodes'); ?></div>
+<h3 class="mt-5">[card-body] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Any <code>p</code> or <code>blockquote</code> tags within <code>[card-body]</code> will automatically receive <code>card-text</code> or <code>card-bodyquote</code> classes respectively', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -1451,7 +1554,40 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[carousel]
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+[&#x2F;carousel]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Controls', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text"></p>
+			<pre><code class="d-block p-4">[carousel controls]
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+  &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
+[&#x2F;carousel]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('With indicators', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text"></p>
+			<pre><code class="d-block p-4">[carousel controls indicators]
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
   &lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder-lg.png&quot;&gt;
@@ -1475,6 +1611,20 @@
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td>controls</td>
+			<td><?php _e('Whether to show carousel controls.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>indicators</td>
+			<td><?php _e('Whether to show position indicators.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
 		<tr>
 			<td>interval</td>
 			<td><?php _e('The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.', 'bootstrap-4-shortcodes'); ?></td>
@@ -1521,18 +1671,19 @@
       <h5 class="card-title">
         <?php _e('Accordion example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Create an accordion by wrapping <code>[card]</code>s in <code>[accordion]</code>.</p>
 			<pre><code class="d-block p-4">[accordion]
   [card]
     [card-header] ... [&#x2F;card-header]
-    [card-block]
+    [card-body]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
   [card]
     [card-header] ... [&#x2F;card-header]
-    [card-block]
+    [card-body]
       ...
-    [&#x2F;card-block]
+    [&#x2F;card-body]
   [&#x2F;card]
 [&#x2F;accordion]</code></pre>
 		</div>
@@ -1578,6 +1729,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">The <code>dropdown</code> flag must be used on a <code>[button]</code> shortcode for dropdowns to work.</p>
 			<pre><code class="d-block p-4">[dropdown]
   [button dropdown]Dropdown Button[&#x2F;button]
   [dropdown-menu]
@@ -1596,6 +1748,7 @@
       <h5 class="card-title">
         <?php _e('Dropdown with header tags as labels', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Add a header to label sections of actions in any dropdown menu.</p>
 			<pre><code class="d-block p-4">[dropdown]
   [button dropdown]Dropdown Button[&#x2F;button]
   [dropdown-menu]
@@ -1615,11 +1768,52 @@
       <h5 class="card-title">
         <?php _e('Divider example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Separate groups of related menu items with a <code>[dropdown-divider]</code>.</p>
 			<pre><code class="d-block p-4">[dropdown]
   [button dropdown]Dropdown Button[&#x2F;button]
   [dropdown-menu]
     &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
     [dropdown-divider]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
+  [&#x2F;dropdown-menu]
+[&#x2F;dropdown]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Split button dropdowns', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">Create split button dropdowns with <code>[button-group]</code> and the <code>dropdown</code> and <code>split</code flag.</p>
+			<pre><code class="d-block p-4">[button-group]
+  [button]Button[&#x2F;button]
+    [button dropdown split][&#x2F;button]
+    [dropdown-menu]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
+    [dropdown-divider]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
+  [&#x2F;dropdown-menu]
+[&#x2F;button-group]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Dropup, dropright variations', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">Set the <code>dropup</code> or <code>dropright</code> flags to set these variations.</p>
+			<pre><code class="d-block p-4">[dropdown dropup]
+  [button dropdown]Dropdown Button[&#x2F;button]
+  [dropdown-menu]
+    &lt;a href&#x3D;&quot;#link&quot;&gt;Link 1&lt;&#x2F;a&gt;
     &lt;a href&#x3D;&quot;#link&quot;&gt;Link 2&lt;&#x2F;a&gt;
     &lt;a href&#x3D;&quot;#link&quot;&gt;Link 3&lt;&#x2F;a&gt;
   [&#x2F;dropdown-menu]
@@ -1642,6 +1836,20 @@
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td>dropup</td>
+			<td><?php _e('Set dropup variation.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>dropright</td>
+			<td><?php _e('Set dropright variation.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
 		<tr>
 			<td>class</td>
 			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
@@ -1730,6 +1938,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[jumbotron]
   &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
   [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
@@ -1744,6 +1953,7 @@
       <h5 class="card-title">
         <?php _e('Fluid example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Set the <code>fluid</code> flag to make a fluid jumbotron.</p>
 			<pre><code class="d-block p-4">[jumbotron fluid]
   &lt;h1&gt; Hello, World! &lt;&#x2F;h1&gt;
   [lead] This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. [&#x2F;lead]
@@ -1798,6 +2008,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[list-group]
   &lt;ul&gt;
     &lt;li&gt;Cras justo odio&lt;&#x2F;li&gt;
@@ -1817,6 +2028,7 @@
       <h5 class="card-title">
         <?php _e('Linked list', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Create a linked list by wrapping links</p>
 			<pre><code class="d-block p-4">[list-group]
   &lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;
   [active]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;active]
@@ -1834,6 +2046,7 @@
       <h5 class="card-title">
         <?php _e('Contextual styles', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Wrap items in the <code>list-item</code> shortcode to give them contextual styles</p>
 			<pre><code class="d-block p-4">[list-group]
   [list-item type&#x3D;&quot;success&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;list-item]
   [list-item type&#x3D;&quot;info&quot;]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;list-item]
@@ -1892,8 +2105,8 @@
 			<td>type</td>
 			<td><?php _e('The type of the list-item.', 'bootstrap-4-shortcodes'); ?></td>
 			<td>0</td>
-			<td>success, info, warning, danger</td>
-			<td>success</td>
+			<td>primary, secondary, success, info, warning, danger, light, dark</td>
+			<td>primary</td>
 		</tr>
 		<tr>
 			<td>class</td>
@@ -1920,6 +2133,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[nav]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1938,6 +2152,7 @@
       <h5 class="card-title">
         <?php _e('Inline example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Set the <code>inline</code> flag to make an inline nav.</p>
 			<pre><code class="d-block p-4">[nav inline]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1956,6 +2171,7 @@
       <h5 class="card-title">
         <?php _e('Tabs example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Set the <code>tabs</code> flag to make an tab-styled nav.</p>
 			<pre><code class="d-block p-4">[nav tabs]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1974,6 +2190,7 @@
       <h5 class="card-title">
         <?php _e('Pills example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Set the <code>pills</code> flag to make an pills-styled nav.</p>
 			<pre><code class="d-block p-4">[nav pills]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1992,6 +2209,7 @@
       <h5 class="card-title">
         <?php _e('Stacked pills example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Pills-styled navs can also be stacked with the <code>stacked</code> flag.</p>
 			<pre><code class="d-block p-4">[nav pills stacked]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2072,6 +2290,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2090,6 +2309,7 @@
       <h5 class="card-title">
         <?php _e('Large example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination size&#x3D;&quot;lg&quot;]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2108,6 +2328,7 @@
       <h5 class="card-title">
         <?php _e('Small example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination size&#x3D;&quot;sm&quot;]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2126,6 +2347,7 @@
       <h5 class="card-title">
         <?php _e('Active and disabled states', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination]
   &lt;ul&gt;
     &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
@@ -2185,6 +2407,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[popover title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2196,6 +2419,7 @@
       <h5 class="card-title">
         <?php _e('Dismiss on next click', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Use the focus trigger to dismiss popovers on the next click that the user makes.</p>
 			<pre><code class="d-block p-4">[popover trigger&#x3D;&quot;focus&quot; title&#x3D;&quot;Popover title&quot; content&#x3D;&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; ]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;popover]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2269,6 +2493,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[progress type&#x3D;&quot;primary&quot; value&#x3D;&quot;50&quot;]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2280,6 +2505,7 @@
       <h5 class="card-title">
         <?php _e('Striped example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Use the <code>striped</code> flag to produce a striped progress bar.</p>
 			<pre><code class="d-block p-4">[progress type&#x3D;&quot;primary&quot; value&#x3D;&quot;50&quot; striped]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2345,6 +2571,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[tooltip title&#x3D;&quot;Tooltip text&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;tooltip]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2356,6 +2583,7 @@
       <h5 class="card-title">
         <?php _e('HTML tooltip', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text">Use the <code>html</code> flag to allow HTML in the tooltip</p>
 			<pre><code class="d-block p-4">[tooltip title&#x3D;&quot;&lt;em&gt;Tooltip&lt;&#x2F;em&gt; &lt;u&gt;with&lt;&#x2F;u&gt; &lt;b&gt;HTML&lt;&#x2F;b&gt;&quot; tooltip]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;tooltip]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2423,6 +2651,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[border rounded]&lt;img src&#x3D;&quot;placeholder-path&#x2F;placeholder.png&quot;&gt;[&#x2F;border]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2510,6 +2739,7 @@
       <h5 class="card-title">
         <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
       </h5>
+      <p class="card-text"></p>
 			<pre><code class="d-block p-4">[color type&#x3D;&quot;primary&quot;]Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.[&#x2F;color]</code></pre>
 		</div>
 		<div class="card-footer text-left">

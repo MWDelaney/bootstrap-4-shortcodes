@@ -30,7 +30,7 @@
                 </nav>
               <div class="col-sm-9 right">
               <div class="modal-header">
-                <h4>Bootstrap 4 Shortcodes Help</h4>
+                <h4 class="m-0">Bootstrap 4 Shortcodes Help</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
 
@@ -43,7 +43,7 @@
                     // ======================================================================== //
                     // Put HTML content in the page so we can pop it up in a modal
                     // ======================================================================== //
-                    echo str_replace('data-path="placeholder"', 'data-path="' . BS4_SHORTCODES_RELATIVE_URL . 'dist/images/"', ob_get_clean());
+                    echo str_replace('data-path="placeholder"', 'data-path="' . BS4_SHORTCODES_RELATIVE_URL . 'dist/images"', ob_get_clean());
                   ?>
                   </article>
                 </section>
