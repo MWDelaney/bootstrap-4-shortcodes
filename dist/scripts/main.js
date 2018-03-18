@@ -23,6 +23,14 @@ jQuery(document).ready(function() {
 
 			var win = window.dialogArguments || opener || parent || top;
 			win.send_to_editor(paras);
-	});
+  });
+  
+  jQuery("[data-toggle='sidebar'], #bs4-table-of-contents.show .nav-link").click(function() {
+    jQuery("#bs4-table-of-contents").toggleClass('show');
+  });
+
+  jQuery('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+    jQuery("#bs4-table-of-contents").removeClass('show');
+  });
 
 });

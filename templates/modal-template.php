@@ -21,17 +21,22 @@
           <div class="modal-content">
             <div class="container-fluid">
               <div class="row">
-                <nav id="bs4-table-of-contents" class="col-sm-3 left hidden-sm-down">
+                <nav id="bs4-table-of-contents" class="col-md-3 left">
+                  <header class="d-flex align-items-center py-3">
+                    <button id="toc-off" class="btn btn-outline-dark mr-3 d-md-none" data-target="#bs4-table-of-contents" data-toggle="sidebar"><i class="fa fa-navicon fa-2x py-2 p-1"></i></button>
+                    <h5 class="text-center m-0">Table of Contents</h5>
+                  </header> 
                   <?php
                     ob_start();
                     include(BS4_SHORTCODES_DIR . '/dist/docs/toc.php');
                     echo str_replace('data-path="placeholder"', 'data-path="' . BS4_SHORTCODES_RELATIVE_URL . 'dist/images/"', ob_get_clean());
                   ?>
                 </nav>
-              <div class="col-sm-9 right">
-              <div class="modal-header">
+              <div class="col-md-9 right">
+              <div class="modal-header align-items-center">
+                <button id="toc-on" class="btn btn-outline-light mr-3 d-md-none" data-target="#bs4-table-of-contents" data-toggle="sidebar"><i class="fa fa-navicon fa-2x py-2 p-1"></i></button>
                 <h4 class="m-0">Bootstrap 4 Shortcodes Help</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close align-self-start" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
 
               <div class="modal-body">

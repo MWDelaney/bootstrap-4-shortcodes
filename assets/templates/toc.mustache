@@ -1,6 +1,5 @@
-<h5>Table of Contents</h5>
 <ul class="nav nav-pills flex-column" role="tablist">
-<li class="mb-0"><h6 class="mb-0"><?php _e('Introduction', 'bootstrap-4-shortcodes'); ?></h6></li>
+<li class="mb-0"><h6 class="my-0"><?php _e('Introduction', 'bootstrap-4-shortcodes'); ?></h6></li>
 <li class="nav-item">
 	<a href="#about" class="nav-link active" data-toggle="pill" role="tab"><?php _e('About', 'bootstrap-4-shortcodes'); ?></a>
 </li>

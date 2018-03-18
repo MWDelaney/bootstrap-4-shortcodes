@@ -5322,7 +5322,17 @@
     background: #f3f3f3;
     border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: #ccc; }
+    border-right-color: #ccc;
+    position: absolute;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: all .2s ease-in-out; }
+    @media (min-width: 768px) {
+      #bootstrap-4-shortcodes-help .left {
+        position: relative;
+        transform: translateX(0); } }
+    #bootstrap-4-shortcodes-help .left.show {
+      transform: translateX(0); }
     #bootstrap-4-shortcodes-help .left .nav-item {
       margin-bottom: 0;
       font-size: 1rem; }
@@ -5331,15 +5341,6 @@
     padding-right: 0; }
     #bootstrap-4-shortcodes-help .right article {
       padding: 15px; }
-    @media (max-width: 576px) {
-      #bootstrap-4-shortcodes-help .right {
-        width: -moz-calc(100% - 110px);
-        /* WebKit */
-        width: -webkit-calc(100% - 110px);
-        /* Opera */
-        width: -o-calc(100% - 110px);
-        /* Standard */
-        width: calc(100% - 110px); } }
   #bootstrap-4-shortcodes-help .modal {
     background-color: rgba(0, 0, 0, 0.5); }
   #bootstrap-4-shortcodes-help .modal-header {
@@ -5367,8 +5368,8 @@
     max-width: none;
     overflow: hidden;
     position: absolute;
-    left: 100px;
-    right: 100px;
+    left: 30px;
+    right: 30px;
     top: 30px;
     bottom: 30px;
     margin: 0;
@@ -5380,6 +5381,10 @@
     height: -o-calc(100% - 30px);
     /* Standard */
     height: calc(100% - 30px); }
+    @media (min-width: 768px) {
+      #bootstrap-4-shortcodes-help .modal-dialog {
+        left: 100px;
+        right: 100px; } }
   #bootstrap-4-shortcodes-help .modal-body {
     overflow: hidden;
     /* Firefox */

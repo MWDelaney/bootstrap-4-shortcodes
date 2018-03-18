@@ -5,26 +5,29 @@
   // Import Bootstrap 4 as from node_modules
   @import "../../node_modules/bootstrap/scss/bootstrap";
 
-.card {
-  padding: 0 !important;
-  max-width: none;
-}
+  .card {
+    padding: 0 !important;
+    max-width: none;
+  }
 
-h5 {
-	margin-top: $spacer;
-}
+  h5 {
+    margin-top: $spacer;
+  }
 
-h6 {
-	margin-top: $spacer*2;
-}
+  h6 {
+    margin-top: $spacer*2;
+  }
+
 	* {
 		box-sizing: border-box;
-	}
+  }
+  
 	.container-fluid,
 	.row,
 	.right {
 		height: 100%;
-	}
+  }
+  
 	.left {
 		height: 100%;
 		overflow-y: scroll;
@@ -32,33 +35,39 @@ h6 {
 		border-right-width: 1px;
 		border-right-style: solid;
     border-right-color: #ccc;
+    position: absolute;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: all .2s ease-in-out;
+
+    @include media-breakpoint-up(md) {
+      position: relative;
+      transform: translateX(0);
+    }
+
+    &.show {
+      transform: translateX(0);
+    }
 
     .nav-item {
       margin-bottom: 0;
       font-size: 1rem;
     }
-	}
+  }
+  
 	.right {
 		padding-left: 0;
-		padding-right: 0;
+    padding-right: 0;
+
 		article {
 			padding: 15px;
-		}
-		@media(max-width: 576px){
-			width: -moz-calc(100% - 110px);
-			/* WebKit */
-			width: -webkit-calc(100% - 110px);
-			/* Opera */
-			width: -o-calc(100% - 110px);
-			/* Standard */
-			width: calc(100% - 110px);
-		}
+    }
   }
 
   .modal {
     background-color: rgba(0,0,0,0.5);
   }
-  
+
   .modal-header {
     background-color: theme-color('primary');
     border-top-left-radius: 0;
@@ -73,10 +82,12 @@ h6 {
 
 	.modal-body {
 		padding: 0;
-	}
+  }
+
 	.modal {
 		z-index: 9999;
-	}
+  }
+
 	.modal-content {
     @extend .rounded-top;
 
@@ -85,19 +96,27 @@ h6 {
 		position: absolute;
 		top: 30px;
 		bottom: 30px;
-		overflow: hidden;
+    overflow: hidden;
+
 		.container-fluid {
 			height: 100%;
 		}
-	}
+  }
+
 	.modal-dialog {
 		max-width: none;
 		overflow: hidden;
-		position: absolute;
-		left: 100px;
-		right: 100px;
+    position: absolute;
+    left: 30px;
+    right: 30px;
 		top: 30px;
-		bottom: 30px;
+    bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      left: 100px;
+      right: 100px;    
+    }
+
 		margin: 0;
 		/* Firefox */
 		height: -moz-calc(100% - 30px);
@@ -107,7 +126,8 @@ h6 {
 		height: -o-calc(100% - 30px);
 		/* Standard */
 		height: calc(100% - 30px);
-	}
+  }
+
 	.modal-body {
 		overflow: hidden;
 		/* Firefox */
@@ -117,13 +137,16 @@ h6 {
 		/* Opera */
 		height: -o-calc(100% - 65px);
 		/* Standard */
-		height: calc(100% - 65px);
+    height: calc(100% - 65px);
+
 		.container-fluid,
 		.row,
-		section {
+
+    section {
 			height: 100%;
 		}
-		section {
+
+    section {
 			overflow: scroll;
 		}
 	}
