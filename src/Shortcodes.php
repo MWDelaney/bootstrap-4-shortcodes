@@ -93,7 +93,10 @@ class Shortcodes {
 			'jumbotron',
 
 			'list-group',
-			'list-item',
+      'list-group-item',
+      
+      'modal',
+      'modal-header',
 
 			'nav',
 			'pagination',
@@ -1484,7 +1487,7 @@ class Shortcodes {
 		 * @param  string $content shortcode contents
 		 * @return string
 		 */
-		function bs_list_item( $save_atts, $content = null ) {
+		function bs_list_group_item( $save_atts, $content = null ) {
 			$atts = shortcode_atts( array(
 				"type"			=> 'primary',
 				"class"			=> false,
@@ -1510,7 +1513,103 @@ class Shortcodes {
 			$return = Utilities::striptagfromdom( 'br', $return );
 
 			return $return;
-		}
+    }
+    
+
+		/**
+		 * Modal shortcode
+		 * @param  [type] $atts    shortcode attributes
+		 * @param  string $content shortcode contents
+		 * @return string
+		 */
+		function bs_modal( $save_atts, $content = null ) {
+			$atts = shortcode_atts( array(
+				"size"			=> false,
+        "class"			=> false,
+        "id"			=> false,
+				"data"			=> false
+			), $save_atts );
+
+      ( isset($GLOBALS['modal_count']) ) ? $GLOBALS['modal_count']++ : $GLOBALS['modal_count'] = 0;
+
+      $id = ($atts['id'] != false) ? $atts['id'] : 'modal-' . $GLOBALS['modal_count'];
+
+			$class	= array();
+
+      $class = array();
+      $class[] = 'modal';
+      $class[]	= (Utilities::is_flag('fade', $save_atts)) ? 'fade' : '';
+
+      $dialog_class = array();
+      $dialog_class[] = 'modal-dialog';
+      $dialog_class[]	= (Utilities::is_flag('centered', $save_atts)) ? 'modal-dialog-centered' : '';
+
+			$content = do_shortcode( $content );
+
+			$return = Utilities::bs_output(
+				sprintf(
+          '<div id="%s" class="%s" tabindex="-1" role="dialog" %s>
+            <div class="%s" role="document">
+              <div class="modal-content">
+                %s
+              </div> <!-- /.modal-content -->
+            </div> <!-- /.modal-dialog -->
+          </div> <!-- /.modal -->',
+          $id,
+          Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+          (isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+					Utilities::class_output('modal_dialog', $dialog_class, null),
+					do_shortcode($content)
+				)
+			);
+
+			return $return;
+    }
+    
+
+	/**
+	 * Modal header shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_modal_header( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+		), $atts );
+
+		$search_tags = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+
+		$wrap_before = (Utilities::testdom($content, $search_tags)) ? null : '<h5>';
+		$wrap_after = (Utilities::testdom($content, $search_tags)) ? null : '</h5>';
+
+		$class	= array();
+    $class[]  = 'modal-header';
+    
+    $h_class = array();
+    $h_class[] = "modal-title";
+
+		$content = do_shortcode( $wrap_before . $content . $wrap_after );
+
+		$return = Utilities::bs_output(
+			sprintf(
+        '<div class="%s" %s>
+          %s
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>',
+        Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+        (isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+				$content
+			)
+		);
+
+    $return = Utilities::addclass( $search_tags, $return, $h_class );
+    
+		return $return;
+	}
 
 
 
