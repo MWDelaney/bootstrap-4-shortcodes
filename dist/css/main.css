@@ -5425,6 +5425,14 @@
 .bs_bootstrap-logo {
   padding: 0 3px; }
 
+.wp-media-buttons .add_media span.wp-media-buttons-icon.bs_bootstrap-logo {
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media only screen and (min-width: 600px) {
+    .wp-media-buttons .add_media span.wp-media-buttons-icon.bs_bootstrap-logo {
+      margin-left: 3px !important;
+      margin-right: 3px !important; } }
+
 .wp-media-buttons .bootstrap-shortcodes-button {
   transition: all 0.2s;
   border-radius: 5px;
@@ -5451,11 +5459,15 @@
   text-transform: none;
   line-height: 1;
   position: relative;
-  top: -3px;
+  top: -1px;
   border-color: #cdbfe3;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  @media only screen and (min-width: 600px) {
+    .wp-media-buttons .add_media span.bs_bootstrap-logo:before,
+    .mce-i-bootstrap-shortcodes:before {
+      top: -3px; } }
 
 #wp_fs_bootstrap-shortcodes {
   font-size: 14px !important; }

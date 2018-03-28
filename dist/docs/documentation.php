@@ -2046,12 +2046,12 @@
       <h5 class="card-title">
         <?php _e('Contextual styles', 'bootstrap-4-shortcodes'); ?>
       </h5>
-      <p class="card-text">Wrap items in the <code>list-item</code> shortcode to give them contextual styles</p>
+      <p class="card-text">Wrap items in the <code>list-group-item</code> shortcode to give them contextual styles</p>
 			<pre><code class="d-block p-4">[list-group]
-  [list-item type&#x3D;&quot;success&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;list-item]
-  [list-item type&#x3D;&quot;info&quot;]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;list-item]
-  [list-item type&#x3D;&quot;warning&quot;]&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;[&#x2F;list-item]
-  [list-item type&#x3D;&quot;danger&quot;]&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;[&#x2F;list-item]
+  [list-group-item type&#x3D;&quot;success&quot;]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;list-group-item]
+  [list-group-item type&#x3D;&quot;info&quot;]&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;[&#x2F;list-group-item]
+  [list-group-item type&#x3D;&quot;warning&quot;]&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;[&#x2F;list-group-item]
+  [list-group-item type&#x3D;&quot;danger&quot;]&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;[&#x2F;list-group-item]
 [&#x2F;list-group]</code></pre>
 		</div>
 		<div class="card-footer text-left">
@@ -2088,7 +2088,7 @@
 		</tr>
 	</tbody>
 </table>
-<h3 class="mt-5">[list-item] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<h3 class="mt-5">[list-group-item] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
 <div class="alert alert-warning"><strong><?php _e('Note:', 'bootstrap-4-shortcodes'); ?></strong> <?php _e('Remember that <code>[list-group]</code> must wrap a set of links or list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></div>
 <table class="table table-striped">
 	<thead>
@@ -2103,7 +2103,7 @@
 	<tbody>
 		<tr>
 			<td>type</td>
-			<td><?php _e('The type of the list-item.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('The type of the list-group-item.', 'bootstrap-4-shortcodes'); ?></td>
 			<td>0</td>
 			<td>primary, secondary, success, info, warning, danger, light, dark</td>
 			<td>primary</td>

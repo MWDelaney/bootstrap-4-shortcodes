@@ -10,8 +10,19 @@
 }
 
 .bs_bootstrap-logo {
-	padding: 0 3px;
+  padding: 0 3px;
 }
+
+.wp-media-buttons .add_media span.wp-media-buttons-icon.bs_bootstrap-logo {
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  @media only screen and (min-width: 600px) {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+}
+
 .wp-media-buttons {
 	.bootstrap-shortcodes-button {
 		transition: all 0.2s;
@@ -19,16 +30,19 @@
 		color: $bs4-primary !important;
 		padding: 0;
 		text-align: center;
-		span.bs_bootstrap-logo:before {
+  
+    span.bs_bootstrap-logo:before {
 			transition: all 0.2s;
 			color: $bs4-primary !important;
 		}
-		&:hover {
+  
+    &:hover {
 			background-color: $bs4-text;
 			border-color: $bs4-text;
 			span.bs_bootstrap-logo:before {
 				color: $bs4-primary !important;
-			}		}
+      }		
+    }
 	}
 
 }
@@ -43,8 +57,12 @@
 	text-transform: none;
 	line-height: 1;
 	position: relative;
-	top: -3px;
-	border-color: $bs4-text;
+  top: -1px;
+  border-color: $bs4-text;
+
+  @media only screen and (min-width: 600px) {
+    top: -3px;
+  }
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
