@@ -1544,8 +1544,6 @@ class Shortcodes {
       $dialog_class[] = 'modal-dialog';
       $dialog_class[]	= (Utilities::is_flag('centered', $save_atts)) ? 'modal-dialog-centered' : '';
 
-			$content = do_shortcode( $content );
-
 			$return = Utilities::bs_output(
 				sprintf(
           '<div id="%s" class="%s" tabindex="-1" role="dialog" %s>
