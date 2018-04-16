@@ -713,10 +713,13 @@ class Shortcodes {
 		$button_data[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'toggle,dropdown' : null;
 		$button_data = implode( '|', $button_data );
 
-		$wrap_before = (!empty($button_data)) ? '<button>' : null;
-		$wrap_after = (!empty($button_data)) ? '</button>' : null;
+		$wrap_before = (!empty($button_data) || !$content) ? '<button>' : null;
+		$wrap_after = (!empty($button_data) || !$content) ? '</button>' : null;
 
-		$search_tags	= array('a', 'button', 'input');
+    $search_tags	= array('a', 'button', 'input');
+
+		$wrap_before = ($content && Utilities::testdom($content, $search_tags)) ? null : '<button>';
+		$wrap_after = ($content && Utilities::testdom($content, $search_tags)) ? null : '</button>';
 
 		$content = do_shortcode( $wrap_before . $content . $wrap_after );
 		$return = Utilities::bs_output(
