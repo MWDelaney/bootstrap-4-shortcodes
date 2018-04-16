@@ -474,7 +474,7 @@
 					"examples": [
 						{
 							"description": "Basic example",
-							"code": "[card]\n  [card-body]\n    ...\n  [/card-body]\n[/card]"
+							"code": "[card]\n  [card-body]\n    Lorem ipsum dolor sit.\n  [/card-body]\n[/card]"
             },
 						{
 							"note": "List groups are suppored by adding the <code>flush</code> flag to the <code>[list-group]</code> shortcode.",
@@ -489,32 +489,32 @@
 						{
 							"note": "Image caps are supported with the <code>[card-img]</code> shortcode and the <code>top</code> or <code>bottom</code> flag.",
 							"description": "Card with image cap",
-							"code": "[card]\n  [card-img top]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-body]\n    [card-title]\n      <h5>Card Title</h5> [/card-title]\n    ...\n  [/card-body]\n[/card]"
+							"code": "[card]\n  [card-img top]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-body]\n    [card-title]\n      <h5>Card Title</h5> [/card-title]\n    Lorem ipsum dolor sit.\n  [/card-body]\n[/card]"
 						},
 						{
 							"note": "Image overlay cards are supported with the <code>[card-img-overlay]</code> shortcode.",
 							"description": "Card with image overlay",
-							"code": "[card]\n  [card-img]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-img-overlay]\n    [card-title]\n      <h5>Card Title</h5>\n    [/card-title]\n    ...\n  [/card-img-overlay]\n[/card]"
+							"code": "[card]\n  [card-img]\n    <img src=\"placeholder-path/placeholder-lg.png\" class=\"img-fluid\">\n  [/card-img]\n  [card-img-overlay]\n    [card-title]\n      <h5>Card Title</h5>\n    [/card-title]\n    Lorem ipsum dolor sit.\n  [/card-img-overlay]\n[/card]"
 						},
 						{
 							"note": "Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.",
 							"description": "Card with Header and Footer",
-							"code": "[card]\n  [card-header]\n    ...\n  [/card-header]\n  [card-body]\n    [card-title]\n      <h5>Card Title</h5>\n    [/card-title]\n    ...\n  [/card-body]\n  [card-footer]\n    ...\n  [/card-footer]\n[/card]"
+							"code": "[card]\n  [card-header]\n    Example Header\n  [/card-header]\n  [card-body]\n    [card-title]\n      <h5>Card Title</h5>\n    [/card-title]\n    Lorem ipsum dolor sit.\n  [/card-body]\n  [card-footer]\n    Example footer.\n  [/card-footer]\n[/card]"
 						},
 						{
 							"note": "Use card groups to render cards as a single, attached element with equal width and height columns.",
 							"description": "Card group",
-							"code": "[card-group]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n[/card-group]"
+							"code": "[card-group]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Lorem ipsum dolor sit.\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Cras justo odio.\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Dapibus ac facilisis in.\n    [/card-body]\n  [/card]\n[/card-group]"
 						},
 						{
 							"note": "Need a set of equal width and height cards that aren’t attached to one another? Use card decks.",
 							"description": "Card deck",
-							"code": "[card-deck]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n[/card-deck]"
+							"code": "[card-deck]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Lorem ipsum dolor sit.\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Cras justo odio.\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Dapibus ac facilisis in.\n    [/card-body]\n  [/card]\n[/card-deck]"
 						},
 						{
 							"note": "Cards can be organized into Masonry-like columns with just CSS by wrapping them in <code>[card-columns]</code>",
 							"description": "Card columns",
-							"code": "[card-columns]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      ...\n    [/card-body]\n  [/card]\n[/card-columns]"
+							"code": "[card-columns]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Lorem ipsum dolor sit.\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Cras justo odio.\n    [/card-body]\n  [/card]\n  [card]\n    [card-body]\n      [card-title]\n        <h5>Card Title</h5>\n      [/card-title]\n      Dapibus ac facilisis in.\n    [/card-body]\n  [/card]\n[/card-columns]"
 						}
 					],
 					"shortcodes": [

@@ -977,7 +977,7 @@
       <p class="card-text"></p>
 			<pre><code class="d-block p-4">[card]
   [card-body]
-    ...
+    Lorem ipsum dolor sit.
   [&#x2F;card-body]
 [&#x2F;card]</code></pre>
 		</div>
@@ -1051,7 +1051,7 @@
   [card-body]
     [card-title]
       &lt;h5&gt;Card Title&lt;&#x2F;h5&gt; [&#x2F;card-title]
-    ...
+    Lorem ipsum dolor sit.
   [&#x2F;card-body]
 [&#x2F;card]</code></pre>
 		</div>
@@ -1073,7 +1073,7 @@
     [card-title]
       &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
     [&#x2F;card-title]
-    ...
+    Lorem ipsum dolor sit.
   [&#x2F;card-img-overlay]
 [&#x2F;card]</code></pre>
 		</div>
@@ -1089,16 +1089,16 @@
       <p class="card-text">Card header and card footers are supported with the <code>[card-header]</code> and <code>[card-footer]</code> shortcodes.</p>
 			<pre><code class="d-block p-4">[card]
   [card-header]
-    ...
+    Example Header
   [&#x2F;card-header]
   [card-body]
     [card-title]
       &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
     [&#x2F;card-title]
-    ...
+    Lorem ipsum dolor sit.
   [&#x2F;card-body]
   [card-footer]
-    ...
+    Example footer.
   [&#x2F;card-footer]
 [&#x2F;card]</code></pre>
 		</div>
@@ -1118,7 +1118,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Lorem ipsum dolor sit.
     [&#x2F;card-body]
   [&#x2F;card]
   [card]
@@ -1126,7 +1126,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Cras justo odio.
     [&#x2F;card-body]
   [&#x2F;card]
   [card]
@@ -1134,7 +1134,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Dapibus ac facilisis in.
     [&#x2F;card-body]
   [&#x2F;card]
 [&#x2F;card-group]</code></pre>
@@ -1155,7 +1155,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Lorem ipsum dolor sit.
     [&#x2F;card-body]
   [&#x2F;card]
   [card]
@@ -1163,7 +1163,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Cras justo odio.
     [&#x2F;card-body]
   [&#x2F;card]
   [card]
@@ -1171,7 +1171,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Dapibus ac facilisis in.
     [&#x2F;card-body]
   [&#x2F;card]
 [&#x2F;card-deck]</code></pre>
@@ -1192,7 +1192,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Lorem ipsum dolor sit.
     [&#x2F;card-body]
   [&#x2F;card]
   [card]
@@ -1200,7 +1200,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Cras justo odio.
     [&#x2F;card-body]
   [&#x2F;card]
   [card]
@@ -1208,7 +1208,7 @@
       [card-title]
         &lt;h5&gt;Card Title&lt;&#x2F;h5&gt;
       [&#x2F;card-title]
-      ...
+      Dapibus ac facilisis in.
     [&#x2F;card-body]
   [&#x2F;card]
 [&#x2F;card-columns]</code></pre>
