@@ -48,6 +48,9 @@
 	<a href="#list-group" class="nav-link" data-toggle="pill" role="tab"><?php _e('List Group', 'bootstrap-4-shortcodes'); ?></a>
 </li>
 <li class="nav-item">
+	<a href="#modal" class="nav-link" data-toggle="pill" role="tab"><?php _e('Modal', 'bootstrap-4-shortcodes'); ?></a>
+</li>
+<li class="nav-item">
 	<a href="#navs" class="nav-link" data-toggle="pill" role="tab"><?php _e('Navs', 'bootstrap-4-shortcodes'); ?></a>
 </li>
 <li class="nav-item">

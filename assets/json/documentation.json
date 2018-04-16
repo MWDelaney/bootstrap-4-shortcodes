@@ -806,6 +806,80 @@
 							]
 						}
 					]
+        },
+				{
+					"title": "Modal",
+					"id": "modal",
+					"note": "",
+					"examples": [
+						{
+							"note": "",
+							"description": "Basic example",
+							"code": "[modal fade id=\"example-modal\"]\n  [modal-header]<h5>Example Header</h5>[/modal-header]\n  [modal-body]\n    Lorem ipsum dolor sit.\n  [/modal-body]\n  [modal-footer]\n    [button type=\"secondary\"] Lorem [/button]\n    [button type=\"primary\"] Ipsum [/button]\n  [/modal-footer]\n[/modal]\n\n[button data=\"toggle,modal|target,#example-modal\"] Launch Modal [/button]"
+            },
+						{
+							"note": "Use the <code>size=\"large\"</code> attribute for a larger modal",
+							"description": "Large example",
+							"code": "[modal size=\"lg\" fade id=\"example-modal-lg\"]\n  [modal-header]<h5>Example Header</h5>[/modal-header]\n  [modal-body]\n    Lorem ipsum dolor sit.\n  [/modal-body]\n  [modal-footer]\n    [button type=\"secondary\"] Lorem [/button]\n    [button type=\"primary\"] Ipsum [/button]\n  [/modal-footer]\n[/modal]\n\n[button data=\"toggle,modal|target,#example-modal-lg\"] Launch Large Modal [/button]"
+            },
+						{
+							"note": "Use the <code>size=\"small\"</code> attribute for a smaller modal",
+							"description": "Small example",
+							"code": "[modal size=\"sm\" fade id=\"example-modal-sm\"]\n  [modal-header]<h5>Example Header</h5>[/modal-header]\n  [modal-body]\n    Lorem ipsum dolor sit.\n  [/modal-body]\n  [modal-footer]\n    [button type=\"secondary\"] Lorem [/button]\n    [button type=\"primary\"] Ipsum [/button]\n  [/modal-footer]\n[/modal]\n\n[button data=\"toggle,modal|target,#example-modal-sm\"] Launch Small Modal [/button]"
+            },
+						{
+							"note": "Use the <code>centered</code> flag to vertically center the modal",
+							"description": "Vertically centered",
+							"code": "[modal fade centered id=\"centered-modal\"]\n  [modal-header]<h5>Example Header</h5>[/modal-header]\n  [modal-body]\n    Lorem ipsum dolor sit.\n  [/modal-body]\n  [modal-footer]\n    [button type=\"secondary\"] Lorem [/button]\n    [button type=\"primary\"] Ipsum [/button]\n  [/modal-footer]\n[/modal]\n\n[button data=\"toggle,modal|target,#centered-modal\"] Launch Centered Modal [/button]"
+            }
+					],
+					"shortcodes": [
+						{
+							"name": "modal",
+							"parameters": [
+								{
+									"name": "size",
+									"description": "Size of the modal (optional)",
+									"required": "0",
+									"values": "lg, sm",
+									"default": "none"
+                },
+								{
+									"name": "id",
+									"description": "ID of the modal (optional)",
+									"required": "0",
+									"values": "any text",
+									"default": "none"
+                },
+								{
+									"name": "fade",
+									"description": "Flag whether modal should use fade animation.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+                },
+								{
+									"name": "centered",
+									"description": "Flag whether modal be vertically centered.",
+									"required": "0",
+									"values": "🚩 (flag)",
+									"default": ""
+								}
+							]
+						},
+						{
+							"name": "modal-header",
+							"parameters": ""
+            },
+						{
+							"name": "modal-body",
+							"parameters": ""
+            },
+						{
+							"name": "modal-footer",
+							"parameters": ""
+						}
+					]
 				},
 				{
 					"title": "Navs",

@@ -2125,6 +2125,243 @@
 	</tbody>
 </table>
 </div>
+<div class="tab-pane" id="modal" role="tabpanel">
+<h2><?php _e('Modal', 'bootstrap-4-shortcodes'); ?></h2>
+
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Basic example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text"></p>
+			<pre><code class="d-block p-4">[modal fade id&#x3D;&quot;example-modal&quot;]
+  [modal-header]&lt;h5&gt;Example Header&lt;&#x2F;h5&gt;[&#x2F;modal-header]
+  [modal-body]
+    Lorem ipsum dolor sit.
+  [&#x2F;modal-body]
+  [modal-footer]
+    [button type&#x3D;&quot;secondary&quot;] Lorem [&#x2F;button]
+    [button type&#x3D;&quot;primary&quot;] Ipsum [&#x2F;button]
+  [&#x2F;modal-footer]
+[&#x2F;modal]
+
+[button data&#x3D;&quot;toggle,modal|target,#example-modal&quot;] Launch Modal [&#x2F;button]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Large example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">Use the <code>size="large"</code> attribute for a larger modal</p>
+			<pre><code class="d-block p-4">[modal size&#x3D;&quot;lg&quot; fade id&#x3D;&quot;example-modal-lg&quot;]
+  [modal-header]&lt;h5&gt;Example Header&lt;&#x2F;h5&gt;[&#x2F;modal-header]
+  [modal-body]
+    Lorem ipsum dolor sit.
+  [&#x2F;modal-body]
+  [modal-footer]
+    [button type&#x3D;&quot;secondary&quot;] Lorem [&#x2F;button]
+    [button type&#x3D;&quot;primary&quot;] Ipsum [&#x2F;button]
+  [&#x2F;modal-footer]
+[&#x2F;modal]
+
+[button data&#x3D;&quot;toggle,modal|target,#example-modal-lg&quot;] Launch Large Modal [&#x2F;button]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Small example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">Use the <code>size="small"</code> attribute for a smaller modal</p>
+			<pre><code class="d-block p-4">[modal size&#x3D;&quot;sm&quot; fade id&#x3D;&quot;example-modal-sm&quot;]
+  [modal-header]&lt;h5&gt;Example Header&lt;&#x2F;h5&gt;[&#x2F;modal-header]
+  [modal-body]
+    Lorem ipsum dolor sit.
+  [&#x2F;modal-body]
+  [modal-footer]
+    [button type&#x3D;&quot;secondary&quot;] Lorem [&#x2F;button]
+    [button type&#x3D;&quot;primary&quot;] Ipsum [&#x2F;button]
+  [&#x2F;modal-footer]
+[&#x2F;modal]
+
+[button data&#x3D;&quot;toggle,modal|target,#example-modal-sm&quot;] Launch Small Modal [&#x2F;button]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Vertically centered', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">Use the <code>centered</code> flag to vertically center the modal</p>
+			<pre><code class="d-block p-4">[modal fade centered id&#x3D;&quot;centered-modal&quot;]
+  [modal-header]&lt;h5&gt;Example Header&lt;&#x2F;h5&gt;[&#x2F;modal-header]
+  [modal-body]
+    Lorem ipsum dolor sit.
+  [&#x2F;modal-body]
+  [modal-footer]
+    [button type&#x3D;&quot;secondary&quot;] Lorem [&#x2F;button]
+    [button type&#x3D;&quot;primary&quot;] Ipsum [&#x2F;button]
+  [&#x2F;modal-footer]
+[&#x2F;modal]
+
+[button data&#x3D;&quot;toggle,modal|target,#centered-modal&quot;] Launch Centered Modal [&#x2F;button]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+
+<h3 class="mt-5">[modal] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>size</td>
+			<td><?php _e('Size of the modal (optional)', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>lg, sm</td>
+			<td>none</td>
+		</tr>
+		<tr>
+			<td>id</td>
+			<td><?php _e('ID of the modal (optional)', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>any text</td>
+			<td>none</td>
+		</tr>
+		<tr>
+			<td>fade</td>
+			<td><?php _e('Flag whether modal should use fade animation.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>centered</td>
+			<td><?php _e('Flag whether modal be vertically centered.', 'bootstrap-4-shortcodes'); ?></td>
+			<td>0</td>
+			<td>🚩 (flag)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3 class="mt-5">[modal-header] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3 class="mt-5">[modal-body] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<h3 class="mt-5">[modal-footer] <?php _e('parameters', 'bootstrap-4-shortcodes'); ?></h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?php _e('Parameter', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Description', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Required', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Values', 'bootstrap-4-shortcodes'); ?></th>
+			<th><?php _e('Default', 'bootstrap-4-shortcodes'); ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>class</td>
+			<td><?php _e('Any extra classes you want to add.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td><?php _e('Data attribute and value pairs separated by a comma. Pairs separated by pipe.', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('optional', 'bootstrap-4-shortcodes'); ?></td>
+			<td><?php _e('any text', 'bootstrap-4-shortcodes'); ?></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</div>
 <div class="tab-pane" id="navs" role="tabpanel">
 <h2><?php _e('Navs', 'bootstrap-4-shortcodes'); ?></h2>
 <p><?php _e('Remember that <code>[nav]</code> must wrap a set of links and list items inserted via the WordPress editor.', 'bootstrap-4-shortcodes'); ?></p>

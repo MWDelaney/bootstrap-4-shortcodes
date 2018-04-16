@@ -97,6 +97,8 @@ class Shortcodes {
       
       'modal',
       'modal-header',
+      'modal-body',
+      'modal-footer',
 
 			'nav',
 			'pagination',
@@ -707,7 +709,7 @@ class Shortcodes {
 		$class[]	= (Utilities::is_flag('active', $save_atts)) ? 'active' : null;
 		$class[]	= (Utilities::is_flag('disabled', $save_atts)) ? 'disabled' : null;
 		$class[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'dropdown-toggle' : null;
-		$class[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'dropdown-toggle-split' : null;
+		$class[]	= (Utilities::is_flag('split', $save_atts)) ? 'dropdown-toggle-split' : null;
 
 		$button_data = array();
 		$button_data[]	= (Utilities::is_flag('dropdown', $save_atts)) ? 'toggle,dropdown' : null;
@@ -1545,6 +1547,7 @@ class Shortcodes {
 
       $dialog_class = array();
       $dialog_class[] = 'modal-dialog';
+			$dialog_class[]  = ($atts['size']) ? 'modal-' . $atts['size'] : null;
       $dialog_class[]	= (Utilities::is_flag('centered', $save_atts)) ? 'modal-dialog-centered' : '';
 
 			$content = do_shortcode( $content );
@@ -1612,7 +1615,68 @@ class Shortcodes {
     $return = Utilities::addclass( $search_tags, $return, $h_class );
     
 		return $return;
-	}
+  }
+
+
+
+	/**
+	 * Modal body shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_modal_body( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+    ), $atts );
+    
+		$class	= array();
+    $class[]  = 'modal-body';
+
+		$return = Utilities::bs_output(
+			sprintf(
+        '<div class="%s" %s>
+          %s
+        </div>',
+        Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+        (isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+				do_shortcode($content)
+			)
+    );
+        
+		return $return;
+  }
+
+
+	/**
+	 * Modal footer shortcode
+	 * @param  [type] $atts    shortcode attributes
+	 * @param  string $content shortcode contents
+	 * @return string
+	 */
+	function bs_modal_footer( $atts, $content = null ) {
+		$atts = shortcode_atts( array(
+				"class" => false,
+				"data"   => false
+    ), $atts );
+    
+		$class	= array();
+    $class[]  = 'modal-footer';
+
+		$return = Utilities::bs_output(
+			sprintf(
+        '<div class="%s" %s>
+          %s
+        </div>',
+        Utilities::class_output(__FUNCTION__, $class, (isset($atts['class'])) ? $atts['class'] : null),
+        (isset($atts['data'])) ? Utilities::parse_data_attributes( $atts['data'] ) : null,
+				do_shortcode($content)
+			)
+    );
+        
+		return $return;
+  }
 
 
 

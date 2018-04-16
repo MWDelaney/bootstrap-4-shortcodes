@@ -23,6 +23,6 @@
 		"composer/installers": "1.0.*@dev"
 	},
 	"autoload": {
-    "psr-4": { "MWD\\BS4Shortcodes\\": "src/" }
+    "psr-4": { "MWD\\BS4Shortcodes\\": "app/" }
   }
 }

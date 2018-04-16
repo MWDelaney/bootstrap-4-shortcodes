@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'MWD\\BS4Shortcodes\\' => array($baseDir . '/src'),
+    'MWD\\BS4Shortcodes\\' => array($baseDir . '/app'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
 );
