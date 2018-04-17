@@ -2387,10 +2387,48 @@
 	<div class="card">
 		<div class="card-body">
       <h5 class="card-title">
-        <?php _e('Inline example', 'bootstrap-4-shortcodes'); ?>
+        <?php _e('Vertical example', 'bootstrap-4-shortcodes'); ?>
       </h5>
       <p class="card-text">Set the <code>vertical</code> flag to make a vertical nav.</p>
 			<pre><code class="d-block p-4">[nav vertical]
+  &lt;ul&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;nav]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Fill example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">Set the <code>fill</code> flag to force navs to the full available width.</p>
+			<pre><code class="d-block p-4">[nav fill]
+  &lt;ul&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+[&#x2F;nav]</code></pre>
+		</div>
+		<div class="card-footer text-left">
+			<button data-path="placeholder" data-dismiss="modal" class="btn btn-primary btn-sm float-xs-right insert-code"><?php _e('Insert Example', 'bootstrap-4-shortcodes'); ?></button>
+		</div>
+	</div> <!--/card -->
+	<div class="card">
+		<div class="card-body">
+      <h5 class="card-title">
+        <?php _e('Fill example', 'bootstrap-4-shortcodes'); ?>
+      </h5>
+      <p class="card-text">Set the <code>justified</code> flag to force nav-items to have equal widths.</p>
+			<pre><code class="d-block p-4">[nav fill]
   &lt;ul&gt;
     &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2530,10 +2568,11 @@
       <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#prev&quot;&gt;&amp;laquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#next&quot;&gt;&amp;raquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>
@@ -2549,10 +2588,11 @@
       <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination size&#x3D;&quot;lg&quot;]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#prev&quot;&gt;&amp;laquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#next&quot;&gt;&amp;raquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>
@@ -2568,10 +2608,11 @@
       <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination size&#x3D;&quot;sm&quot;]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#prev&quot;&gt;&amp;laquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#next&quot;&gt;&amp;raquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>
@@ -2587,10 +2628,11 @@
       <p class="card-text"></p>
 			<pre><code class="d-block p-4">[pagination]
   &lt;ul&gt;
-    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-    &lt;li&gt;[disabled]&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;[&#x2F;disabled]&lt;&#x2F;li&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#prev&quot;&gt;&amp;laquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;1&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[disabled]&lt;a href&#x3D;&quot;#link3&quot;&gt;3&lt;&#x2F;a&gt;[&#x2F;disabled]&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#next&quot;&gt;&amp;raquo;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
   &lt;&#x2F;ul&gt;
 [&#x2F;pagination]</code></pre>
 		</div>

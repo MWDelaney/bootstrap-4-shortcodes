@@ -1,0 +1,14 @@
+
+button.btn-outline-primary svg * {
+  stroke: #563d7c;
+}
+
+button:hover {  
+  svg * {
+    stroke: #fff;
+  }
+}
+
+button.btn-outline-light:hover svg * {
+  stroke: #563d7c !important;
+}

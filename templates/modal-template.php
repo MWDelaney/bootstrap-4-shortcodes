@@ -23,7 +23,9 @@
               <div class="row">
                 <nav id="bs4-table-of-contents" class="col-md-3 left">
                   <header class="d-flex align-items-center py-3">
-                    <button id="toc-off" class="btn btn-outline-dark mr-3 d-md-none" data-target="#bs4-table-of-contents" data-toggle="sidebar"><i class="fa fa-navicon fa-2x py-2 p-1"></i></button>
+                    <button id="toc-off" class="btn btn-outline-primary mr-3 d-md-none d-flex align-items-center" data-target="#bs4-table-of-contents" data-toggle="sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" width="16" height="16"><g class="nc-icon-wrapper" fill="#444444"><line fill="none" stroke="#444444" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="13.5" y1="2.5" x2="2.5" y2="13.5" data-cap="butt"></line> <line fill="none" stroke="#444444" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="2.5" y1="2.5" x2="13.5" y2="13.5" data-cap="butt"></line> </g></svg>
+                    </button>
                     <h5 class="text-center m-0">Table of Contents</h5>
                   </header> 
                   <?php
@@ -34,7 +36,9 @@
                 </nav>
               <div class="col-md-9 right">
               <div class="modal-header align-items-center">
-                <button id="toc-on" class="btn btn-outline-light mr-3 d-md-none" data-target="#bs4-table-of-contents" data-toggle="sidebar"><i class="fa fa-navicon fa-2x py-2 p-1"></i></button>
+                <button id="toc-on" class="btn btn-outline-light mr-3 d-md-none d-flex align-items-center" data-target="#bs4-table-of-contents" data-toggle="sidebar">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" width="16" height="16"><g class="nc-icon-wrapper" fill="#ffffff"><line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1.5" y1="2.5" x2="15.5" y2="2.5"></line> <line data-color="color-2" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1.5" y1="8.5" x2="15.5" y2="8.5"></line> <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1.5" y1="14.5" x2="15.5" y2="14.5"></line> </g></svg>
+                </button>
                 <h4 class="m-0">Bootstrap 4 Shortcodes Help</h4>
                 <button type="button" class="close align-self-start" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>

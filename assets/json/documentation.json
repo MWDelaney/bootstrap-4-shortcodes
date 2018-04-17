@@ -966,22 +966,22 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "[pagination]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination]\n  <ul>\n    <li><a href=\"#prev\">&laquo;</a></li>\n    <li><a href=\"#link1\">1</a></li>\n    <li><a href=\"#link2\">2</a></li>\n    <li><a href=\"#link3\">3</a></li>\n    <li><a href=\"#next\">&raquo;</a></li>\n  </ul>\n[/pagination]"
 						},
 						{
 							"note": "",
 							"description": "Large example",
-							"code": "[pagination size=\"lg\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination size=\"lg\"]\n  <ul>\n    <li><a href=\"#prev\">&laquo;</a></li>\n    <li><a href=\"#link1\">1</a></li>\n    <li><a href=\"#link2\">2</a></li>\n    <li><a href=\"#link3\">3</a></li>\n    <li><a href=\"#next\">&raquo;</a></li>\n  </ul>\n[/pagination]"
 						},
 						{
 							"note": "",
 							"description": "Small example",
-							"code": "[pagination size=\"sm\"]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination size=\"sm\"]\n  <ul>\n    <li><a href=\"#prev\">&laquo;</a></li>\n    <li><a href=\"#link1\">1</a></li>\n    <li><a href=\"#link2\">2</a></li>\n    <li><a href=\"#link3\">3</a></li>\n    <li><a href=\"#next\">&raquo;</a></li>\n  </ul>\n[/pagination]"
 						},
 						{
 							"note": "",
 							"description": "Active and disabled states",
-							"code": "[pagination]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li>[disabled]<a href=\"#link3\">Morbi leo risus</a>[/disabled]</li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/pagination]"
+							"code": "[pagination]\n  <ul>\n    <li><a href=\"#prev\">&laquo;</a></li>\n    <li>[active]<a href=\"#link1\">1</a>[/active]</li>\n    <li><a href=\"#link2\">2</a></li>\n    <li>[disabled]<a href=\"#link3\">3</a>[/disabled]</li>\n    <li><a href=\"#next\">&raquo;</a></li>\n  </ul>\n[/pagination]"
 						}
 					],
 					"shortcodes": [

@@ -5471,3 +5471,12 @@
 
 #wp_fs_bootstrap-shortcodes {
   font-size: 14px !important; }
+
+button.btn-outline-primary svg * {
+  stroke: #563d7c; }
+
+button:hover svg * {
+  stroke: #fff; }
+
+button.btn-outline-light:hover svg * {
+  stroke: #563d7c !important; }
