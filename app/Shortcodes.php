@@ -1699,10 +1699,11 @@ class Shortcodes {
 
 			$class	= array();
 			$class[]	= 'nav';
-			$class[]	= (Utilities::is_flag('inline', $save_atts)) ? 'nav-inline' : null;
+			$class[]	= (Utilities::is_flag('vertical', $save_atts)) ? 'flex-column' : null;
 			$class[]	= (Utilities::is_flag('tabs', $save_atts)) ? 'nav-tabs' : null;
 			$class[]	= (Utilities::is_flag('pills', $save_atts)) ? 'nav-pills' : null;
-			$class[]	= (Utilities::is_flag('stacked', $save_atts)) ? 'nav-stacked' : null;
+			$class[]	= (Utilities::is_flag('fill', $save_atts)) ? 'nav-fill' : null;
+			$class[]	= (Utilities::is_flag('justified', $save_atts)) ? 'nav-justified' : null;
 
 			$li_class	= array();
 			$li_class[]	= 'nav-item';

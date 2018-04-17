@@ -2373,7 +2373,7 @@
       <p class="card-text"></p>
 			<pre><code class="d-block p-4">[nav]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2389,10 +2389,10 @@
       <h5 class="card-title">
         <?php _e('Inline example', 'bootstrap-4-shortcodes'); ?>
       </h5>
-      <p class="card-text">Set the <code>inline</code> flag to make an inline nav.</p>
-			<pre><code class="d-block p-4">[nav inline]
+      <p class="card-text">Set the <code>vertical</code> flag to make a vertical nav.</p>
+			<pre><code class="d-block p-4">[nav vertical]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2411,7 +2411,7 @@
       <p class="card-text">Set the <code>tabs</code> flag to make an tab-styled nav.</p>
 			<pre><code class="d-block p-4">[nav tabs]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2430,7 +2430,7 @@
       <p class="card-text">Set the <code>pills</code> flag to make an pills-styled nav.</p>
 			<pre><code class="d-block p-4">[nav pills]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2449,7 +2449,7 @@
       <p class="card-text">Pills-styled navs can also be stacked with the <code>stacked</code> flag.</p>
 			<pre><code class="d-block p-4">[nav pills stacked]
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;[active]&lt;a href&#x3D;&quot;#link1&quot;&gt;Cras justo odio&lt;&#x2F;a&gt;[&#x2F;active]&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link2&quot;&gt;Dapibus ac facilisis in&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link3&quot;&gt;Morbi leo risus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
     &lt;li&gt;&lt;a href&#x3D;&quot;#link4&quot;&gt;Porta ac consectetur ac&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;

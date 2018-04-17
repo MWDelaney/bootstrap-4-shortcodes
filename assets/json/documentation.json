@@ -889,27 +889,37 @@
 						{
 							"note": "",
 							"description": "Basic example",
-							"code": "[nav]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
-							"note": "Set the <code>inline</code> flag to make an inline nav.",
-							"description": "Inline example",
-							"code": "[nav inline]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"note": "Set the <code>vertical</code> flag to make a vertical nav.",
+							"description": "Vertical example",
+							"code": "[nav vertical]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+            },
+						{
+							"note": "Set the <code>fill</code> flag to force navs to the full available width.",
+							"description": "Fill example",
+							"code": "[nav fill]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+            },
+						{
+							"note": "Set the <code>justified</code> flag to force nav-items to have equal widths.",
+							"description": "Fill example",
+							"code": "[nav fill]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
 							"note": "Set the <code>tabs</code> flag to make an tab-styled nav.",
 							"description": "Tabs example",
-							"code": "[nav tabs]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav tabs]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
 							"note": "Set the <code>pills</code> flag to make an pills-styled nav.",
 							"description": "Pills example",
-							"code": "[nav pills]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav pills]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						},
 						{
 							"note": "Pills-styled navs can also be stacked with the <code>stacked</code> flag.",
 							"description": "Stacked pills example",
-							"code": "[nav pills stacked]\n  <ul>\n    <li><a href=\"#link1\">Cras justo odio</a></li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
+							"code": "[nav pills stacked]\n  <ul>\n    <li>[active]<a href=\"#link1\">Cras justo odio</a>[/active]</li>\n    <li><a href=\"#link2\">Dapibus ac facilisis in</a></li>\n    <li><a href=\"#link3\">Morbi leo risus</a></li>\n    <li><a href=\"#link4\">Porta ac consectetur ac</a></li>\n  </ul>\n[/nav]"
 						}
 					],
 					"shortcodes": [
